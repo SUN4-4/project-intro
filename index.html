@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="一个正在构建中的项目介绍页，用来清晰呈现项目愿景、方向与进展。"
+    />
+    <meta name="theme-color" content="#f2efe7" />
+    <title>PROJECT 001 — 一个正在发生的项目</title>
+    <link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="assets/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="回到页面顶部">
+        <svg
+          class="brand__mark"
+          viewBox="0 0 40 40"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <rect width="40" height="40" rx="11" fill="currentColor" />
+          <path
+            d="M11 20.5 17.4 27 30 13.5"
+            fill="none"
+            stroke="#f2efe7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="3.2"
+          />
+        </svg>
+        <span class="brand__name">PROJECT / 001</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-navigation"
+        aria-label="打开导航菜单"
+        data-nav-toggle
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-navigation" aria-label="主导航" data-nav>
+        <a href="#idea">项目缘起</a>
+        <a href="#direction">项目方向</a>
+        <a href="#progress">当前进展</a>
+        <a href="#about">项目档案</a>
+      </nav>
+
+      <a class="header-cta" href="#contact">
+        联系项目
+        <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+          <path d="M3 8h10M9 4l4 4-4 4" />
+        </svg>
+      </a>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero__backdrop" aria-hidden="true"></div>
+
+        <div class="hero__content">
+          <div class="eyebrow hero__eyebrow" data-reveal>
+            <span class="status-pill">
+              <span class="status-pill__dot"></span>
+              Building in public
+            </span>
+            <span>CONCEPT / V0.1</span>
+          </div>
+
+          <h1 id="hero-title" data-reveal>
+            把想法，做成
+            <span class="hero__accent">值得被看见</span>
+            的项目。
+          </h1>
+
+          <!-- 替换这里时，优先写清项目做了什么、为谁而做。 -->
+          <p class="hero__lead" data-reveal>
+            这是一个项目介绍页的初始版本。未来，这里会讲清楚项目为什么存在、正在解决什么问题，以及它最终会以什么方式进入真实世界。
+          </p>
+
+          <div class="hero__actions" data-reveal>
+            <a class="button button--primary" href="#idea">
+              了解这个项目
+              <svg viewBox="0 0 18 18" aria-hidden="true" focusable="false">
+                <path d="M4 9h10M10 5l4 4-4 4" />
+              </svg>
+            </a>
+            <a class="text-link" href="#progress">
+              查看当前进展
+              <span aria-hidden="true">↘</span>
+            </a>
+          </div>
+
+          <dl class="hero__meta" data-reveal>
+            <div>
+              <dt>当前阶段</dt>
+              <dd>概念梳理</dd>
+            </div>
+            <div>
+              <dt>页面版本</dt>
+              <dd>0.1 / Draft</dd>
+            </div>
+            <div>
+              <dt>最后更新</dt>
+              <dd>2026.10</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__visual" data-reveal>
+          <div class="orbit-card" aria-label="项目正在构建中的视觉标识">
+            <div class="orbit-card__topline">
+              <span>STATUS</span>
+              <span>IN THE MAKING</span>
+            </div>
+
+            <div class="orbit" aria-hidden="true">
+              <span class="orbit__ring orbit__ring--outer"></span>
+              <span class="orbit__ring orbit__ring--inner"></span>
+              <span class="orbit__satellite orbit__satellite--one"></span>
+              <span class="orbit__satellite orbit__satellite--two"></span>
+              <span class="orbit__axis orbit__axis--horizontal"></span>
+              <span class="orbit__axis orbit__axis--vertical"></span>
+              <span class="orbit__core">
+                <span>IDEA</span>
+                <strong>001</strong>
+              </span>
+            </div>
+
+            <span class="orbit-card__note">A PROJECT<br />WITH ROOM<br />TO GROW</span>
+            <span class="orbit-card__index" aria-hidden="true">01</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="process-strip" aria-hidden="true">
+        <div class="process-strip__track">
+          <span>OBSERVE</span><i></i>
+          <span>THINK</span><i></i>
+          <span>BUILD</span><i></i>
+          <span>ITERATE</span><i></i>
+          <span>OBSERVE</span><i></i>
+          <span>THINK</span><i></i>
+          <span>BUILD</span><i></i>
+          <span>ITERATE</span><i></i>
+        </div>
+      </div>
+
+      <section class="section idea" aria-labelledby="idea-title">
+        <div class="section__label" id="idea" data-reveal>
+          <span>01</span>
+          <span>The idea</span>
+        </div>
+
+        <div class="idea__grid">
+          <div class="section-heading" data-reveal>
+            <p class="kicker">项目缘起</p>
+            <h2 id="idea-title">
+              从真实的问题出发，而不是从功能清单出发。
+            </h2>
+          </div>
+
+          <div class="idea__body" data-reveal>
+            <p>
+              每个项目都应该有一个值得解释的起点。这里将记录项目的背景、观察到的机会，以及为什么现在值得开始做这件事。
+            </p>
+            <p>
+              在具体内容确定之前，我们先把最重要的位置留给问题本身：谁遇到了什么困难，现有的方式为什么不够好，这个项目希望带来怎样的改变。
+            </p>
+            <span class="placeholder-tag">项目背景待补充</span>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section direction"
+        aria-labelledby="direction-title"
+      >
+        <div class="section__label" id="direction" data-reveal>
+          <span>02</span>
+          <span>Direction</span>
+        </div>
+
+        <div class="direction__header" data-reveal>
+          <div>
+            <p class="kicker">项目方向</p>
+            <h2 id="direction-title">关于项目的核心，先留三个位置。</h2>
+          </div>
+          <p>
+            内容确定后，这三部分可以替换为项目的核心能力、产品特色或用户价值。
+          </p>
+        </div>
+
+        <div class="direction__cards">
+          <article class="focus-card focus-card--lead" data-reveal>
+            <span class="focus-card__number">A</span>
+            <div>
+              <p class="focus-card__eyebrow">Purpose</p>
+              <h3>说清楚为什么做</h3>
+              <p>
+                用一段真实、具体的叙述，让第一次访问的人快速理解项目的意义和边界。
+              </p>
+            </div>
+            <span class="focus-card__mark" aria-hidden="true">↗</span>
+          </article>
+
+          <article class="focus-card" data-reveal>
+            <span class="focus-card__number">B</span>
+            <div>
+              <p class="focus-card__eyebrow">Experience</p>
+              <h3>展示它如何工作</h3>
+              <p>
+                后续可加入产品截图、流程演示、视频或关键功能卡片。
+              </p>
+            </div>
+          </article>
+
+          <article class="focus-card focus-card--accent" data-reveal>
+            <span class="focus-card__number">C</span>
+            <div>
+              <p class="focus-card__eyebrow">Impact</p>
+              <h3>说明它带来什么</h3>
+              <p>
+                记录真实成果、使用场景或阶段性验证，让价值不只停留在描述里。
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section progress" aria-labelledby="progress-title">
+        <div class="section__label" id="progress" data-reveal>
+          <span>03</span>
+          <span>Progress</span>
+        </div>
+
+        <div class="progress__grid">
+          <div class="progress__intro" data-reveal>
+            <p class="kicker">当前进展</p>
+            <h2 id="progress-title">好的介绍页，也应该诚实地展示过程。</h2>
+            <p>
+              这不是一份完成后的成绩单，而是项目从想法走向现实的过程记录。随着内容补齐，下面的状态可以持续更新。
+            </p>
+
+            <div class="progress-meter" aria-label="当前页面原型完成度：第一阶段">
+              <div class="progress-meter__head">
+                <span>PHASE 01 / 03</span>
+                <strong>33%</strong>
+              </div>
+              <div class="progress-meter__track" aria-hidden="true">
+                <span></span>
+              </div>
+              <p>页面框架已建立，项目内容待补充。</p>
+            </div>
+          </div>
+
+          <ol class="timeline" data-reveal>
+            <li class="timeline__item is-complete">
+              <span class="timeline__dot"></span>
+              <div class="timeline__content">
+                <div class="timeline__meta">
+                  <span>2026.10</span>
+                  <span class="timeline__status">已完成</span>
+                </div>
+                <h3>搭好项目叙事框架</h3>
+                <p>确定页面结构、视觉语言和需要回答的核心问题。</p>
+              </div>
+            </li>
+            <li class="timeline__item is-current">
+              <span class="timeline__dot"></span>
+              <div class="timeline__content">
+                <div class="timeline__meta">
+                  <span>Now</span>
+                  <span class="timeline__status">进行中</span>
+                </div>
+                <h3>补充项目内容</h3>
+                <p>明确项目名称、问题背景、解决方案与目标用户。</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <span class="timeline__dot"></span>
+              <div class="timeline__content">
+                <div class="timeline__meta">
+                  <span>Next</span>
+                  <span class="timeline__status">下一步</span>
+                </div>
+                <h3>加入真实材料</h3>
+                <p>补充截图、演示、团队信息、联系方式和对外链接。</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section about" aria-labelledby="about-title">
+        <div class="section__label" id="about" data-reveal>
+          <span>04</span>
+          <span>Project file</span>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__title" data-reveal>
+            <p class="kicker">项目档案</p>
+            <h2 id="about-title">
+              项目的名字<br />
+              <span>还在路上。</span>
+            </h2>
+          </div>
+
+          <dl class="project-facts" data-reveal>
+            <div>
+              <dt>项目名称</dt>
+              <dd>待定</dd>
+            </div>
+            <div>
+              <dt>项目类型</dt>
+              <dd>待确认</dd>
+            </div>
+            <div>
+              <dt>当前阶段</dt>
+              <dd>介绍页原型</dd>
+            </div>
+            <div>
+              <dt>对外链接</dt>
+              <dd>待补充</dd>
+            </div>
+            <div>
+              <dt>页面更新</dt>
+              <dd><time datetime="2026-10-26">2026.10.26</time></dd>
+            </div>
+            <div>
+              <dt>项目状态</dt>
+              <dd><span class="inline-status">In progress</span></dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="contact" aria-labelledby="contact-title">
+        <div class="contact__decor" aria-hidden="true"></div>
+        <div class="contact__content" id="contact" data-reveal>
+          <p class="kicker kicker--light">Start a conversation</p>
+          <h2 id="contact-title">有想法，或者想一起把它做出来？</h2>
+          <p>
+            联系方式将在项目信息确认后开放。现在，这个页面已经准备好承载下一步的内容。
+          </p>
+          <a class="button button--light" href="#top">
+            回到顶部
+            <svg viewBox="0 0 18 18" aria-hidden="true" focusable="false">
+              <path d="M9 15V3M5 7l4-4 4 4" />
+            </svg>
+          </a>
+        </div>
+        <p class="contact__aside" aria-hidden="true">LET'S<br />MAKE<br />IT REAL.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span data-current-year>2026</span> PROJECT / 001</p>
+      <p>Designed to grow with the idea.</p>
+      <a href="#top">BACK TO TOP ↑</a>
+    </footer>
+  </body>
+</html>
