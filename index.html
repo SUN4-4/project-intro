@@ -14,6 +14,7 @@
     <script>
       document.documentElement.classList.add("js");
     </script>
+    <script src="assets/tasks.js" defer></script>
     <script src="assets/main.js" defer></script>
   </head>
   <body>
@@ -56,6 +57,8 @@
         <a href="#idea">项目缘起</a>
         <a href="#direction">项目方向</a>
         <a href="#progress">当前进展</a>
+        <a href="#benchmarks">Benchmark 任务</a>
+        <a href="libero-plus.html">LIBERO-Plus</a>
         <a href="#about">项目档案</a>
       </nav>
 
@@ -255,15 +258,15 @@
               这不是一份完成后的成绩单，而是项目从想法走向现实的过程记录。随着内容补齐，下面的状态可以持续更新。
             </p>
 
-            <div class="progress-meter" aria-label="当前页面原型完成度：第一阶段">
+            <div class="progress-meter" aria-label="当前页面原型完成度：第二阶段">
               <div class="progress-meter__head">
-                <span>PHASE 01 / 03</span>
-                <strong>33%</strong>
+                <span>PHASE 02 / 03</span>
+                <strong>66%</strong>
               </div>
               <div class="progress-meter__track" aria-hidden="true">
                 <span></span>
               </div>
-              <p>页面框架已建立，项目内容待补充。</p>
+              <p>任务库已接入：4 个 benchmark、299 个任务可浏览。</p>
             </div>
           </div>
 
@@ -286,8 +289,8 @@
                   <span>Now</span>
                   <span class="timeline__status">进行中</span>
                 </div>
-                <h3>补充项目内容</h3>
-                <p>明确项目名称、问题背景、解决方案与目标用户。</p>
+                <h3>接入 benchmark 任务库</h3>
+                <p>4 个 benchmark、299 个任务已进入网页；BEHAVIOR 使用官方演示截图，LIBERO-Plus 10,030 条独立成页。</p>
               </div>
             </li>
             <li class="timeline__item">
@@ -297,17 +300,87 @@
                   <span>Next</span>
                   <span class="timeline__status">下一步</span>
                 </div>
-                <h3>加入真实材料</h3>
-                <p>补充截图、演示、团队信息、联系方式和对外链接。</p>
+                <h3>补齐本地仿真截图</h3>
+                <p>修复 Isaac Sim 5.1 与当前 RTX 595 驱动的 RTX scene DB 崩溃，用本地第一视角截图替换官方演示截图。</p>
               </div>
             </li>
           </ol>
         </div>
       </section>
 
+      <section class="section benchmarks" aria-labelledby="benchmarks-title">
+        <div class="section__label" id="benchmarks" data-reveal>
+          <span>04</span>
+          <span>Benchmarks</span>
+        </div>
+
+        <div class="benchmarks__header" data-reveal>
+          <div>
+            <p class="kicker">Benchmark 任务</p>
+            <h2 id="benchmarks-title">四个 benchmark，299 个任务。</h2>
+          </div>
+          <p>
+            按 benchmark 与 suite 分组浏览全部任务，每张卡片包含渲染图、任务 id、名称与 instruction。
+          </p>
+        </div>
+
+        <p class="task-note" data-reveal>
+          LIBERO / RoboTwin / robosuite 为仿真截图；BEHAVIOR-1K 使用官方演示视频截图（本机 Isaac Sim RTX
+          启动仍受驱动兼容性影响，卡片上标注“官方演示截图”并提供演示视频链接）。LIBERO-Plus 的
+          10,030 个扰动任务在独立目录页中浏览。
+        </p>
+
+        <p data-reveal>
+          <a class="button button--primary" href="libero-plus.html">
+            进入 LIBERO-Plus 目录（10,030）
+          </a>
+        </p>
+
+        <div class="task-toolbar" data-reveal>
+          <div class="task-filters" role="group" aria-label="按 benchmark 筛选">
+            <button class="task-filter is-active" type="button" data-benchmark-filter="all" aria-pressed="true">
+              全部 <span data-filter-count="all">299</span>
+            </button>
+            <button class="task-filter" type="button" data-benchmark-filter="libero" aria-pressed="false">
+              LIBERO <span data-filter-count="libero">130</span>
+            </button>
+            <button class="task-filter" type="button" data-benchmark-filter="robotwin" aria-pressed="false">
+              RoboTwin <span data-filter-count="robotwin">50</span>
+            </button>
+            <button class="task-filter" type="button" data-benchmark-filter="robosuite" aria-pressed="false">
+              robosuite <span data-filter-count="robosuite">19</span>
+            </button>
+            <button class="task-filter" type="button" data-benchmark-filter="behavior" aria-pressed="false">
+              BEHAVIOR-1K <span data-filter-count="behavior">100</span>
+            </button>
+          </div>
+
+          <div class="task-search">
+            <label class="visually-hidden" for="task-search-input">搜索任务</label>
+            <input
+              id="task-search-input"
+              type="search"
+              placeholder="搜索任务 id、名称或 instruction"
+              autocomplete="off"
+              data-task-search
+            />
+          </div>
+        </div>
+
+        <p class="task-status" role="status" aria-live="polite" data-task-status>
+          显示 299 / 299 个任务
+        </p>
+
+        <div class="task-groups" data-task-groups></div>
+
+        <p class="task-empty" data-task-empty hidden>
+          没有匹配的任务，试试其他关键词或切换 benchmark。
+        </p>
+      </section>
+
       <section class="section about" aria-labelledby="about-title">
         <div class="section__label" id="about" data-reveal>
-          <span>04</span>
+          <span>05</span>
           <span>Project file</span>
         </div>
 

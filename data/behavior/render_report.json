@@ -1,0 +1,19 @@
+{
+  "benchmark": "behavior",
+  "image_kind": "demo_thumbnail",
+  "source": "https://behavior.stanford.edu/challenge/tasks/",
+  "size": [
+    512,
+    320
+  ],
+  "tasks": 100,
+  "written": 100,
+  "failures": [],
+  "simulator": {
+    "status": "segmentation fault",
+    "component": "librtx.scenedb.plugin -> libcarb.scenerenderer-rtx",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "driver": "595.99.02",
+    "note": "Isaac Sim 5.1 RTX scene database crashes on startup; use official demo thumbnails or a compatible driver/remote host."
+  }
+}

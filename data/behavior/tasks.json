@@ -1,0 +1,2513 @@
+{
+  "benchmark": "behavior",
+  "label": "BEHAVIOR-1K",
+  "generated_by": "website/data/scripts/export_behavior.py",
+  "image_kind": "demo_thumbnail",
+  "source": "https://behavior.stanford.edu/challenge/tasks/",
+  "tasks": [
+    {
+      "id": "behavior/assembling_gift_baskets",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 0,
+      "name": "Assembling Gift Baskets",
+      "display_name": "Assembling Gift Baskets",
+      "instruction": "Place one candle, one butter cookie, one piece of Swiss cheese, and one bow from the table into each of the four wicker baskets on the floor in the living room.",
+      "rooms": [
+        "living_room"
+      ],
+      "room_labels": [
+        "客厅"
+      ],
+      "duration_seconds": 869,
+      "video_url": "https://player.vimeo.com/video/1114059476",
+      "goal_raw": "(:goal (and (forpairs (?wicker_basket.n.01 - wicker_basket.n.01) (?candle.n.01 - candle.n.01) (inside ?candle.n.01 ?wicker_basket.n.01) ) (forpairs (?wicker_basket.n.01 - wicker_basket.n.01) (?swiss_cheese.n.01 - swiss_cheese.n.01) (inside ?swiss_cheese.n.01 ?wicker_basket.n.01) ) (forpairs (?wicker_basket.n.01 - wicker_basket.n.01) (?butter_cookie.n.01 - butter_cookie.n.01) (inside ?butter_cookie",
+      "goal_summary": ":goal and forpairs wicker_basket - wicker_basket candle - candle inside candle wicker_basket forpairs wicker_basket - wicker_basket swiss_cheese - swiss_cheese",
+      "image": "images/assembling_gift_baskets.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/attach_a_camera_to_a_tripod",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_upper",
+      "suite_label": "双层住宅 · 上层",
+      "index": 1,
+      "name": "Attach a Camera to a Tripod",
+      "display_name": "Attach a Camera to a Tripod",
+      "instruction": "Attach the digital camera to the camera tripod in the bedroom.",
+      "rooms": [
+        "bedroom"
+      ],
+      "room_labels": [
+        "卧室"
+      ],
+      "duration_seconds": 130,
+      "video_url": "https://player.vimeo.com/video/1114060393",
+      "goal_raw": "(:goal (and (attached ?digital_camera.n.01_1 ?camera_tripod.n.01_1) ) )",
+      "goal_summary": ":goal and attached digital_camera_1 camera_tripod_1",
+      "image": "images/attach_a_camera_to_a_tripod.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/boxing_books_up_for_storage",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_upper",
+      "suite_label": "双层住宅 · 上层",
+      "index": 2,
+      "name": "Boxing Books Up for Storage",
+      "display_name": "Boxing Books Up for Storage",
+      "instruction": "Put all six books from the bookcases in the living room into the box on the living room floor.",
+      "rooms": [
+        "living_room"
+      ],
+      "room_labels": [
+        "客厅"
+      ],
+      "duration_seconds": 808,
+      "video_url": "https://player.vimeo.com/video/1114059113",
+      "goal_raw": "(:goal (and (forall (?book.n.02 - book.n.02) (inside ?book.n.02 ?box.n.01_1) ) ) )",
+      "goal_summary": ":goal and forall book - book inside book box_1",
+      "image": "images/boxing_books_up_for_storage.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/boxing_food_after_dinner",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 3,
+      "name": "Boxing Food After Dinner",
+      "display_name": "Boxing Food After Dinner",
+      "instruction": "Boxing Food After Dinner.",
+      "rooms": [
+        "dining_room",
+        "kitchen"
+      ],
+      "room_labels": [
+        "餐厅",
+        "厨房"
+      ],
+      "duration_seconds": 240,
+      "video_url": "https://www.youtube.com/embed/OmpbFiXPwMo",
+      "goal_raw": "(:goal (and (forall (?taco.n.02 - taco.n.02) (inside ?taco.n.02 ?tupperware.n.01_1) ) (ontop ?plate.n.04_1 sink.n.01_1) (ontop ?plate.n.04_2 sink.n.01_1) (inside ?tupperware.n.01_1 ?electric_refrigerator.n.01_1) (not (open ?electric_refrigerator.n.01_1) ) ) )",
+      "goal_summary": ":goal and forall taco - taco inside taco tupperware_1 ontop plate_1 sink_1 ontop plate_2 sink_1 inside tupperware_1 electric_refrigerator_1 not open electric_re",
+      "image": "images/boxing_food_after_dinner.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/bringing_in_wood",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 4,
+      "name": "Bringing in Wood",
+      "display_name": "Bringing in Wood",
+      "instruction": "Bring the three plywood sheets from the garden into the corridor and place them on the floor there.",
+      "rooms": [
+        "garden",
+        "corridor"
+      ],
+      "room_labels": [
+        "花园",
+        "走廊"
+      ],
+      "duration_seconds": 451,
+      "video_url": "https://player.vimeo.com/video/1114058068",
+      "goal_raw": "(:goal (and (forall (?plywood.n.01 - plywood.n.01) (ontop ?plywood.n.01 ?floor.n.01_2) ) ) )",
+      "goal_summary": ":goal and forall plywood - plywood ontop plywood floor_2",
+      "image": "images/bringing_in_wood.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/bringing_paper_to_recycling",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 5,
+      "name": "Bringing Paper To Recycling",
+      "display_name": "Bringing Paper To Recycling",
+      "instruction": "Bringing Paper To Recycling.",
+      "rooms": [
+        "kitchen",
+        "garden"
+      ],
+      "room_labels": [
+        "厨房",
+        "花园"
+      ],
+      "duration_seconds": 318,
+      "video_url": "https://www.youtube.com/embed/5OU6Zq9bGG4",
+      "goal_raw": "(:goal (and (inside sack.n.01_1 ?recycling_bin.n.01_1) (inside newspaper.n.03_1 ?recycling_bin.n.01_1) (not (open ?recycling_bin.n.01_1) ) ) )",
+      "goal_summary": ":goal and inside sack_1 recycling_bin_1 inside newspaper_1 recycling_bin_1 not open recycling_bin_1",
+      "image": "images/bringing_paper_to_recycling.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/bringing_water",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 6,
+      "name": "Bringing Water",
+      "display_name": "Bringing Water",
+      "instruction": "Retrieve the two bottles from the refrigerator in the kitchen, bring them to the living room, and place both on the coffee table. Make sure the refrigerator is closed when you finish.",
+      "rooms": [
+        "living_room",
+        "kitchen"
+      ],
+      "room_labels": [
+        "客厅",
+        "厨房"
+      ],
+      "duration_seconds": 315,
+      "video_url": "https://player.vimeo.com/video/1114058418",
+      "goal_raw": "(:goal (and (forall (?bottle.n.01 - bottle.n.01) (ontop ?bottle.n.01 ?coffee_table.n.01_1) ) (not (open ?electric_refrigerator.n.01_1) ) ) )",
+      "goal_summary": ":goal and forall bottle - bottle ontop bottle coffee_table_1 not open electric_refrigerator_1",
+      "image": "images/bringing_water.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/can_meat",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 7,
+      "name": "Can Meat",
+      "display_name": "Can Meat",
+      "instruction": "Open the kitchen cabinet, take out the two hinged jars, open them, place exactly two cooked bratwursts from the chopping board on the countertop into each jar, then close both jars, put them back inside the cabinet, and close the cabinet.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 395,
+      "video_url": "https://player.vimeo.com/video/1114054618",
+      "goal_raw": "(:goal (and (forall (?hinged_jar.n.01 - hinged_jar.n.01) (inside ?hinged_jar.n.01 ?cabinet.n.01_1) ) (forall (?hinged_jar.n.01 - hinged_jar.n.01) (not (open ?hinged_jar.n.01) ) ) (forall (?hinged_jar.n.01 - hinged_jar.n.01) (forn (2) (?bratwurst.n.01 - bratwurst.n.01) (inside ?bratwurst.n.01 ?hinged_jar.n.01) ) ) (not (open ?cabinet.n.01_1) ) ) )",
+      "goal_summary": ":goal and forall hinged_jar - hinged_jar inside hinged_jar cabinet_1 forall hinged_jar - hinged_jar not open hinged_jar forall hinged_jar - hinged_jar forn 2 br",
+      "image": "images/can_meat.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/canning_food",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 8,
+      "name": "Canning Food",
+      "display_name": "Canning Food",
+      "instruction": "In the kitchen, open the refrigerator and the cabinet. Take the steak and the pineapple out of the refrigerator and take two bowls from the cabinet. On the chopping board on the countertop, use the carving knife to dice the steak and to dice the pineapple. Put only the diced steak into one bowl and only the diced pineapple into the other bowl - do not mix them. Place both bowls back inside the cabinet, then close the refrigerator and close the cabinet.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 766,
+      "video_url": "https://player.vimeo.com/video/1114061821",
+      "goal_raw": "(:goal (and (real ?diced__steak.n.01_1) (real ?diced__pineapple.n.01_1) (exists (?bowl.n.01 - bowl.n.01) (and (filled ?bowl.n.01 ?diced__steak.n.01_1) (not (contains ?bowl.n.01 ?diced__pineapple.n.01_1) ) ) ) (exists (?bowl.n.01 - bowl.n.01) (and (filled ?bowl.n.01 ?diced__pineapple.n.01_1) (not (contains ?bowl.n.01 ?diced__steak.n.01_1) ) ) ) (forall (?bowl.n.01 - bowl.n.01) (and (inside ?bowl.n.",
+      "goal_summary": ":goal and real diced__steak_1 real diced__pineapple_1 exists bowl - bowl and filled bowl diced__steak_1 not contains bowl diced__pineapple_1 exists bowl - bowl",
+      "image": "images/canning_food.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/carrying_in_groceries",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 9,
+      "name": "Carrying in Groceries",
+      "display_name": "Carrying in Groceries",
+      "instruction": "Take the sack of groceries out of the car trunk in the garage, bring it to the kitchen, and put both the tomato and the carton of milk into the refrigerator in the kitchen. When you're done, close the car trunk and make sure the refrigerator in the kitchen is closed.",
+      "rooms": [
+        "kitchen",
+        "garage"
+      ],
+      "room_labels": [
+        "厨房",
+        "车库"
+      ],
+      "duration_seconds": 476,
+      "video_url": "https://player.vimeo.com/video/1114057919",
+      "goal_raw": "(:goal (and (exists (?electric_refrigerator.n.01 - electric_refrigerator.n.01) (and (inside ?beefsteak_tomato.n.01_1 ?electric_refrigerator.n.01) (inside ?carton__of__milk.n.01_1 ?electric_refrigerator.n.01) ) ) (not (open car.n.01_1) ) (not (open electric_refrigerator.n.01_1) ) ) )",
+      "goal_summary": ":goal and exists electric_refrigerator - electric_refrigerator and inside beefsteak_tomato_1 electric_refrigerator inside carton__of__milk_1 electric_refrigerat",
+      "image": "images/carrying_in_groceries.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/carrying_out_garden_furniture",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 10,
+      "name": "Carrying Out Garden Furniture",
+      "display_name": "Carrying Out Garden Furniture",
+      "instruction": "Carrying Out Garden Furniture.",
+      "rooms": [
+        "corridor",
+        "dining_room",
+        "entryway",
+        "garden",
+        "kitchen",
+        "living_room"
+      ],
+      "room_labels": [
+        "走廊",
+        "餐厅",
+        "玄关",
+        "花园",
+        "厨房",
+        "客厅"
+      ],
+      "duration_seconds": 358,
+      "video_url": "https://www.youtube.com/embed/NCQc0IIRmos",
+      "goal_raw": "(:goal (and (ontop ?lawn_chair.n.01_1 ?floor.n.01_2) (exists (?lawn.n.01 - lawn.n.01) (ontop ?barrow.n.03_1 ?lawn.n.01) ) ) )",
+      "goal_summary": ":goal and ontop lawn_chair_1 floor_2 exists lawn - lawn ontop barrow_1 lawn",
+      "image": "images/carrying_out_garden_furniture.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/chop_an_onion",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 11,
+      "name": "Chop an Onion",
+      "display_name": "Chop an Onion",
+      "instruction": "In the kitchen, take the Vidalia onion out of the sink, dice it on the chopping board with the paring knife, put the diced onion into the bowl on the countertop, then place both the paring knife and the chopping board into the sink.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 213,
+      "video_url": "https://player.vimeo.com/video/1114061062",
+      "goal_raw": "(:goal (and (real ?diced__vidalia_onion.n.01_1) (inside ?parer.n.02_1 ?sink.n.01_1) (inside ?chopping_board.n.01_1 ?sink.n.01_1) (contains ?bowl.n.01_1 ?diced__vidalia_onion.n.01_1) ) )",
+      "goal_summary": ":goal and real diced__vidalia_onion_1 inside parer_1 sink_1 inside chopping_board_1 sink_1 contains bowl_1 diced__vidalia_onion_1",
+      "image": "images/chop_an_onion.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/chopping_wood",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 12,
+      "name": "Chopping Wood",
+      "display_name": "Chopping Wood",
+      "instruction": "Chop the four logs on the driveway in the garden into eight half logs using the axe and the chopping block.",
+      "rooms": [
+        "garden"
+      ],
+      "room_labels": [
+        "花园"
+      ],
+      "duration_seconds": 358,
+      "video_url": "https://player.vimeo.com/video/1114061262",
+      "goal_raw": "(:goal (and (real ?half__log.n.01_1) (real ?half__log.n.01_2) (real ?half__log.n.01_3) (real ?half__log.n.01_4) (real ?half__log.n.01_5) (real ?half__log.n.01_6) (real ?half__log.n.01_7) (real ?half__log.n.01_8) ) )",
+      "goal_summary": ":goal and real half__log_1 real half__log_2 real half__log_3 real half__log_4 real half__log_5 real half__log_6 real half__log_7 real half__log_8",
+      "image": "images/chopping_wood.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/clean_a_keyboard",
+      "benchmark": "behavior",
+      "suite": "office_cubicles_right",
+      "suite_label": "右侧办公区",
+      "index": 13,
+      "name": "Clean A Keyboard",
+      "display_name": "Clean A Keyboard",
+      "instruction": "Clean A Keyboard.",
+      "rooms": [
+        "private_office"
+      ],
+      "room_labels": [
+        "私人办公室"
+      ],
+      "duration_seconds": 142,
+      "video_url": "https://www.youtube.com/embed/yEV3cFqyu-4",
+      "goal_raw": "(:goal (and (not (covered ?keyboard.n.01_1 ?dust.n.01_1) ) ) )",
+      "goal_summary": ":goal and not covered keyboard_1 dust_1",
+      "image": "images/clean_a_keyboard.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/clean_a_patio",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 14,
+      "name": "Clean a Patio",
+      "display_name": "Clean a Patio",
+      "instruction": "Pick up the broom in the garden and sweep the mud off the patio floor until the floor is no longer covered in mud.",
+      "rooms": [
+        "garden"
+      ],
+      "room_labels": [
+        "花园"
+      ],
+      "duration_seconds": 402,
+      "video_url": "https://player.vimeo.com/video/1114060492",
+      "goal_raw": "(:goal (and (not (covered ?floor.n.01_1 ?mud.n.03_1) ) ) )",
+      "goal_summary": ":goal and not covered floor_1 mud_1",
+      "image": "images/clean_a_patio.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/clean_a_trumpet",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_upper",
+      "suite_label": "双层住宅 · 上层",
+      "index": 15,
+      "name": "Clean a Trumpet",
+      "display_name": "Clean a Trumpet",
+      "instruction": "In the bedroom, pick up the scrub brush from the desk and scrub the cornet (trumpet) on the desk until it's no longer covered in dust.",
+      "rooms": [
+        "bedroom"
+      ],
+      "room_labels": [
+        "卧室"
+      ],
+      "duration_seconds": 177,
+      "video_url": "https://player.vimeo.com/video/1114060606",
+      "goal_raw": "(:goal (and (not (covered ?cornet.n.01_1 ?dust.n.01_1) ) ) )",
+      "goal_summary": ":goal and not covered cornet_1 dust_1",
+      "image": "images/clean_a_trumpet.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/clean_boxing_gloves",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 16,
+      "name": "Clean Boxing Gloves",
+      "display_name": "Clean Boxing Gloves",
+      "instruction": "Wash the two dusty boxing gloves from the countertop in the utility room in the washer until they are no longer covered with dust.",
+      "rooms": [
+        "utility_room"
+      ],
+      "room_labels": [
+        "洗衣房"
+      ],
+      "duration_seconds": 275,
+      "video_url": "https://player.vimeo.com/video/1114060008",
+      "goal_raw": "(:goal (and (forall (?boxing_glove.n.01 - boxing_glove.n.01) (not (covered ?boxing_glove.n.01 ?dust.n.01_1) ) ) ) )",
+      "goal_summary": ":goal and forall boxing_glove - boxing_glove not covered boxing_glove dust_1",
+      "image": "images/clean_boxing_gloves.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/clean_up_broken_glass",
+      "benchmark": "behavior",
+      "suite": "restaurant_diner",
+      "suite_label": "餐厅",
+      "index": 17,
+      "name": "Clean Up Broken Glass",
+      "display_name": "Clean Up Broken Glass",
+      "instruction": "Clean Up Broken Glass.",
+      "rooms": [
+        "corridor",
+        "dining_room"
+      ],
+      "room_labels": [
+        "走廊",
+        "餐厅"
+      ],
+      "duration_seconds": 286,
+      "video_url": "https://www.youtube.com/embed/qXliGIYzh2w",
+      "goal_raw": "(:goal (and (forall (?broken__glass.n.01 - broken__glass.n.01) (inside ?broken__glass.n.01 ?ashcan.n.01_1) ) ) )",
+      "goal_summary": ":goal and forall broken__glass - broken__glass inside broken__glass ashcan_1",
+      "image": "images/clean_up_broken_glass.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/clean_up_your_desk",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 18,
+      "name": "Clean Up Your Desk",
+      "display_name": "Clean Up Your Desk",
+      "instruction": "In the child's room, clean up the desk: put both folders and both paperback books into the bookcase; put the pencil and both pens into the pencil case and leave the case on the desk; take the stapler out of the bookcase and place it on the desk; move the laptop from the bed onto the desk and close it.",
+      "rooms": [
+        "childs_room"
+      ],
+      "room_labels": [
+        "儿童房"
+      ],
+      "duration_seconds": 714,
+      "video_url": "https://player.vimeo.com/video/1114059839",
+      "goal_raw": "(:goal (and (forall (?folder.n.02 - folder.n.02) (inside ?folder.n.02 ?bookcase.n.01_1) ) (forall (?pen.n.01 - pen.n.01) (inside ?pen.n.01 ?pencil_box.n.01_1) ) (forall (?paperback_book.n.01 - paperback_book.n.01) (inside ?paperback_book.n.01 ?bookcase.n.01_1) ) (inside ?pencil.n.01_1 ?pencil_box.n.01_1) (ontop ?stapler.n.01_1 ?desk.n.01_1) (ontop ?pencil_box.n.01_1 ?desk.n.01_1) (ontop ?laptop.n.",
+      "goal_summary": ":goal and forall folder - folder inside folder bookcase_1 forall pen - pen inside pen pencil_box_1 forall paperback_book - paperback_book inside paperback_book",
+      "image": "images/clean_up_your_desk.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/clean_your_rusty_garden_tools",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 19,
+      "name": "Clean Your Rusty Garden Tools",
+      "display_name": "Clean Your Rusty Garden Tools",
+      "instruction": "Clean Your Rusty Garden Tools.",
+      "rooms": [
+        "garden"
+      ],
+      "room_labels": [
+        "花园"
+      ],
+      "duration_seconds": 484,
+      "video_url": "https://www.youtube.com/embed/tHiesuHDgkc",
+      "goal_raw": "(:goal (and (not (covered ?trowel.n.01_1 ?rust.n.01_1) ) (not (covered ?scraper.n.01_1 ?rust.n.01_1) ) (inside ?trowel.n.01_1 ?toolbox.n.01_1) (inside ?scraper.n.01_1 ?toolbox.n.01_1) (not (open ?toolbox.n.01_1) ) ) )",
+      "goal_summary": ":goal and not covered trowel_1 rust_1 not covered scraper_1 rust_1 inside trowel_1 toolbox_1 inside scraper_1 toolbox_1 not open toolbox_1",
+      "image": "images/clean_your_rusty_garden_tools.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/cleaning_up_branches_and_twigs",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 20,
+      "name": "Cleaning Up Branches And Twigs",
+      "display_name": "Cleaning Up Branches And Twigs",
+      "instruction": "Cleaning Up Branches And Twigs.",
+      "rooms": [
+        "garden"
+      ],
+      "room_labels": [
+        "花园"
+      ],
+      "duration_seconds": 434,
+      "video_url": "https://www.youtube.com/embed/iztsNYYMpv0",
+      "goal_raw": "(:goal (and (forall (?branch.n.02 - branch.n.02) (inside ?branch.n.02 ?recycling_bin.n.01_1) ) (ontop ?recycling_bin.n.01_1 ?floor.n.01_1) ) )",
+      "goal_summary": ":goal and forall branch - branch inside branch recycling_bin_1 ontop recycling_bin_1 floor_1",
+      "image": "images/cleaning_up_branches_and_twigs.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/cleaning_up_plates_and_food",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 21,
+      "name": "Cleaning Up Plates and Food",
+      "display_name": "Cleaning Up Plates and Food",
+      "instruction": "From the breakfast table in the kitchen, move both pizzas - keeping each on its plate - into the same refrigerator, put both bowls into one sink, and make sure the refrigerator is closed.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 457,
+      "video_url": "https://player.vimeo.com/video/1114054554",
+      "goal_raw": "(:goal (and (forpairs (?pizza.n.01 - pizza.n.01) (?plate.n.04 - plate.n.04) (ontop ?pizza.n.01 ?plate.n.04) ) (exists (?electric_refrigerator.n.01 - electric_refrigerator.n.01) (forall (?pizza.n.01 - pizza.n.01) (inside ?pizza.n.01 ?electric_refrigerator.n.01) ) ) (exists (?sink.n.01 - sink.n.01) (forall (?bowl.n.01 - bowl.n.01) (inside ?bowl.n.01 ?sink.n.01) ) ) (forall (?electric_refrigerator.n.",
+      "goal_summary": ":goal and forpairs pizza - pizza plate - plate ontop pizza plate exists electric_refrigerator - electric_refrigerator forall pizza - pizza inside pizza electric",
+      "image": "images/cleaning_up_plates_and_food.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/clearing_food_from_table_into_fridge",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 22,
+      "name": "Clearing Food from Table into Fridge",
+      "display_name": "Clearing Food from Table into Fridge",
+      "instruction": "Pack the half chicken and the half apple pie from the plates on the breakfast table into the two tupperware containers from the countertop, then put both tupperware containers inside the refrigerator in the kitchen and make sure the refrigerator is closed at the end.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 436,
+      "video_url": "https://player.vimeo.com/video/1114059394",
+      "goal_raw": "(:goal (and (exists (?tupperware.n.01 - tupperware.n.01) (inside ?half__apple_pie.n.01_1 ?tupperware.n.01) ) (exists (?tupperware.n.01 - tupperware.n.01) (inside ?half__chicken.n.01_1 ?tupperware.n.01) ) (forall (?tupperware.n.01 - tupperware.n.01) (inside ?tupperware.n.01 ?electric_refrigerator.n.01_1) ) (not (open ?electric_refrigerator.n.01_1) ) ) )",
+      "goal_summary": ":goal and exists tupperware - tupperware inside half__apple_pie_1 tupperware exists tupperware - tupperware inside half__chicken_1 tupperware forall tupperware",
+      "image": "images/clearing_food_from_table_into_fridge.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/collecting_aluminum_cans",
+      "benchmark": "behavior",
+      "suite": "hotel_suite_large",
+      "suite_label": "大型酒店套房",
+      "index": 23,
+      "name": "Collecting Aluminum Cans",
+      "display_name": "Collecting Aluminum Cans",
+      "instruction": "Collecting Aluminum Cans.",
+      "rooms": [
+        "bedroom"
+      ],
+      "room_labels": [
+        "卧室"
+      ],
+      "duration_seconds": 325,
+      "video_url": "https://www.youtube.com/embed/QRgCjhEdNzA",
+      "goal_raw": "(:goal (and (forall (?can__of__soda.n.01 - can__of__soda.n.01) (inside ?can__of__soda.n.01 ?bucket.n.01_1) ) ) )",
+      "goal_summary": ":goal and forall can__of__soda - can__of__soda inside can__of__soda bucket_1",
+      "image": "images/collecting_aluminum_cans.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/collecting_childrens_toys",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 24,
+      "name": "Collecting Children's Toys",
+      "display_name": "Collecting Children's Toys",
+      "instruction": "Pick up the two dice from the bed, the two teddy bears from the floor, and the two board games (one from the desk and one from the bed), and place them all inside the same bookcase in the child's room.",
+      "rooms": [
+        "childs_room"
+      ],
+      "room_labels": [
+        "儿童房"
+      ],
+      "duration_seconds": 640,
+      "video_url": "https://player.vimeo.com/video/1114058872",
+      "goal_raw": "(:goal (and (exists (?bookcase.n.01 - bookcase.n.01) (and (forall (?die.n.01 - die.n.01) (inside ?die.n.01 ?bookcase.n.01) ) (forall (?teddy.n.01 - teddy.n.01) (inside ?teddy.n.01 ?bookcase.n.01) ) (forall (?board_game.n.01 - board_game.n.01) (inside ?board_game.n.01 ?bookcase.n.01) ) (forall (?train_set.n.01 - train_set.n.01) (inside ?train_set.n.01 ?bookcase.n.01) ) ) ) ) )",
+      "goal_summary": ":goal and exists bookcase - bookcase and forall die - die inside die bookcase forall teddy - teddy inside teddy bookcase forall board_game - board_game inside b",
+      "image": "images/collecting_childrens_toys.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/composting_waste",
+      "benchmark": "behavior",
+      "suite": "Rs_int",
+      "suite_label": "小型住宅 Rs_int",
+      "index": 25,
+      "name": "Composting Waste",
+      "display_name": "Composting Waste",
+      "instruction": "Composting Waste.",
+      "rooms": [
+        "entryway",
+        "kitchen",
+        "living_room"
+      ],
+      "room_labels": [
+        "玄关",
+        "厨房",
+        "客厅"
+      ],
+      "duration_seconds": 115,
+      "video_url": "https://www.youtube.com/embed/RR3PLEFcdYg",
+      "goal_raw": "(:goal (and (inside ?half__banana.n.01_1 ?ashcan.n.01_1) (inside ?half__pomegranate.n.01_1 ?ashcan.n.01_1) ) )",
+      "goal_summary": ":goal and inside half__banana_1 ashcan_1 inside half__pomegranate_1 ashcan_1",
+      "image": "images/composting_waste.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/cook_a_brisket",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 26,
+      "name": "Cook A Brisket",
+      "display_name": "Cook A Brisket",
+      "instruction": "Cook A Brisket.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 251,
+      "video_url": "https://www.youtube.com/embed/RCSy8B0_s5Y",
+      "goal_raw": "(:goal (and (cooked ?brisket.n.01_1) (ontop ?brisket.n.01_1 ?chopping_board.n.01_1) (ontop ?frying_pan.n.01_1 ?countertop.n.01_1) ) )",
+      "goal_summary": ":goal and cooked brisket_1 ontop brisket_1 chopping_board_1 ontop frying_pan_1 countertop_1",
+      "image": "images/cook_a_brisket.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/cook_a_frozen_pie",
+      "benchmark": "behavior",
+      "suite": "restaurant_diner",
+      "suite_label": "餐厅",
+      "index": 27,
+      "name": "Cook A Frozen Pie",
+      "display_name": "Cook A Frozen Pie",
+      "instruction": "Cook A Frozen Pie.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 323,
+      "video_url": "https://www.youtube.com/embed/H4z3xTJn058",
+      "goal_raw": "(:goal (and (ontop apple_pie.n.01_1 tray.n.01_1) (cooked ?apple_pie.n.01_1) ) )",
+      "goal_summary": ":goal and ontop apple_pie_1 tray_1 cooked apple_pie_1",
+      "image": "images/cook_a_frozen_pie.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/cook_bacon",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 28,
+      "name": "Cook Bacon",
+      "display_name": "Cook Bacon",
+      "instruction": "Take the tray with six slices of bacon out of the refrigerator in the kitchen, cook all six slices in the frying pan on the stove until they're cooked, and make sure the refrigerator is closed when you're done.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 256,
+      "video_url": "https://player.vimeo.com/video/1114061497",
+      "goal_raw": "(:goal (and (forall (?bacon.n.01 - bacon.n.01) (cooked ?bacon.n.01) ) (not (open ?electric_refrigerator.n.01_1) ) ) )",
+      "goal_summary": ":goal and forall bacon - bacon cooked bacon not open electric_refrigerator_1",
+      "image": "images/cook_bacon.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/cook_broccolini",
+      "benchmark": "behavior",
+      "suite": "restaurant_diner",
+      "suite_label": "餐厅",
+      "index": 29,
+      "name": "Cook Broccolini",
+      "display_name": "Cook Broccolini",
+      "instruction": "Cook Broccolini.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 137,
+      "video_url": "https://www.youtube.com/embed/NXoYiAs_KCs",
+      "goal_raw": "(:goal (and (forall (?clove.n.03 - clove.n.03) (and (ontop ?clove.n.03 ?frying_pan.n.01_1) (cooked ?clove.n.03) ) ) (forall (?broccolini.n.01 - broccolini.n.01) (and (ontop ?broccolini.n.01 ?frying_pan.n.01_1) (cooked ?broccolini.n.01) ) ) (ontop ?frying_pan.n.01_1 ?stove.n.01_1) ) )",
+      "goal_summary": ":goal and forall clove - clove and ontop clove frying_pan_1 cooked clove forall broccolini - broccolini and ontop broccolini frying_pan_1 cooked broccolini onto",
+      "image": "images/cook_broccolini.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/cook_brussels_sprouts",
+      "benchmark": "behavior",
+      "suite": "restaurant_diner",
+      "suite_label": "餐厅",
+      "index": 30,
+      "name": "Cook Brussels Sprouts",
+      "display_name": "Cook Brussels Sprouts",
+      "instruction": "Cook Brussels Sprouts.",
+      "rooms": [
+        "bar",
+        "corridor",
+        "kitchen"
+      ],
+      "room_labels": [
+        "吧台",
+        "走廊",
+        "厨房"
+      ],
+      "duration_seconds": 687,
+      "video_url": "https://www.youtube.com/embed/9XPaPQmWAgI",
+      "goal_raw": "(:goal (and (forall (?half__brussels_sprouts.n.01 - half__brussels_sprouts.n.01) (and (real ?half__brussels_sprouts.n.01) (cooked ?half__brussels_sprouts.n.01) (inside ?half__brussels_sprouts.n.01 oven.n.01_1) ) ) (not (open ?electric_refrigerator.n.01_1) ) (not (open ?oven.n.01_1) ) ) )",
+      "goal_summary": ":goal and forall half__brussels_sprouts - half__brussels_sprouts and real half__brussels_sprouts cooked half__brussels_sprouts inside half__brussels_sprouts ove",
+      "image": "images/cook_brussels_sprouts.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/cook_cabbage",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 31,
+      "name": "Cook Cabbage",
+      "display_name": "Cook Cabbage",
+      "instruction": "From the kitchen refrigerator, take the cabbage and the chili, dice them on the chopping board with the knife, cook the diced cabbage and diced chili in the frying pan on the stove, and leave the cooked, diced cabbage and cooked, diced chili in the frying pan.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 471,
+      "video_url": "https://player.vimeo.com/video/1114060935",
+      "goal_raw": "(:goal (and (real ?cooked__diced__head_cabbage.n.01_1) (real ?cooked__diced__chili.n.01_1) (contains ?frying_pan.n.01_1 ?cooked__diced__head_cabbage.n.01_1) (contains ?frying_pan.n.01_1 ?cooked__diced__chili.n.01_1) ) )",
+      "goal_summary": ":goal and real cooked__diced__head_cabbage_1 real cooked__diced__chili_1 contains frying_pan_1 cooked__diced__head_cabbage_1 contains frying_pan_1 cooked__diced",
+      "image": "images/cook_cabbage.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/cook_hot_dogs",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 32,
+      "name": "Cook Hot Dogs",
+      "display_name": "Cook Hot Dogs",
+      "instruction": "Take the two hot dogs out of the refrigerator in the kitchen and cook them in the microwave until both are cooked.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 305,
+      "video_url": "https://player.vimeo.com/video/1114061371",
+      "goal_raw": "(:goal (and (forall (?hotdog.n.02 - hotdog.n.02) (cooked ?hotdog.n.02) ) ) )",
+      "goal_summary": ":goal and forall hotdog - hotdog cooked hotdog",
+      "image": "images/cook_hot_dogs.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/dispose_of_batteries",
+      "benchmark": "behavior",
+      "suite": "office_cubicles_right",
+      "suite_label": "右侧办公区",
+      "index": 33,
+      "name": "Dispose Of Batteries",
+      "display_name": "Dispose Of Batteries",
+      "instruction": "Dispose Of Batteries.",
+      "rooms": [
+        "copy_room",
+        "corridor",
+        "private_office",
+        "shared_office"
+      ],
+      "room_labels": [
+        "复印室",
+        "走廊",
+        "私人办公室",
+        "共享办公室"
+      ],
+      "duration_seconds": 441,
+      "video_url": "https://www.youtube.com/embed/TmJ7dNwDyws",
+      "goal_raw": "(:goal (and (forall (?battery.n.02 - battery.n.02) (inside ?battery.n.02 ?ashcan.n.01_1) ) (ontop ?ashcan.n.01_1 ?floor.n.01_1) ) )",
+      "goal_summary": ":goal and forall battery - battery inside battery ashcan_1 ontop ashcan_1 floor_1",
+      "image": "images/dispose_of_batteries.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/dispose_of_glass",
+      "benchmark": "behavior",
+      "suite": "hotel_suite_large",
+      "suite_label": "大型酒店套房",
+      "index": 34,
+      "name": "Dispose Of Glass",
+      "display_name": "Dispose Of Glass",
+      "instruction": "Dispose Of Glass.",
+      "rooms": [
+        "bathroom",
+        "bedroom"
+      ],
+      "room_labels": [
+        "卫生间",
+        "卧室"
+      ],
+      "duration_seconds": 240,
+      "video_url": "https://www.youtube.com/embed/dzVB9aAmnNU",
+      "goal_raw": "(:goal (and (forall (?water_glass.n.02 - water_glass.n.02) (inside ?water_glass.n.02 ?ashcan.n.01_1) ) ) )",
+      "goal_summary": ":goal and forall water_glass - water_glass inside water_glass ashcan_1",
+      "image": "images/dispose_of_glass.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/freeze_fruit",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 35,
+      "name": "Freeze Fruit",
+      "display_name": "Freeze Fruit",
+      "instruction": "Freeze Fruit.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 339,
+      "video_url": "https://www.youtube.com/embed/6nM9_B5OoRY",
+      "goal_raw": "(:goal (and (forpairs (?apple.n.01 - apple.n.01) (?tupperware.n.01 - tupperware.n.01) (inside ?apple.n.01 ?tupperware.n.01) ) (forpairs (?strawberry.n.01 - strawberry.n.01) (?tupperware.n.01 - tupperware.n.01) (inside ?strawberry.n.01 ?tupperware.n.01) ) (forall (?tupperware.n.01 - tupperware.n.01) (inside ?tupperware.n.01 ?electric_refrigerator.n.01_1) ) (not (open ?electric_refrigerator.n.01_1) ",
+      "goal_summary": ":goal and forpairs apple - apple tupperware - tupperware inside apple tupperware forpairs strawberry - strawberry tupperware - tupperware inside strawberry tupp",
+      "image": "images/freeze_fruit.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/freeze_pies",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 36,
+      "name": "Freeze Pies",
+      "display_name": "Freeze Pies",
+      "instruction": "In the kitchen, take the two apple pies from the plates on the countertop, put each pie into a separate tupperware container taken from the cabinet, place both tupperwares inside the refrigerator, close the refrigerator, and leave them until the pies are frozen.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 415,
+      "video_url": "https://player.vimeo.com/video/1114061625",
+      "goal_raw": "(:goal (and (forpairs (?apple_pie.n.01 - apple_pie.n.01) (?tupperware.n.01 - tupperware.n.01) (inside ?apple_pie.n.01 ?tupperware.n.01) ) (forall (?tupperware.n.01 - tupperware.n.01) (inside ?tupperware.n.01 ?electric_refrigerator.n.01_1) ) (forall (?apple_pie.n.01 - apple_pie.n.01) (frozen ?apple_pie.n.01) ) (not (open ?electric_refrigerator.n.01_1) ) ) )",
+      "goal_summary": ":goal and forpairs apple_pie - apple_pie tupperware - tupperware inside apple_pie tupperware forall tupperware - tupperware inside tupperware electric_refrigera",
+      "image": "images/freeze_pies.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/getting_organized_for_work",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_upper",
+      "suite_label": "双层住宅 · 上层",
+      "index": 37,
+      "name": "Getting Organized For Work",
+      "display_name": "Getting Organized For Work",
+      "instruction": "In the bedroom, organize the workspace by keeping the computer under the desk, ensuring the monitor is on the desk, placing the keyboard on the desk next to the monitor, placing the mouse on the desk next to the keyboard, moving the folder from the swivel chair onto the desk next to the mouse, stacking the notebook on top of the folder with the pen on top of the notebook, and positioning the swivel chair next to the desk.",
+      "rooms": [
+        "bedroom"
+      ],
+      "room_labels": [
+        "卧室"
+      ],
+      "duration_seconds": 522,
+      "video_url": "https://player.vimeo.com/video/1114059683",
+      "goal_raw": "(:goal (and (nextto ?keyboard.n.01_1 ?monitor.n.04_1) (ontop ?keyboard.n.01_1 ?desk.n.01_1) (under ?computer.n.01_1 ?desk.n.01_1) (ontop ?monitor.n.04_1 ?desk.n.01_1) (nextto ?mouse.n.04_1 ?keyboard.n.01_1) (ontop ?mouse.n.04_1 ?desk.n.01_1) (nextto ?folder.n.02_1 ?mouse.n.04_1) (ontop ?notebook.n.01_1 ?folder.n.02_1) (ontop ?pen.n.01_1 ?notebook.n.01_1) (nextto ?swivel_chair.n.01_1 ?desk.n.01_1) ",
+      "goal_summary": ":goal and nextto keyboard_1 monitor_1 ontop keyboard_1 desk_1 under computer_1 desk_1 ontop monitor_1 desk_1 nextto mouse_1 keyboard_1 ontop mouse_1 desk_1 next",
+      "image": "images/getting_organized_for_work.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/halve_an_egg",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 38,
+      "name": "Halve An Egg",
+      "display_name": "Halve An Egg",
+      "instruction": "Halve An Egg.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 212,
+      "video_url": "https://www.youtube.com/embed/c1YJezdD7oM",
+      "goal_raw": "(:goal (and (real ?half__hard-boiled_egg.n.01_1) (real ?half__hard-boiled_egg.n.01_2) (ontop ?half__hard-boiled_egg.n.01_1 ?plate.n.04_1) (ontop ?half__hard-boiled_egg.n.01_2 ?plate.n.04_1) (inside ?carving_knife.n.01_1 ?sink.n.01_1) ) )",
+      "goal_summary": ":goal and real half__hard-boiled_egg_1 real half__hard-boiled_egg_2 ontop half__hard-boiled_egg_1 plate_1 ontop half__hard-boiled_egg_2 plate_1 inside carving_k",
+      "image": "images/halve_an_egg.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/hanging_pictures",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 39,
+      "name": "Hanging Pictures",
+      "display_name": "Hanging Pictures",
+      "instruction": "Pick up the poster from the kitchen countertop and hang it on one of the wall nails in the kitchen.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 80,
+      "video_url": "https://player.vimeo.com/video/1114060330",
+      "goal_raw": "(:goal (and (exists (?wall_nail.n.01 - wall_nail.n.01) (attached ?poster.n.01_1 ?wall_nail.n.01) ) ) )",
+      "goal_summary": ":goal and exists wall_nail - wall_nail attached poster_1 wall_nail",
+      "image": "images/hanging_pictures.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/hiding_Easter_eggs",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 40,
+      "name": "Hiding Easter Eggs",
+      "display_name": "Hiding Easter Eggs",
+      "instruction": "Take the three Easter eggs out of the wicker basket on the lawn in the garden, then place them on the lawn next to a single tree (choose any tree) so that all three eggs are next to the same tree and none are left in the basket.",
+      "rooms": [
+        "garden"
+      ],
+      "room_labels": [
+        "花园"
+      ],
+      "duration_seconds": 254,
+      "video_url": "https://player.vimeo.com/video/1114055436",
+      "goal_raw": "(:goal (and (exists (?tree.n.01 - tree.n.01) (forall (?easter_egg.n.01 - easter_egg.n.01) (and (nextto ?easter_egg.n.01 ?tree.n.01) ) ) ) (forall (?easter_egg.n.01 - easter_egg.n.01) (and (not (inside ?easter_egg.n.01 ?wicker_basket.n.01_1) ) (ontop ?easter_egg.n.01 ?lawn.n.01_1) ) ) ) )",
+      "goal_summary": ":goal and exists tree - tree forall easter_egg - easter_egg and nextto easter_egg tree forall easter_egg - easter_egg and not inside easter_egg wicker_basket_1",
+      "image": "images/hiding_Easter_eggs.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/installing_a_fax_machine",
+      "benchmark": "behavior",
+      "suite": "office_cubicles_right",
+      "suite_label": "右侧办公区",
+      "index": 41,
+      "name": "Installing A Fax Machine",
+      "display_name": "Installing A Fax Machine",
+      "instruction": "Installing A Fax Machine.",
+      "rooms": [
+        "corridor",
+        "shared_office"
+      ],
+      "room_labels": [
+        "走廊",
+        "共享办公室"
+      ],
+      "duration_seconds": 148,
+      "video_url": "https://www.youtube.com/embed/v1CrUuIN0lY",
+      "goal_raw": "(:goal (and (toggled_on ?facsimile.n.02_1) (exists (?carrel.n.02 - carrel.n.02) (ontop ?facsimile.n.02_1 ?carrel.n.02) ) ) )",
+      "goal_summary": ":goal and toggled_on facsimile_1 exists carrel - carrel ontop facsimile_1 carrel",
+      "image": "images/installing_a_fax_machine.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/installing_a_modem",
+      "benchmark": "behavior",
+      "suite": "Rs_int",
+      "suite_label": "小型住宅 Rs_int",
+      "index": 42,
+      "name": "Installing A Modem",
+      "display_name": "Installing A Modem",
+      "instruction": "Installing A Modem.",
+      "rooms": [
+        "bedroom",
+        "entryway",
+        "kitchen",
+        "living_room"
+      ],
+      "room_labels": [
+        "卧室",
+        "玄关",
+        "厨房",
+        "客厅"
+      ],
+      "duration_seconds": 63,
+      "video_url": "https://www.youtube.com/embed/zHEfUkrCWfc",
+      "goal_raw": "(:goal (and (toggled_on ?modem.n.01_1) (nextto ?modem.n.01_1 ?television_receiver.n.01_1) (exists (?cabinet.n.01 - cabinet.n.01) (and (ontop ?television_receiver.n.01_1 ?cabinet.n.01) (ontop ?modem.n.01_1 ?cabinet.n.01) ) ) ) )",
+      "goal_summary": ":goal and toggled_on modem_1 nextto modem_1 television_receiver_1 exists cabinet - cabinet and ontop television_receiver_1 cabinet ontop modem_1 cabinet",
+      "image": "images/installing_a_modem.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/installing_a_scanner",
+      "benchmark": "behavior",
+      "suite": "office_cubicles_right",
+      "suite_label": "右侧办公区",
+      "index": 43,
+      "name": "Installing A Scanner",
+      "display_name": "Installing A Scanner",
+      "instruction": "Installing A Scanner.",
+      "rooms": [
+        "private_office"
+      ],
+      "room_labels": [
+        "私人办公室"
+      ],
+      "duration_seconds": 122,
+      "video_url": "https://www.youtube.com/embed/fVy3dPNOBYk",
+      "goal_raw": "(:goal (and (toggled_on ?scanner.n.02_1) (nextto ?scanner.n.02_1 ?laptop.n.01_1) ) )",
+      "goal_summary": ":goal and toggled_on scanner_1 nextto scanner_1 laptop_1",
+      "image": "images/installing_a_scanner.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/installing_smoke_detectors",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 44,
+      "name": "Installing Smoke Detectors",
+      "display_name": "Installing Smoke Detectors",
+      "instruction": "Installing Smoke Detectors.",
+      "rooms": [
+        "living_room",
+        "kitchen",
+        "garden"
+      ],
+      "room_labels": [
+        "客厅",
+        "厨房",
+        "花园"
+      ],
+      "duration_seconds": 68,
+      "video_url": "https://www.youtube.com/embed/gRtLcTllXqQ",
+      "goal_raw": "(:goal (and (attached fire_alarm.n.02_1 wall_nail.n.01_1) ) )",
+      "goal_summary": ":goal and attached fire_alarm_1 wall_nail_1",
+      "image": "images/installing_smoke_detectors.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/laying_tile_floors",
+      "benchmark": "behavior",
+      "suite": "office_cubicles_right",
+      "suite_label": "右侧办公区",
+      "index": 45,
+      "name": "Laying Tile Floors",
+      "display_name": "Laying Tile Floors",
+      "instruction": "Laying Tile Floors.",
+      "rooms": [
+        "bathroom",
+        "corridor"
+      ],
+      "room_labels": [
+        "卫生间",
+        "走廊"
+      ],
+      "duration_seconds": 520,
+      "video_url": "https://www.youtube.com/embed/a3OjMFaaSs8",
+      "goal_raw": "(:goal (and (forall (?tile.n.01 - tile.n.01) (ontop ?tile.n.01 ?floor.n.01_2) ) (forall (?tile.n.01 - tile.n.01) (or (nextto ?tile.n.01 tile.n.01_1) (nextto ?tile.n.01 tile.n.01_2) (nextto ?tile.n.01 tile.n.01_3) (nextto ?tile.n.01 tile.n.01_4) ) ) ) )",
+      "goal_summary": ":goal and forall tile - tile ontop tile floor_2 forall tile - tile or nextto tile tile_1 nextto tile tile_2 nextto tile tile_3 nextto tile tile_4",
+      "image": "images/laying_tile_floors.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/loading_the_car",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 46,
+      "name": "Loading The Car",
+      "display_name": "Loading The Car",
+      "instruction": "Put the digital camera from the living room table into the container on the living room floor. Then take the container and the tennis racket to the garage, place both in the car trunk, and close it.",
+      "rooms": [
+        "living_room",
+        "garage"
+      ],
+      "room_labels": [
+        "客厅",
+        "车库"
+      ],
+      "duration_seconds": 641,
+      "video_url": "https://player.vimeo.com/video/1114057519",
+      "goal_raw": "(:goal (and (inside ?container.n.01_1 ?car.n.01_1) (inside ?digital_camera.n.01_1 ?container.n.01_1) (inside ?tennis_racket.n.01_1 ?car.n.01_1) ) (not (open ?car.n.01_1) ) )",
+      "goal_summary": ":goal and inside container_1 car_1 inside digital_camera_1 container_1 inside tennis_racket_1 car_1 not open car_1",
+      "image": "images/loading_the_car.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/make_cabinet_doors",
+      "benchmark": "behavior",
+      "suite": "Rs_int",
+      "suite_label": "小型住宅 Rs_int",
+      "index": 47,
+      "name": "Make Cabinet Doors",
+      "display_name": "Make Cabinet Doors",
+      "instruction": "Make Cabinet Doors.",
+      "rooms": [
+        "bedroom",
+        "entryway",
+        "kitchen",
+        "living_room"
+      ],
+      "room_labels": [
+        "卧室",
+        "玄关",
+        "厨房",
+        "客厅"
+      ],
+      "duration_seconds": 120,
+      "video_url": "https://www.youtube.com/embed/rqqgwEPTLwk",
+      "goal_raw": "(:goal (and (attached ?cabinet_door.n.01_1 ?cabinet_base.n.01_1) ) )",
+      "goal_summary": ":goal and attached cabinet_door_1 cabinet_base_1",
+      "image": "images/make_cabinet_doors.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/make_gift_bags_for_baby_showers",
+      "benchmark": "behavior",
+      "suite": "Rs_int",
+      "suite_label": "小型住宅 Rs_int",
+      "index": 48,
+      "name": "Make Gift Bags For Baby Showers",
+      "display_name": "Make Gift Bags For Baby Showers",
+      "instruction": "Make Gift Bags For Baby Showers.",
+      "rooms": [
+        "living_room"
+      ],
+      "room_labels": [
+        "客厅"
+      ],
+      "duration_seconds": 242,
+      "video_url": "https://www.youtube.com/embed/EY42jyNoEh8",
+      "goal_raw": "(:goal (and (forall (?sack.n.01 - sack.n.01) (ontop ?sack.n.01 ?coffee_table.n.01_1) ) (forpairs (?toy_dice.n.01 - toy_dice.n.01) (?sack.n.01 - sack.n.01) (inside ?toy_dice.n.01 ?sack.n.01) ) (forpairs (?wafer.n.02 - wafer.n.02) (?sack.n.01 - sack.n.01) (inside ?wafer.n.02 ?sack.n.01) ) ) )",
+      "goal_summary": ":goal and forall sack - sack ontop sack coffee_table_1 forpairs toy_dice - toy_dice sack - sack inside toy_dice sack forpairs wafer - wafer sack - sack inside w",
+      "image": "images/make_gift_bags_for_baby_showers.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/make_microwave_popcorn",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 49,
+      "name": "Make Microwave Popcorn",
+      "display_name": "Make Microwave Popcorn",
+      "instruction": "In the kitchen, take the popcorn bag from the countertop, put it into the microwave, and heat it until the popcorn is cooked so the cooked popcorn ends up inside the bag.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 108,
+      "video_url": "https://player.vimeo.com/video/1114060842",
+      "goal_raw": "(:goal (and (real ?cooked__popcorn.n.01_1) (contains ?popcorn__bag.n.01_1 ?cooked__popcorn.n.01_1) ) )",
+      "goal_summary": ":goal and real cooked__popcorn_1 contains popcorn__bag_1 cooked__popcorn_1",
+      "image": "images/make_microwave_popcorn.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/make_pizza",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 50,
+      "name": "Make Pizza",
+      "display_name": "Make Pizza",
+      "instruction": "Make a pizza on the cookie sheet in the kitchen: take the grated cheese, the four pieces of pepperoni, and the two mushrooms from their tupperware containers in the refrigerator; chop the Vidalia onion on the chopping board with the knife, and also chop the two whole mushrooms in half; top the pizza dough that's already on the cookie sheet with the cheese, pepperoni, halved mushrooms, and chopped onion; bake it in the oven until it becomes a pizza, and leave the finished pizza on the cookie sheet.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 640,
+      "video_url": "https://player.vimeo.com/video/1114061917",
+      "goal_raw": "(:goal (and (real ?pizza.n.01_1) (ontop ?pizza.n.01_1 ?cookie_sheet.n.01_1) ) )",
+      "goal_summary": ":goal and real pizza_1 ontop pizza_1 cookie_sheet_1",
+      "image": "images/make_pizza.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/make_rose_centerpieces",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 51,
+      "name": "Make Rose Centerpieces",
+      "display_name": "Make Rose Centerpieces",
+      "instruction": "Make Rose Centerpieces.",
+      "rooms": [
+        "living_room"
+      ],
+      "room_labels": [
+        "客厅"
+      ],
+      "duration_seconds": 111,
+      "video_url": "https://www.youtube.com/embed/Nb8kdrf7c_M",
+      "goal_raw": "(:goal (and (inside ?rose.n.01_1 ?vase.n.01_1) (inside ?rose.n.01_2 ?vase.n.01_1) (inside ?rose.n.01_3 ?vase.n.01_1) (ontop ?vase.n.01_1 ?coffee_table.n.01_1) ) )",
+      "goal_summary": ":goal and inside rose_1 vase_1 inside rose_2 vase_1 inside rose_3 vase_1 ontop vase_1 coffee_table_1",
+      "image": "images/make_rose_centerpieces.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/moving_boxes_to_storage",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 52,
+      "name": "Moving Boxes To Storage",
+      "display_name": "Moving Boxes To Storage",
+      "instruction": "Move the two storage containers from the living room to the garage. In the garage, place one container on the floor and stack the other container on top of it (either order is fine).",
+      "rooms": [
+        "living_room",
+        "garage"
+      ],
+      "room_labels": [
+        "客厅",
+        "车库"
+      ],
+      "duration_seconds": 487,
+      "video_url": "https://player.vimeo.com/video/1114058315",
+      "goal_raw": "(:goal (and (or (and (ontop ?storage_container.n.01_1 ?floor.n.01_2) (ontop ?storage_container.n.01_2 ?storage_container.n.01_1) ) (and (ontop ?storage_container.n.01_2 ?floor.n.01_2) (ontop ?storage_container.n.01_1 ?storage_container.n.01_2) ) ) ) )",
+      "goal_summary": ":goal and or and ontop storage_container_1 floor_2 ontop storage_container_2 storage_container_1 and ontop storage_container_2 floor_2 ontop storage_container_1",
+      "image": "images/moving_boxes_to_storage.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/organizing_art_supplies",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_upper",
+      "suite_label": "双层住宅 · 上层",
+      "index": 53,
+      "name": "Organizing Art Supplies",
+      "display_name": "Organizing Art Supplies",
+      "instruction": "Organizing Art Supplies.",
+      "rooms": [
+        "bedroom"
+      ],
+      "room_labels": [
+        "卧室"
+      ],
+      "duration_seconds": 228,
+      "video_url": "https://www.youtube.com/embed/M1D9oCKBJZg",
+      "goal_raw": "(:goal (and (inside glue_stick.n.01_1 carryall.n.01_1) (inside rubber_eraser.n.01_1 carryall.n.01_1) (inside paintbrush.n.01_1 carryall.n.01_1) (inside marker.n.03_1 carryall.n.01_1) (ontop carryall.n.01_1 desk.n.01_1) ) )",
+      "goal_summary": ":goal and inside glue_stick_1 carryall_1 inside rubber_eraser_1 carryall_1 inside paintbrush_1 carryall_1 inside marker_1 carryall_1 ontop carryall_1 desk_1",
+      "image": "images/organizing_art_supplies.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/organizing_school_stuff",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 54,
+      "name": "Organizing School Stuff",
+      "display_name": "Organizing School Stuff",
+      "instruction": "Organizing School Stuff.",
+      "rooms": [
+        "bedroom"
+      ],
+      "room_labels": [
+        "卧室"
+      ],
+      "duration_seconds": 426,
+      "video_url": "https://www.youtube.com/embed/GO2Bw-0OY7M",
+      "goal_raw": "(:goal (and (inside ?folder.n.02_1 ?carryall.n.01_1) (inside ?book.n.02_1 ?carryall.n.01_1) (inside ?pencil.n.01_1 ?carryall.n.01_1) (inside ?pen.n.01_1 ?carryall.n.01_1) (inside ?calculator.n.02_1 ?carryall.n.01_1) (ontop ?carryall.n.01_1 ?bed.n.01_1) ) )",
+      "goal_summary": ":goal and inside folder_1 carryall_1 inside book_1 carryall_1 inside pencil_1 carryall_1 inside pen_1 carryall_1 inside calculator_1 carryall_1 ontop carryall_1",
+      "image": "images/organizing_school_stuff.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/outfit_a_basic_toolbox",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 55,
+      "name": "Outfit A Basic Toolbox",
+      "display_name": "Outfit A Basic Toolbox",
+      "instruction": "In the utility room, put the drill, pliers, flashlight, Allen wrench, and screwdriver from the tabletop into the toolbox, keep the toolbox on the tabletop, and close the toolbox.",
+      "rooms": [
+        "utility_room"
+      ],
+      "room_labels": [
+        "洗衣房"
+      ],
+      "duration_seconds": 355,
+      "video_url": "https://player.vimeo.com/video/1114058641",
+      "goal_raw": "(:goal (and (inside ?drill.n.01_1 ?toolbox.n.01_1) (inside ?pliers.n.01_1 ?toolbox.n.01_1) (inside ?flashlight.n.01_1 ?toolbox.n.01_1) (inside ?allen_wrench.n.01_1 ?toolbox.n.01_1) (inside ?screwdriver.n.01_1 ?toolbox.n.01_1) (ontop ?toolbox.n.01_1 ?tabletop.n.01_1) (not (open ?toolbox.n.01_1) ) ) )",
+      "goal_summary": ":goal and inside drill_1 toolbox_1 inside pliers_1 toolbox_1 inside flashlight_1 toolbox_1 inside allen_wrench_1 toolbox_1 inside screwdriver_1 toolbox_1 ontop",
+      "image": "images/outfit_a_basic_toolbox.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/packing_meal_for_delivery",
+      "benchmark": "behavior",
+      "suite": "restaurant_diner",
+      "suite_label": "餐厅",
+      "index": 56,
+      "name": "Packing Meal For Delivery",
+      "display_name": "Packing Meal For Delivery",
+      "instruction": "Packing Meal For Delivery.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 300,
+      "video_url": "https://www.youtube.com/embed/DirqFshrOAA",
+      "goal_raw": "(:goal (and (forpairs (?wrapped_hamburger.n.01 - wrapped_hamburger.n.01) (?sack.n.01 - sack.n.01) (inside ?wrapped_hamburger.n.01 ?sack.n.01) ) (forall (?sack.n.01 - sack.n.01) (ontop ?sack.n.01 ?storage_container.n.01_1) ) ) )",
+      "goal_summary": ":goal and forpairs wrapped_hamburger - wrapped_hamburger sack - sack inside wrapped_hamburger sack forall sack - sack ontop sack storage_container_1",
+      "image": "images/packing_meal_for_delivery.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/picking_up_toys",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 57,
+      "name": "Picking Up Toys",
+      "display_name": "Picking Up Toys",
+      "instruction": "Put all the toys in the child's room - the three board games (two on the bed and one on the table), the two jigsaw puzzles on the table, and the tennis ball on the table - inside the toy box on the table in the child's room.",
+      "rooms": [
+        "childs_room"
+      ],
+      "room_labels": [
+        "儿童房"
+      ],
+      "duration_seconds": 630,
+      "video_url": "https://player.vimeo.com/video/1114054920",
+      "goal_raw": "(:goal (and (exists (?toy_box.n.01 - toy_box.n.01) (forall (?jigsaw_puzzle.n.01 - jigsaw_puzzle.n.01) (inside ?jigsaw_puzzle.n.01 ?toy_box.n.01) ) ) (exists (?toy_box.n.01 - toy_box.n.01) (forall (?board_game.n.01 - board_game.n.01) (inside ?board_game.n.01 ?toy_box.n.01) ) ) (exists (?toy_box.n.01 - toy_box.n.01) (forall (?tennis_ball.n.01 - tennis_ball.n.01) (inside ?tennis_ball.n.01 ?toy_box.n.",
+      "goal_summary": ":goal and exists toy_box - toy_box forall jigsaw_puzzle - jigsaw_puzzle inside jigsaw_puzzle toy_box exists toy_box - toy_box forall board_game - board_game ins",
+      "image": "images/picking_up_toys.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/picking_up_trash",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 58,
+      "name": "Picking Up Trash",
+      "display_name": "Picking Up Trash",
+      "instruction": "Put the three cans of soda from the living room inside the trash can in the kitchen.",
+      "rooms": [
+        "kitchen",
+        "living_room"
+      ],
+      "room_labels": [
+        "厨房",
+        "客厅"
+      ],
+      "duration_seconds": 176,
+      "video_url": "https://player.vimeo.com/video/1109202972",
+      "goal_raw": "(:goal (and (forall (?can__of__soda.n.01 - can__of__soda.n.01) (inside ?can__of__soda.n.01 ?ashcan.n.01_1) ) ) )",
+      "goal_summary": ":goal and forall can__of__soda - can__of__soda inside can__of__soda ashcan_1",
+      "image": "images/picking_up_trash.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/polishing_shoes",
+      "benchmark": "behavior",
+      "suite": "hotel_suite_large",
+      "suite_label": "大型酒店套房",
+      "index": 59,
+      "name": "Polishing Shoes",
+      "display_name": "Polishing Shoes",
+      "instruction": "Polishing Shoes.",
+      "rooms": [
+        "bedroom"
+      ],
+      "room_labels": [
+        "卧室"
+      ],
+      "duration_seconds": 363,
+      "video_url": "https://www.youtube.com/embed/bSCbEvVJykI",
+      "goal_raw": "(:goal (and (ontop scrub_brush.n.01_1 stand.n.04_1) (not (covered ?shoe.n.01_1 ?dust.n.01_1) ) (not (covered ?shoe.n.01_2 ?dust.n.01_1) ) (nextto ?shoe.n.01_1 ?shoe.n.01_2) (exists (?footstool.n.01 - footstool.n.01) (and (nextto ?shoe.n.01_1 ?footstool.n.01) (nextto ?shoe.n.01_2 ?footstool.n.01) ) ) ) )",
+      "goal_summary": ":goal and ontop scrub_brush_1 stand_1 not covered shoe_1 dust_1 not covered shoe_2 dust_1 nextto shoe_1 shoe_2 exists footstool - footstool and nextto shoe_1 fo",
+      "image": "images/polishing_shoes.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/preparing_lunch_box",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 60,
+      "name": "Preparing Lunch Box",
+      "display_name": "Preparing Lunch Box",
+      "instruction": "Put both apple halves, the club sandwich, and the chocolate chip cookie from the chopping board on the kitchen countertop into the packing box on the countertop. Then take the bottle of tea out of the refrigerator, put it into the same box, and close the refrigerator when you're done.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 275,
+      "video_url": "https://player.vimeo.com/video/1114057330",
+      "goal_raw": "(:goal (and (forall (?half__apple.n.01 - half__apple.n.01) (inside ?half__apple.n.01 ?packing_box.n.02_1) ) (inside ?club_sandwich.n.01_1 ?packing_box.n.02_1) (inside ?chocolate_chip_cookie.n.01_1 ?packing_box.n.02_1) (inside ?bottle__of__tea.n.01_1 ?packing_box.n.02_1) (not (open ?electric_refrigerator.n.01_1) ) ) )",
+      "goal_summary": ":goal and forall half__apple - half__apple inside half__apple packing_box_1 inside club_sandwich_1 packing_box_1 inside chocolate_chip_cookie_1 packing_box_1 in",
+      "image": "images/preparing_lunch_box.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/put_together_a_basic_pruning_kit",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 61,
+      "name": "Put Together A Basic Pruning Kit",
+      "display_name": "Put Together A Basic Pruning Kit",
+      "instruction": "Put Together A Basic Pruning Kit.",
+      "rooms": [
+        "garage"
+      ],
+      "room_labels": [
+        "车库"
+      ],
+      "duration_seconds": 448,
+      "video_url": "https://www.youtube.com/embed/UmGRVx-OCac",
+      "goal_raw": "(:goal (and (ontop ?toolbox.n.01_1 ?floor.n.01_1) (inside ?pruner.n.02_1 ?toolbox.n.01_1) (inside ?shears.n.01_1 ?toolbox.n.01_1) (not (open ?toolbox.n.01_1) ) ) )",
+      "goal_summary": ":goal and ontop toolbox_1 floor_1 inside pruner_1 toolbox_1 inside shears_1 toolbox_1 not open toolbox_1",
+      "image": "images/put_together_a_basic_pruning_kit.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/putting_away_Halloween_decorations",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 62,
+      "name": "Putting Away Halloween Decorations",
+      "display_name": "Putting Away Halloween Decorations",
+      "instruction": "Place each of the two pumpkins and all three candles from the living room inside a cabinet in the living room (use any cabinet), then make sure every cabinet is closed, and position the cauldron so it is next to a table in the living room.",
+      "rooms": [
+        "living_room"
+      ],
+      "room_labels": [
+        "客厅"
+      ],
+      "duration_seconds": 460,
+      "video_url": "https://player.vimeo.com/video/1114054409",
+      "goal_raw": "(:goal (and (forall (?pumpkin.n.02 - pumpkin.n.02) (exists (?cabinet.n.01 - cabinet.n.01) (inside ?pumpkin.n.02 ?cabinet.n.01) ) ) (forall (?candle.n.01 - candle.n.01) (exists (?cabinet.n.01 - cabinet.n.01) (inside ?candle.n.01 ?cabinet.n.01) ) ) (exists (?table.n.02 - table.n.02) (nextto ?caldron.n.01_1 ?table.n.02) ) (forall (?cabinet.n.01 - cabinet.n.01) (not (open ?cabinet.n.01) ) ) ) )",
+      "goal_summary": ":goal and forall pumpkin - pumpkin exists cabinet - cabinet inside pumpkin cabinet forall candle - candle exists cabinet - cabinet inside candle cabinet exists",
+      "image": "images/putting_away_Halloween_decorations.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/putting_away_toys",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 63,
+      "name": "Putting Away Toys",
+      "display_name": "Putting Away Toys",
+      "instruction": "Putting Away Toys.",
+      "rooms": [
+        "dining_room",
+        "living_room"
+      ],
+      "room_labels": [
+        "餐厅",
+        "客厅"
+      ],
+      "duration_seconds": 438,
+      "video_url": "https://www.youtube.com/embed/StbSZCTn7D4",
+      "goal_raw": "(:goal (and (forall (?toy_figure.n.01 - toy_figure.n.01) (exists (?toy_box.n.01 - toy_box.n.01) (inside ?toy_figure.n.01 ?toy_box.n.01) ) ) ) )",
+      "goal_summary": ":goal and forall toy_figure - toy_figure exists toy_box - toy_box inside toy_figure toy_box",
+      "image": "images/putting_away_toys.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/putting_dirty_dishes_in_sink",
+      "benchmark": "behavior",
+      "suite": "restaurant_diner",
+      "suite_label": "餐厅",
+      "index": 64,
+      "name": "Putting Dirty Dishes In Sink",
+      "display_name": "Putting Dirty Dishes In Sink",
+      "instruction": "Putting Dirty Dishes In Sink.",
+      "rooms": [
+        "kitchen",
+        "dining_room"
+      ],
+      "room_labels": [
+        "厨房",
+        "餐厅"
+      ],
+      "duration_seconds": 337,
+      "video_url": "https://www.youtube.com/embed/SCX0NPFlMhI",
+      "goal_raw": "(:goal (and (forall (?bowl.n.01 - bowl.n.01) (inside ?bowl.n.01 ?sink.n.01_1) ) (forall (?plate.n.04 - plate.n.04) (inside ?plate.n.04 ?sink.n.01_1) ) ) )",
+      "goal_summary": ":goal and forall bowl - bowl inside bowl sink_1 forall plate - plate inside plate sink_1",
+      "image": "images/putting_dirty_dishes_in_sink.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/putting_dishes_away_after_cleaning",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 65,
+      "name": "Putting Dishes Away After Cleaning",
+      "display_name": "Putting Dishes Away After Cleaning",
+      "instruction": "In the kitchen, gather all eight plates from the two countertops, place them all inside a single cabinet (either one), and make sure all cabinets are closed when you're done.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 365,
+      "video_url": "https://player.vimeo.com/video/1114057082",
+      "goal_raw": "(:goal (and (exists (?cabinet.n.01 - cabinet.n.01) (forall (?plate.n.04 - plate.n.04) (inside ?plate.n.04 ?cabinet.n.01) ) ) (forall (?cabinet.n.01 - cabinet.n.01) (not (open ?cabinet.n.01) ) ) ) )",
+      "goal_summary": ":goal and exists cabinet - cabinet forall plate - plate inside plate cabinet forall cabinet - cabinet not open cabinet",
+      "image": "images/putting_dishes_away_after_cleaning.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/putting_shoes_on_rack",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 66,
+      "name": "Putting Shoes On Rack",
+      "display_name": "Putting Shoes On Rack",
+      "instruction": "Pick up the two gym shoes and the two sandals from the corridor floor and place them onto the hallstand (shoe rack) in the corridor, making sure they are on the rack and not on the floor. Arrange them so the two gym shoes are next to each other and the two sandals are next to each other.",
+      "rooms": [
+        "corridor"
+      ],
+      "room_labels": [
+        "走廊"
+      ],
+      "duration_seconds": 258,
+      "video_url": "https://player.vimeo.com/video/1114058985",
+      "goal_raw": "(:goal (and (forall (?sandal.n.01 - sandal.n.01) (and (touching ?sandal.n.01 ?hallstand.n.01_1) (not (touching ?sandal.n.01 floor.n.01_1) ) ) ) (forall (?gym_shoe.n.01 - gym_shoe.n.01) (and (touching ?gym_shoe.n.01 ?hallstand.n.01_1) (not (touching ?gym_shoe.n.01 floor.n.01_1) ) ) ) (nextto gym_shoe.n.01_1 gym_shoe.n.01_2) (nextto sandal.n.01_1 sandal.n.01_2) ) )",
+      "goal_summary": ":goal and forall sandal - sandal and touching sandal hallstand_1 not touching sandal floor_1 forall gym_shoe - gym_shoe and touching gym_shoe hallstand_1 not to",
+      "image": "images/putting_shoes_on_rack.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/putting_up_Christmas_decorations_inside",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 67,
+      "name": "Putting Up Christmas Decorations Inside",
+      "display_name": "Putting Up Christmas Decorations Inside",
+      "instruction": "In the living room, take the wreath, three candy canes, and two pillar candles out of the wicker basket. Place the wreath and two of the candy canes on the same living-room sofa. Put the remaining candy cane on top of a dining-room table. Put both pillar candles together on top of one dining-room table (they can share the same table). Finally, place all three gift boxes under or right next to the Christmas tree in the living room.",
+      "rooms": [
+        "kitchen",
+        "living_room"
+      ],
+      "room_labels": [
+        "厨房",
+        "客厅"
+      ],
+      "duration_seconds": 457,
+      "video_url": "https://player.vimeo.com/video/1114056731",
+      "goal_raw": "(:goal (and (forall (?gift_box.n.01 - gift_box.n.01) (or (nextto ?gift_box.n.01 ?christmas_tree.n.05_1) (under ?gift_box.n.01 ?christmas_tree.n.05_1) (touching ?gift_box.n.01 ?christmas_tree.n.05_1) ) ) (exists (?table.n.02 - table.n.02) (forall (?pillar_candle.n.01 - pillar_candle.n.01) (ontop ?pillar_candle.n.01 ?table.n.02) ) ) (exists (?table.n.02 - table.n.02) (forn (1) (?candy_cane.n.01 - ca",
+      "goal_summary": ":goal and forall gift_box - gift_box or nextto gift_box christmas_tree_1 under gift_box christmas_tree_1 touching gift_box christmas_tree_1 exists table - table",
+      "image": "images/putting_up_Christmas_decorations_inside.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/re_shelving_library_books",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_upper",
+      "suite_label": "双层住宅 · 上层",
+      "index": 68,
+      "name": "Re Shelving Library Books",
+      "display_name": "Re Shelving Library Books",
+      "instruction": "Re Shelving Library Books.",
+      "rooms": [
+        "living_room"
+      ],
+      "room_labels": [
+        "客厅"
+      ],
+      "duration_seconds": 281,
+      "video_url": "https://www.youtube.com/embed/AQdhTrye7NQ",
+      "goal_raw": "(:goal (and (forall (?book.n.02 - book.n.02) (exists (?bookcase.n.01 - bookcase.n.01) (inside ?book.n.02 ?bookcase.n.01) ) ) ) )",
+      "goal_summary": ":goal and forall book - book exists bookcase - bookcase inside book bookcase",
+      "image": "images/re_shelving_library_books.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/rearrange_your_room",
+      "benchmark": "behavior",
+      "suite": "hotel_suite_large",
+      "suite_label": "大型酒店套房",
+      "index": 69,
+      "name": "Rearrange Your Room",
+      "display_name": "Rearrange Your Room",
+      "instruction": "Rearrange Your Room.",
+      "rooms": [
+        "bedroom",
+        "bathroom"
+      ],
+      "room_labels": [
+        "卧室",
+        "卫生间"
+      ],
+      "duration_seconds": 515,
+      "video_url": "https://www.youtube.com/embed/PuP9DeUF4K4",
+      "goal_raw": "(:goal (and (exists (?stand.n.04 - stand.n.04) (ontop tissue_dispenser.n.01_1 ?stand.n.04) ) (forpairs (?pillow.n.01 - pillow.n.01) (?bed.n.01 - bed.n.01) (ontop ?pillow.n.01 ?bed.n.01) ) ) )",
+      "goal_summary": ":goal and exists stand - stand ontop tissue_dispenser_1 stand forpairs pillow - pillow bed - bed ontop pillow bed",
+      "image": "images/rearrange_your_room.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/rearranging_kitchen_furniture",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 70,
+      "name": "Rearranging Kitchen Furniture",
+      "display_name": "Rearranging Kitchen Furniture",
+      "instruction": "Move the toaster, food processor, and French press from the kitchen countertop into the same kitchen cabinet, and make sure that cabinet is closed at the end.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 298,
+      "video_url": "https://player.vimeo.com/video/1114056046",
+      "goal_raw": "(:goal (and (exists (?cabinet.n.01 - cabinet.n.01) (and (inside toaster.n.02_1 ?cabinet.n.01) (inside food_processor.n.01_1 ?cabinet.n.01) (inside french_press.n.01_1 ?cabinet.n.01) (not (open ?cabinet.n.01) ) ) ) ) )",
+      "goal_summary": ":goal and exists cabinet - cabinet and inside toaster_1 cabinet inside food_processor_1 cabinet inside french_press_1 cabinet not open cabinet",
+      "image": "images/rearranging_kitchen_furniture.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/scrubbing_bathroom_floor",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 71,
+      "name": "Scrubbing Bathroom Floor",
+      "display_name": "Scrubbing Bathroom Floor",
+      "instruction": "Scrubbing Bathroom Floor.",
+      "rooms": [
+        "bathroom"
+      ],
+      "room_labels": [
+        "卫生间"
+      ],
+      "duration_seconds": 123,
+      "video_url": "https://www.youtube.com/embed/u9wtUgoB8o8",
+      "goal_raw": "(:goal (and (not (covered ?floor.n.01_1 ?dirt.n.02_1) ) ) )",
+      "goal_summary": ":goal and not covered floor_1 dirt_1",
+      "image": "images/scrubbing_bathroom_floor.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/set_up_a_coffee_station_in_your_kitchen",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 72,
+      "name": "Set Up A Coffee Station In Your Kitchen",
+      "display_name": "Set Up A Coffee Station In Your Kitchen",
+      "instruction": "Set up a coffee station on the kitchen countertop: keep the coffee maker on the countertop, move the bottle of coffee from the kitchen shelf to the counter next to the coffee maker, place a paper coffee filter on top of the coffee maker, put the saucer next to the coffee maker with the coffee cup on the saucer, and place the electric kettle next to the coffee maker.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 209,
+      "video_url": "https://player.vimeo.com/video/1114056931",
+      "goal_raw": "(:goal (and (ontop ?coffee_maker.n.01_1 ?countertop.n.01_1) (nextto ?bottle__of__coffee.n.01_1 ?coffee_maker.n.01_1) (ontop ?paper_coffee_filter.n.01_1 ?coffee_maker.n.01_1) (nextto ?saucer.n.02_1 ?coffee_maker.n.01_1) (ontop ?coffee_cup.n.01_1 ?saucer.n.02_1) (nextto ?electric_kettle.n.01_1 ?coffee_maker.n.01_1) ) )",
+      "goal_summary": ":goal and ontop coffee_maker_1 countertop_1 nextto bottle__of__coffee_1 coffee_maker_1 ontop paper_coffee_filter_1 coffee_maker_1 nextto saucer_1 coffee_maker_1",
+      "image": "images/set_up_a_coffee_station_in_your_kitchen.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/setting_mousetraps",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_upper",
+      "suite_label": "双层住宅 · 上层",
+      "index": 73,
+      "name": "Setting Mousetraps",
+      "display_name": "Setting Mousetraps",
+      "instruction": "Take the four mousetraps from the cabinet in the bathroom and place them on the bathroom floor. Make sure all four end up on the same floor surface, and ensure that at least two of them are either under or directly next to the same bathroom sink.",
+      "rooms": [
+        "bathroom"
+      ],
+      "room_labels": [
+        "卫生间"
+      ],
+      "duration_seconds": 339,
+      "video_url": "https://player.vimeo.com/video/1114054686",
+      "goal_raw": "(:goal (and (exists (?floor.n.01 - floor.n.01) (forall (?mousetrap.n.01 - mousetrap.n.01) (ontop ?mousetrap.n.01 ?floor.n.01) ) ) (exists (?sink.n.01 - sink.n.01) (forn (2) (?mousetrap.n.01 - mousetrap.n.01) (or (under ?mousetrap.n.01 ?sink.n.01) (nextto ?mousetrap.n.01 ?sink.n.01) ) ) ) ) )",
+      "goal_summary": ":goal and exists floor - floor forall mousetrap - mousetrap ontop mousetrap floor exists sink - sink forn 2 mousetrap - mousetrap or under mousetrap sink nextto",
+      "image": "images/setting_mousetraps.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/setting_the_fire",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 74,
+      "name": "Setting The Fire",
+      "display_name": "Setting The Fire",
+      "instruction": "In the living room, place the newspaper from the table into the wood fireplace, then put both pieces of firewood from the floor on top of the newspaper. Use the cigar lighter to ignite any one of the items so that the whole pile catches fire, and then turn the lighter off.",
+      "rooms": [
+        "living_room"
+      ],
+      "room_labels": [
+        "客厅"
+      ],
+      "duration_seconds": 304,
+      "video_url": "https://player.vimeo.com/video/1114059945",
+      "goal_raw": "(:goal (and (forall (?firewood.n.01 - firewood.n.01) (and (on_fire ?firewood.n.01) (ontop ?firewood.n.01 ?newspaper.n.03_1) (inside ?firewood.n.01 ?wood_fireplace.n.01_1) ) ) (on_fire ?newspaper.n.03_1) (not (toggled_on cigar_lighter.n.01_1) ) ) )",
+      "goal_summary": ":goal and forall firewood - firewood and on_fire firewood ontop firewood newspaper_1 inside firewood wood_fireplace_1 on_fire newspaper_1 not toggled_on cigar_l",
+      "image": "images/setting_the_fire.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/setting_the_table",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 75,
+      "name": "Setting The Table",
+      "display_name": "Setting The Table",
+      "instruction": "Setting The Table.",
+      "rooms": [
+        "dining_room",
+        "kitchen"
+      ],
+      "room_labels": [
+        "餐厅",
+        "厨房"
+      ],
+      "duration_seconds": 727,
+      "video_url": "https://www.youtube.com/embed/Tkf34ap-z8U",
+      "goal_raw": "(:goal (and (forall (?plate.n.04 - plate.n.04) (ontop ?plate.n.04 ?breakfast_table.n.01_1) ) (forpairs (?plate.n.04 - plate.n.04) (?cupcake.n.01 - cupcake.n.01) (ontop ?cupcake.n.01 ?plate.n.04) ) (forpairs (?tablefork.n.01 - tablefork.n.01) (?plate.n.04 - plate.n.04) (nextto ?tablefork.n.01 ?plate.n.04) ) (forpairs (?table_knife.n.01 - table_knife.n.01) (?plate.n.04 - plate.n.04) (nextto ?table_k",
+      "goal_summary": ":goal and forall plate - plate ontop plate breakfast_table_1 forpairs plate - plate cupcake - cupcake ontop cupcake plate forpairs tablefork - tablefork plate -",
+      "image": "images/setting_the_table.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/setup_a_bar_for_a_cocktail_party",
+      "benchmark": "behavior",
+      "suite": "restaurant_diner",
+      "suite_label": "餐厅",
+      "index": 76,
+      "name": "Setup A Bar For A Cocktail Party",
+      "display_name": "Setup A Bar For A Cocktail Party",
+      "instruction": "Setup A Bar For A Cocktail Party.",
+      "rooms": [
+        "bar"
+      ],
+      "room_labels": [
+        "吧台"
+      ],
+      "duration_seconds": 350,
+      "video_url": "https://www.youtube.com/embed/3V0ySKyGKRw",
+      "goal_raw": "(:goal (and (ontop ?wine_bottle.n.01_1 ?countertop.n.01_1) (forall (?can__of__soda.n.01 - can__of__soda.n.01) (and (or (nextto ?can__of__soda.n.01 ?can__of__soda.n.01_1) (nextto ?can__of__soda.n.01 ?can__of__soda.n.01_2) (nextto ?can__of__soda.n.01 ?can__of__soda.n.01_3) ) (ontop ?can__of__soda.n.01 ?countertop.n.01_1) ) ) (forall (?ice_cube.n.01 - ice_cube.n.01) (inside ?ice_cube.n.01 ?bucket.n.0",
+      "goal_summary": ":goal and ontop wine_bottle_1 countertop_1 forall can__of__soda - can__of__soda and or nextto can__of__soda can__of__soda_1 nextto can__of__soda can__of__soda_2",
+      "image": "images/setup_a_bar_for_a_cocktail_party.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/slicing_vegetables",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 77,
+      "name": "Slicing Vegetables",
+      "display_name": "Slicing Vegetables",
+      "instruction": "From the refrigerator in the kitchen, take out the two bell peppers, the two beets, and the zucchini. Then, on either chopping board on the countertop, use the parer to dice all of them so that only diced bell pepper, diced beet, and diced zucchini remain. Make sure the refrigerator is closed when you finish.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 495,
+      "video_url": "https://player.vimeo.com/video/1114061183",
+      "goal_raw": "(:goal (and (real ?diced__zucchini.n.01_1) (real ?diced__bell_pepper.n.01_1) (real ?diced__beet.n.01_1) (not (open ?electric_refrigerator.n.01_1) ) (forall (?bell_pepper.n.02 - bell_pepper.n.02) (not (real ?bell_pepper.n.02) ) ) (forall (?beet.n.02 - beet.n.02) (not (real ?beet.n.02) ) ) (forall (?zucchini.n.02 - zucchini.n.02) (not (real ?zucchini.n.02) ) ) ) )",
+      "goal_summary": ":goal and real diced__zucchini_1 real diced__bell_pepper_1 real diced__beet_1 not open electric_refrigerator_1 forall bell_pepper - bell_pepper not real bell_pe",
+      "image": "images/slicing_vegetables.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/sorting_books_on_shelf",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_upper",
+      "suite_label": "双层住宅 · 上层",
+      "index": 78,
+      "name": "Sorting Books On Shelf",
+      "display_name": "Sorting Books On Shelf",
+      "instruction": "Sorting Books On Shelf.",
+      "rooms": [
+        "living_room"
+      ],
+      "room_labels": [
+        "客厅"
+      ],
+      "duration_seconds": 200,
+      "video_url": "https://www.youtube.com/embed/wXUyDWyvpRA",
+      "goal_raw": "(:goal (and (forall (?comic_book.n.01 - comic_book.n.01) (inside ?comic_book.n.01 ?bookcase.n.01_1) ) (forn (2) (?comic_book.n.01 - comic_book.n.01) (or (ontop ?comic_book.n.01 ?comic_book.n.01_1) (ontop ?comic_book.n.01 ?comic_book.n.01_2) (ontop ?comic_book.n.01 ?comic_book.n.01_3) ) ) (forall (?notebook.n.01 - notebook.n.01) (inside ?notebook.n.01 ?bookcase.n.01_1) ) (exists (?notebook.n.01 - n",
+      "goal_summary": ":goal and forall comic_book - comic_book inside comic_book bookcase_1 forn 2 comic_book - comic_book or ontop comic_book comic_book_1 ontop comic_book comic_boo",
+      "image": "images/sorting_books_on_shelf.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/sorting_bottles_cans_and_paper",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 79,
+      "name": "Sorting Bottles Cans And Paper",
+      "display_name": "Sorting Bottles Cans And Paper",
+      "instruction": "Sorting Bottles Cans And Paper.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 312,
+      "video_url": "https://www.youtube.com/embed/h8-XZ85UxSU",
+      "goal_raw": "(:goal (and (exists (?bucket.n.01 - bucket.n.01) (and (forall (?wine_bottle.n.01 - wine_bottle.n.01) (inside ?wine_bottle.n.01 ?bucket.n.01) ) (not (inside ?can__of__soda.n.01_1 ?bucket.n.01) ) (not (inside ?newspaper.n.03_1 ?bucket.n.01) ) (not (inside ?magazine.n.02_1 ?bucket.n.01) ) ) ) (exists (?bucket.n.01 - bucket.n.01) (and (forall (?can__of__soda.n.01 - can__of__soda.n.01) (inside ?can__of",
+      "goal_summary": ":goal and exists bucket - bucket and forall wine_bottle - wine_bottle inside wine_bottle bucket not inside can__of__soda_1 bucket not inside newspaper_1 bucket",
+      "image": "images/sorting_bottles_cans_and_paper.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/sorting_household_items",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 80,
+      "name": "Sorting Household Items",
+      "display_name": "Sorting Household Items",
+      "instruction": "From the two baskets on the bedroom floor, take out the items and organize them in the bathroom: place both detergent bottles under the bathroom sink next to each other; put the box of sanitary napkins on the bathroom shelf; set the soap dispenser on the sink; make sure the cup remains on the sink; put both the toothpaste tube and the toothbrush inside the cup.",
+      "rooms": [
+        "bedroom",
+        "bathroom"
+      ],
+      "room_labels": [
+        "卧室",
+        "卫生间"
+      ],
+      "duration_seconds": 527,
+      "video_url": "https://player.vimeo.com/video/1114059574",
+      "goal_raw": "(:goal (and (forall (?bottle__of__detergent.n.01 - bottle__of__detergent.n.01) (under ?bottle__of__detergent.n.01 ?sink.n.01_1) ) (nextto ?bottle__of__detergent.n.01_1 ?bottle__of__detergent.n.01_2) (ontop ?box__of__sanitary_napkin.n.01_1 ?shelf.n.01_1) (ontop ?soap_dispenser.n.01_1 ?sink.n.01_1) (ontop cup.n.01_1 sink.n.01_1) (nextto ?tube__of__toothpaste.n.01_1 cup.n.01_1) (inside ?toothbrush.n.",
+      "goal_summary": ":goal and forall bottle__of__detergent - bottle__of__detergent under bottle__of__detergent sink_1 nextto bottle__of__detergent_1 bottle__of__detergent_2 ontop b",
+      "image": "images/sorting_household_items.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/sorting_vegetables",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 81,
+      "name": "Sorting Vegetables",
+      "display_name": "Sorting Vegetables",
+      "instruction": "Sort the vegetables from the two wicker baskets on the kitchen floor into the mixing bowls on the kitchen countertop: put all three bok choy and all three Vidalia onions together into one mixing bowl; put both leeks and both broccoli together into a second mixing bowl; and put all three sweet corn into a third mixing bowl.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 397,
+      "video_url": "https://player.vimeo.com/video/1114058741",
+      "goal_raw": "(:goal (and (exists (?mixing_bowl.n.01 - mixing_bowl.n.01) (and (forall (?bok_choy.n.02 - bok_choy.n.02) (inside ?bok_choy.n.02 ?mixing_bowl.n.01) ) (forall (?vidalia_onion.n.01 - vidalia_onion.n.01) (inside ?vidalia_onion.n.01 ?mixing_bowl.n.01) ) ) ) (exists (?mixing_bowl.n.01 - mixing_bowl.n.01) (and (forall (?leek.n.02 - leek.n.02) (inside ?leek.n.02 ?mixing_bowl.n.01) ) (forall (?broccoli.n.0",
+      "goal_summary": ":goal and exists mixing_bowl - mixing_bowl and forall bok_choy - bok_choy inside bok_choy mixing_bowl forall vidalia_onion - vidalia_onion inside vidalia_onion",
+      "image": "images/sorting_vegetables.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/spraying_for_bugs",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 82,
+      "name": "Spraying For Bugs",
+      "display_name": "Spraying For Bugs",
+      "instruction": "Pick up the pesticide atomizer in the garden and spray insectifuge to fully cover both potted plants in the garden.",
+      "rooms": [
+        "garden"
+      ],
+      "room_labels": [
+        "花园"
+      ],
+      "duration_seconds": 216,
+      "video_url": "https://player.vimeo.com/video/1114060681",
+      "goal_raw": "(:goal (forall (?pot_plant.n.01 - pot_plant.n.01) (and (covered ?pot_plant.n.01 ?insectifuge.n.01_1) ) ) )",
+      "goal_summary": ":goal forall pot_plant - pot_plant and covered pot_plant insectifuge_1",
+      "image": "images/spraying_for_bugs.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/spraying_fruit_trees",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 83,
+      "name": "Spraying Fruit Trees",
+      "display_name": "Spraying Fruit Trees",
+      "instruction": "In the garden, pick up the pesticide atomizer on the floor and spray pesticide onto both trees until each tree trunk is fully covered.",
+      "rooms": [
+        "garden"
+      ],
+      "room_labels": [
+        "花园"
+      ],
+      "duration_seconds": 278,
+      "video_url": "https://player.vimeo.com/video/1114060748",
+      "goal_raw": "(:goal (and (covered ?tree.n.01_1 ?pesticide.n.01_1) (covered ?tree.n.01_2 ?pesticide.n.01_1) ) )",
+      "goal_summary": ":goal and covered tree_1 pesticide_1 covered tree_2 pesticide_1",
+      "image": "images/spraying_fruit_trees.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/stacking_wood",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 84,
+      "name": "Stacking Wood",
+      "display_name": "Stacking Wood",
+      "instruction": "Stacking Wood.",
+      "rooms": [
+        "garden"
+      ],
+      "room_labels": [
+        "花园"
+      ],
+      "duration_seconds": 447,
+      "video_url": "https://www.youtube.com/embed/8MDz0GuPlto",
+      "goal_raw": "(:goal (forall (?log.n.01 - log.n.01) (or (touching ?log.n.01 ?log.n.01_1) (touching ?log.n.01 ?log.n.01_2) (touching ?log.n.01 ?log.n.01_3) (touching ?log.n.01 ?log.n.01_4) (touching ?log.n.01 ?log.n.01_5) (touching ?log.n.01 ?log.n.01_6) ) ) )",
+      "goal_summary": ":goal forall log - log or touching log log_1 touching log log_2 touching log log_3 touching log log_4 touching log log_5 touching log log_6",
+      "image": "images/stacking_wood.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/store_batteries",
+      "benchmark": "behavior",
+      "suite": "Rs_int",
+      "suite_label": "小型住宅 Rs_int",
+      "index": 85,
+      "name": "Store Batteries",
+      "display_name": "Store Batteries",
+      "instruction": "Store Batteries.",
+      "rooms": [
+        "bedroom",
+        "entryway",
+        "kitchen",
+        "living_room"
+      ],
+      "room_labels": [
+        "卧室",
+        "玄关",
+        "厨房",
+        "客厅"
+      ],
+      "duration_seconds": 328,
+      "video_url": "https://www.youtube.com/embed/jMSkFQy95FY",
+      "goal_raw": "(:goal (and (exists (?cabinet.n.01 - cabinet.n.01) (forall (?battery.n.02 - battery.n.02) (inside ?battery.n.02 ?cabinet.n.01) ) ) ) )",
+      "goal_summary": ":goal and exists cabinet - cabinet forall battery - battery inside battery cabinet",
+      "image": "images/store_batteries.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/store_honey",
+      "benchmark": "behavior",
+      "suite": "Rs_int",
+      "suite_label": "小型住宅 Rs_int",
+      "index": 86,
+      "name": "Store Honey",
+      "display_name": "Store Honey",
+      "instruction": "Store Honey.",
+      "rooms": [
+        "bedroom",
+        "entryway",
+        "kitchen",
+        "living_room"
+      ],
+      "room_labels": [
+        "卧室",
+        "玄关",
+        "厨房",
+        "客厅"
+      ],
+      "duration_seconds": 193,
+      "video_url": "https://www.youtube.com/embed/oFu38YPgVEU",
+      "goal_raw": "(:goal (and (inside ?jar__of__honey.n.01_1 ?cabinet.n.01_1) ) )",
+      "goal_summary": ":goal and inside jar__of__honey_1 cabinet_1",
+      "image": "images/store_honey.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/store_produce",
+      "benchmark": "behavior",
+      "suite": "restaurant_diner",
+      "suite_label": "餐厅",
+      "index": 87,
+      "name": "Store Produce",
+      "display_name": "Store Produce",
+      "instruction": "Store Produce.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 316,
+      "video_url": "https://www.youtube.com/embed/jppOziwq7xI",
+      "goal_raw": "(:goal (and (exists (?electric_refrigerator.n.01 - electric_refrigerator.n.01) (and (forall (?pomegranate.n.02 - pomegranate.n.02) (inside ?pomegranate.n.02 ?electric_refrigerator.n.01) ) (forall (?mango.n.02 - mango.n.02) (inside ?mango.n.02 ?electric_refrigerator.n.01) ) ) ) ) )",
+      "goal_summary": ":goal and exists electric_refrigerator - electric_refrigerator and forall pomegranate - pomegranate inside pomegranate electric_refrigerator forall mango - mang",
+      "image": "images/store_produce.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/storing_food",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 88,
+      "name": "Storing Food",
+      "display_name": "Storing Food",
+      "instruction": "Put away all the food on the kitchen countertop by storing it inside the kitchen cabinets: move the two boxes of oatmeal, two bags of chips, two bottles of olive oil, and two jars of sugar from the countertop into the kitchen cabinets (each item can go into either cabinet).",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 662,
+      "video_url": "https://player.vimeo.com/video/1114059272",
+      "goal_raw": "(:goal (and (forall (?box__of__oatmeal.n.01 - box__of__oatmeal.n.01) (exists (?cabinet.n.01 - cabinet.n.01) (inside ?box__of__oatmeal.n.01 ?cabinet.n.01) ) ) (forall (?bag__of__chips.n.01 - bag__of__chips.n.01) (exists (?cabinet.n.01 - cabinet.n.01) (inside ?bag__of__chips.n.01 ?cabinet.n.01) ) ) (forall (?bottle__of__olive_oil.n.01 - bottle__of__olive_oil.n.01) (exists (?cabinet.n.01 - cabinet.n.",
+      "goal_summary": ":goal and forall box__of__oatmeal - box__of__oatmeal exists cabinet - cabinet inside box__of__oatmeal cabinet forall bag__of__chips - bag__of__chips exists cabi",
+      "image": "images/storing_food.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/sweeping_garage",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 89,
+      "name": "Sweeping Garage",
+      "display_name": "Sweeping Garage",
+      "instruction": "Sweeping Garage.",
+      "rooms": [
+        "garage"
+      ],
+      "room_labels": [
+        "车库"
+      ],
+      "duration_seconds": 126,
+      "video_url": "https://www.youtube.com/embed/0bdsrbEeFEc",
+      "goal_raw": "(:goal (and (not (covered ?floor.n.01_1 ?sand.n.04_1) ) (not (covered ?floor.n.01_1 ?dust.n.01_1) ) ) )",
+      "goal_summary": ":goal and not covered floor_1 sand_1 not covered floor_1 dust_1",
+      "image": "images/sweeping_garage.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/thawing_frozen_food",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 90,
+      "name": "Thawing Frozen Food",
+      "display_name": "Thawing Frozen Food",
+      "instruction": "Thawing Frozen Food.",
+      "rooms": [
+        "kitchen"
+      ],
+      "room_labels": [
+        "厨房"
+      ],
+      "duration_seconds": 348,
+      "video_url": "https://www.youtube.com/embed/FF3HiYSHGdc",
+      "goal_raw": "(:goal (and (not (frozen chicken_breast.n.02_1) ) (exists (?plate.n.04 - plate.n.04) (and (ontop chicken_breast.n.02_1 ?plate.n.04) (inside ?plate.n.04 microwave.n.02_1) ) ) (toggled_on microwave.n.02_1) (not (open microwave.n.02_1) ) (not (open electric_refrigerator.n.01_1) ) (not (frozen bread_slice.n.01_1) ) (exists (?plate.n.04 - plate.n.04) (and (ontop bread_slice.n.01_1 ?plate.n.04) (ontop ?",
+      "goal_summary": ":goal and not frozen chicken_breast_1 exists plate - plate and ontop chicken_breast_1 plate inside plate microwave_1 toggled_on microwave_1 not open microwave_1",
+      "image": "images/thawing_frozen_food.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/tidying_bathroom",
+      "benchmark": "behavior",
+      "suite": "hotel_suite_large",
+      "suite_label": "大型酒店套房",
+      "index": 91,
+      "name": "Tidying Bathroom",
+      "display_name": "Tidying Bathroom",
+      "instruction": "Tidying Bathroom.",
+      "rooms": [
+        "bathroom"
+      ],
+      "room_labels": [
+        "卫生间"
+      ],
+      "duration_seconds": 541,
+      "video_url": "https://www.youtube.com/embed/EdKc0cKLITw",
+      "goal_raw": "(:goal (and (ontop ?bar_soap.n.01_1 ?soap_dish.n.01_1) (ontop ?tissue_dispenser.n.01_1 ?sink.n.01_1) (ontop ?toilet_tissue.n.01_1 ?toilet.n.02_1) (inside ?cork.n.04_1 ?ashcan.n.01_1) ) )",
+      "goal_summary": ":goal and ontop bar_soap_1 soap_dish_1 ontop tissue_dispenser_1 sink_1 ontop toilet_tissue_1 toilet_1 inside cork_1 ashcan_1",
+      "image": "images/tidying_bathroom.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/tidying_bedroom",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 92,
+      "name": "Tidying Bedroom",
+      "display_name": "Tidying Bedroom",
+      "instruction": "In the bedroom, move the book from the bed onto either nightstand, and place the two sandals side by side next to the bed.",
+      "rooms": [
+        "bedroom"
+      ],
+      "room_labels": [
+        "卧室"
+      ],
+      "duration_seconds": 368,
+      "video_url": "https://player.vimeo.com/video/1114058519",
+      "goal_raw": "(:goal (and (nextto ?sandal.n.01_1 ?bed.n.01_1) (nextto ?sandal.n.01_2 ?sandal.n.01_1) (exists (?table.n.02 - table.n.02) (ontop ?book.n.02_1 ?table.n.02) ) ) )",
+      "goal_summary": ":goal and nextto sandal_1 bed_1 nextto sandal_2 sandal_1 exists table - table ontop book_1 table",
+      "image": "images/tidying_bedroom.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/tidying_living_room",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_upper",
+      "suite_label": "双层住宅 · 上层",
+      "index": 93,
+      "name": "Tidying Living Room",
+      "display_name": "Tidying Living Room",
+      "instruction": "Tidying Living Room.",
+      "rooms": [
+        "living_room"
+      ],
+      "room_labels": [
+        "客厅"
+      ],
+      "duration_seconds": 316,
+      "video_url": "https://www.youtube.com/embed/aTCNKnjR03c",
+      "goal_raw": "(:goal (and (ontop ?pot_plant.n.01_1 ?coffee_table.n.01_1) (exists (?bookcase.n.01 - bookcase.n.01) (inside ?hardback.n.01_1 ?bookcase.n.01) ) (ontop ?newspaper.n.03_1 ?coffee_table.n.01_1) (ontop ?notebook.n.01_1 ?desk.n.01_1) ) )",
+      "goal_summary": ":goal and ontop pot_plant_1 coffee_table_1 exists bookcase - bookcase inside hardback_1 bookcase ontop newspaper_1 coffee_table_1 ontop notebook_1 desk_1",
+      "image": "images/tidying_living_room.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/turning_on_radio",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 94,
+      "name": "Turning On Radio",
+      "display_name": "Turning On Radio",
+      "instruction": "Turn on the radio receiver that's on the table in the living room.",
+      "rooms": [
+        "living_room"
+      ],
+      "room_labels": [
+        "客厅"
+      ],
+      "duration_seconds": 72,
+      "video_url": "https://player.vimeo.com/video/1109198872",
+      "goal_raw": "(:goal (and (toggled_on ?radio_receiver.n.01_1) ) )",
+      "goal_summary": ":goal and toggled_on radio_receiver_1",
+      "image": "images/turning_on_radio.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/turning_out_all_lights_before_sleep",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 95,
+      "name": "Turning Out All Lights Before Sleep",
+      "display_name": "Turning Out All Lights Before Sleep",
+      "instruction": "Turning Out All Lights Before Sleep.",
+      "rooms": [
+        "corridor",
+        "utility_room",
+        "childs_room",
+        "dining_room",
+        "bedroom",
+        "kitchen",
+        "living_room",
+        "bathroom"
+      ],
+      "room_labels": [
+        "走廊",
+        "洗衣房",
+        "儿童房",
+        "餐厅",
+        "卧室",
+        "厨房",
+        "客厅",
+        "卫生间"
+      ],
+      "duration_seconds": 337,
+      "video_url": "https://www.youtube.com/embed/AN8l_cduvqU",
+      "goal_raw": "(:goal (and (forall (?switch.n.01 - switch.n.01) (not (toggled_on ?switch.n.01) ) ) (forall (?table_lamp.n.01 - table_lamp.n.01) (not (toggled_on ?table_lamp.n.01) ) ) ) )",
+      "goal_summary": ":goal and forall switch - switch not toggled_on switch forall table_lamp - table_lamp not toggled_on table_lamp",
+      "image": "images/turning_out_all_lights_before_sleep.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/unloading_the_car",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_lower",
+      "suite_label": "双层住宅 · 下层",
+      "index": 96,
+      "name": "Unloading The Car",
+      "display_name": "Unloading The Car",
+      "instruction": "Unloading The Car.",
+      "rooms": [
+        "garage",
+        "living_room"
+      ],
+      "room_labels": [
+        "车库",
+        "客厅"
+      ],
+      "duration_seconds": 378,
+      "video_url": "https://www.youtube.com/embed/IBV8nn39hTM",
+      "goal_raw": "(:goal (and (forall (?briefcase.n.01 - briefcase.n.01) (nextto ?briefcase.n.01 ?sofa.n.01_1) ) (forall (?satchel.n.01 - satchel.n.01) (nextto ?satchel.n.01 ?sofa.n.01_1) ) ) )",
+      "goal_summary": ":goal and forall briefcase - briefcase nextto briefcase sofa_1 forall satchel - satchel nextto satchel sofa_1",
+      "image": "images/unloading_the_car.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/vacuuming_floors",
+      "benchmark": "behavior",
+      "suite": "house_double_floor_upper",
+      "suite_label": "双层住宅 · 上层",
+      "index": 97,
+      "name": "Vacuuming Floors",
+      "display_name": "Vacuuming Floors",
+      "instruction": "Vacuuming Floors.",
+      "rooms": [
+        "bedroom"
+      ],
+      "room_labels": [
+        "卧室"
+      ],
+      "duration_seconds": 65,
+      "video_url": "https://www.youtube.com/embed/RqYuT-aj21A",
+      "goal_raw": "(:goal (and (not (covered ?floor.n.01_1 ?dust.n.01_1) ) ) )",
+      "goal_summary": ":goal and not covered floor_1 dust_1",
+      "image": "images/vacuuming_floors.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/wash_a_baseball_cap",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 98,
+      "name": "Wash A Baseball Cap",
+      "display_name": "Wash A Baseball Cap",
+      "instruction": "Wash the two baseball caps on the countertop in the utility room using the washer until they are no longer dirty.",
+      "rooms": [
+        "utility_room"
+      ],
+      "room_labels": [
+        "洗衣房"
+      ],
+      "duration_seconds": 278,
+      "video_url": "https://player.vimeo.com/video/1114060147",
+      "goal_raw": "(:goal (and (forall (?baseball_cap.n.01 - baseball_cap.n.01) (not (covered ?baseball_cap.n.01 ?dirt.n.02_1) ) ) ) )",
+      "goal_summary": ":goal and forall baseball_cap - baseball_cap not covered baseball_cap dirt_1",
+      "image": "images/wash_a_baseball_cap.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    },
+    {
+      "id": "behavior/wash_dog_toys",
+      "benchmark": "behavior",
+      "suite": "house_single_floor",
+      "suite_label": "单层住宅",
+      "index": 99,
+      "name": "Wash Dog Toys",
+      "display_name": "Wash Dog Toys",
+      "instruction": "In the utility room, take the two teddy toys, the tennis ball, and the softball out of the cabinet and wash them in the washer so that both teddies are free of dirt and dust, the tennis ball has no debris, and the softball has no dirt.",
+      "rooms": [
+        "utility_room"
+      ],
+      "room_labels": [
+        "洗衣房"
+      ],
+      "duration_seconds": 374,
+      "video_url": "https://player.vimeo.com/video/1114060219",
+      "goal_raw": "(:goal (and (forall (?teddy.n.01 - teddy.n.01) (and (not (covered ?teddy.n.01 ?dirt.n.02_1) ) (not (covered ?teddy.n.01 ?dust.n.01_1) ) ) ) (not (covered ?tennis_ball.n.01_1 ?debris.n.01_1) ) (not (covered ?softball.n.01_1 ?dirt.n.02_1) ) ) )",
+      "goal_summary": ":goal and forall teddy - teddy and not covered teddy dirt_1 not covered teddy dust_1 not covered tennis_ball_1 debris_1 not covered softball_1 dirt_1",
+      "image": "images/wash_dog_toys.jpg",
+      "image_kind": "demo_thumbnail",
+      "image_source": "https://behavior.stanford.edu/challenge/tasks/",
+      "note": "官方 BEHAVIOR-1K 演示视频截图；本机 Isaac Sim RTX 启动 segfault，暂不本地渲染"
+    }
+  ]
+}

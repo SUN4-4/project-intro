@@ -1,0 +1,34 @@
+{
+  "benchmark": "libero-plus",
+  "tasks": 10030,
+  "suites": {
+    "libero_spatial": 2402,
+    "libero_object": 2518,
+    "libero_goal": 2591,
+    "libero_10": 2519
+  },
+  "categories": {
+    "Background Textures": 1076,
+    "Robot Initial States": 1550,
+    "Camera Viewpoints": 1599,
+    "Language Instructions": 1537,
+    "Sensor Noise": 1601,
+    "Objects Layout": 1525,
+    "Light Conditions": 1142
+  },
+  "difficulties": {
+    "0": 121,
+    "1": 1644,
+    "2": 2202,
+    "3": 2094,
+    "4": 1886,
+    "5": 2083
+  },
+  "suite_images": {
+    "libero_spatial": "data/libero-plus/images/libero_spatial.jpg",
+    "libero_object": "data/libero-plus/images/libero_object.jpg",
+    "libero_goal": "data/libero-plus/images/libero_goal.jpg",
+    "libero_10": "data/libero-plus/images/libero_10.jpg"
+  },
+  "hero": "data/libero-plus/hero.jpg"
+}

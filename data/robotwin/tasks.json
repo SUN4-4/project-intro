@@ -1,0 +1,457 @@
+{
+  "benchmark": "robotwin",
+  "label": "RoboTwin",
+  "generated_by": "website/data/scripts/export_robotwin.py",
+  "tasks": [
+    {
+      "id": "adjust_bottle",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 0,
+      "name": "adjust_bottle",
+      "instruction": "Pick up the bottle on the table head-up with the correct arm",
+      "image": "images/adjust_bottle.jpg"
+    },
+    {
+      "id": "beat_block_hammer",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 1,
+      "name": "beat_block_hammer",
+      "instruction": "there is a hammer and a block on the table, use the arm to <grab the hammer> and <beat the block>",
+      "image": "images/beat_block_hammer.jpg"
+    },
+    {
+      "id": "blocks_ranking_rgb",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 2,
+      "name": "blocks_ranking_rgb",
+      "instruction": "<Place> the red block, green block, and blue block <in the order> of red, green, and blue from left to right, <placing in a row>.",
+      "image": "images/blocks_ranking_rgb.jpg"
+    },
+    {
+      "id": "blocks_ranking_size",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 3,
+      "name": "blocks_ranking_size",
+      "instruction": "there are three blocks on the table, the color of the blocks is random, move the blocks to the center of the table, and arrange them from largest to smallest, from left to right",
+      "image": "images/blocks_ranking_size.jpg"
+    },
+    {
+      "id": "click_alarmclock",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 4,
+      "name": "click_alarmclock",
+      "instruction": "click the alarm clock's center of the top side button on the table",
+      "image": "images/click_alarmclock.jpg"
+    },
+    {
+      "id": "click_bell",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 5,
+      "name": "click_bell",
+      "instruction": "click the <bell's top center> on the table",
+      "image": "images/click_bell.jpg"
+    },
+    {
+      "id": "dump_bin_bigbin",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 6,
+      "name": "dump_bin_bigbin",
+      "instruction": "Grab the small bin and pour the balls into the big bin",
+      "image": "images/dump_bin_bigbin.jpg"
+    },
+    {
+      "id": "grab_roller",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 7,
+      "name": "grab_roller",
+      "instruction": "use both arms to grab the roller on the table",
+      "image": "images/grab_roller.jpg"
+    },
+    {
+      "id": "handover_block",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 8,
+      "name": "handover_block",
+      "instruction": "use the left arm to grasp the red block on the table, handover it to the right arm and place it on the blue pad",
+      "image": "images/handover_block.jpg"
+    },
+    {
+      "id": "handover_mic",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 9,
+      "name": "handover_mic",
+      "instruction": "Use one arm to grasp the microphone on the table and handover it to the other arm",
+      "image": "images/handover_mic.jpg"
+    },
+    {
+      "id": "hanging_mug",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 10,
+      "name": "hanging_mug",
+      "instruction": "Use left arm to pick the mug on the table, rotate the mug and put the mug down in the middle of the table, use the right arm to pick the mug and hang it onto the rack.",
+      "image": "images/hanging_mug.jpg"
+    },
+    {
+      "id": "lift_pot",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 11,
+      "name": "lift_pot",
+      "instruction": "use BOTH!!! arms to lift the pot",
+      "image": "images/lift_pot.jpg"
+    },
+    {
+      "id": "move_can_pot",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 12,
+      "name": "move_can_pot",
+      "instruction": "there is a can and a pot on the table, use one arm to <pick up the can> and <move it to beside the pot>",
+      "image": "images/move_can_pot.jpg"
+    },
+    {
+      "id": "move_pillbottle_pad",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 13,
+      "name": "move_pillbottle_pad",
+      "instruction": "Use one arm to pick the pillbottle and place it onto the pad.",
+      "image": "images/move_pillbottle_pad.jpg"
+    },
+    {
+      "id": "move_playingcard_away",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 14,
+      "name": "move_playingcard_away",
+      "instruction": "use the arm to <pick up the playing card> and <move it away from the table>.For example, if the playing card is on the outward side of the table, you should move it further outward side of the table.",
+      "image": "images/move_playingcard_away.jpg"
+    },
+    {
+      "id": "move_stapler_pad",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 15,
+      "name": "move_stapler_pad",
+      "instruction": "use appropriate arm to move the stapler to a colored mat",
+      "image": "images/move_stapler_pad.jpg"
+    },
+    {
+      "id": "open_laptop",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 16,
+      "name": "open_laptop",
+      "instruction": "use one arm to open the laptop",
+      "image": "images/open_laptop.jpg"
+    },
+    {
+      "id": "open_microwave",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 17,
+      "name": "open_microwave",
+      "instruction": "Use one arm to open the microwave.",
+      "image": "images/open_microwave.jpg"
+    },
+    {
+      "id": "pick_diverse_bottles",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 18,
+      "name": "pick_diverse_bottles",
+      "instruction": "simultaneously pick up the two different bottles, one with each arm",
+      "image": "images/pick_diverse_bottles.jpg"
+    },
+    {
+      "id": "pick_dual_bottles",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 19,
+      "name": "pick_dual_bottles",
+      "instruction": "simultaneously pick up one bottle with each arm",
+      "image": "images/pick_dual_bottles.jpg"
+    },
+    {
+      "id": "place_a2b_left",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 20,
+      "name": "place_a2b_left",
+      "instruction": "use appropriate arm to place object A on the left of object B",
+      "image": "images/place_a2b_left.jpg"
+    },
+    {
+      "id": "place_a2b_right",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 21,
+      "name": "place_a2b_right",
+      "instruction": "use appropriate arm to place object A on the right of object B",
+      "image": "images/place_a2b_right.jpg"
+    },
+    {
+      "id": "place_bread_basket",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 22,
+      "name": "place_bread_basket",
+      "instruction": "place every bread on the table into the basket, using the available arm or arms",
+      "image": "images/place_bread_basket.jpg"
+    },
+    {
+      "id": "place_bread_skillet",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 23,
+      "name": "place_bread_skillet",
+      "instruction": "use one arm to lift and hold the skillet while the other arm places the bread into it",
+      "image": "images/place_bread_skillet.jpg"
+    },
+    {
+      "id": "place_burger_fries",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 24,
+      "name": "place_burger_fries",
+      "instruction": "simultaneously pick up the hamburger and fries with both arms, then place both foods on the tray",
+      "image": "images/place_burger_fries.jpg"
+    },
+    {
+      "id": "place_can_basket",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 25,
+      "name": "place_can_basket",
+      "instruction": "use one arm to pick up the can, put it into the basket, and use another arm to lift the basket",
+      "image": "images/place_can_basket.jpg"
+    },
+    {
+      "id": "place_cans_plasticbox",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 26,
+      "name": "place_cans_plasticbox",
+      "instruction": "simultaneously pick up both cans with separate arms, then place the left can and right can into the plastic box",
+      "image": "images/place_cans_plasticbox.jpg"
+    },
+    {
+      "id": "place_container_plate",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 27,
+      "name": "place_container_plate",
+      "instruction": "place the container onto the plate",
+      "image": "images/place_container_plate.jpg"
+    },
+    {
+      "id": "place_dual_shoes",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 28,
+      "name": "place_dual_shoes",
+      "instruction": "use both arms to pick up the two shoes on the table and put them in the shoebox, with the shoe tip pointing to the left",
+      "image": "images/place_dual_shoes.jpg"
+    },
+    {
+      "id": "place_empty_cup",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 29,
+      "name": "place_empty_cup",
+      "instruction": "use an arm to place the empty cup on the coaster",
+      "image": "images/place_empty_cup.jpg"
+    },
+    {
+      "id": "place_fan",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 30,
+      "name": "place_fan",
+      "instruction": "grab the fan and place it on a colored mat, <make sure the fan is facing the robot!(THIS MUST BE REFERRED TO>",
+      "image": "images/place_fan.jpg"
+    },
+    {
+      "id": "place_mouse_pad",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 31,
+      "name": "place_mouse_pad",
+      "instruction": "grab the mouse and place it on a colored mat",
+      "image": "images/place_mouse_pad.jpg"
+    },
+    {
+      "id": "place_object_basket",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 32,
+      "name": "place_object_basket",
+      "instruction": "use one arm to grab the target object and put it in the basket, then use the other arm to grab the basket, and finally move the basket slightly away",
+      "image": "images/place_object_basket.jpg"
+    },
+    {
+      "id": "place_object_scale",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 33,
+      "name": "place_object_scale",
+      "instruction": "use one arm to grab the object and put it on the scale",
+      "image": "images/place_object_scale.jpg"
+    },
+    {
+      "id": "place_object_stand",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 34,
+      "name": "place_object_stand",
+      "instruction": "use appropriate arm to place the object on the stand",
+      "image": "images/place_object_stand.jpg"
+    },
+    {
+      "id": "place_phone_stand",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 35,
+      "name": "place_phone_stand",
+      "instruction": "pick up the phone and put it on the phone stand",
+      "image": "images/place_phone_stand.jpg"
+    },
+    {
+      "id": "place_shoe",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 36,
+      "name": "place_shoe",
+      "instruction": "use one arm to grab the shoe from the table and place it on the mat",
+      "image": "images/place_shoe.jpg"
+    },
+    {
+      "id": "press_stapler",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 37,
+      "name": "press_stapler",
+      "instruction": "Use one arm to press the stapler.",
+      "image": "images/press_stapler.jpg"
+    },
+    {
+      "id": "put_bottles_dustbin",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 38,
+      "name": "put_bottles_dustbin",
+      "instruction": "use arms to grab the bottles and put them into the dustbin to the left of the table",
+      "image": "images/put_bottles_dustbin.jpg"
+    },
+    {
+      "id": "put_object_cabinet",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 39,
+      "name": "put_object_cabinet",
+      "instruction": "use one arm to hold the object and the other arm to open the cabinet drawer, then place the object inside",
+      "image": "images/put_object_cabinet.jpg"
+    },
+    {
+      "id": "rotate_qrcode",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 40,
+      "name": "rotate_qrcode",
+      "instruction": "Use arm to catch the qrcode board on the table, pick it up, rotate to let the qrcode face towards you, then put it back on the table and release it",
+      "image": "images/rotate_qrcode.jpg"
+    },
+    {
+      "id": "scan_object",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 41,
+      "name": "scan_object",
+      "instruction": "simultaneously pick up the scanner and the object with separate arms, then scan the object",
+      "image": "images/scan_object.jpg"
+    },
+    {
+      "id": "shake_bottle",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 42,
+      "name": "shake_bottle",
+      "instruction": "Shake the bottle with proper arm",
+      "image": "images/shake_bottle.jpg"
+    },
+    {
+      "id": "shake_bottle_horizontally",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 43,
+      "name": "shake_bottle_horizontally",
+      "instruction": "Shake the bottle horizontally with proper arm",
+      "image": "images/shake_bottle_horizontally.jpg"
+    },
+    {
+      "id": "stack_blocks_three",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 44,
+      "name": "stack_blocks_three",
+      "instruction": "build a three-block stack at the center by placing the red block first, the green block on red, and the blue block on green",
+      "image": "images/stack_blocks_three.jpg"
+    },
+    {
+      "id": "stack_blocks_two",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 45,
+      "name": "stack_blocks_two",
+      "instruction": "there are two blocks on the table, the color of the blocks is <red, green>, <move the blocks to the center of the table>, and <stack the geen block on the red block>",
+      "image": "images/stack_blocks_two.jpg"
+    },
+    {
+      "id": "stack_bowls_three",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 46,
+      "name": "stack_bowls_three",
+      "instruction": "stack the three bowls on top of each other",
+      "image": "images/stack_bowls_three.jpg"
+    },
+    {
+      "id": "stack_bowls_two",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 47,
+      "name": "stack_bowls_two",
+      "instruction": "stack the two bowls on top of each other",
+      "image": "images/stack_bowls_two.jpg"
+    },
+    {
+      "id": "stamp_seal",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 48,
+      "name": "stamp_seal",
+      "instruction": "Grab the stamp and stamp onto the specific color mat",
+      "image": "images/stamp_seal.jpg"
+    },
+    {
+      "id": "turn_switch",
+      "benchmark": "robotwin",
+      "suite": "robotwin",
+      "index": 49,
+      "name": "turn_switch",
+      "instruction": "use the robotic arm to click the switch",
+      "image": "images/turn_switch.jpg"
+    }
+  ]
+}

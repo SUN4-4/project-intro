@@ -1,6 +1,9 @@
 # Project Intro
 
-一个无需构建步骤的响应式项目介绍页原型。页面当前使用“待定 / 待补充”文案，方便在项目信息确认后直接替换。
+> 本目录已归并到 RoboRSI 仓库的 `website/`，由 `website-agent` 负责维护。
+> 预览、测试与归属说明见 [`../docs/WEBSITE.md`](../docs/WEBSITE.md)。
+
+一个无需构建步骤的响应式项目介绍页。主页面展示 4 个 benchmark 的 299 个任务；`libero-plus.html` 单独展示 LIBERO-Plus 的 10,030 个扰动实例。
 
 ## 本地预览
 
@@ -15,7 +18,7 @@ python3 -m http.server 8000 --directory .
 ## 测试
 
 ```bash
-node --test tests/site.test.mjs
+node --test tests/*.test.mjs
 ```
 
 ## 内容替换
@@ -35,15 +38,24 @@ node --test tests/site.test.mjs
 ```text
 .
 ├── index.html
+├── index.html
+├── libero-plus.html
 ├── assets/
 │   ├── brand-mark.svg
 │   ├── main.js
-│   └── styles.css
+│   ├── styles.css
+│   ├── tasks.js
+│   ├── libero-plus.css
+│   └── libero-plus.js
+├── data/
+│   ├── libero/
+│   ├── robotwin/
+│   ├── robosuite/
+│   ├── behavior/
+│   └── libero-plus/
 ├── tests/
-│   └── site.test.mjs
+│   ├── site.test.mjs
+│   ├── tasks.test.mjs
+│   └── libero-plus.test.mjs
 └── README.md
 ```
-
-## 发布
-
-这是一个纯静态站点，可以直接部署到 GitHub Pages、Netlify、Cloudflare Pages 或任意静态文件服务器。上线前应替换示例域名、标题、介绍、联系方式以及 `meta` 描述。
