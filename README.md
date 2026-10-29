@@ -3,17 +3,7 @@
 > 本目录已归并到 RoboRSI 仓库的 `website/`，由 `website-agent` 负责维护。
 > 预览、测试与归属说明见 [`../docs/WEBSITE.md`](../docs/WEBSITE.md)。
 
-一个无需构建步骤的响应式项目介绍页。主页面展示 4 个 benchmark 的 299 个任务；`libero-plus.html` 单独展示 LIBERO-Plus 的 10,030 个扰动实例。
-
-## 本地预览
-
-在项目目录运行：
-
-```bash
-python3 -m http.server 8000 --directory .
-```
-
-然后访问 <http://localhost:8000>。
+一个无需构建步骤的响应式项目介绍页，展示 4 个 benchmark 的 299 个任务。
 
 ## 测试
 
@@ -38,24 +28,18 @@ node --test tests/*.test.mjs
 ```text
 .
 ├── index.html
-├── index.html
-├── libero-plus.html
 ├── assets/
 │   ├── brand-mark.svg
 │   ├── main.js
 │   ├── styles.css
-│   ├── tasks.js
-│   ├── libero-plus.css
-│   └── libero-plus.js
+│   └── tasks.js
 ├── data/
 │   ├── libero/
 │   ├── robotwin/
 │   ├── robosuite/
-│   ├── behavior/
-│   └── libero-plus/
+│   └── behavior/
 ├── tests/
 │   ├── site.test.mjs
-│   ├── tasks.test.mjs
-│   └── libero-plus.test.mjs
+│   └── tasks.test.mjs
 └── README.md
 ```
