@@ -124,7 +124,11 @@ const taskSearchInput = document.querySelector("[data-task-search]");
 const taskStatus = document.querySelector("[data-task-status]");
 const taskEmpty = document.querySelector("[data-task-empty]");
 const benchmarkFilters = [...document.querySelectorAll("[data-benchmark-filter]")];
-const benchmarkData = Array.isArray(window.BENCHMARK_TASKS) ? window.BENCHMARK_TASKS : [];
+const benchmarkData = Array.isArray(window.BM_CATALOG?.groups)
+  ? window.BM_CATALOG.groups
+  : Array.isArray(window.BENCHMARK_TASKS)
+    ? window.BENCHMARK_TASKS
+    : [];
 
 const IMAGE_KIND_LABELS = {
   scene_layout: "场景平面图",
@@ -144,7 +148,9 @@ function createTaskCard(task, dataDir) {
   const card = document.createElement("article");
   card.className = "task-card";
   card.dataset.benchmark = task.benchmark;
+  card.dataset.bmId = task.bm_id;
   card.dataset.search = [
+    task.bm_id,
     task.id,
     task.name,
     task.display_name,
@@ -153,6 +159,8 @@ function createTaskCard(task, dataDir) {
     task.suite_label,
     task.rooms,
     task.room_labels,
+    task.variants,
+    task.source_ids,
     task.goal_raw,
     task.goal_summary,
   ]
@@ -180,12 +188,51 @@ function createTaskCard(task, dataDir) {
   image.height = 240;
   media.append(image);
 
+  const videoSlot = document.createElement("div");
+  videoSlot.className = "task-card__video-slot";
+  videoSlot.dataset.videoSlot = task.bm_id;
+
+  if (task.success_video_url) {
+    const player = document.createElement("video");
+    player.className = "task-card__video-player";
+    player.controls = true;
+    player.preload = "metadata";
+    player.src = task.success_video_url;
+    videoSlot.append(player);
+  } else {
+    const play = document.createElement("span");
+    play.className = "task-card__video-play";
+    play.setAttribute("aria-hidden", "true");
+    play.textContent = "▶";
+
+    const copy = document.createElement("span");
+    copy.className = "task-card__video-copy";
+
+    const title = document.createElement("strong");
+    title.textContent = "成功视频待接入";
+
+    const subtitle = document.createElement("small");
+    subtitle.textContent = `${task.bm_id} · VIDEO SLOT`;
+
+    copy.append(title, subtitle);
+    videoSlot.append(play, copy);
+  }
+
   const body = document.createElement("div");
   body.className = "task-card__body";
 
+  const ids = document.createElement("div");
+  ids.className = "task-card__ids";
+
   const id = document.createElement("span");
   id.className = "task-card__id";
-  id.textContent = task.id;
+  id.textContent = task.bm_id || task.id;
+
+  const sourceId = document.createElement("span");
+  sourceId.className = "task-card__source-id";
+  sourceId.textContent = task.id;
+
+  ids.append(id, sourceId);
 
   const name = document.createElement("h4");
   name.className = "task-card__name";
@@ -195,7 +242,7 @@ function createTaskCard(task, dataDir) {
   instruction.className = "task-card__instruction";
   instruction.textContent = task.instruction;
 
-  body.append(id, name, instruction);
+  body.append(ids, name, instruction);
 
   const meta = [
     ...(task.room_labels || []),
@@ -210,13 +257,20 @@ function createTaskCard(task, dataDir) {
     body.append(metaLine);
   }
 
-  if (task.video_url) {
+  if (task.variants?.length) {
+    const variants = document.createElement("p");
+    variants.className = "task-card__meta task-card__variants";
+    variants.textContent = `同族变体：${task.variants.join(" / ")}`;
+    body.append(variants);
+  }
+
+  if (task.demo_video_url) {
     const video = document.createElement("a");
     video.className = "task-card__video";
-    video.href = task.video_url;
+    video.href = task.demo_video_url;
     video.target = "_blank";
     video.rel = "noopener";
-    video.textContent = "观看演示视频";
+    video.textContent = "官方演示视频";
     body.append(video);
   }
 
@@ -235,7 +289,7 @@ function createTaskCard(task, dataDir) {
     body.append(goal);
   }
 
-  card.append(media, body);
+  card.append(media, videoSlot, body);
 
   return card;
 }
@@ -266,7 +320,7 @@ function renderTaskGroups() {
       title.textContent = tasks[0].suite_label || suite;
 
       const label = document.createElement("small");
-      label.textContent = group.label;
+      label.textContent = `${group.label} · ${tasks[0].bm_id}–${tasks[tasks.length - 1].bm_id}`;
       title.append(label);
 
       const count = document.createElement("span");
@@ -313,7 +367,7 @@ function applyTaskFilters() {
   });
 
   if (taskStatus) {
-    taskStatus.textContent = `显示 ${visible} / ${taskCards.length} 个任务`;
+    taskStatus.textContent = `显示 ${visible} / ${taskCards.length} 个 BM 任务`;
   }
 
   if (taskEmpty) {

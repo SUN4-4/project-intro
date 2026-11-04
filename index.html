@@ -57,7 +57,7 @@
         <a href="#idea">项目缘起</a>
         <a href="#direction">项目方向</a>
         <a href="#progress">当前进展</a>
-        <a href="#benchmarks">Benchmark 任务</a>
+        <a href="#benchmarks">BM 任务</a>
         <a href="#about">项目档案</a>
       </nav>
 
@@ -265,7 +265,7 @@
               <div class="progress-meter__track" aria-hidden="true">
                 <span></span>
               </div>
-              <p>任务库已接入：4 个 benchmark、299 个任务可浏览。</p>
+              <p>任务库已接入：4 个 benchmark、291 个 BM 任务可浏览。</p>
             </div>
           </div>
 
@@ -288,8 +288,8 @@
                   <span>Now</span>
                   <span class="timeline__status">进行中</span>
                 </div>
-                <h3>接入 benchmark 任务库</h3>
-                <p>4 个 benchmark、299 个任务已进入网页；BEHAVIOR 使用官方演示截图。</p>
+                <h3>接入 BM 任务库</h3>
+                <p>4 个 benchmark、291 个 BM 任务已进入网页；每个任务预留成功视频槽位。</p>
               </div>
             </li>
             <li class="timeline__item">
@@ -315,23 +315,33 @@
 
         <div class="benchmarks__header" data-reveal>
           <div>
-            <p class="kicker">Benchmark 任务</p>
-            <h2 id="benchmarks-title">四个 benchmark，299 个任务。</h2>
+            <p class="kicker">BM 任务目标集</p>
+            <h2 id="benchmarks-title">四个 benchmark，291 个 BM 任务。</h2>
           </div>
           <p>
-            按 benchmark 与 suite 分组浏览全部任务，每张卡片包含渲染图、任务 id、名称与 instruction。
+            按 BM 统一编号，覆盖 LIBERO、RoboTwin、BEHAVIOR-1K 与 robosuite。每张卡片包含渲染图、BM 编号、任务名称与 instruction。
           </p>
         </div>
 
+        <aside class="bm-definition" data-reveal aria-label="BM 编号说明">
+          <span class="bm-definition__mark">BM</span>
+          <div>
+            <strong>Embodied Brain Task Goal Set</strong>
+            <p>
+              BM 是 RoboRSI 需要让具身大脑完成的任务目标集合。291 个任务从 BM-001 连续编号到 BM-291；后续成功视频、执行记录和技能都挂到对应 BM 编号下。
+            </p>
+          </div>
+        </aside>
+
         <p class="task-note" data-reveal>
-          LIBERO / RoboTwin / robosuite 为仿真截图；BEHAVIOR-1K 使用官方演示视频截图（本机 Isaac Sim RTX
-          启动仍受驱动兼容性影响，卡片上标注“官方演示截图”并提供演示视频链接）。
+          LIBERO 130 + RoboTwin 50 + BEHAVIOR-1K 100 + robosuite 11（19 个注册环境按 11 个任务族合并）= 291。
+          每个任务预留一个成功视频槽位，当前显示“成功视频待接入”；BEHAVIOR-1K 另保留官方演示视频链接。
         </p>
 
         <div class="task-toolbar" data-reveal>
           <div class="task-filters" role="group" aria-label="按 benchmark 筛选">
             <button class="task-filter is-active" type="button" data-benchmark-filter="all" aria-pressed="true">
-              全部 <span data-filter-count="all">299</span>
+              全部 <span data-filter-count="all">291</span>
             </button>
             <button class="task-filter" type="button" data-benchmark-filter="libero" aria-pressed="false">
               LIBERO <span data-filter-count="libero">130</span>
@@ -339,11 +349,11 @@
             <button class="task-filter" type="button" data-benchmark-filter="robotwin" aria-pressed="false">
               RoboTwin <span data-filter-count="robotwin">50</span>
             </button>
-            <button class="task-filter" type="button" data-benchmark-filter="robosuite" aria-pressed="false">
-              robosuite <span data-filter-count="robosuite">19</span>
-            </button>
             <button class="task-filter" type="button" data-benchmark-filter="behavior" aria-pressed="false">
               BEHAVIOR-1K <span data-filter-count="behavior">100</span>
+            </button>
+            <button class="task-filter" type="button" data-benchmark-filter="robosuite" aria-pressed="false">
+              robosuite <span data-filter-count="robosuite">11</span>
             </button>
           </div>
 
@@ -352,7 +362,7 @@
             <input
               id="task-search-input"
               type="search"
-              placeholder="搜索任务 id、名称或 instruction"
+              placeholder="搜索 BM 编号、任务 id、名称或 instruction"
               autocomplete="off"
               data-task-search
             />
@@ -360,7 +370,7 @@
         </div>
 
         <p class="task-status" role="status" aria-live="polite" data-task-status>
-          显示 299 / 299 个任务
+          显示 291 / 291 个 BM 任务
         </p>
 
         <div class="task-groups" data-task-groups></div>
