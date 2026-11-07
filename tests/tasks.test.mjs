@@ -15,6 +15,7 @@ const expectedCounts = {
   robotwin: 50,
   behavior: 100,
   robosuite: 11,
+  robodojo: 42,
 };
 
 const expectedRanges = [
@@ -22,6 +23,7 @@ const expectedRanges = [
   ["robotwin", 50, "BM-131", "BM-180"],
   ["behavior", 100, "BM-181", "BM-280"],
   ["robosuite", 11, "BM-281", "BM-291"],
+  ["robodojo", 42, "BM-292", "BM-333"],
 ];
 
 function localPath(relativePath) {
@@ -30,7 +32,7 @@ function localPath(relativePath) {
 
 test("BM catalog covers every deployed benchmark", () => {
   assert.equal(catalog.name, "BM");
-  assert.equal(catalog.total, 291);
+  assert.equal(catalog.total, 333);
   assert.ok(Array.isArray(groups));
   assert.deepEqual(
     Object.fromEntries(groups.map((group) => [group.benchmark, group.tasks.length])),
@@ -45,13 +47,13 @@ test("BM catalog covers every deployed benchmark", () => {
     ]),
     expectedRanges,
   );
-  assert.equal(allTasks.length, 291);
+  assert.equal(allTasks.length, 333);
 });
 
 test("every task has one sequential BM id", () => {
   const ids = allTasks.map((task) => task.bm_id);
   const expected = Array.from(
-    { length: 291 },
+    { length: 333 },
     (_, index) => `BM-${String(index + 1).padStart(3, "0")}`,
   );
   assert.deepEqual(ids, expected);
@@ -80,6 +82,14 @@ test("every task has an id, name, instruction and an existing image", () => {
 
 test("every task reserves a success-video slot", () => {
   for (const task of allTasks) {
+    if (task.video_status === "published") {
+      assert.ok(task.success_video_url, `${task.bm_id}: published video URL`);
+      assert.ok(
+        existsSync(localPath(task.success_video_url)),
+        `${task.bm_id}: published video file`,
+      );
+      continue;
+    }
     assert.equal(task.video_status, "pending", `${task.bm_id}: video status`);
     assert.equal(task.success_video_url, null, `${task.bm_id}: success video`);
   }
@@ -134,4 +144,15 @@ test("generated JSON catalog matches the browser catalog", () => {
     json.tasks.map((task) => task.bm_id),
     allTasks.map((task) => task.bm_id),
   );
+});
+
+test("published failure replays point at real files", () => {
+  for (const task of allTasks) {
+    if (task.failure_video_status !== "published") continue;
+    assert.ok(task.failure_video_url, `${task.bm_id}: failure video URL`);
+    assert.ok(
+      existsSync(localPath(task.failure_video_url)),
+      `${task.bm_id}: failure video file`,
+    );
+  }
 });

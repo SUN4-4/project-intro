@@ -1,0 +1,717 @@
+{
+  "benchmark": "robodojo",
+  "label": "RoboDojo",
+  "generated_by": "website/data/scripts/export_robodojo.py",
+  "canonical_tasks": 42,
+  "runnable_configs": 54,
+  "tasks": [
+    {
+      "id": "align_blocks",
+      "benchmark": "robodojo",
+      "suite": "open",
+      "suite_label": "开放",
+      "index": 0,
+      "name": "align_blocks",
+      "display_name": "Align Blocks",
+      "instruction": "Use the set square to push the three blocks into a straight, aligned row, then reset the robot arm.",
+      "image": "images/align_blocks.jpg",
+      "dimension": "open",
+      "variants": [],
+      "source_ids": [
+        "align_blocks"
+      ]
+    },
+    {
+      "id": "arrange_largest_number",
+      "benchmark": "robodojo",
+      "suite": "generalization",
+      "suite_label": "泛化",
+      "index": 1,
+      "name": "arrange_largest_number",
+      "display_name": "Arrange Largest Number",
+      "instruction": "Arrange the numbers from left to right to form the largest possible number, and place them on the pad.",
+      "image": "images/arrange_largest_number.jpg",
+      "dimension": "generalization",
+      "variants": [
+        "arrange_largest_number_random"
+      ],
+      "source_ids": [
+        "arrange_largest_number",
+        "arrange_largest_number_random"
+      ]
+    },
+    {
+      "id": "build_tower",
+      "benchmark": "robodojo",
+      "suite": "precision",
+      "suite_label": "精度",
+      "index": 2,
+      "name": "build_tower",
+      "display_name": "Build Tower",
+      "instruction": "Build a tower using the wooden blocks and wooden boards.",
+      "image": "images/build_tower.jpg",
+      "dimension": "precision",
+      "variants": [],
+      "source_ids": [
+        "build_tower"
+      ]
+    },
+    {
+      "id": "classify_objects",
+      "benchmark": "robodojo",
+      "suite": "long-horizon",
+      "suite_label": "长程",
+      "index": 3,
+      "name": "classify_objects",
+      "display_name": "Classify Objects",
+      "instruction": "Sort the objects by category into the three baskets.",
+      "image": "images/classify_objects.jpg",
+      "dimension": "long-horizon",
+      "variants": [],
+      "source_ids": [
+        "classify_objects"
+      ]
+    },
+    {
+      "id": "classify_objects_by_language",
+      "benchmark": "robodojo",
+      "suite": "open",
+      "suite_label": "开放",
+      "index": 4,
+      "name": "classify_objects_by_language",
+      "display_name": "Classify Objects By Language",
+      "instruction": "Sort the objects into the left, middle, and right baskets according to the language labels, then reset the robot arm.",
+      "image": "images/classify_objects_by_language.jpg",
+      "dimension": "open",
+      "variants": [],
+      "source_ids": [
+        "classify_objects_by_language"
+      ]
+    },
+    {
+      "id": "cover_blocks",
+      "benchmark": "robodojo",
+      "suite": "memory",
+      "suite_label": "记忆",
+      "index": 5,
+      "name": "cover_blocks",
+      "display_name": "Cover Blocks",
+      "instruction": "Cover the blocks from left to right, remember their colors, then uncover them in the order: red, green, and blue.",
+      "image": "images/cover_blocks.jpg",
+      "dimension": "memory",
+      "variants": [],
+      "source_ids": [
+        "cover_blocks"
+      ]
+    },
+    {
+      "id": "deposit_coin",
+      "benchmark": "robodojo",
+      "suite": "precision",
+      "suite_label": "精度",
+      "index": 6,
+      "name": "deposit_coin",
+      "display_name": "Deposit Coin",
+      "instruction": "Pick up the coin from the holder and insert it precisely into the coin bank.",
+      "image": "images/deposit_coin.jpg",
+      "dimension": "precision",
+      "variants": [],
+      "source_ids": [
+        "deposit_coin"
+      ]
+    },
+    {
+      "id": "fasten_screws",
+      "benchmark": "robodojo",
+      "suite": "precision",
+      "suite_label": "精度",
+      "index": 7,
+      "name": "fasten_screws",
+      "display_name": "Fasten Screws",
+      "instruction": "Insert and tighten each screw into the nut of the same color.",
+      "image": "images/fasten_screws.jpg",
+      "dimension": "precision",
+      "variants": [],
+      "source_ids": [
+        "fasten_screws"
+      ]
+    },
+    {
+      "id": "fill_egg_holder",
+      "benchmark": "robodojo",
+      "suite": "long-horizon",
+      "suite_label": "长程",
+      "index": 8,
+      "name": "fill_egg_holder",
+      "display_name": "Fill Egg Holder",
+      "instruction": "Place the four eggs from the basket into the egg holder, then close the lid.",
+      "image": "images/fill_egg_holder.jpg",
+      "dimension": "long-horizon",
+      "variants": [],
+      "source_ids": [
+        "fill_egg_holder"
+      ]
+    },
+    {
+      "id": "fill_pen_holder",
+      "benchmark": "robodojo",
+      "suite": "long-horizon",
+      "suite_label": "长程",
+      "index": 9,
+      "name": "fill_pen_holder",
+      "display_name": "Fill Pen Holder",
+      "instruction": "Hold the pen holder with one hand, place all pens into it with the other hand, then put it back down.",
+      "image": "images/fill_pen_holder.jpg",
+      "dimension": "long-horizon",
+      "variants": [],
+      "source_ids": [
+        "fill_pen_holder"
+      ]
+    },
+    {
+      "id": "fold_clothes",
+      "benchmark": "robodojo",
+      "suite": "generalization",
+      "suite_label": "泛化",
+      "index": 10,
+      "name": "fold_clothes",
+      "display_name": "Fold Clothes",
+      "instruction": "Fold the clothes neatly.",
+      "image": "images/fold_clothes.jpg",
+      "dimension": "generalization",
+      "variants": [
+        "fold_clothes_random"
+      ],
+      "source_ids": [
+        "fold_clothes",
+        "fold_clothes_random"
+      ]
+    },
+    {
+      "id": "general_pickup",
+      "benchmark": "robodojo",
+      "suite": "open",
+      "suite_label": "开放",
+      "index": 11,
+      "name": "general_pickup",
+      "display_name": "General Pickup",
+      "instruction": "Pick up the <target> by 10 cm.",
+      "image": "images/general_pickup.jpg",
+      "dimension": "open",
+      "variants": [],
+      "source_ids": [
+        "general_pickup"
+      ]
+    },
+    {
+      "id": "hang_mugs",
+      "benchmark": "robodojo",
+      "suite": "generalization",
+      "suite_label": "泛化",
+      "index": 12,
+      "name": "hang_mugs",
+      "display_name": "Hang Mugs",
+      "instruction": "Hang all the mugs on the mug rack.",
+      "image": "images/hang_mugs.jpg",
+      "dimension": "generalization",
+      "variants": [
+        "hang_mugs_random"
+      ],
+      "source_ids": [
+        "hang_mugs",
+        "hang_mugs_random"
+      ]
+    },
+    {
+      "id": "imitate_sorting_sequence",
+      "benchmark": "robodojo",
+      "suite": "memory",
+      "suite_label": "记忆",
+      "index": 13,
+      "name": "imitate_sorting_sequence",
+      "display_name": "Imitate Sorting Sequence",
+      "instruction": "Observe the object placement order, remember it, then place the corresponding objects into the basket in the same order.",
+      "image": "images/imitate_sorting_sequence.jpg",
+      "dimension": "memory",
+      "variants": [],
+      "source_ids": [
+        "imitate_sorting_sequence"
+      ]
+    },
+    {
+      "id": "insert_key",
+      "benchmark": "robodojo",
+      "suite": "precision",
+      "suite_label": "精度",
+      "index": 14,
+      "name": "insert_key",
+      "display_name": "Insert Key",
+      "instruction": "Pick up the key, hand it over to the other hand, insert it into the keyhole, then turn it.",
+      "image": "images/insert_key.jpg",
+      "dimension": "precision",
+      "variants": [],
+      "source_ids": [
+        "insert_key"
+      ]
+    },
+    {
+      "id": "insert_tubes",
+      "benchmark": "robodojo",
+      "suite": "precision",
+      "suite_label": "精度",
+      "index": 15,
+      "name": "insert_tubes",
+      "display_name": "Insert Tubes",
+      "instruction": "Insert the three tubes into the rack one by one.",
+      "image": "images/insert_tubes.jpg",
+      "dimension": "precision",
+      "variants": [],
+      "source_ids": [
+        "insert_tubes"
+      ]
+    },
+    {
+      "id": "make_kong",
+      "benchmark": "robodojo",
+      "suite": "long-horizon",
+      "suite_label": "长程",
+      "index": 16,
+      "name": "make_kong",
+      "display_name": "Make Kong",
+      "instruction": "Wait for the opponent to discard a tile, then declare a kong with the matching tiles.",
+      "image": "images/make_kong.jpg",
+      "dimension": "long-horizon",
+      "variants": [],
+      "source_ids": [
+        "make_kong"
+      ]
+    },
+    {
+      "id": "make_toast",
+      "benchmark": "robodojo",
+      "suite": "generalization",
+      "suite_label": "泛化",
+      "index": 17,
+      "name": "make_toast",
+      "display_name": "Make Toast",
+      "instruction": "Pick up two slices of bread, place them into the toaster, and press the lever down.",
+      "image": "images/make_toast.jpg",
+      "dimension": "generalization",
+      "variants": [
+        "make_toast_random"
+      ],
+      "source_ids": [
+        "make_toast",
+        "make_toast_random"
+      ]
+    },
+    {
+      "id": "match_and_pick_from_conveyor",
+      "benchmark": "robodojo",
+      "suite": "memory",
+      "suite_label": "记忆",
+      "index": 18,
+      "name": "match_and_pick_from_conveyor",
+      "display_name": "Match And Pick From Conveyor",
+      "instruction": "Remember the first object on the conveyor, then pick the matching object when it appears again.",
+      "image": "images/match_and_pick_from_conveyor.jpg",
+      "dimension": "memory",
+      "variants": [],
+      "source_ids": [
+        "match_and_pick_from_conveyor"
+      ]
+    },
+    {
+      "id": "organize_table",
+      "benchmark": "robodojo",
+      "suite": "long-horizon",
+      "suite_label": "长程",
+      "index": 19,
+      "name": "organize_table",
+      "display_name": "Organize Table",
+      "instruction": "Place the alarm clock on the drawer, put the figurine on the stand, place the mouse on the mouse pad, and push the keyboard into the frame.",
+      "image": "images/organize_table.jpg",
+      "dimension": "long-horizon",
+      "variants": [],
+      "source_ids": [
+        "organize_table"
+      ]
+    },
+    {
+      "id": "pack_objects_into_box",
+      "benchmark": "robodojo",
+      "suite": "generalization",
+      "suite_label": "泛化",
+      "index": 20,
+      "name": "pack_objects_into_box",
+      "display_name": "Pack Objects Into Box",
+      "instruction": "Place all the objects into the box with their front sides facing left.",
+      "image": "images/pack_objects_into_box.jpg",
+      "dimension": "generalization",
+      "variants": [
+        "pack_objects_into_box_random"
+      ],
+      "source_ids": [
+        "pack_objects_into_box",
+        "pack_objects_into_box_random"
+      ]
+    },
+    {
+      "id": "pick_from_conveyor_by_image",
+      "benchmark": "robodojo",
+      "suite": "open",
+      "suite_label": "开放",
+      "index": 21,
+      "name": "pick_from_conveyor_by_image",
+      "display_name": "Pick From Conveyor By Image",
+      "instruction": "Lift the basket more than 8 cm, identify the target object on the conveyor according to the image on the board, pick it up, and place it into the basket.",
+      "image": "images/pick_from_conveyor_by_image.jpg",
+      "dimension": "open",
+      "variants": [],
+      "source_ids": [
+        "pick_from_conveyor_by_image"
+      ]
+    },
+    {
+      "id": "play_Xylophone",
+      "benchmark": "robodojo",
+      "suite": "precision",
+      "suite_label": "精度",
+      "index": 22,
+      "name": "play_Xylophone",
+      "display_name": "Play Xylophone",
+      "instruction": "Pick up the mallet and strike all xylophone keys from left to right.",
+      "image": "images/play_Xylophone.jpg",
+      "dimension": "precision",
+      "variants": [],
+      "source_ids": [
+        "play_Xylophone"
+      ]
+    },
+    {
+      "id": "play_stacking_toy",
+      "benchmark": "robodojo",
+      "suite": "long-horizon",
+      "suite_label": "长程",
+      "index": 23,
+      "name": "play_stacking_toy",
+      "display_name": "Play Stacking Toy",
+      "instruction": "Place all stacking toy pieces onto the correct pegs.",
+      "image": "images/play_stacking_toy.jpg",
+      "dimension": "long-horizon",
+      "variants": [],
+      "source_ids": [
+        "play_stacking_toy"
+      ]
+    },
+    {
+      "id": "play_tic_tac_toe",
+      "benchmark": "robodojo",
+      "suite": "long-horizon",
+      "suite_label": "长程",
+      "index": 24,
+      "name": "play_tic_tac_toe",
+      "display_name": "Play Tic Tac Toe",
+      "instruction": "Play tic-tac-toe as the first player and fill the board with the opponent.",
+      "image": "images/play_tic_tac_toe.jpg",
+      "dimension": "long-horizon",
+      "variants": [],
+      "source_ids": [
+        "play_tic_tac_toe"
+      ]
+    },
+    {
+      "id": "plug_in_charger",
+      "benchmark": "robodojo",
+      "suite": "precision",
+      "suite_label": "精度",
+      "index": 25,
+      "name": "plug_in_charger",
+      "display_name": "Plug In Charger",
+      "instruction": "Plug the charger into the power strip.",
+      "image": "images/plug_in_charger.jpg",
+      "dimension": "precision",
+      "variants": [],
+      "source_ids": [
+        "plug_in_charger"
+      ]
+    },
+    {
+      "id": "pour_balls_into_vase",
+      "benchmark": "robodojo",
+      "suite": "precision",
+      "suite_label": "精度",
+      "index": 26,
+      "name": "pour_balls_into_vase",
+      "display_name": "Pour Balls Into Vase",
+      "instruction": "Pour all the balls from the cup into the vase.",
+      "image": "images/pour_balls_into_vase.jpg",
+      "dimension": "precision",
+      "variants": [],
+      "source_ids": [
+        "pour_balls_into_vase"
+      ]
+    },
+    {
+      "id": "pour_by_language",
+      "benchmark": "robodojo",
+      "suite": "open",
+      "suite_label": "开放",
+      "index": 27,
+      "name": "pour_by_language",
+      "display_name": "Pour By Language",
+      "instruction": "Pour each bottle into the matching bowl according to the language labels, then reset the robot arm.",
+      "image": "images/pour_by_language.jpg",
+      "dimension": "open",
+      "variants": [],
+      "source_ids": [
+        "pour_by_language"
+      ]
+    },
+    {
+      "id": "pour_liquid_into_cup",
+      "benchmark": "robodojo",
+      "suite": "generalization",
+      "suite_label": "泛化",
+      "index": 28,
+      "name": "pour_liquid_into_cup",
+      "display_name": "Pour Liquid Into Cup",
+      "instruction": "Pour the liquid from the bottle into the cup.",
+      "image": "images/pour_liquid_into_cup.jpg",
+      "dimension": "generalization",
+      "variants": [
+        "pour_liquid_into_cup_random"
+      ],
+      "source_ids": [
+        "pour_liquid_into_cup",
+        "pour_liquid_into_cup_random"
+      ]
+    },
+    {
+      "id": "press_by_number",
+      "benchmark": "robodojo",
+      "suite": "memory",
+      "suite_label": "记忆",
+      "index": 29,
+      "name": "press_by_number",
+      "display_name": "Press By Number",
+      "instruction": "Press the two red buttons the required number of times according to the number cards, then press the blue button to confirm.",
+      "image": "images/press_by_number.jpg",
+      "dimension": "memory",
+      "variants": [],
+      "source_ids": [
+        "press_by_number"
+      ]
+    },
+    {
+      "id": "push_T",
+      "benchmark": "robodojo",
+      "suite": "generalization",
+      "suite_label": "泛化",
+      "index": 30,
+      "name": "push_T",
+      "display_name": "Push T",
+      "instruction": "Push the T-shaped block to align it precisely with the gray T-shaped pad.",
+      "image": "images/push_T.jpg",
+      "dimension": "generalization",
+      "variants": [
+        "push_T_random"
+      ],
+      "source_ids": [
+        "push_T",
+        "push_T_random"
+      ]
+    },
+    {
+      "id": "put_bottles_into_dustbin",
+      "benchmark": "robodojo",
+      "suite": "long-horizon",
+      "suite_label": "长程",
+      "index": 31,
+      "name": "put_bottles_into_dustbin",
+      "display_name": "Put Bottles Into Dustbin",
+      "instruction": "Pick up the bottles and throw them into the dustbin, using handover when needed.",
+      "image": "images/put_bottles_into_dustbin.jpg",
+      "dimension": "long-horizon",
+      "variants": [],
+      "source_ids": [
+        "put_bottles_into_dustbin"
+      ]
+    },
+    {
+      "id": "solve_equation",
+      "benchmark": "robodojo",
+      "suite": "open",
+      "suite_label": "开放",
+      "index": 32,
+      "name": "solve_equation",
+      "display_name": "Solve Equation",
+      "instruction": "Complete the equation by selecting the correct missing number or operator and placing it on the pad, then reset the robot arm.",
+      "image": "images/solve_equation.jpg",
+      "dimension": "open",
+      "variants": [],
+      "source_ids": [
+        "solve_equation"
+      ]
+    },
+    {
+      "id": "sort_nesting_dolls_by_size",
+      "benchmark": "robodojo",
+      "suite": "generalization",
+      "suite_label": "泛化",
+      "index": 33,
+      "name": "sort_nesting_dolls_by_size",
+      "display_name": "Sort Nesting Dolls By Size",
+      "instruction": "Arrange the five nesting dolls in a row from left to right, from smallest to largest.",
+      "image": "images/sort_nesting_dolls_by_size.jpg",
+      "dimension": "generalization",
+      "variants": [
+        "sort_nesting_dolls_by_size_random"
+      ],
+      "source_ids": [
+        "sort_nesting_dolls_by_size",
+        "sort_nesting_dolls_by_size_random"
+      ]
+    },
+    {
+      "id": "stack_blocks",
+      "benchmark": "robodojo",
+      "suite": "generalization",
+      "suite_label": "泛化",
+      "index": 34,
+      "name": "stack_blocks",
+      "display_name": "Stack Blocks",
+      "instruction": "Stack the three blocks with different textures.",
+      "image": "images/stack_blocks.jpg",
+      "dimension": "generalization",
+      "variants": [
+        "stack_blocks_random"
+      ],
+      "source_ids": [
+        "stack_blocks",
+        "stack_blocks_random"
+      ]
+    },
+    {
+      "id": "stack_blocks_by_language",
+      "benchmark": "robodojo",
+      "suite": "open",
+      "suite_label": "开放",
+      "index": 35,
+      "name": "stack_blocks_by_language",
+      "display_name": "Stack Blocks By Language",
+      "instruction": "Stack the blocks from bottom to top in the order given by the language labels, then reset the robot arm.",
+      "image": "images/stack_blocks_by_language.jpg",
+      "dimension": "open",
+      "variants": [],
+      "source_ids": [
+        "stack_blocks_by_language"
+      ]
+    },
+    {
+      "id": "stack_bowls",
+      "benchmark": "robodojo",
+      "suite": "generalization",
+      "suite_label": "泛化",
+      "index": 36,
+      "name": "stack_bowls",
+      "display_name": "Stack Bowls",
+      "instruction": "Stack the three bowls together.",
+      "image": "images/stack_bowls.jpg",
+      "dimension": "generalization",
+      "variants": [
+        "stack_bowls_random"
+      ],
+      "source_ids": [
+        "stack_bowls",
+        "stack_bowls_random"
+      ]
+    },
+    {
+      "id": "store_laptop_and_headphones",
+      "benchmark": "robodojo",
+      "suite": "generalization",
+      "suite_label": "泛化",
+      "index": 37,
+      "name": "store_laptop_and_headphones",
+      "display_name": "Store Laptop And Headphones",
+      "instruction": "Hang the headphones on the headphone stand, close the laptop, then place it into the vertical laptop stand.",
+      "image": "images/store_laptop_and_headphones.jpg",
+      "dimension": "generalization",
+      "variants": [
+        "store_laptop_and_headphones_random"
+      ],
+      "source_ids": [
+        "store_laptop_and_headphones",
+        "store_laptop_and_headphones_random"
+      ]
+    },
+    {
+      "id": "store_tools_in_toolbox",
+      "benchmark": "robodojo",
+      "suite": "open",
+      "suite_label": "开放",
+      "index": 38,
+      "name": "store_tools_in_toolbox",
+      "display_name": "Store Tools In Toolbox",
+      "instruction": "Place each tool into its matching position in the toolbox, then reset the robot arm.",
+      "image": "images/store_tools_in_toolbox.jpg",
+      "dimension": "open",
+      "variants": [],
+      "source_ids": [
+        "store_tools_in_toolbox"
+      ]
+    },
+    {
+      "id": "swap_T",
+      "benchmark": "robodojo",
+      "suite": "memory",
+      "suite_label": "记忆",
+      "index": 39,
+      "name": "swap_T",
+      "display_name": "Swap T",
+      "instruction": "Pick up the two T-shaped blocks, swap their positions, and place them back with the correct orientations.",
+      "image": "images/swap_T.jpg",
+      "dimension": "memory",
+      "variants": [],
+      "source_ids": [
+        "swap_T"
+      ]
+    },
+    {
+      "id": "swap_blocks",
+      "benchmark": "robodojo",
+      "suite": "memory",
+      "suite_label": "记忆",
+      "index": 40,
+      "name": "swap_blocks",
+      "display_name": "Swap Blocks",
+      "instruction": "Swap the two blocks using the empty mat, pressing the button after each move.",
+      "image": "images/swap_blocks.jpg",
+      "dimension": "memory",
+      "variants": [],
+      "source_ids": [
+        "swap_blocks"
+      ]
+    },
+    {
+      "id": "sweep_blocks",
+      "benchmark": "robodojo",
+      "suite": "generalization",
+      "suite_label": "泛化",
+      "index": 41,
+      "name": "sweep_blocks",
+      "display_name": "Sweep Blocks",
+      "instruction": "Pick up the broom, hand it over to the right hand, then use the dustpan to sweep the blocks.",
+      "image": "images/sweep_blocks.jpg",
+      "dimension": "generalization",
+      "variants": [
+        "sweep_blocks_random"
+      ],
+      "source_ids": [
+        "sweep_blocks",
+        "sweep_blocks_random"
+      ]
+    }
+  ]
+}

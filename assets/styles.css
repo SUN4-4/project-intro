@@ -2062,3 +2062,162 @@ ol {
   font-weight: 700;
   letter-spacing: 0.04em;
 }
+
+/* Execution results */
+.run-summary {
+  margin: 1.5rem 0;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid rgba(23, 23, 20, 0.12);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.run-summary > strong {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.run-summary__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 0.8rem;
+  margin: 0;
+}
+
+.run-summary__grid div {
+  padding: 0.6rem 0.7rem;
+  border-radius: 0.7rem;
+  background: rgba(23, 23, 20, 0.04);
+}
+
+.run-summary__grid dt {
+  margin: 0 0 0.2rem;
+  color: rgba(23, 23, 20, 0.6);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.run-summary__grid dd {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.run-summary__note {
+  margin: 0.8rem 0 0;
+  color: rgba(23, 23, 20, 0.62);
+  font-size: 0.78rem;
+}
+
+.task-card__exec {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.6rem;
+  font-size: 0.7rem;
+}
+
+.exec-badge {
+  padding: 0.16rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.task-card__exec--success .exec-badge {
+  color: #0b4a1f;
+  background: #b7f0c2;
+}
+
+.task-card__exec--failure .exec-badge {
+  color: #6b1111;
+  background: #ffc9c4;
+}
+
+.task-card__exec--blocked .exec-badge {
+  color: #4a3a08;
+  background: #ffe9a8;
+}
+
+.task-card__exec--not_run .exec-badge,
+.task-card__exec--pending .exec-badge {
+  color: rgba(23, 23, 20, 0.7);
+  background: rgba(23, 23, 20, 0.1);
+}
+
+.task-card__exec-metrics {
+  color: rgba(23, 23, 20, 0.68);
+}
+
+.task-card__exec-reason {
+  margin: 0.45rem 0 0;
+  padding-left: 0.6rem;
+  border-left: 2px solid rgba(23, 23, 20, 0.15);
+  color: rgba(23, 23, 20, 0.66);
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.task-card__exec--infra .exec-badge {
+  color: #4a1a5e;
+  background: #e7c7f7;
+}
+
+.task-card__blender {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
+  color: #12263a;
+  background: rgba(183, 226, 255, 0.92);
+  border: 1px solid rgba(18, 38, 58, 0.15);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.task-card__failure-video {
+  margin-top: 0.7rem;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.task-card__failure-label {
+  color: rgba(23, 23, 20, 0.6);
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.task-card__failure-player {
+  width: 100%;
+  border-radius: 0.6rem;
+  background: #111;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+.task-card__video-kind {
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #0b4a1f;
+  background: rgba(183, 240, 194, 0.92);
+  border: 1px solid rgba(11, 74, 31, 0.15);
+}
+
+.task-card__video-kind--failure {
+  color: #6b1111;
+  background: rgba(255, 201, 196, 0.92);
+  border-color: rgba(107, 17, 17, 0.15);
+}

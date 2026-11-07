@@ -1,0 +1,8 @@
+{
+  "benchmark": "robodojo",
+  "seed": 0,
+  "size": 512,
+  "written": 5,
+  "failures": [],
+  "elapsed_s": 218.1
+}

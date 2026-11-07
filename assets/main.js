@@ -188,6 +188,14 @@ function createTaskCard(task, dataDir) {
   image.height = 240;
   media.append(image);
 
+  if (task.blender_status === "built" || task.blender_status === "captured") {
+    const blender = document.createElement("span");
+    blender.className = "task-card__blender";
+    blender.textContent =
+      task.blender_status === "built" ? "Blender 已重建" : "Blender 已采集";
+    media.append(blender);
+  }
+
   const videoSlot = document.createElement("div");
   videoSlot.className = "task-card__video-slot";
   videoSlot.dataset.videoSlot = task.bm_id;
@@ -198,7 +206,13 @@ function createTaskCard(task, dataDir) {
     player.controls = true;
     player.preload = "metadata";
     player.src = task.success_video_url;
-    videoSlot.append(player);
+
+    const label = document.createElement("span");
+    label.className = `task-card__video-kind task-card__video-kind--${task.video_kind || "success"}`;
+    label.textContent =
+      task.video_kind === "failure" ? "失败回放 · 最后一次尝试" : "成功执行视频";
+
+    videoSlot.append(player, label);
   } else {
     const play = document.createElement("span");
     play.className = "task-card__video-play";
@@ -209,7 +223,7 @@ function createTaskCard(task, dataDir) {
     copy.className = "task-card__video-copy";
 
     const title = document.createElement("strong");
-    title.textContent = "成功视频待接入";
+    title.textContent = "视频待接入";
 
     const subtitle = document.createElement("small");
     subtitle.textContent = `${task.bm_id} · VIDEO SLOT`;
@@ -243,6 +257,52 @@ function createTaskCard(task, dataDir) {
   instruction.textContent = task.instruction;
 
   body.append(ids, name, instruction);
+
+  if (task.exec_status) {
+    const statusLabels = {
+      success: "成功",
+      failure: "失败",
+      blocked: "阻塞",
+      infra: "基础设施",
+      not_run: "未运行",
+      pending: "待执行",
+    };
+    const exec = document.createElement("div");
+    exec.className = `task-card__exec task-card__exec--${task.exec_status}`;
+
+    const badge = document.createElement("span");
+    badge.className = "exec-badge";
+    badge.textContent = statusLabels[task.exec_status] || task.exec_status;
+    exec.append(badge);
+
+    const metrics = [];
+    if (typeof task.exec_success_rate === "number") {
+      metrics.push(`成功率 ${Math.round(task.exec_success_rate * 100)}%`);
+    }
+    if (typeof task.exec_attempts === "number") {
+      metrics.push(`${task.exec_attempts} 次尝试`);
+    }
+    if (typeof task.exec_rounds === "number") {
+      metrics.push(`${task.exec_rounds} 轮`);
+    }
+    if (typeof task.exec_duration_s === "number") {
+      metrics.push(`${Math.round(task.exec_duration_s)}s`);
+    }
+    if (metrics.length) {
+      const line = document.createElement("span");
+      line.className = "task-card__exec-metrics";
+      line.textContent = metrics.join(" · ");
+      exec.append(line);
+    }
+    body.append(exec);
+
+    if (task.exec_failure_reason) {
+      const reason = document.createElement("p");
+      reason.className = "task-card__exec-reason";
+      reason.textContent = task.exec_failure_reason;
+      body.append(reason);
+    }
+  }
 
   const meta = [
     ...(task.room_labels || []),
@@ -292,6 +352,76 @@ function createTaskCard(task, dataDir) {
   card.append(media, videoSlot, body);
 
   return card;
+}
+
+const runSummaryRoot = document.querySelector("[data-run-summary]");
+
+function renderRunSummary() {
+  if (!runSummaryRoot) return;
+
+  const all = Array.isArray(window.BM_CATALOG?.tasks)
+    ? window.BM_CATALOG.tasks
+    : [];
+  if (!all.length) return;
+
+  const executed = all.filter(
+    (task) => task.exec_status === "success" || task.exec_status === "failure",
+  );
+  const success = all.filter((task) => task.exec_status === "success").length;
+  const blocked = all.filter((task) => task.exec_status === "blocked").length;
+  const infra = all.filter((task) => task.exec_status === "infra").length;
+  const notRun = all.filter((task) => task.exec_status === "not_run").length;
+  const blenderBuilt = all.filter(
+    (task) => task.blender_status === "built",
+  ).length;
+  const rounds = executed
+    .map((task) => task.exec_rounds)
+    .filter((value) => typeof value === "number");
+  const durations = executed
+    .map((task) => task.exec_duration_s)
+    .filter((value) => typeof value === "number");
+  const avgRounds = rounds.length
+    ? (rounds.reduce((sum, value) => sum + value, 0) / rounds.length).toFixed(1)
+    : "—";
+  const totalHours = durations.length
+    ? (durations.reduce((sum, value) => sum + value, 0) / 3600).toFixed(1)
+    : "—";
+
+  const rows = [
+    ["已执行", `${executed.length} / ${all.length}`],
+    ["成功", `${success}`],
+    ["失败", `${executed.length - success}`],
+    ["阻塞 / 基础设施 / 未运行", `${blocked} / ${infra} / ${notRun}`],
+    ["成功率", executed.length ? `${Math.round((success / executed.length) * 100)}%` : "—"],
+    ["平均迭代轮数", avgRounds],
+    ["累计执行时长", `${totalHours} h`],
+    ["Blender 已重建", `${blenderBuilt} / ${all.length}`],
+  ];
+
+  runSummaryRoot.replaceChildren();
+  const title = document.createElement("strong");
+  title.textContent = "本轮真实执行结果";
+  runSummaryRoot.append(title);
+
+  const grid = document.createElement("dl");
+  grid.className = "run-summary__grid";
+  rows.forEach(([label, value]) => {
+    const item = document.createElement("div");
+    const dt = document.createElement("dt");
+    dt.textContent = label;
+    const dd = document.createElement("dd");
+    dd.textContent = value;
+    item.append(dt, dd);
+    grid.append(item);
+  });
+  runSummaryRoot.append(grid);
+
+  const note = document.createElement("p");
+  note.className = "run-summary__note";
+  note.textContent =
+    "范围：不使用 G1D，采用各 benchmark 原生机器人；LIBERO 短任务、RoboTwin 与 RoboDojo 闭环评测。" +
+    "无可用后端的任务标为阻塞，不伪造失败。";
+  runSummaryRoot.append(note);
 }
 
 function renderTaskGroups() {
@@ -391,5 +521,6 @@ benchmarkFilters.forEach((button) => {
 
 taskSearchInput?.addEventListener("input", applyTaskFilters);
 
+renderRunSummary();
 renderTaskGroups();
 applyTaskFilters();

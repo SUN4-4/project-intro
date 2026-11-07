@@ -22,6 +22,7 @@ GROUPS = (
     ("robotwin", "RoboTwin"),
     ("behavior", "BEHAVIOR-1K"),
     ("robosuite", "robosuite"),
+    ("robodojo", "RoboDojo"),
 )
 
 # robosuite registers 19 environments, but eight are object/layout variants of
@@ -90,6 +91,22 @@ def _previous_video_state() -> dict[str, dict]:
     }
 
 
+_EXEC_FIELDS = (
+    "blender_status",
+    "failure_video_url",
+    "failure_video_status",
+    "video_kind",
+    "exec_status",
+    "exec_success_rate",
+    "exec_attempts",
+    "exec_rounds",
+    "exec_duration_s",
+    "exec_failure_reason",
+    "exec_note",
+    "exec_checked_at",
+)
+
+
 def _prepare_task(
     task: dict,
     benchmark: str,
@@ -107,6 +124,9 @@ def _prepare_task(
     prior = previous.get(bm_id) or {}
     prepared["video_status"] = prior.get("video_status") or "pending"
     prepared["success_video_url"] = prior.get("success_video_url")
+    for field in _EXEC_FIELDS:
+        if field in prior:
+            prepared[field] = prior[field]
 
     if "video_url" in prepared:
         prepared["demo_video_url"] = prepared.pop("video_url")

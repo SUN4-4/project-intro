@@ -56,11 +56,12 @@ test("navigation and progressive reveal behavior are initialized", () => {
   assert.match(js, /updateActiveNavigation/);
 });
 
-test("benchmark section is the 291-task BM catalog", () => {
-  assert.match(html, /291 个 BM 任务/);
+test("benchmark section is the 333-task BM catalog", () => {
+  assert.match(html, /333 个 BM 任务/);
   assert.match(html, /BM-001/);
   assert.match(html, /data-benchmark-filter="robosuite"[\s\S]*?11/);
+  assert.match(html, /data-benchmark-filter="robodojo"[\s\S]*?42/);
   assert.match(js, /window\.BM_CATALOG/);
   assert.match(js, /task\.bm_id/);
-  assert.match(js, /成功视频待接入/);
+  assert.match(js, /视频待接入/);
 });
