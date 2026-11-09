@@ -1,22 +1,22 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-09T15:44:53.276165+00:00",
+  "generated_at": "2026-11-09T15:45:50.697302+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-09T15:44:53.266462+00:00",
+    "generated_at": "2026-11-09T15:45:50.692352+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
-    "success": 1,
+    "success": 0,
     "failure": 1,
     "infra": 0,
     "blocked": 100,
-    "pending": 230,
+    "pending": 231,
     "running": 1,
     "clean_success": 0,
-    "soft_success": 1,
-    "valid_verdicts": 2,
-    "success_rate": 0.5,
+    "soft_success": 0,
+    "valid_verdicts": 1,
+    "success_rate": 0.0,
     "clean_success_rate": 0.0,
     "publish": {
       "at": "2026-11-09T15:35:12.345597+00:00",
@@ -26,11 +26,11 @@
     }
   },
   "current": {
-    "bm_id": "BM-003",
-    "task_id": "libero_goal/2",
+    "bm_id": "BM-002",
+    "task_id": "libero_goal/1",
     "benchmark": "libero",
-    "attempt": 1,
-    "started_at": "2026-11-09T15:35:12.354237+00:00"
+    "attempt": 2,
+    "started_at": "2026-11-09T15:45:50.685506+00:00"
   },
   "tasks": [
     {
@@ -50,21 +50,21 @@
       "bm_id": "BM-002",
       "task_id": "libero_goal/1",
       "benchmark": "libero",
-      "status": "success",
+      "status": "running",
       "attempts": 2,
-      "rounds": 2,
-      "duration_s": 409.465,
+      "rounds": 0,
+      "duration_s": 0.0,
       "failure_reason": null,
-      "success_video_url": "data/videos/agent/BM-002-success.mp4",
-      "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:10:41.077554+00:00"
+      "success_video_url": null,
+      "last_failure_video_url": "data/videos/agent/BM-002-last-failure.mp4",
+      "finished_at": null
     },
     {
       "bm_id": "BM-003",
       "task_id": "libero_goal/2",
       "benchmark": "libero",
-      "status": "running",
-      "attempts": 1,
+      "status": "pending",
+      "attempts": 0,
       "rounds": 0,
       "duration_s": 0.0,
       "failure_reason": null,
@@ -96,7 +96,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927108+00:00"
+      "finished_at": "2026-11-09T15:45:50.625423+00:00"
     },
     {
       "bm_id": "BM-182",
@@ -109,7 +109,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927129+00:00"
+      "finished_at": "2026-11-09T15:45:50.625440+00:00"
     },
     {
       "bm_id": "BM-183",
@@ -122,7 +122,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927141+00:00"
+      "finished_at": "2026-11-09T15:45:50.625443+00:00"
     },
     {
       "bm_id": "BM-184",
@@ -135,7 +135,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927150+00:00"
+      "finished_at": "2026-11-09T15:45:50.625446+00:00"
     },
     {
       "bm_id": "BM-185",
@@ -148,7 +148,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927160+00:00"
+      "finished_at": "2026-11-09T15:45:50.625448+00:00"
     },
     {
       "bm_id": "BM-186",
@@ -161,7 +161,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927168+00:00"
+      "finished_at": "2026-11-09T15:45:50.625449+00:00"
     },
     {
       "bm_id": "BM-187",
@@ -174,7 +174,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927176+00:00"
+      "finished_at": "2026-11-09T15:45:50.625451+00:00"
     },
     {
       "bm_id": "BM-188",
@@ -187,7 +187,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927183+00:00"
+      "finished_at": "2026-11-09T15:45:50.625453+00:00"
     },
     {
       "bm_id": "BM-189",
@@ -200,7 +200,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927204+00:00"
+      "finished_at": "2026-11-09T15:45:50.625455+00:00"
     },
     {
       "bm_id": "BM-190",
@@ -213,7 +213,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927212+00:00"
+      "finished_at": "2026-11-09T15:45:50.625457+00:00"
     },
     {
       "bm_id": "BM-191",
@@ -226,7 +226,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927219+00:00"
+      "finished_at": "2026-11-09T15:45:50.625459+00:00"
     },
     {
       "bm_id": "BM-192",
@@ -239,7 +239,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927226+00:00"
+      "finished_at": "2026-11-09T15:45:50.625461+00:00"
     },
     {
       "bm_id": "BM-193",
@@ -252,7 +252,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927233+00:00"
+      "finished_at": "2026-11-09T15:45:50.625463+00:00"
     },
     {
       "bm_id": "BM-194",
@@ -265,7 +265,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927240+00:00"
+      "finished_at": "2026-11-09T15:45:50.625464+00:00"
     },
     {
       "bm_id": "BM-195",
@@ -278,7 +278,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927246+00:00"
+      "finished_at": "2026-11-09T15:45:50.625466+00:00"
     },
     {
       "bm_id": "BM-196",
@@ -291,7 +291,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927253+00:00"
+      "finished_at": "2026-11-09T15:45:50.625467+00:00"
     },
     {
       "bm_id": "BM-197",
@@ -304,7 +304,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927260+00:00"
+      "finished_at": "2026-11-09T15:45:50.625469+00:00"
     },
     {
       "bm_id": "BM-198",
@@ -317,7 +317,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927266+00:00"
+      "finished_at": "2026-11-09T15:45:50.625470+00:00"
     },
     {
       "bm_id": "BM-199",
@@ -330,7 +330,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927276+00:00"
+      "finished_at": "2026-11-09T15:45:50.625471+00:00"
     },
     {
       "bm_id": "BM-200",
@@ -343,7 +343,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927286+00:00"
+      "finished_at": "2026-11-09T15:45:50.625473+00:00"
     },
     {
       "bm_id": "BM-201",
@@ -356,7 +356,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927293+00:00"
+      "finished_at": "2026-11-09T15:45:50.625475+00:00"
     },
     {
       "bm_id": "BM-202",
@@ -369,7 +369,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927299+00:00"
+      "finished_at": "2026-11-09T15:45:50.625476+00:00"
     },
     {
       "bm_id": "BM-203",
@@ -382,7 +382,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927306+00:00"
+      "finished_at": "2026-11-09T15:45:50.625478+00:00"
     },
     {
       "bm_id": "BM-204",
@@ -395,7 +395,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927314+00:00"
+      "finished_at": "2026-11-09T15:45:50.625480+00:00"
     },
     {
       "bm_id": "BM-205",
@@ -408,7 +408,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927321+00:00"
+      "finished_at": "2026-11-09T15:45:50.625482+00:00"
     },
     {
       "bm_id": "BM-206",
@@ -421,7 +421,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927327+00:00"
+      "finished_at": "2026-11-09T15:45:50.625484+00:00"
     },
     {
       "bm_id": "BM-207",
@@ -434,7 +434,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927334+00:00"
+      "finished_at": "2026-11-09T15:45:50.625486+00:00"
     },
     {
       "bm_id": "BM-208",
@@ -447,7 +447,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927341+00:00"
+      "finished_at": "2026-11-09T15:45:50.625487+00:00"
     },
     {
       "bm_id": "BM-209",
@@ -460,7 +460,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927347+00:00"
+      "finished_at": "2026-11-09T15:45:50.625489+00:00"
     },
     {
       "bm_id": "BM-210",
@@ -473,7 +473,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927354+00:00"
+      "finished_at": "2026-11-09T15:45:50.625490+00:00"
     },
     {
       "bm_id": "BM-211",
@@ -486,7 +486,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927360+00:00"
+      "finished_at": "2026-11-09T15:45:50.625492+00:00"
     },
     {
       "bm_id": "BM-212",
@@ -499,7 +499,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927366+00:00"
+      "finished_at": "2026-11-09T15:45:50.625494+00:00"
     },
     {
       "bm_id": "BM-213",
@@ -512,7 +512,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927373+00:00"
+      "finished_at": "2026-11-09T15:45:50.625495+00:00"
     },
     {
       "bm_id": "BM-214",
@@ -525,7 +525,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927379+00:00"
+      "finished_at": "2026-11-09T15:45:50.625497+00:00"
     },
     {
       "bm_id": "BM-215",
@@ -538,7 +538,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927386+00:00"
+      "finished_at": "2026-11-09T15:45:50.625499+00:00"
     },
     {
       "bm_id": "BM-216",
@@ -551,7 +551,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927392+00:00"
+      "finished_at": "2026-11-09T15:45:50.625500+00:00"
     },
     {
       "bm_id": "BM-217",
@@ -564,7 +564,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927398+00:00"
+      "finished_at": "2026-11-09T15:45:50.625502+00:00"
     },
     {
       "bm_id": "BM-218",
@@ -577,7 +577,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927405+00:00"
+      "finished_at": "2026-11-09T15:45:50.625504+00:00"
     },
     {
       "bm_id": "BM-219",
@@ -590,7 +590,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927411+00:00"
+      "finished_at": "2026-11-09T15:45:50.625505+00:00"
     },
     {
       "bm_id": "BM-220",
@@ -603,7 +603,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927418+00:00"
+      "finished_at": "2026-11-09T15:45:50.625508+00:00"
     },
     {
       "bm_id": "BM-221",
@@ -616,7 +616,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927426+00:00"
+      "finished_at": "2026-11-09T15:45:50.625509+00:00"
     },
     {
       "bm_id": "BM-222",
@@ -629,7 +629,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927433+00:00"
+      "finished_at": "2026-11-09T15:45:50.625511+00:00"
     },
     {
       "bm_id": "BM-223",
@@ -642,7 +642,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927440+00:00"
+      "finished_at": "2026-11-09T15:45:50.625512+00:00"
     },
     {
       "bm_id": "BM-224",
@@ -655,7 +655,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927446+00:00"
+      "finished_at": "2026-11-09T15:45:50.625514+00:00"
     },
     {
       "bm_id": "BM-225",
@@ -668,7 +668,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927452+00:00"
+      "finished_at": "2026-11-09T15:45:50.625515+00:00"
     },
     {
       "bm_id": "BM-226",
@@ -681,7 +681,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927459+00:00"
+      "finished_at": "2026-11-09T15:45:50.625517+00:00"
     },
     {
       "bm_id": "BM-227",
@@ -694,7 +694,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927465+00:00"
+      "finished_at": "2026-11-09T15:45:50.625519+00:00"
     },
     {
       "bm_id": "BM-228",
@@ -707,7 +707,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927472+00:00"
+      "finished_at": "2026-11-09T15:45:50.625520+00:00"
     },
     {
       "bm_id": "BM-229",
@@ -720,7 +720,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927478+00:00"
+      "finished_at": "2026-11-09T15:45:50.625522+00:00"
     },
     {
       "bm_id": "BM-230",
@@ -733,7 +733,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927486+00:00"
+      "finished_at": "2026-11-09T15:45:50.625524+00:00"
     },
     {
       "bm_id": "BM-231",
@@ -746,7 +746,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927492+00:00"
+      "finished_at": "2026-11-09T15:45:50.625526+00:00"
     },
     {
       "bm_id": "BM-232",
@@ -759,7 +759,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927499+00:00"
+      "finished_at": "2026-11-09T15:45:50.625528+00:00"
     },
     {
       "bm_id": "BM-233",
@@ -772,7 +772,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927505+00:00"
+      "finished_at": "2026-11-09T15:45:50.625529+00:00"
     },
     {
       "bm_id": "BM-234",
@@ -785,7 +785,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927512+00:00"
+      "finished_at": "2026-11-09T15:45:50.625530+00:00"
     },
     {
       "bm_id": "BM-235",
@@ -798,7 +798,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927518+00:00"
+      "finished_at": "2026-11-09T15:45:50.625532+00:00"
     },
     {
       "bm_id": "BM-236",
@@ -811,7 +811,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927525+00:00"
+      "finished_at": "2026-11-09T15:45:50.625533+00:00"
     },
     {
       "bm_id": "BM-237",
@@ -824,7 +824,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927531+00:00"
+      "finished_at": "2026-11-09T15:45:50.625535+00:00"
     },
     {
       "bm_id": "BM-238",
@@ -837,7 +837,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927538+00:00"
+      "finished_at": "2026-11-09T15:45:50.625536+00:00"
     },
     {
       "bm_id": "BM-239",
@@ -850,7 +850,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927546+00:00"
+      "finished_at": "2026-11-09T15:45:50.625538+00:00"
     },
     {
       "bm_id": "BM-240",
@@ -863,7 +863,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927554+00:00"
+      "finished_at": "2026-11-09T15:45:50.625540+00:00"
     },
     {
       "bm_id": "BM-241",
@@ -876,7 +876,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927560+00:00"
+      "finished_at": "2026-11-09T15:45:50.625541+00:00"
     },
     {
       "bm_id": "BM-242",
@@ -889,7 +889,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927567+00:00"
+      "finished_at": "2026-11-09T15:45:50.625543+00:00"
     },
     {
       "bm_id": "BM-243",
@@ -902,7 +902,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927574+00:00"
+      "finished_at": "2026-11-09T15:45:50.625545+00:00"
     },
     {
       "bm_id": "BM-244",
@@ -915,7 +915,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927580+00:00"
+      "finished_at": "2026-11-09T15:45:50.625546+00:00"
     },
     {
       "bm_id": "BM-245",
@@ -928,7 +928,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927587+00:00"
+      "finished_at": "2026-11-09T15:45:50.625547+00:00"
     },
     {
       "bm_id": "BM-246",
@@ -941,7 +941,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927593+00:00"
+      "finished_at": "2026-11-09T15:45:50.625549+00:00"
     },
     {
       "bm_id": "BM-247",
@@ -954,7 +954,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927601+00:00"
+      "finished_at": "2026-11-09T15:45:50.625550+00:00"
     },
     {
       "bm_id": "BM-248",
@@ -967,7 +967,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927608+00:00"
+      "finished_at": "2026-11-09T15:45:50.625552+00:00"
     },
     {
       "bm_id": "BM-249",
@@ -980,7 +980,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927615+00:00"
+      "finished_at": "2026-11-09T15:45:50.625554+00:00"
     },
     {
       "bm_id": "BM-250",
@@ -993,7 +993,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927622+00:00"
+      "finished_at": "2026-11-09T15:45:50.625555+00:00"
     },
     {
       "bm_id": "BM-251",
@@ -1006,7 +1006,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927629+00:00"
+      "finished_at": "2026-11-09T15:45:50.625557+00:00"
     },
     {
       "bm_id": "BM-252",
@@ -1019,7 +1019,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927635+00:00"
+      "finished_at": "2026-11-09T15:45:50.625559+00:00"
     },
     {
       "bm_id": "BM-253",
@@ -1032,7 +1032,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927642+00:00"
+      "finished_at": "2026-11-09T15:45:50.625561+00:00"
     },
     {
       "bm_id": "BM-254",
@@ -1045,7 +1045,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927648+00:00"
+      "finished_at": "2026-11-09T15:45:50.625562+00:00"
     },
     {
       "bm_id": "BM-255",
@@ -1058,7 +1058,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927655+00:00"
+      "finished_at": "2026-11-09T15:45:50.625564+00:00"
     },
     {
       "bm_id": "BM-256",
@@ -1071,7 +1071,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927661+00:00"
+      "finished_at": "2026-11-09T15:45:50.625566+00:00"
     },
     {
       "bm_id": "BM-257",
@@ -1084,7 +1084,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927667+00:00"
+      "finished_at": "2026-11-09T15:45:50.625567+00:00"
     },
     {
       "bm_id": "BM-258",
@@ -1097,7 +1097,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927674+00:00"
+      "finished_at": "2026-11-09T15:45:50.625569+00:00"
     },
     {
       "bm_id": "BM-259",
@@ -1110,7 +1110,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927680+00:00"
+      "finished_at": "2026-11-09T15:45:50.625571+00:00"
     },
     {
       "bm_id": "BM-260",
@@ -1123,7 +1123,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927687+00:00"
+      "finished_at": "2026-11-09T15:45:50.625572+00:00"
     },
     {
       "bm_id": "BM-261",
@@ -1136,7 +1136,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927694+00:00"
+      "finished_at": "2026-11-09T15:45:50.625574+00:00"
     },
     {
       "bm_id": "BM-262",
@@ -1149,7 +1149,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927700+00:00"
+      "finished_at": "2026-11-09T15:45:50.625575+00:00"
     },
     {
       "bm_id": "BM-263",
@@ -1162,7 +1162,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927706+00:00"
+      "finished_at": "2026-11-09T15:45:50.625577+00:00"
     },
     {
       "bm_id": "BM-264",
@@ -1175,7 +1175,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927716+00:00"
+      "finished_at": "2026-11-09T15:45:50.625578+00:00"
     },
     {
       "bm_id": "BM-265",
@@ -1188,7 +1188,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927723+00:00"
+      "finished_at": "2026-11-09T15:45:50.625580+00:00"
     },
     {
       "bm_id": "BM-266",
@@ -1201,7 +1201,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927729+00:00"
+      "finished_at": "2026-11-09T15:45:50.625581+00:00"
     },
     {
       "bm_id": "BM-267",
@@ -1214,7 +1214,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927735+00:00"
+      "finished_at": "2026-11-09T15:45:50.625583+00:00"
     },
     {
       "bm_id": "BM-268",
@@ -1227,7 +1227,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927741+00:00"
+      "finished_at": "2026-11-09T15:45:50.625584+00:00"
     },
     {
       "bm_id": "BM-269",
@@ -1240,7 +1240,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927748+00:00"
+      "finished_at": "2026-11-09T15:45:50.625586+00:00"
     },
     {
       "bm_id": "BM-270",
@@ -1253,7 +1253,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927754+00:00"
+      "finished_at": "2026-11-09T15:45:50.625587+00:00"
     },
     {
       "bm_id": "BM-271",
@@ -1266,7 +1266,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927760+00:00"
+      "finished_at": "2026-11-09T15:45:50.625589+00:00"
     },
     {
       "bm_id": "BM-272",
@@ -1279,7 +1279,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927766+00:00"
+      "finished_at": "2026-11-09T15:45:50.625590+00:00"
     },
     {
       "bm_id": "BM-273",
@@ -1292,7 +1292,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927773+00:00"
+      "finished_at": "2026-11-09T15:45:50.625592+00:00"
     },
     {
       "bm_id": "BM-274",
@@ -1305,7 +1305,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927779+00:00"
+      "finished_at": "2026-11-09T15:45:50.625593+00:00"
     },
     {
       "bm_id": "BM-275",
@@ -1318,7 +1318,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927785+00:00"
+      "finished_at": "2026-11-09T15:45:50.625594+00:00"
     },
     {
       "bm_id": "BM-276",
@@ -1331,7 +1331,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927792+00:00"
+      "finished_at": "2026-11-09T15:45:50.625596+00:00"
     },
     {
       "bm_id": "BM-277",
@@ -1344,7 +1344,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927799+00:00"
+      "finished_at": "2026-11-09T15:45:50.625598+00:00"
     },
     {
       "bm_id": "BM-278",
@@ -1357,7 +1357,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927805+00:00"
+      "finished_at": "2026-11-09T15:45:50.625600+00:00"
     },
     {
       "bm_id": "BM-279",
@@ -1370,7 +1370,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927811+00:00"
+      "finished_at": "2026-11-09T15:45:50.625601+00:00"
     },
     {
       "bm_id": "BM-280",
@@ -1383,7 +1383,7 @@
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
       "last_failure_video_url": null,
-      "finished_at": "2026-11-09T14:32:10.927830+00:00"
+      "finished_at": "2026-11-09T15:45:50.625603+00:00"
     }
   ]
 }
