@@ -1,23 +1,23 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-09T21:30:08.809829+00:00",
+  "generated_at": "2026-11-09T21:57:10.261770+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-09T21:30:08.805114+00:00",
+    "generated_at": "2026-11-09T21:57:10.258104+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 3,
-    "failure": 8,
+    "failure": 9,
     "infra": 1,
     "blocked": 100,
     "pending": 220,
-    "running": 1,
+    "running": 0,
     "clean_success": 3,
     "soft_success": 0,
-    "valid_verdicts": 11,
-    "success_rate": 0.2727272727272727,
-    "clean_success_rate": 0.2727272727272727,
+    "valid_verdicts": 12,
+    "success_rate": 0.25,
+    "clean_success_rate": 0.25,
     "publish": {
       "at": "2026-11-09T20:53:13.185898+00:00",
       "returncode": 0,
@@ -25,13 +25,7 @@
       "url": "https://sun4-4.github.io/project-intro/"
     }
   },
-  "current": {
-    "bm_id": "BM-013",
-    "task_id": "libero_object/2",
-    "benchmark": "libero",
-    "attempt": 1,
-    "started_at": "2026-11-09T21:01:56.813751+00:00"
-  },
+  "current": null,
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -205,15 +199,15 @@
       "bm_id": "BM-013",
       "task_id": "libero_object/2",
       "benchmark": "libero",
-      "status": "running",
+      "status": "failure",
       "attempts": 1,
-      "rounds": 0,
-      "duration_s": 0.0,
-      "failure_reason": null,
+      "rounds": 10,
+      "duration_s": 3300.599,
+      "failure_reason": "n/a — round 10 succeeded: grasp_object held the bottle (gap 0.0378, holding_visual true), place_object_in(basket, z_offset 0.06) released inside and is_holding returned open (not held).",
       "success_video_url": null,
-      "last_failure_video_url": null,
-      "clean_grasp_trajectory_url": null,
-      "finished_at": null
+      "last_failure_video_url": "data/videos/agent/BM-013-last-failure.mp4",
+      "clean_grasp_trajectory_url": "data/trajectories/BM-013-last-clean-grasp.json",
+      "finished_at": "2026-11-09T21:57:10.243646+00:00"
     },
     {
       "bm_id": "BM-131",
