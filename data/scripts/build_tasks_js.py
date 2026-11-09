@@ -133,6 +133,7 @@ _EXEC_FIELDS = (
     "agent_clean_success",
     "agent_success_kind",
     "agent_success_note",
+    "agent_clean_grasp_trajectory_url",
 )
 
 

@@ -2162,6 +2162,15 @@ ol {
   line-height: 1.45;
 }
 
+.task-card__trajectory-link {
+  display: inline-block;
+  margin-top: 0.45rem;
+  color: #2f5d8a;
+  font-size: 0.72rem;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .task-card__exec--infra .exec-badge {
   color: #4a1a5e;
   background: #e7c7f7;

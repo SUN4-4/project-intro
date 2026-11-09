@@ -333,6 +333,14 @@ function createTaskCard(task, dataDir) {
       note.textContent = `注意：${task.agent_success_note}`;
       body.append(note);
     }
+    if (task.agent_clean_grasp_trajectory_url) {
+      const trajectory = document.createElement("a");
+      trajectory.className = "task-card__trajectory-link";
+      trajectory.href = task.agent_clean_grasp_trajectory_url;
+      trajectory.download = "";
+      trajectory.textContent = "下载最后一次干净抓取轨迹 (JSON)";
+      body.append(trajectory);
+    }
   }
 
   const meta = [
