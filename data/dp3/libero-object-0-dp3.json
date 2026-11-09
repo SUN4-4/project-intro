@@ -1,0 +1,22 @@
+{
+  "schema": "roborsi.dp3.loop.v1",
+  "experiment": "libero-object-0-dp3",
+  "task": "libero_object/0",
+  "atomic": "libero_pick_place",
+  "backend": "libero",
+  "status": "running",
+  "started_at": "2026-11-09T11:24:19.726471+00:00",
+  "updated_at": "2026-11-09T11:24:19.726482+00:00",
+  "config": {
+    "rounds": 5,
+    "collect_successes": 1,
+    "max_attempts_per_round": 3,
+    "eval_seeds": 3,
+    "target_rate": 0.66,
+    "epochs": 150,
+    "max_steps": 800
+  },
+  "rounds": [],
+  "best_success_rate": 0.0,
+  "website_updated_at": "2026-11-09T11:24:19.726685+00:00"
+}

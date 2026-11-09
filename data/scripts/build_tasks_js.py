@@ -104,6 +104,10 @@ _EXEC_FIELDS = (
     "exec_failure_reason",
     "exec_note",
     "exec_checked_at",
+    "agent_success_videos",
+    "agent_success_count",
+    "agent_loop_updated_at",
+    "success_video_label",
 )
 
 

@@ -49,7 +49,7 @@
           "benchmark": "libero",
           "benchmark_label": "LIBERO",
           "video_status": "published",
-          "success_video_url": "data/videos/BM-002.mp4",
+          "success_video_url": "data/videos/BM-002-agent-loop.mp4",
           "blender_status": "built",
           "failure_video_url": null,
           "failure_video_status": "pending",
@@ -60,8 +60,18 @@
           "exec_rounds": 2,
           "exec_duration_s": 579.4521462917328,
           "exec_failure_reason": "✓ **libero_pick_place** seed=0 · predicate_passed_without_done (24 tool calls)\nMode: `frozen` · released capability set frozen\n\nWorkspace: `/home/sunhe/.roborsi-campaign/workspaces/libero_pick_place-20261106-212435-4dcb05`\n  plan.md · summary.md · review.md\n\nReviewer verdict: `done` · proposal: `NO_PROPOSAL`",
-          "exec_note": "原生机器人（未使用 G1D）",
-          "exec_checked_at": "2026-11-06T13:34:17.518028+00:00"
+          "exec_note": "Agent 迭代成功轨迹：2026-11-09 闭环采集的 5 条 dense 轨迹（libero_goal/1）。",
+          "exec_checked_at": "2026-11-06T13:34:17.518028+00:00",
+          "agent_success_videos": [
+            "data/videos/agent/goal1_seed0_185202.mp4",
+            "data/videos/agent/goal1_seed1_185742.mp4",
+            "data/videos/agent/goal1_seed3_191154.mp4",
+            "data/videos/agent/goal1_seed5_193400.mp4",
+            "data/videos/agent/goal1_seed3_201541.mp4"
+          ],
+          "agent_success_count": 5,
+          "agent_loop_updated_at": "2026-11-09T12:38:10.954142+00:00",
+          "success_video_label": "5 条 agent 迭代成功轨迹（2026-11-09 frozen 闭环）"
         },
         {
           "id": "libero_goal/2",
@@ -10743,7 +10753,7 @@
       "benchmark": "libero",
       "benchmark_label": "LIBERO",
       "video_status": "published",
-      "success_video_url": "data/videos/BM-002.mp4",
+      "success_video_url": "data/videos/BM-002-agent-loop.mp4",
       "blender_status": "built",
       "failure_video_url": null,
       "failure_video_status": "pending",
@@ -10754,8 +10764,18 @@
       "exec_rounds": 2,
       "exec_duration_s": 579.4521462917328,
       "exec_failure_reason": "✓ **libero_pick_place** seed=0 · predicate_passed_without_done (24 tool calls)\nMode: `frozen` · released capability set frozen\n\nWorkspace: `/home/sunhe/.roborsi-campaign/workspaces/libero_pick_place-20261106-212435-4dcb05`\n  plan.md · summary.md · review.md\n\nReviewer verdict: `done` · proposal: `NO_PROPOSAL`",
-      "exec_note": "原生机器人（未使用 G1D）",
-      "exec_checked_at": "2026-11-06T13:34:17.518028+00:00"
+      "exec_note": "Agent 迭代成功轨迹：2026-11-09 闭环采集的 5 条 dense 轨迹（libero_goal/1）。",
+      "exec_checked_at": "2026-11-06T13:34:17.518028+00:00",
+      "agent_success_videos": [
+        "data/videos/agent/goal1_seed0_185202.mp4",
+        "data/videos/agent/goal1_seed1_185742.mp4",
+        "data/videos/agent/goal1_seed3_191154.mp4",
+        "data/videos/agent/goal1_seed5_193400.mp4",
+        "data/videos/agent/goal1_seed3_201541.mp4"
+      ],
+      "agent_success_count": 5,
+      "agent_loop_updated_at": "2026-11-09T12:38:10.954142+00:00",
+      "success_video_label": "5 条 agent 迭代成功轨迹（2026-11-09 frozen 闭环）"
     },
     {
       "id": "libero_goal/2",

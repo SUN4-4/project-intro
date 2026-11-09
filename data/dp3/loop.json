@@ -1,0 +1,244 @@
+{
+  "schema": "roborsi.dp3.loop.v1",
+  "experiment": "libero-goal-1-dp3",
+  "task": "libero_goal/1",
+  "atomic": "libero_pick_place",
+  "backend": "libero",
+  "status": "running",
+  "started_at": "2026-11-09T12:00:00.703428+00:00",
+  "updated_at": "2026-11-09T12:44:01.794545+00:00",
+  "config": {
+    "rounds": 4,
+    "collect_successes": 3,
+    "max_attempts_per_round": 5,
+    "eval_seeds": 3,
+    "target_rate": 0.66,
+    "epochs": 400,
+    "max_steps": 1200
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "started_at": "2026-11-09T12:00:00.703793+00:00",
+      "status": "improve",
+      "collect": {
+        "target_successes": 3,
+        "max_attempts": 5,
+        "attempts": [
+          {
+            "seed": 0,
+            "success": false,
+            "verdict": "failure",
+            "outcome": "budget_exceeded",
+            "run_id": "20261109-200000-ad1f28",
+            "workspace": "/home/sunhe/.roborsi/workspaces/libero_pick_place-20261109-200000-ad1f28",
+            "video_path": "/home/sunhe/.roborsi/artifacts/evals/libero_pick_place-seed0-failure-20261109-200839.mp4",
+            "tool_calls": 20,
+            "wallclock_s": 653.485,
+            "dp3_episode": null,
+            "video_url": "data/dp3/libero-goal-1-dp3/agent_round1_seed0.mp4"
+          },
+          {
+            "seed": 1,
+            "success": false,
+            "verdict": "implementation_error",
+            "outcome": "implementation_error",
+            "run_id": null,
+            "workspace": null,
+            "video_path": null,
+            "tool_calls": 0,
+            "wallclock_s": 199.171,
+            "dp3_episode": null
+          },
+          {
+            "seed": 2,
+            "success": false,
+            "verdict": "implementation_error",
+            "outcome": "implementation_error",
+            "run_id": null,
+            "workspace": null,
+            "video_path": null,
+            "tool_calls": 0,
+            "wallclock_s": 87.551,
+            "dp3_episode": null
+          },
+          {
+            "seed": 3,
+            "success": true,
+            "verdict": "success",
+            "outcome": "predicate_passed_without_done",
+            "run_id": "20261109-201541-3819df",
+            "workspace": "/home/sunhe/.roborsi/workspaces/libero_pick_place-20261109-201541-3819df",
+            "video_path": "/home/sunhe/.roborsi/artifacts/evals/libero_pick_place-seed3-success-20261109-202732.mp4",
+            "tool_calls": 40,
+            "wallclock_s": 712.027,
+            "dp3_episode": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/episodes/libero/libero_goal-1/20261109-201541-3819df",
+            "video_url": "data/dp3/libero-goal-1-dp3/agent_round1_seed3.mp4"
+          },
+          {
+            "seed": 4,
+            "success": false,
+            "verdict": "implementation_error",
+            "outcome": "implementation_error",
+            "run_id": null,
+            "workspace": null,
+            "video_path": null,
+            "tool_calls": 0,
+            "wallclock_s": 165.091,
+            "dp3_episode": null
+          }
+        ],
+        "successes": 1
+      },
+      "dataset": {
+        "group": "libero",
+        "dataset_path": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/datasets/libero/dataset.npz",
+        "meta_path": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/datasets/libero/meta.json",
+        "episodes": 5,
+        "frames": 977,
+        "shape": {
+          "state_dim": 39,
+          "action_dim": 8,
+          "num_points": 1024
+        },
+        "tasks": [
+          "libero_goal/1"
+        ],
+        "skipped": []
+      },
+      "train": {
+        "group": "libero",
+        "command": "/home/sunhe/RoboRSI/scripts/roborsi-dp3 python /home/sunhe/RoboRSI/roborsi/dp3/dp3_train_entry.py --config-dir /home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/configs/libero --config-name train_dp3_roborsi --output-dir /home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/checkpoints/libero/train-20261109-203018 hydra.run.dir=/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/checkpoints/libero/train-20261109-203018 task=libero training.seed=43 training.device=cuda:0 training.debug=False training.num_epochs=400 training.max_train_steps=null training.checkpoint_every=50 training.use_ema=True dataloader.batch_size=16 dataloader.num_workers=0 optimizer.lr=0.0001 logging.mode=offline checkpoint.save_ckpt=True training.resume=False training.finetune_from=/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/checkpoints/libero/train-20261109-191858/checkpoints/latest.ckpt",
+        "output_dir": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/checkpoints/libero/train-20261109-203018",
+        "checkpoint": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/checkpoints/libero/train-20261109-203018/checkpoints/latest.ckpt",
+        "returncode": 0,
+        "dry_run": false,
+        "last_log": "\u001b[1;34mwandb\u001b[0m: Find logs at: \u001b[1;35m../../../.roborsi/dp3/experiments/libero-goal-1-dp3/checkpoints/libero/train-20261109-203018/wandb/offline-run-20261109_203021-u7f2syuw/logs\u001b[0m",
+        "config": {
+          "config_dir": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/configs/libero",
+          "config_name": "train_dp3_roborsi",
+          "config_path": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/configs/libero/train_dp3_roborsi.yaml",
+          "task_path": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/configs/libero/task/libero.yaml",
+          "dataset_path": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/datasets/libero/dataset.npz",
+          "group": "libero"
+        }
+      },
+      "eval": {
+        "checkpoint": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/checkpoints/libero/train-20261109-203018/checkpoints/latest.ckpt",
+        "dataset": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/datasets/libero/dataset.npz",
+        "group": "libero",
+        "task": "libero_goal/1",
+        "success_rate": 0.0,
+        "successes": 0,
+        "total": 3,
+        "episodes": [
+          {
+            "seed": 100,
+            "success": false,
+            "steps": 1200,
+            "action_mean": -0.026666754856705666,
+            "action_std": 0.3121601641178131,
+            "video_path": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/loop/eval_round_1/seed_100/head_failure.mp4",
+            "final_frame": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/loop/eval_round_1/seed_100/final.jpg",
+            "video_url": "data/dp3/libero-goal-1-dp3/round1_seed100_fail.mp4",
+            "final_frame_url": "data/dp3/libero-goal-1-dp3/round1_seed100_final.jpg"
+          },
+          {
+            "seed": 101,
+            "success": false,
+            "steps": 1200,
+            "action_mean": -0.05171038582921028,
+            "action_std": 0.31349241733551025,
+            "video_path": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/loop/eval_round_1/seed_101/head_failure.mp4",
+            "final_frame": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/loop/eval_round_1/seed_101/final.jpg",
+            "video_url": "data/dp3/libero-goal-1-dp3/round1_seed101_fail.mp4",
+            "final_frame_url": "data/dp3/libero-goal-1-dp3/round1_seed101_final.jpg"
+          },
+          {
+            "seed": 102,
+            "success": false,
+            "steps": 1200,
+            "action_mean": -0.08177638053894043,
+            "action_std": 0.3144281506538391,
+            "video_path": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/loop/eval_round_1/seed_102/head_failure.mp4",
+            "final_frame": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/loop/eval_round_1/seed_102/final.jpg",
+            "video_url": "data/dp3/libero-goal-1-dp3/round1_seed102_fail.mp4",
+            "final_frame_url": "data/dp3/libero-goal-1-dp3/round1_seed102_final.jpg"
+          }
+        ],
+        "output_dir": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/loop/eval_round_1",
+        "error": "",
+        "metadata": {
+          "checkpoint": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/checkpoints/libero/train-20261109-203018/checkpoints/latest.ckpt",
+          "n_obs_steps": 2,
+          "n_action_steps": 8,
+          "state_dim": 39,
+          "num_points": 1024,
+          "action_dim": 8,
+          "missing_keys": [],
+          "unexpected_keys": []
+        }
+      },
+      "analysis": {
+        "diagnosis": "insufficient data or training; collect more successful episodes and train longer",
+        "collect_successes": 4,
+        "epochs": 600,
+        "max_steps": 1440,
+        "notes": "analysis fallback: AuthenticationError: litellm.AuthenticationError: AuthenticationError: DeepseekException - Authentication Fails (governor)"
+      },
+      "finished_at": "2026-11-09T12:44:01.794532+00:00"
+    }
+  ],
+  "best_success_rate": 0.0,
+  "latest_eval": {
+    "checkpoint": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/checkpoints/libero/train-20261109-203018/checkpoints/latest.ckpt",
+    "dataset": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/datasets/libero/dataset.npz",
+    "group": "libero",
+    "task": "libero_goal/1",
+    "success_rate": 0.0,
+    "successes": 0,
+    "total": 3,
+    "episodes": [
+      {
+        "seed": 100,
+        "success": false,
+        "steps": 1200,
+        "action_mean": -0.026666754856705666,
+        "action_std": 0.3121601641178131,
+        "video_path": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/loop/eval_round_1/seed_100/head_failure.mp4",
+        "final_frame": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/loop/eval_round_1/seed_100/final.jpg"
+      },
+      {
+        "seed": 101,
+        "success": false,
+        "steps": 1200,
+        "action_mean": -0.05171038582921028,
+        "action_std": 0.31349241733551025,
+        "video_path": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/loop/eval_round_1/seed_101/head_failure.mp4",
+        "final_frame": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/loop/eval_round_1/seed_101/final.jpg"
+      },
+      {
+        "seed": 102,
+        "success": false,
+        "steps": 1200,
+        "action_mean": -0.08177638053894043,
+        "action_std": 0.3144281506538391,
+        "video_path": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/loop/eval_round_1/seed_102/head_failure.mp4",
+        "final_frame": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/loop/eval_round_1/seed_102/final.jpg"
+      }
+    ],
+    "output_dir": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/loop/eval_round_1",
+    "error": "",
+    "metadata": {
+      "checkpoint": "/home/sunhe/.roborsi/dp3/experiments/libero-goal-1-dp3/checkpoints/libero/train-20261109-203018/checkpoints/latest.ckpt",
+      "n_obs_steps": 2,
+      "n_action_steps": 8,
+      "state_dim": 39,
+      "num_points": 1024,
+      "action_dim": 8,
+      "missing_keys": [],
+      "unexpected_keys": []
+    }
+  },
+  "website_updated_at": "2026-11-09T12:44:01.796015+00:00"
+}
