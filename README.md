@@ -6,6 +6,22 @@
 RoboRSI 的项目介绍页：项目定位、核心能力、最新评测进展，以及 5 个 benchmark
 的 333 个 BM 任务。
 
+## 发布
+
+公网地址：<https://sun4-4.github.io/project-intro/>
+
+`website/` 是源文件。任何修改 `website/` 的 commit 都会触发
+`.githooks/post-commit`，由 `scripts/publish-website` 同步到
+`SUN4-4/project-intro` GitHub Pages 镜像，作为阶段性成果自动发布。
+新克隆仓库后运行一次：
+
+```bash
+./scripts/install-website-publish-hook
+```
+
+手动发布：`./scripts/publish-website`。发布日志在
+`~/.cache/roborsi/website-publish.log`。
+
 ## BM 任务目录
 
 333 个 BM 任务由 `data/scripts/build_tasks_js.py` 统一生成。编号按
