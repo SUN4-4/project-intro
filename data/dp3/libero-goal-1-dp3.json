@@ -4,9 +4,9 @@
   "task": "libero_goal/1",
   "atomic": "libero_pick_place",
   "backend": "libero",
-  "status": "running",
+  "status": "paused",
   "started_at": "2026-11-09T12:00:00.703428+00:00",
-  "updated_at": "2026-11-09T12:44:01.794545+00:00",
+  "updated_at": "2026-11-09T13:00:37.951491+00:00",
   "config": {
     "rounds": 4,
     "collect_successes": 3,
@@ -240,5 +240,6 @@
       "unexpected_keys": []
     }
   },
-  "website_updated_at": "2026-11-09T12:44:01.796015+00:00"
+  "website_updated_at": "2026-11-09T12:44:01.796015+00:00",
+  "paused_at": "2026-11-09T13:00:37.951491+00:00"
 }
