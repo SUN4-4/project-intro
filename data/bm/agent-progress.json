@@ -1,9 +1,9 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-09T15:35:06.688027+00:00",
+  "generated_at": "2026-11-09T15:44:53.276165+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-09T15:35:06.684222+00:00",
+    "generated_at": "2026-11-09T15:44:53.266462+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -11,18 +11,27 @@
     "failure": 1,
     "infra": 0,
     "blocked": 100,
-    "pending": 231,
-    "running": 0,
+    "pending": 230,
+    "running": 1,
+    "clean_success": 0,
+    "soft_success": 1,
     "valid_verdicts": 2,
     "success_rate": 0.5,
+    "clean_success_rate": 0.0,
     "publish": {
-      "at": "2026-11-09T14:33:41.496471+00:00",
-      "returncode": 1,
-      "tail": "2026-11-09T14:33:41Z fetch failed | fatal: 无法访问 'https://github.com/SUN4-4/project-intro.git/'：GnuTLS recv error (-110): The TLS connection was non-properly terminated.",
+      "at": "2026-11-09T15:35:12.345597+00:00",
+      "returncode": 0,
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    46a59c5..7f3f176  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     }
   },
-  "current": null,
+  "current": {
+    "bm_id": "BM-003",
+    "task_id": "libero_goal/2",
+    "benchmark": "libero",
+    "attempt": 1,
+    "started_at": "2026-11-09T15:35:12.354237+00:00"
+  },
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -49,6 +58,19 @@
       "success_video_url": "data/videos/agent/BM-002-success.mp4",
       "last_failure_video_url": null,
       "finished_at": "2026-11-09T14:10:41.077554+00:00"
+    },
+    {
+      "bm_id": "BM-003",
+      "task_id": "libero_goal/2",
+      "benchmark": "libero",
+      "status": "running",
+      "attempts": 1,
+      "rounds": 0,
+      "duration_s": 0.0,
+      "failure_reason": null,
+      "success_video_url": null,
+      "last_failure_video_url": null,
+      "finished_at": null
     },
     {
       "bm_id": "BM-131",

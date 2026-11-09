@@ -216,7 +216,9 @@ function createTaskCard(task, dataDir) {
       const label = document.createElement("span");
       label.className = `task-card__video-kind task-card__video-kind--${kind}`;
       label.textContent =
-        kind === "failure" ? "最后一次失败回放" : "Agent 成功执行视频";
+        kind === "failure"
+          ? "最后一次失败回放"
+          : task.success_video_label || "Agent 成功执行视频";
 
       videoSlot.append(player, label);
     };
@@ -288,7 +290,10 @@ function createTaskCard(task, dataDir) {
 
     const badge = document.createElement("span");
     badge.className = "exec-badge";
-    badge.textContent = statusLabels[execStatus] || execStatus;
+    badge.textContent =
+      execStatus === "success" && task.agent_success_kind === "soft"
+        ? "软成功"
+        : statusLabels[execStatus] || execStatus;
     exec.append(badge);
 
     const metrics = [];
@@ -321,6 +326,12 @@ function createTaskCard(task, dataDir) {
       reason.className = "task-card__exec-reason";
       reason.textContent = reasonText;
       body.append(reason);
+    }
+    if (task.agent_success_note) {
+      const note = document.createElement("p");
+      note.className = "task-card__exec-reason";
+      note.textContent = `注意：${task.agent_success_note}`;
+      body.append(note);
     }
   }
 

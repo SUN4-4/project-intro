@@ -130,6 +130,9 @@ _EXEC_FIELDS = (
     "agent_analysis",
     "agent_success_video_url",
     "agent_last_failure_video_url",
+    "agent_clean_success",
+    "agent_success_kind",
+    "agent_success_note",
 )
 
 
