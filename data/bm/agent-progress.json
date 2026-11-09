@@ -1,37 +1,31 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-09T17:30:08.078325+00:00",
+  "generated_at": "2026-11-09T17:43:36.796999+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-09T17:30:08.049029+00:00",
+    "generated_at": "2026-11-09T17:43:36.792162+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 1,
-    "failure": 2,
+    "failure": 3,
     "infra": 0,
     "blocked": 100,
     "pending": 229,
-    "running": 1,
+    "running": 0,
     "clean_success": 1,
     "soft_success": 0,
-    "valid_verdicts": 3,
-    "success_rate": 0.3333333333333333,
-    "clean_success_rate": 0.3333333333333333,
+    "valid_verdicts": 4,
+    "success_rate": 0.25,
+    "clean_success_rate": 0.25,
     "publish": {
-      "at": "2026-11-09T16:46:24.000691+00:00",
-      "returncode": 1,
-      "tail": "2026-11-09T16:46:23Z fetch failed",
+      "at": "2026-11-09T17:01:46.767550+00:00",
+      "returncode": 124,
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD |  + ce54e8d...c6c92c2 main       -> origin/main  (强制更新)",
       "url": "https://sun4-4.github.io/project-intro/"
     }
   },
-  "current": {
-    "bm_id": "BM-004",
-    "task_id": "libero_goal/3",
-    "benchmark": "libero",
-    "attempt": 1,
-    "started_at": "2026-11-09T17:00:44.116388+00:00"
-  },
+  "current": null,
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -79,15 +73,15 @@
       "bm_id": "BM-004",
       "task_id": "libero_goal/3",
       "benchmark": "libero",
-      "status": "running",
+      "status": "failure",
       "attempts": 1,
-      "rounds": 0,
-      "duration_s": 0.0,
-      "failure_reason": null,
+      "rounds": 10,
+      "duration_s": 2497.054,
+      "failure_reason": "grasp_object returned ok=True but grasped=False / holding=False on both calls (steps 1 and 4, gripper_gap unchanged at 0.0798, source_patch_mad=None), and the follow-up move_to_pixel also failed to reach (step 8, ee_pos z=0.9934 vs world z=0.9118) — the bowl never left the tabletop; it sits partly beneath the overhanging protruded top-drawer front, which blocks the vertical approach the skill used.",
       "success_video_url": null,
-      "last_failure_video_url": null,
-      "clean_grasp_trajectory_url": null,
-      "finished_at": null
+      "last_failure_video_url": "data/videos/agent/BM-004-last-failure.mp4",
+      "clean_grasp_trajectory_url": "data/trajectories/BM-004-last-clean-grasp.json",
+      "finished_at": "2026-11-09T17:43:36.775329+00:00"
     },
     {
       "bm_id": "BM-131",
