@@ -1,31 +1,37 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-09T19:52:59.887628+00:00",
+  "generated_at": "2026-11-09T20:00:11.082873+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-09T19:52:59.882663+00:00",
+    "generated_at": "2026-11-09T20:00:11.072643+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
-    "success": 1,
+    "success": 3,
     "failure": 6,
     "infra": 1,
     "blocked": 100,
-    "pending": 225,
-    "running": 0,
-    "clean_success": 1,
+    "pending": 222,
+    "running": 1,
+    "clean_success": 3,
     "soft_success": 0,
-    "valid_verdicts": 7,
-    "success_rate": 0.14285714285714285,
-    "clean_success_rate": 0.14285714285714285,
+    "valid_verdicts": 9,
+    "success_rate": 0.3333333333333333,
+    "clean_success_rate": 0.3333333333333333,
     "publish": {
-      "at": "2026-11-09T19:10:03.791720+00:00",
+      "at": "2026-11-09T19:53:05.741343+00:00",
       "returncode": 0,
-      "tail": "正在更新文件: 100% (3/3) | 正在更新文件: 100% (3/3), 完成. | To https://github.com/SUN4-4/project-intro.git |    0c72536..644e0d5  main -> main",
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    2b14b0b..be2492a  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     }
   },
-  "current": null,
+  "current": {
+    "bm_id": "BM-011",
+    "task_id": "libero_object/0",
+    "benchmark": "libero",
+    "attempt": 1,
+    "started_at": "2026-11-09T19:59:26.537201+00:00"
+  },
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -138,6 +144,48 @@
       "last_failure_video_url": "data/videos/agent/BM-008-last-failure.mp4",
       "clean_grasp_trajectory_url": null,
       "finished_at": "2026-11-09T19:52:59.868955+00:00"
+    },
+    {
+      "bm_id": "BM-009",
+      "task_id": "libero_goal/8",
+      "benchmark": "libero",
+      "status": "success",
+      "attempts": 1,
+      "rounds": 1,
+      "duration_s": 105.229,
+      "failure_reason": null,
+      "success_video_url": "data/videos/agent/BM-009-success.mp4",
+      "last_failure_video_url": null,
+      "clean_grasp_trajectory_url": "data/trajectories/BM-009-last-clean-grasp.json",
+      "finished_at": "2026-11-09T19:55:03.761758+00:00"
+    },
+    {
+      "bm_id": "BM-010",
+      "task_id": "libero_goal/9",
+      "benchmark": "libero",
+      "status": "success",
+      "attempts": 1,
+      "rounds": 1,
+      "duration_s": 249.959,
+      "failure_reason": null,
+      "success_video_url": "data/videos/agent/BM-010-success.mp4",
+      "last_failure_video_url": null,
+      "clean_grasp_trajectory_url": "data/trajectories/BM-010-last-clean-grasp.json",
+      "finished_at": "2026-11-09T19:59:26.468469+00:00"
+    },
+    {
+      "bm_id": "BM-011",
+      "task_id": "libero_object/0",
+      "benchmark": "libero",
+      "status": "running",
+      "attempts": 1,
+      "rounds": 0,
+      "duration_s": 0.0,
+      "failure_reason": null,
+      "success_video_url": null,
+      "last_failure_video_url": null,
+      "clean_grasp_trajectory_url": null,
+      "finished_at": null
     },
     {
       "bm_id": "BM-131",

@@ -48,7 +48,31 @@
       "steps": 10,
       "file": "data/trajectories/BM-007-last-clean-grasp.json",
       "updated_at": "2026-11-09T19:09:55.544144+00:00"
+    },
+    "BM-009": {
+      "bm_id": "BM-009",
+      "task_id": "libero_goal/8",
+      "benchmark": "libero",
+      "tool": "grasp_object",
+      "place_tool": "place_on_surface",
+      "task_clean_success": true,
+      "task_status": "success",
+      "steps": 4,
+      "file": "data/trajectories/BM-009-last-clean-grasp.json",
+      "updated_at": "2026-11-09T19:55:03.763009+00:00"
+    },
+    "BM-010": {
+      "bm_id": "BM-010",
+      "task_id": "libero_goal/9",
+      "benchmark": "libero",
+      "tool": "grasp_object",
+      "place_tool": "place_on_surface",
+      "task_clean_success": true,
+      "task_status": "success",
+      "steps": 3,
+      "file": "data/trajectories/BM-010-last-clean-grasp.json",
+      "updated_at": "2026-11-09T19:59:26.469756+00:00"
     }
   },
-  "updated_at": "2026-11-09T19:09:55.544139+00:00"
+  "updated_at": "2026-11-09T19:59:26.469753+00:00"
 }
