@@ -1,42 +1,41 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-09T15:00:17.914036+00:00",
+  "generated_at": "2026-11-09T15:35:06.688027+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-09T15:00:17.909907+00:00",
+    "generated_at": "2026-11-09T15:35:06.684222+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 1,
-    "failure": 0,
+    "failure": 1,
     "infra": 0,
     "blocked": 100,
     "pending": 231,
-    "running": 1,
-    "valid_verdicts": 1,
-    "success_rate": 1.0,
-    "publish": null
+    "running": 0,
+    "valid_verdicts": 2,
+    "success_rate": 0.5,
+    "publish": {
+      "at": "2026-11-09T14:33:41.496471+00:00",
+      "returncode": 1,
+      "tail": "2026-11-09T14:33:41Z fetch failed | fatal: 无法访问 'https://github.com/SUN4-4/project-intro.git/'：GnuTLS recv error (-110): The TLS connection was non-properly terminated.",
+      "url": "https://sun4-4.github.io/project-intro/"
+    }
   },
-  "current": {
-    "bm_id": "BM-001",
-    "task_id": "libero_goal/0",
-    "benchmark": "libero",
-    "attempt": 1,
-    "started_at": "2026-11-09T14:32:10.987332+00:00"
-  },
+  "current": null,
   "tasks": [
     {
       "bm_id": "BM-001",
       "task_id": "libero_goal/0",
       "benchmark": "libero",
-      "status": "running",
+      "status": "failure",
       "attempts": 1,
-      "rounds": 0,
-      "duration_s": 0.0,
-      "failure_reason": null,
+      "rounds": 10,
+      "duration_s": 3671.87,
+      "failure_reason": "Perception never localized the middle handle: every find_pixel / find_by_pointing result for the drawer rows landed on the cabinet's front face or the ramp (u≈75-107, v≈126-177), giving inconsistent depths on adjacent pixels (100,132)→z=1.0988 vs (95,126)→z=0.9025; no tool call ever pointed at the visible grey bar handles (u≈143-150, v≈250-330 in the head frame), so pull_drawer approached empty air and reported 'handle pull did not achieve enough measured motion' / 'could not reach the handle approach pose' / 'pixel was not visually verified', and the drawer never opened.",
       "success_video_url": null,
-      "last_failure_video_url": null,
-      "finished_at": null
+      "last_failure_video_url": "data/videos/agent/BM-001-last-failure.mp4",
+      "finished_at": "2026-11-09T15:35:06.675544+00:00"
     },
     {
       "bm_id": "BM-002",
