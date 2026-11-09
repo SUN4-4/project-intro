@@ -91,6 +91,18 @@ def _previous_video_state() -> dict[str, dict]:
     }
 
 
+def _previous_results_summary() -> dict | None:
+    path = WEB_ROOT / "data" / "bm" / "tasks.json"
+    if not path.exists():
+        return None
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    summary = payload.get("results_summary")
+    return summary if isinstance(summary, dict) else None
+
+
 _EXEC_FIELDS = (
     "blender_status",
     "failure_video_url",
@@ -108,6 +120,16 @@ _EXEC_FIELDS = (
     "agent_success_count",
     "agent_loop_updated_at",
     "success_video_label",
+    "agent_status",
+    "agent_attempts",
+    "agent_rounds",
+    "agent_started_at",
+    "agent_finished_at",
+    "agent_duration_s",
+    "agent_failure_reason",
+    "agent_analysis",
+    "agent_success_video_url",
+    "agent_last_failure_video_url",
 )
 
 
@@ -174,6 +196,9 @@ def main() -> int:
         "groups": groups,
         "tasks": flat_tasks,
     }
+    previous_summary = _previous_results_summary()
+    if previous_summary:
+        catalog["results_summary"] = previous_summary
 
     catalog_path = WEB_ROOT / "data" / "bm" / "tasks.json"
     catalog_path.parent.mkdir(parents=True, exist_ok=True)

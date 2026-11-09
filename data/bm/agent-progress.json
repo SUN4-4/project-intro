@@ -1,0 +1,62 @@
+{
+  "schema": "roborsi.bm_agent_progress.v1",
+  "generated_at": "2026-11-09T14:12:27.524412+00:00",
+  "campaign_id": "bm-agent-20261109-140132",
+  "summary": {
+    "generated_at": "2026-11-09T14:12:27.519842+00:00",
+    "campaign_id": "bm-agent-20261109-140132",
+    "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
+    "total": 333,
+    "success": 1,
+    "failure": 0,
+    "infra": 1,
+    "blocked": 0,
+    "pending": 331,
+    "running": 0,
+    "valid_verdicts": 1,
+    "success_rate": 1.0,
+    "publish": null
+  },
+  "current": null,
+  "tasks": [
+    {
+      "bm_id": "BM-001",
+      "task_id": "libero_goal/0",
+      "benchmark": "libero",
+      "status": "pending",
+      "attempts": 1,
+      "rounds": 0,
+      "duration_s": 0.0,
+      "failure_reason": null,
+      "success_video_url": null,
+      "last_failure_video_url": null,
+      "finished_at": "2026-11-09T14:01:32.496108+00:00"
+    },
+    {
+      "bm_id": "BM-002",
+      "task_id": "libero_goal/1",
+      "benchmark": "libero",
+      "status": "success",
+      "attempts": 2,
+      "rounds": 2,
+      "duration_s": 409.465,
+      "failure_reason": null,
+      "success_video_url": "data/videos/agent/BM-002-success.mp4",
+      "last_failure_video_url": null,
+      "finished_at": "2026-11-09T14:10:41.077554+00:00"
+    },
+    {
+      "bm_id": "BM-131",
+      "task_id": "adjust_bottle",
+      "benchmark": "robotwin",
+      "status": "infra",
+      "attempts": 1,
+      "rounds": 0,
+      "duration_s": 1.701,
+      "failure_reason": "BackendUnavailable: backend 'robotwin-http' is unavailable: ModuleNotFoundError: No module named 'msgpack'. Install the matching optional extra (the 'robotwin' or 'libero' extra).",
+      "success_video_url": null,
+      "last_failure_video_url": null,
+      "finished_at": "2026-11-09T14:12:23.473498+00:00"
+    }
+  ]
+}

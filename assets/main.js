@@ -200,19 +200,33 @@ function createTaskCard(task, dataDir) {
   videoSlot.className = "task-card__video-slot";
   videoSlot.dataset.videoSlot = task.bm_id;
 
-  if (task.success_video_url) {
-    const player = document.createElement("video");
-    player.className = "task-card__video-player";
-    player.controls = true;
-    player.preload = "metadata";
-    player.src = task.success_video_url;
+  const successVideo =
+    task.success_video_url || task.agent_success_video_url || null;
+  const failureVideo =
+    task.failure_video_url || task.agent_last_failure_video_url || null;
 
-    const label = document.createElement("span");
-    label.className = `task-card__video-kind task-card__video-kind--${task.video_kind || "success"}`;
-    label.textContent =
-      task.video_kind === "failure" ? "失败回放 · 最后一次尝试" : "成功执行视频";
+  if (successVideo || failureVideo) {
+    const appendPlayer = (src, kind) => {
+      const player = document.createElement("video");
+      player.className = "task-card__video-player";
+      player.controls = true;
+      player.preload = "metadata";
+      player.src = src;
 
-    videoSlot.append(player, label);
+      const label = document.createElement("span");
+      label.className = `task-card__video-kind task-card__video-kind--${kind}`;
+      label.textContent =
+        kind === "failure" ? "最后一次失败回放" : "Agent 成功执行视频";
+
+      videoSlot.append(player, label);
+    };
+
+    if (successVideo) {
+      appendPlayer(successVideo, "success");
+    }
+    if (failureVideo && failureVideo !== successVideo) {
+      appendPlayer(failureVideo, "failure");
+    }
   } else {
     const play = document.createElement("span");
     play.className = "task-card__video-play";
@@ -258,7 +272,8 @@ function createTaskCard(task, dataDir) {
 
   body.append(ids, name, instruction);
 
-  if (task.exec_status) {
+  const execStatus = task.agent_status || task.exec_status;
+  if (execStatus) {
     const statusLabels = {
       success: "成功",
       failure: "失败",
@@ -266,27 +281,31 @@ function createTaskCard(task, dataDir) {
       infra: "基础设施",
       not_run: "未运行",
       pending: "待执行",
+      running: "运行中",
     };
     const exec = document.createElement("div");
-    exec.className = `task-card__exec task-card__exec--${task.exec_status}`;
+    exec.className = `task-card__exec task-card__exec--${execStatus}`;
 
     const badge = document.createElement("span");
     badge.className = "exec-badge";
-    badge.textContent = statusLabels[task.exec_status] || task.exec_status;
+    badge.textContent = statusLabels[execStatus] || execStatus;
     exec.append(badge);
 
     const metrics = [];
     if (typeof task.exec_success_rate === "number") {
       metrics.push(`成功率 ${Math.round(task.exec_success_rate * 100)}%`);
     }
-    if (typeof task.exec_attempts === "number") {
-      metrics.push(`${task.exec_attempts} 次尝试`);
+    const attempts = task.agent_attempts ?? task.exec_attempts;
+    if (typeof attempts === "number") {
+      metrics.push(`${attempts} 次尝试`);
     }
-    if (typeof task.exec_rounds === "number") {
-      metrics.push(`${task.exec_rounds} 轮`);
+    const rounds = task.agent_rounds ?? task.exec_rounds;
+    if (typeof rounds === "number") {
+      metrics.push(`${rounds} 轮`);
     }
-    if (typeof task.exec_duration_s === "number") {
-      metrics.push(`${Math.round(task.exec_duration_s)}s`);
+    const duration = task.agent_duration_s ?? task.exec_duration_s;
+    if (typeof duration === "number") {
+      metrics.push(`${Math.round(duration)}s`);
     }
     if (metrics.length) {
       const line = document.createElement("span");
@@ -296,10 +315,11 @@ function createTaskCard(task, dataDir) {
     }
     body.append(exec);
 
-    if (task.exec_failure_reason) {
+    const reasonText = task.agent_failure_reason || task.exec_failure_reason;
+    if (reasonText) {
       const reason = document.createElement("p");
       reason.className = "task-card__exec-reason";
-      reason.textContent = task.exec_failure_reason;
+      reason.textContent = reasonText;
       body.append(reason);
     }
   }
