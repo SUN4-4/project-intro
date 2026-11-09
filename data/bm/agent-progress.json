@@ -1,23 +1,23 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-09T23:30:07.968754+00:00",
+  "generated_at": "2026-11-09T23:57:45.122849+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-09T23:30:07.959607+00:00",
+    "generated_at": "2026-11-09T23:57:45.119546+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 3,
-    "failure": 10,
+    "failure": 11,
     "infra": 1,
     "blocked": 100,
     "pending": 218,
-    "running": 1,
+    "running": 0,
     "clean_success": 3,
     "soft_success": 0,
-    "valid_verdicts": 13,
-    "success_rate": 0.23076923076923078,
-    "clean_success_rate": 0.23076923076923078,
+    "valid_verdicts": 14,
+    "success_rate": 0.21428571428571427,
+    "clean_success_rate": 0.21428571428571427,
     "publish": {
       "at": "2026-11-09T22:53:46.859922+00:00",
       "returncode": 1,
@@ -25,13 +25,7 @@
       "url": "https://sun4-4.github.io/project-intro/"
     }
   },
-  "current": {
-    "bm_id": "BM-015",
-    "task_id": "libero_object/4",
-    "benchmark": "libero",
-    "attempt": 1,
-    "started_at": "2026-11-09T22:53:46.872526+00:00"
-  },
+  "current": null,
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -233,15 +227,15 @@
       "bm_id": "BM-015",
       "task_id": "libero_object/4",
       "benchmark": "libero",
-      "status": "running",
+      "status": "failure",
       "attempts": 1,
-      "rounds": 0,
-      "duration_s": 0.0,
-      "failure_reason": null,
+      "rounds": 10,
+      "duration_s": 3825.465,
+      "failure_reason": "No transport ever completed: round 10 was wasted on a pixel-scale mismatch — the head frame is 256x256 but was read in 512 display space, and all four marks (u=330/360/390/405, v=315-340, round 10 step 5) sat outside the sensor grid, so unproject_pixel silently clamped them to a constant far point [0.8966, 0.0, 0.65] instead of erroring; no grasp was attempted that round. Across rounds the grasps that did report held were table-level pinches (gap 0.0017-0.0133, e.g. round 2 step 6 grasp_point z=0.0355 with pixel 137,145 = table beside the bottle, round 1 step 6 z=0.0352) and the one real pinch (round 1 step 4, gap 0.0133) was lost during the basket approach ('hold lost after container approach', round 1 step 6, gate 'closed_empty' gap 0.001).",
       "success_video_url": null,
-      "last_failure_video_url": null,
+      "last_failure_video_url": "data/videos/agent/BM-015-last-failure.mp4",
       "clean_grasp_trajectory_url": null,
-      "finished_at": null
+      "finished_at": "2026-11-09T23:57:45.103094+00:00"
     },
     {
       "bm_id": "BM-131",
