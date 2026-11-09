@@ -1,9 +1,9 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-09T20:53:04.644610+00:00",
+  "generated_at": "2026-11-09T21:00:09.427434+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-09T20:53:04.641167+00:00",
+    "generated_at": "2026-11-09T21:00:09.422952+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -11,21 +11,27 @@
     "failure": 7,
     "infra": 1,
     "blocked": 100,
-    "pending": 222,
-    "running": 0,
+    "pending": 221,
+    "running": 1,
     "clean_success": 3,
     "soft_success": 0,
     "valid_verdicts": 10,
     "success_rate": 0.3,
     "clean_success_rate": 0.3,
     "publish": {
-      "at": "2026-11-09T19:53:05.741343+00:00",
+      "at": "2026-11-09T20:53:13.185898+00:00",
       "returncode": 0,
-      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    2b14b0b..be2492a  main -> main",
+      "tail": "正在更新文件: 100% (3/3) | 正在更新文件: 100% (3/3), 完成. | To https://github.com/SUN4-4/project-intro.git |    94c82c0..814b67f  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     }
   },
-  "current": null,
+  "current": {
+    "bm_id": "BM-012",
+    "task_id": "libero_object/1",
+    "benchmark": "libero",
+    "attempt": 1,
+    "started_at": "2026-11-09T20:53:13.193219+00:00"
+  },
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -180,6 +186,20 @@
       "last_failure_video_url": "data/videos/agent/BM-011-last-failure.mp4",
       "clean_grasp_trajectory_url": null,
       "finished_at": "2026-11-09T20:53:04.626056+00:00"
+    },
+    {
+      "bm_id": "BM-012",
+      "task_id": "libero_object/1",
+      "benchmark": "libero",
+      "status": "running",
+      "attempts": 1,
+      "rounds": 0,
+      "duration_s": 0.0,
+      "failure_reason": null,
+      "success_video_url": null,
+      "last_failure_video_url": null,
+      "clean_grasp_trajectory_url": null,
+      "finished_at": null
     },
     {
       "bm_id": "BM-131",
