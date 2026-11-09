@@ -1,23 +1,23 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-09T21:00:09.427434+00:00",
+  "generated_at": "2026-11-09T21:30:08.809829+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-09T21:00:09.422952+00:00",
+    "generated_at": "2026-11-09T21:30:08.805114+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 3,
-    "failure": 7,
+    "failure": 8,
     "infra": 1,
     "blocked": 100,
-    "pending": 221,
+    "pending": 220,
     "running": 1,
     "clean_success": 3,
     "soft_success": 0,
-    "valid_verdicts": 10,
-    "success_rate": 0.3,
-    "clean_success_rate": 0.3,
+    "valid_verdicts": 11,
+    "success_rate": 0.2727272727272727,
+    "clean_success_rate": 0.2727272727272727,
     "publish": {
       "at": "2026-11-09T20:53:13.185898+00:00",
       "returncode": 0,
@@ -26,11 +26,11 @@
     }
   },
   "current": {
-    "bm_id": "BM-012",
-    "task_id": "libero_object/1",
+    "bm_id": "BM-013",
+    "task_id": "libero_object/2",
     "benchmark": "libero",
     "attempt": 1,
-    "started_at": "2026-11-09T20:53:13.193219+00:00"
+    "started_at": "2026-11-09T21:01:56.813751+00:00"
   },
   "tasks": [
     {
@@ -190,6 +190,20 @@
     {
       "bm_id": "BM-012",
       "task_id": "libero_object/1",
+      "benchmark": "libero",
+      "status": "failure",
+      "attempts": 1,
+      "rounds": 2,
+      "duration_s": 510.395,
+      "failure_reason": "✗ **libero_pick_place** seed=0 · budget_exceeded (32 tool calls)\nMode: `evolve`\n\nWorkspace: `/home/sunhe/.roborsi-bm-agent/home/workspaces/libero_pick_place-20261110-045313-52b2a6`\n  plan.md · summary.md · review.md\n\nReviewer verdict: `blocked` · proposal: `NO_PROPOSAL`",
+      "success_video_url": null,
+      "last_failure_video_url": "data/videos/agent/BM-012-last-failure.mp4",
+      "clean_grasp_trajectory_url": "data/trajectories/BM-012-last-clean-grasp.json",
+      "finished_at": "2026-11-09T21:01:56.741192+00:00"
+    },
+    {
+      "bm_id": "BM-013",
+      "task_id": "libero_object/2",
       "benchmark": "libero",
       "status": "running",
       "attempts": 1,
