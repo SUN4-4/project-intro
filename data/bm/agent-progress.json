@@ -1,36 +1,36 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-09T15:51:31.193223+00:00",
+  "generated_at": "2026-11-09T16:00:16.507884+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-09T15:51:31.188696+00:00",
+    "generated_at": "2026-11-09T16:00:16.503682+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 0,
-    "failure": 1,
+    "failure": 2,
     "infra": 0,
     "blocked": 100,
-    "pending": 231,
+    "pending": 230,
     "running": 1,
     "clean_success": 0,
     "soft_success": 0,
-    "valid_verdicts": 1,
+    "valid_verdicts": 2,
     "success_rate": 0.0,
     "clean_success_rate": 0.0,
     "publish": {
-      "at": "2026-11-09T15:35:12.345597+00:00",
+      "at": "2026-11-09T15:51:36.335708+00:00",
       "returncode": 0,
-      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    46a59c5..7f3f176  main -> main",
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    c0083c9..14fc183  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     }
   },
   "current": {
-    "bm_id": "BM-002",
-    "task_id": "libero_goal/1",
+    "bm_id": "BM-003",
+    "task_id": "libero_goal/2",
     "benchmark": "libero",
-    "attempt": 2,
-    "started_at": "2026-11-09T15:51:31.181605+00:00"
+    "attempt": 1,
+    "started_at": "2026-11-09T15:58:00.423037+00:00"
   },
   "tasks": [
     {
@@ -51,22 +51,22 @@
       "bm_id": "BM-002",
       "task_id": "libero_goal/1",
       "benchmark": "libero",
-      "status": "running",
+      "status": "failure",
       "attempts": 2,
-      "rounds": 0,
-      "duration_s": 0.0,
-      "failure_reason": null,
+      "rounds": 2,
+      "duration_s": 304.687,
+      "failure_reason": "✗ **libero_pick_place** seed=0 · vlm_overclaimed (31 tool calls)\nMode: `evolve`\n\nWorkspace: `/home/sunhe/.roborsi-bm-agent/home/workspaces/libero_pick_place-20261109-235136-045b92`\n  plan.md · summary.md · review.md\n\nReviewer verdict: `blocked` · proposal: `NO_PROPOSAL`",
       "success_video_url": null,
       "last_failure_video_url": "data/videos/agent/BM-002-last-failure.mp4",
-      "clean_grasp_trajectory_url": null,
-      "finished_at": null
+      "clean_grasp_trajectory_url": "data/trajectories/BM-002-last-clean-grasp.json",
+      "finished_at": "2026-11-09T15:56:53.753970+00:00"
     },
     {
       "bm_id": "BM-003",
       "task_id": "libero_goal/2",
       "benchmark": "libero",
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "rounds": 0,
       "duration_s": 0.0,
       "failure_reason": null,
@@ -101,7 +101,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119036+00:00"
+      "finished_at": "2026-11-09T15:58:00.356386+00:00"
     },
     {
       "bm_id": "BM-182",
@@ -115,7 +115,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119075+00:00"
+      "finished_at": "2026-11-09T15:58:00.356417+00:00"
     },
     {
       "bm_id": "BM-183",
@@ -129,7 +129,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119089+00:00"
+      "finished_at": "2026-11-09T15:58:00.356427+00:00"
     },
     {
       "bm_id": "BM-184",
@@ -143,7 +143,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119097+00:00"
+      "finished_at": "2026-11-09T15:58:00.356433+00:00"
     },
     {
       "bm_id": "BM-185",
@@ -157,7 +157,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119103+00:00"
+      "finished_at": "2026-11-09T15:58:00.356438+00:00"
     },
     {
       "bm_id": "BM-186",
@@ -171,7 +171,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119109+00:00"
+      "finished_at": "2026-11-09T15:58:00.356443+00:00"
     },
     {
       "bm_id": "BM-187",
@@ -185,7 +185,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119114+00:00"
+      "finished_at": "2026-11-09T15:58:00.356447+00:00"
     },
     {
       "bm_id": "BM-188",
@@ -199,7 +199,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119121+00:00"
+      "finished_at": "2026-11-09T15:58:00.356452+00:00"
     },
     {
       "bm_id": "BM-189",
@@ -213,7 +213,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119128+00:00"
+      "finished_at": "2026-11-09T15:58:00.356458+00:00"
     },
     {
       "bm_id": "BM-190",
@@ -227,7 +227,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119134+00:00"
+      "finished_at": "2026-11-09T15:58:00.356463+00:00"
     },
     {
       "bm_id": "BM-191",
@@ -241,7 +241,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119140+00:00"
+      "finished_at": "2026-11-09T15:58:00.356468+00:00"
     },
     {
       "bm_id": "BM-192",
@@ -255,7 +255,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119147+00:00"
+      "finished_at": "2026-11-09T15:58:00.356474+00:00"
     },
     {
       "bm_id": "BM-193",
@@ -269,7 +269,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119153+00:00"
+      "finished_at": "2026-11-09T15:58:00.356480+00:00"
     },
     {
       "bm_id": "BM-194",
@@ -283,7 +283,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119159+00:00"
+      "finished_at": "2026-11-09T15:58:00.356485+00:00"
     },
     {
       "bm_id": "BM-195",
@@ -297,7 +297,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119164+00:00"
+      "finished_at": "2026-11-09T15:58:00.356490+00:00"
     },
     {
       "bm_id": "BM-196",
@@ -311,7 +311,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119169+00:00"
+      "finished_at": "2026-11-09T15:58:00.356495+00:00"
     },
     {
       "bm_id": "BM-197",
@@ -325,7 +325,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119175+00:00"
+      "finished_at": "2026-11-09T15:58:00.356500+00:00"
     },
     {
       "bm_id": "BM-198",
@@ -339,7 +339,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119180+00:00"
+      "finished_at": "2026-11-09T15:58:00.356505+00:00"
     },
     {
       "bm_id": "BM-199",
@@ -353,7 +353,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119186+00:00"
+      "finished_at": "2026-11-09T15:58:00.356510+00:00"
     },
     {
       "bm_id": "BM-200",
@@ -367,7 +367,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119192+00:00"
+      "finished_at": "2026-11-09T15:58:00.356515+00:00"
     },
     {
       "bm_id": "BM-201",
@@ -381,7 +381,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119197+00:00"
+      "finished_at": "2026-11-09T15:58:00.356521+00:00"
     },
     {
       "bm_id": "BM-202",
@@ -395,7 +395,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119203+00:00"
+      "finished_at": "2026-11-09T15:58:00.356526+00:00"
     },
     {
       "bm_id": "BM-203",
@@ -409,7 +409,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119209+00:00"
+      "finished_at": "2026-11-09T15:58:00.356531+00:00"
     },
     {
       "bm_id": "BM-204",
@@ -423,7 +423,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119215+00:00"
+      "finished_at": "2026-11-09T15:58:00.356537+00:00"
     },
     {
       "bm_id": "BM-205",
@@ -437,7 +437,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119221+00:00"
+      "finished_at": "2026-11-09T15:58:00.356542+00:00"
     },
     {
       "bm_id": "BM-206",
@@ -451,7 +451,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119227+00:00"
+      "finished_at": "2026-11-09T15:58:00.356546+00:00"
     },
     {
       "bm_id": "BM-207",
@@ -465,7 +465,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119232+00:00"
+      "finished_at": "2026-11-09T15:58:00.356552+00:00"
     },
     {
       "bm_id": "BM-208",
@@ -479,7 +479,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119236+00:00"
+      "finished_at": "2026-11-09T15:58:00.356557+00:00"
     },
     {
       "bm_id": "BM-209",
@@ -493,7 +493,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119240+00:00"
+      "finished_at": "2026-11-09T15:58:00.356562+00:00"
     },
     {
       "bm_id": "BM-210",
@@ -507,7 +507,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119245+00:00"
+      "finished_at": "2026-11-09T15:58:00.356567+00:00"
     },
     {
       "bm_id": "BM-211",
@@ -521,7 +521,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119249+00:00"
+      "finished_at": "2026-11-09T15:58:00.356572+00:00"
     },
     {
       "bm_id": "BM-212",
@@ -535,7 +535,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119254+00:00"
+      "finished_at": "2026-11-09T15:58:00.356576+00:00"
     },
     {
       "bm_id": "BM-213",
@@ -549,7 +549,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119258+00:00"
+      "finished_at": "2026-11-09T15:58:00.356581+00:00"
     },
     {
       "bm_id": "BM-214",
@@ -563,7 +563,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119262+00:00"
+      "finished_at": "2026-11-09T15:58:00.356586+00:00"
     },
     {
       "bm_id": "BM-215",
@@ -577,7 +577,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119267+00:00"
+      "finished_at": "2026-11-09T15:58:00.356591+00:00"
     },
     {
       "bm_id": "BM-216",
@@ -591,7 +591,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119272+00:00"
+      "finished_at": "2026-11-09T15:58:00.356596+00:00"
     },
     {
       "bm_id": "BM-217",
@@ -605,7 +605,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119276+00:00"
+      "finished_at": "2026-11-09T15:58:00.356601+00:00"
     },
     {
       "bm_id": "BM-218",
@@ -619,7 +619,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119280+00:00"
+      "finished_at": "2026-11-09T15:58:00.356606+00:00"
     },
     {
       "bm_id": "BM-219",
@@ -633,7 +633,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119285+00:00"
+      "finished_at": "2026-11-09T15:58:00.356611+00:00"
     },
     {
       "bm_id": "BM-220",
@@ -647,7 +647,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119289+00:00"
+      "finished_at": "2026-11-09T15:58:00.356616+00:00"
     },
     {
       "bm_id": "BM-221",
@@ -661,7 +661,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119293+00:00"
+      "finished_at": "2026-11-09T15:58:00.356621+00:00"
     },
     {
       "bm_id": "BM-222",
@@ -675,7 +675,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119297+00:00"
+      "finished_at": "2026-11-09T15:58:00.356626+00:00"
     },
     {
       "bm_id": "BM-223",
@@ -689,7 +689,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119302+00:00"
+      "finished_at": "2026-11-09T15:58:00.356630+00:00"
     },
     {
       "bm_id": "BM-224",
@@ -703,7 +703,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119306+00:00"
+      "finished_at": "2026-11-09T15:58:00.356634+00:00"
     },
     {
       "bm_id": "BM-225",
@@ -717,7 +717,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119311+00:00"
+      "finished_at": "2026-11-09T15:58:00.356638+00:00"
     },
     {
       "bm_id": "BM-226",
@@ -731,7 +731,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119315+00:00"
+      "finished_at": "2026-11-09T15:58:00.356642+00:00"
     },
     {
       "bm_id": "BM-227",
@@ -745,7 +745,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119320+00:00"
+      "finished_at": "2026-11-09T15:58:00.356646+00:00"
     },
     {
       "bm_id": "BM-228",
@@ -759,7 +759,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119324+00:00"
+      "finished_at": "2026-11-09T15:58:00.356650+00:00"
     },
     {
       "bm_id": "BM-229",
@@ -773,7 +773,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119329+00:00"
+      "finished_at": "2026-11-09T15:58:00.356654+00:00"
     },
     {
       "bm_id": "BM-230",
@@ -787,7 +787,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119334+00:00"
+      "finished_at": "2026-11-09T15:58:00.356658+00:00"
     },
     {
       "bm_id": "BM-231",
@@ -801,7 +801,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119338+00:00"
+      "finished_at": "2026-11-09T15:58:00.356662+00:00"
     },
     {
       "bm_id": "BM-232",
@@ -815,7 +815,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119343+00:00"
+      "finished_at": "2026-11-09T15:58:00.356667+00:00"
     },
     {
       "bm_id": "BM-233",
@@ -829,7 +829,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119348+00:00"
+      "finished_at": "2026-11-09T15:58:00.356671+00:00"
     },
     {
       "bm_id": "BM-234",
@@ -843,7 +843,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119353+00:00"
+      "finished_at": "2026-11-09T15:58:00.356675+00:00"
     },
     {
       "bm_id": "BM-235",
@@ -857,7 +857,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119357+00:00"
+      "finished_at": "2026-11-09T15:58:00.356679+00:00"
     },
     {
       "bm_id": "BM-236",
@@ -871,7 +871,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119361+00:00"
+      "finished_at": "2026-11-09T15:58:00.356683+00:00"
     },
     {
       "bm_id": "BM-237",
@@ -885,7 +885,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119365+00:00"
+      "finished_at": "2026-11-09T15:58:00.356687+00:00"
     },
     {
       "bm_id": "BM-238",
@@ -899,7 +899,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119369+00:00"
+      "finished_at": "2026-11-09T15:58:00.356692+00:00"
     },
     {
       "bm_id": "BM-239",
@@ -913,7 +913,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119373+00:00"
+      "finished_at": "2026-11-09T15:58:00.356695+00:00"
     },
     {
       "bm_id": "BM-240",
@@ -927,7 +927,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119378+00:00"
+      "finished_at": "2026-11-09T15:58:00.356700+00:00"
     },
     {
       "bm_id": "BM-241",
@@ -941,7 +941,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119382+00:00"
+      "finished_at": "2026-11-09T15:58:00.356703+00:00"
     },
     {
       "bm_id": "BM-242",
@@ -955,7 +955,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119387+00:00"
+      "finished_at": "2026-11-09T15:58:00.356708+00:00"
     },
     {
       "bm_id": "BM-243",
@@ -969,7 +969,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119392+00:00"
+      "finished_at": "2026-11-09T15:58:00.356712+00:00"
     },
     {
       "bm_id": "BM-244",
@@ -983,7 +983,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119396+00:00"
+      "finished_at": "2026-11-09T15:58:00.356716+00:00"
     },
     {
       "bm_id": "BM-245",
@@ -997,7 +997,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119401+00:00"
+      "finished_at": "2026-11-09T15:58:00.356721+00:00"
     },
     {
       "bm_id": "BM-246",
@@ -1011,7 +1011,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119405+00:00"
+      "finished_at": "2026-11-09T15:58:00.356724+00:00"
     },
     {
       "bm_id": "BM-247",
@@ -1025,7 +1025,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119409+00:00"
+      "finished_at": "2026-11-09T15:58:00.356728+00:00"
     },
     {
       "bm_id": "BM-248",
@@ -1039,7 +1039,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119414+00:00"
+      "finished_at": "2026-11-09T15:58:00.356733+00:00"
     },
     {
       "bm_id": "BM-249",
@@ -1053,7 +1053,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119418+00:00"
+      "finished_at": "2026-11-09T15:58:00.356736+00:00"
     },
     {
       "bm_id": "BM-250",
@@ -1067,7 +1067,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119422+00:00"
+      "finished_at": "2026-11-09T15:58:00.356740+00:00"
     },
     {
       "bm_id": "BM-251",
@@ -1081,7 +1081,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119427+00:00"
+      "finished_at": "2026-11-09T15:58:00.356744+00:00"
     },
     {
       "bm_id": "BM-252",
@@ -1095,7 +1095,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119431+00:00"
+      "finished_at": "2026-11-09T15:58:00.356748+00:00"
     },
     {
       "bm_id": "BM-253",
@@ -1109,7 +1109,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119435+00:00"
+      "finished_at": "2026-11-09T15:58:00.356752+00:00"
     },
     {
       "bm_id": "BM-254",
@@ -1123,7 +1123,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119440+00:00"
+      "finished_at": "2026-11-09T15:58:00.356756+00:00"
     },
     {
       "bm_id": "BM-255",
@@ -1137,7 +1137,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119445+00:00"
+      "finished_at": "2026-11-09T15:58:00.356760+00:00"
     },
     {
       "bm_id": "BM-256",
@@ -1151,7 +1151,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119450+00:00"
+      "finished_at": "2026-11-09T15:58:00.356764+00:00"
     },
     {
       "bm_id": "BM-257",
@@ -1165,7 +1165,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119454+00:00"
+      "finished_at": "2026-11-09T15:58:00.356768+00:00"
     },
     {
       "bm_id": "BM-258",
@@ -1179,7 +1179,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119460+00:00"
+      "finished_at": "2026-11-09T15:58:00.356772+00:00"
     },
     {
       "bm_id": "BM-259",
@@ -1193,7 +1193,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119465+00:00"
+      "finished_at": "2026-11-09T15:58:00.356775+00:00"
     },
     {
       "bm_id": "BM-260",
@@ -1207,7 +1207,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119469+00:00"
+      "finished_at": "2026-11-09T15:58:00.356779+00:00"
     },
     {
       "bm_id": "BM-261",
@@ -1221,7 +1221,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119474+00:00"
+      "finished_at": "2026-11-09T15:58:00.356783+00:00"
     },
     {
       "bm_id": "BM-262",
@@ -1235,7 +1235,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119478+00:00"
+      "finished_at": "2026-11-09T15:58:00.356787+00:00"
     },
     {
       "bm_id": "BM-263",
@@ -1249,7 +1249,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119483+00:00"
+      "finished_at": "2026-11-09T15:58:00.356792+00:00"
     },
     {
       "bm_id": "BM-264",
@@ -1263,7 +1263,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119488+00:00"
+      "finished_at": "2026-11-09T15:58:00.356797+00:00"
     },
     {
       "bm_id": "BM-265",
@@ -1277,7 +1277,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119492+00:00"
+      "finished_at": "2026-11-09T15:58:00.356801+00:00"
     },
     {
       "bm_id": "BM-266",
@@ -1291,7 +1291,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119497+00:00"
+      "finished_at": "2026-11-09T15:58:00.356804+00:00"
     },
     {
       "bm_id": "BM-267",
@@ -1305,7 +1305,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119502+00:00"
+      "finished_at": "2026-11-09T15:58:00.356808+00:00"
     },
     {
       "bm_id": "BM-268",
@@ -1319,7 +1319,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119506+00:00"
+      "finished_at": "2026-11-09T15:58:00.356812+00:00"
     },
     {
       "bm_id": "BM-269",
@@ -1333,7 +1333,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119510+00:00"
+      "finished_at": "2026-11-09T15:58:00.356826+00:00"
     },
     {
       "bm_id": "BM-270",
@@ -1347,7 +1347,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119515+00:00"
+      "finished_at": "2026-11-09T15:58:00.356830+00:00"
     },
     {
       "bm_id": "BM-271",
@@ -1361,7 +1361,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119519+00:00"
+      "finished_at": "2026-11-09T15:58:00.356834+00:00"
     },
     {
       "bm_id": "BM-272",
@@ -1375,7 +1375,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119523+00:00"
+      "finished_at": "2026-11-09T15:58:00.356838+00:00"
     },
     {
       "bm_id": "BM-273",
@@ -1389,7 +1389,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119527+00:00"
+      "finished_at": "2026-11-09T15:58:00.356842+00:00"
     },
     {
       "bm_id": "BM-274",
@@ -1403,7 +1403,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119531+00:00"
+      "finished_at": "2026-11-09T15:58:00.356846+00:00"
     },
     {
       "bm_id": "BM-275",
@@ -1417,7 +1417,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119536+00:00"
+      "finished_at": "2026-11-09T15:58:00.356850+00:00"
     },
     {
       "bm_id": "BM-276",
@@ -1431,7 +1431,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119540+00:00"
+      "finished_at": "2026-11-09T15:58:00.356854+00:00"
     },
     {
       "bm_id": "BM-277",
@@ -1445,7 +1445,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119544+00:00"
+      "finished_at": "2026-11-09T15:58:00.356858+00:00"
     },
     {
       "bm_id": "BM-278",
@@ -1459,7 +1459,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119548+00:00"
+      "finished_at": "2026-11-09T15:58:00.356862+00:00"
     },
     {
       "bm_id": "BM-279",
@@ -1473,7 +1473,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119553+00:00"
+      "finished_at": "2026-11-09T15:58:00.356865+00:00"
     },
     {
       "bm_id": "BM-280",
@@ -1487,7 +1487,7 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T15:51:31.119558+00:00"
+      "finished_at": "2026-11-09T15:58:00.356870+00:00"
     }
   ]
 }
