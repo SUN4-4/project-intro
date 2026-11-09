@@ -13,21 +13,27 @@
       "captured": 0,
       "pending": 42
     },
-    "scope": "native robots; no G1D; LIBERO short + RoboTwin",
+    "scope": "5 benchmarks; BEHAVIOR-1K blocked; local campaign",
     "benchmarks": {
       "libero": {
         "executed": 130,
-        "covered_note": "short suites only; libero_90 blocked"
+        "covered_note": "130 tasks attempted; libero_90 included"
       },
       "robotwin": {
-        "executed": 50
+        "executed": 50,
+        "note": "1 success / 49 failure"
       },
       "robosuite": {
         "executed": 11,
-        "note": "single-arm only"
+        "note": "single-arm only; 3 valid failures / 8 infra"
       },
       "robodojo": {
-        "executed": 42
+        "executed": 42,
+        "note": "10 valid failures / 32 infra"
+      },
+      "behavior": {
+        "executed": 0,
+        "note": "blocked by OmniGibson / Isaac Sim 5.1 startup failure"
       }
     }
   },

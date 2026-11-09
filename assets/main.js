@@ -388,11 +388,11 @@ function renderRunSummary() {
     : "—";
 
   const rows = [
-    ["已执行", `${executed.length} / ${all.length}`],
+    ["有效判定", `${executed.length} / ${all.length}`],
     ["成功", `${success}`],
     ["失败", `${executed.length - success}`],
     ["阻塞 / 基础设施 / 未运行", `${blocked} / ${infra} / ${notRun}`],
-    ["成功率", executed.length ? `${Math.round((success / executed.length) * 100)}%` : "—"],
+    ["成功率（有效判定）", executed.length ? `${Math.round((success / executed.length) * 100)}%` : "—"],
     ["平均迭代轮数", avgRounds],
     ["累计执行时长", `${totalHours} h`],
     ["Blender 已重建", `${blenderBuilt} / ${all.length}`],
@@ -419,8 +419,8 @@ function renderRunSummary() {
   const note = document.createElement("p");
   note.className = "run-summary__note";
   note.textContent =
-    "范围：不使用 G1D，采用各 benchmark 原生机器人；LIBERO 短任务、RoboTwin 与 RoboDojo 闭环评测。" +
-    "无可用后端的任务标为阻塞，不伪造失败。";
+    "范围：5 个 benchmark、333 个 BM 任务。成功由仿真器谓词判定；infra 表示没有拿到有效判定（配额、网络或环境问题），不计为任务失败。" +
+    "BEHAVIOR-1K 的 100 个任务因 OmniGibson / Isaac Sim 启动失败未执行，标为阻塞。";
   runSummaryRoot.append(note);
 }
 

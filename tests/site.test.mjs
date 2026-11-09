@@ -56,6 +56,13 @@ test("navigation and progressive reveal behavior are initialized", () => {
   assert.match(js, /updateActiveNavigation/);
 });
 
+test("site introduces RoboRSI and reports the latest campaign", () => {
+  assert.match(html, /RoboRSI/);
+  assert.match(html, /19 个成功/);
+  assert.match(html, /135 个有效判定/);
+  assert.doesNotMatch(html, /arxiv|2610\.12424|论文/i);
+});
+
 test("benchmark section is the 333-task BM catalog", () => {
   assert.match(html, /333 个 BM 任务/);
   assert.match(html, /BM-001/);
