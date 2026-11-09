@@ -1,23 +1,23 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-09T20:30:08.105563+00:00",
+  "generated_at": "2026-11-09T20:53:04.644610+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-09T20:30:08.095411+00:00",
+    "generated_at": "2026-11-09T20:53:04.641167+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 3,
-    "failure": 6,
+    "failure": 7,
     "infra": 1,
     "blocked": 100,
     "pending": 222,
-    "running": 1,
+    "running": 0,
     "clean_success": 3,
     "soft_success": 0,
-    "valid_verdicts": 9,
-    "success_rate": 0.3333333333333333,
-    "clean_success_rate": 0.3333333333333333,
+    "valid_verdicts": 10,
+    "success_rate": 0.3,
+    "clean_success_rate": 0.3,
     "publish": {
       "at": "2026-11-09T19:53:05.741343+00:00",
       "returncode": 0,
@@ -25,13 +25,7 @@
       "url": "https://sun4-4.github.io/project-intro/"
     }
   },
-  "current": {
-    "bm_id": "BM-011",
-    "task_id": "libero_object/0",
-    "benchmark": "libero",
-    "attempt": 1,
-    "started_at": "2026-11-09T19:59:26.537201+00:00"
-  },
+  "current": null,
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -177,15 +171,15 @@
       "bm_id": "BM-011",
       "task_id": "libero_object/0",
       "benchmark": "libero",
-      "status": "running",
+      "status": "failure",
       "attempts": 1,
-      "rounds": 0,
-      "duration_s": 0.0,
-      "failure_reason": null,
+      "rounds": 10,
+      "duration_s": 3205.157,
+      "failure_reason": "Pick never secured: round-10 pointing was inconsistent (find_by_pointing 'tipped can next to carton' -> [145,186] = the upright red/green can at x=+0.248, step 2/9; second call -> [94,110] unprojecting to z=0.135 above the table, step 9), so grasp_object at [94,110] closed on air (grasp_point z=0.0715, gripper_gap 0.0797, grasped=False, step 4); can left tipped on table, basket empty, 0 budget left.",
       "success_video_url": null,
-      "last_failure_video_url": null,
+      "last_failure_video_url": "data/videos/agent/BM-011-last-failure.mp4",
       "clean_grasp_trajectory_url": null,
-      "finished_at": null
+      "finished_at": "2026-11-09T20:53:04.626056+00:00"
     },
     {
       "bm_id": "BM-131",
