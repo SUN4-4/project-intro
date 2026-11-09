@@ -1,0 +1,18 @@
+{
+  "schema": "roborsi.clean_grasp_index.v1",
+  "tasks": {
+    "BM-002": {
+      "bm_id": "BM-002",
+      "task_id": "libero_goal/1",
+      "benchmark": "libero",
+      "tool": "grasp_object",
+      "place_tool": "place_held_at_target_servo",
+      "task_clean_success": false,
+      "task_status": "failure",
+      "steps": 15,
+      "file": "data/trajectories/BM-002-last-clean-grasp.json",
+      "updated_at": "2026-11-09T15:57:40.033915+00:00"
+    }
+  },
+  "updated_at": "2026-11-09T15:57:40.033910+00:00"
+}
