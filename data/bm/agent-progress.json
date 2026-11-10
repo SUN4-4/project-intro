@@ -1,9 +1,9 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T05:20:33.755749+00:00",
+  "generated_at": "2026-11-10T05:20:39.519004+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T05:20:33.751858+00:00",
+    "generated_at": "2026-11-10T05:20:39.513856+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -17,19 +17,26 @@
     "soft_success": 1,
     "confirmed_success": 0,
     "replay_pending": 4,
-    "replay_failed": 2,
+    "replay_failed": 3,
     "valid_verdicts": 21,
     "success_rate": 0.2857142857142857,
     "clean_success_rate": 0.23809523809523808,
     "publish": {
-      "at": "2026-11-10T05:19:46.168490+00:00",
+      "at": "2026-11-10T05:20:39.479033+00:00",
       "returncode": 0,
-      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    25eeeef..8d91451  main -> main",
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    8d91451..5937287  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
   },
-  "current": null,
+  "current": {
+    "bm_id": "BM-010",
+    "task_id": "libero_goal/9",
+    "benchmark": "libero",
+    "replay": true,
+    "attempt": 1,
+    "started_at": "2026-11-10T05:20:39.488475+00:00"
+  },
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -214,9 +221,9 @@
       "success_video_url": "data/videos/agent/BM-010-success.mp4",
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": "data/trajectories/BM-010-last-clean-grasp.json",
-      "confirmed_success": null,
-      "replay_status": null,
-      "replay_success": null,
+      "confirmed_success": false,
+      "replay_status": "running",
+      "replay_success": false,
       "replay_video_url": null,
       "replay_finished_at": null,
       "finished_at": "2026-11-09T19:59:26.468469+00:00"
