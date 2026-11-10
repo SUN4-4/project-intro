@@ -1,26 +1,26 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T16:06:15.482239+00:00",
+  "generated_at": "2026-11-10T16:18:31.969276+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T16:06:15.474938+00:00",
+    "generated_at": "2026-11-10T16:18:31.963785+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 15,
-    "failure": 19,
+    "failure": 20,
     "infra": 6,
     "blocked": 100,
     "pending": 192,
-    "running": 1,
+    "running": 0,
     "clean_success": 14,
     "soft_success": 1,
     "confirmed_success": 2,
     "replay_pending": 11,
     "replay_failed": 2,
-    "valid_verdicts": 34,
-    "success_rate": 0.4411764705882353,
-    "clean_success_rate": 0.4117647058823529,
+    "valid_verdicts": 35,
+    "success_rate": 0.42857142857142855,
+    "clean_success_rate": 0.4,
     "publish": {
       "at": "2026-11-10T16:06:15.438744+00:00",
       "returncode": 1,
@@ -29,13 +29,7 @@
     },
     "paused": null
   },
-  "current": {
-    "bm_id": "BM-046",
-    "task_id": "libero_90/5",
-    "benchmark": "libero",
-    "attempt": 1,
-    "started_at": "2026-11-10T16:06:15.450356+00:00"
-  },
+  "current": null,
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -4544,24 +4538,116 @@
       "bm_id": "BM-046",
       "task_id": "libero_90/5",
       "benchmark": "libero",
-      "status": "running",
+      "status": "failure",
       "attempts": 1,
-      "rounds": 0,
-      "duration_s": 0.0,
-      "thinking_s": null,
-      "time_breakdown": {},
-      "tool_counts": {},
-      "failure_counts": {},
-      "failure_reason": null,
+      "rounds": 1,
+      "duration_s": 629.43,
+      "thinking_s": 623.347,
+      "time_breakdown": {
+        "tool_total_s": 1038.4,
+        "perception_s": 364.0,
+        "action_s": 60.4,
+        "recovery_s": 0.6,
+        "other_s": 613.4,
+        "llm_overhead_s": 0.0,
+        "tool_calls": 40,
+        "steps": 39,
+        "tool_counts": {
+          "look": 8,
+          "find_by_pointing": 6,
+          "unproject_pixel": 3,
+          "observe_orbit": 3,
+          "get_arm_pose": 2,
+          "grasp_object": 2,
+          "descend_tcp_to_z": 2,
+          "gripper": 2,
+          "home": 2,
+          "close_drawer": 2,
+          "exec_python": 1,
+          "find_pixel": 1,
+          "move_to_pixel": 1,
+          "think": 1,
+          "verify_pick_complete": 1,
+          "place_object_in": 1,
+          "find_by_detector": 1,
+          "?": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 8,
+            "seconds": 1.8
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 6,
+            "seconds": 216.8
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 3,
+            "seconds": 0.8
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 3,
+            "seconds": 0.5
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 2,
+            "seconds": 0.4
+          },
+          {
+            "tool": "grasp_object",
+            "count": 2,
+            "seconds": 9.4
+          },
+          {
+            "tool": "descend_tcp_to_z",
+            "count": 2,
+            "seconds": 0.5
+          },
+          {
+            "tool": "gripper",
+            "count": 2,
+            "seconds": 0.6
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 8,
+        "find_by_pointing": 6,
+        "unproject_pixel": 3,
+        "observe_orbit": 3,
+        "get_arm_pose": 2,
+        "grasp_object": 2,
+        "descend_tcp_to_z": 2,
+        "gripper": 2,
+        "home": 2,
+        "close_drawer": 2,
+        "exec_python": 1,
+        "find_pixel": 1,
+        "move_to_pixel": 1,
+        "think": 1,
+        "verify_pick_complete": 1,
+        "place_object_in": 1,
+        "find_by_detector": 1,
+        "?": 1
+      },
+      "failure_counts": {
+        "contrib:planning": 1
+      },
+      "failure_reason": "single-agent episode",
       "success_video_url": null,
-      "last_failure_video_url": null,
-      "clean_grasp_trajectory_url": null,
+      "last_failure_video_url": "data/videos/agent/BM-046-last-failure.mp4",
+      "clean_grasp_trajectory_url": "data/trajectories/BM-046-last-clean-grasp.json",
       "confirmed_success": null,
       "replay_status": null,
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": null
+      "finished_at": "2026-11-10T16:18:31.939887+00:00"
     },
     {
       "bm_id": "BM-047",

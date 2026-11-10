@@ -288,7 +288,19 @@
       "steps": 8,
       "file": "data/trajectories/BM-044-last-clean-grasp.json",
       "updated_at": "2026-11-10T15:49:25.070913+00:00"
+    },
+    "BM-046": {
+      "bm_id": "BM-046",
+      "task_id": "libero_90/5",
+      "benchmark": "libero",
+      "tool": "grasp_object",
+      "place_tool": "place_object_in",
+      "task_clean_success": false,
+      "task_status": "failure",
+      "steps": 6,
+      "file": "data/trajectories/BM-046-last-clean-grasp.json",
+      "updated_at": "2026-11-10T16:18:31.942715+00:00"
     }
   },
-  "updated_at": "2026-11-10T15:49:25.070907+00:00"
+  "updated_at": "2026-11-10T16:18:31.942711+00:00"
 }
