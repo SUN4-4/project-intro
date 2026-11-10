@@ -4414,9 +4414,9 @@
           "failure_video_url": "data/videos/agent/BM-031-last-failure.mp4",
           "failure_video_status": "published",
           "video_kind": null,
-          "exec_status": "pending",
+          "exec_status": "running",
           "exec_success_rate": null,
-          "exec_attempts": 0,
+          "exec_attempts": 1,
           "exec_rounds": 0,
           "exec_duration_s": 0.0,
           "exec_failure_reason": null,
@@ -4425,17 +4425,17 @@
           "agent_success_count": 0,
           "agent_loop_updated_at": null,
           "success_video_label": "待执行",
-          "agent_status": "pending",
-          "agent_attempts": 0,
+          "agent_status": "running",
+          "agent_attempts": 1,
           "agent_rounds": 0,
-          "agent_started_at": "2026-11-10T14:03:56.706619+00:00",
+          "agent_started_at": "2026-11-10T16:50:23.096618+00:00",
           "agent_finished_at": null,
           "agent_duration_s": 0.0,
           "agent_failure_reason": null,
           "agent_analysis": {},
           "agent_success_video_url": null,
           "agent_last_failure_video_url": "data/videos/agent/BM-031-last-failure.mp4",
-          "agent_clean_success": false,
+          "agent_clean_success": null,
           "agent_success_kind": null,
           "agent_success_note": null,
           "agent_clean_grasp_trajectory_url": "data/trajectories/BM-031-last-clean-grasp.json",
@@ -4447,89 +4447,12 @@
           "agent_replay_attempts": null,
           "agent_replay_finished_at": null,
           "agent_replay_note": null,
-          "agent_thinking_s": 611.578,
-          "agent_time_breakdown": {
-            "tool_total_s": 1135.6,
-            "perception_s": 530.8,
-            "action_s": 3.3,
-            "recovery_s": 0.0,
-            "other_s": 601.5,
-            "llm_overhead_s": 0.0,
-            "tool_calls": 21,
-            "steps": 16,
-            "tool_counts": {
-              "look": 4,
-              "find_by_pointing": 3,
-              "unproject_pixel": 3,
-              "get_arm_pose": 2,
-              "exec_python": 2,
-              "is_holding": 2,
-              "find_pixel": 2,
-              "grasp_object": 1,
-              "place_object_in": 1,
-              "?": 1
-            },
-            "top_tools": [
-              {
-                "tool": "look",
-                "count": 4,
-                "seconds": 0.9
-              },
-              {
-                "tool": "find_by_pointing",
-                "count": 3,
-                "seconds": 291.6
-              },
-              {
-                "tool": "unproject_pixel",
-                "count": 3,
-                "seconds": 0.7
-              },
-              {
-                "tool": "get_arm_pose",
-                "count": 2,
-                "seconds": 0.4
-              },
-              {
-                "tool": "exec_python",
-                "count": 2,
-                "seconds": 1.1
-              },
-              {
-                "tool": "is_holding",
-                "count": 2,
-                "seconds": 0.4
-              },
-              {
-                "tool": "find_pixel",
-                "count": 2,
-                "seconds": 235.7
-              },
-              {
-                "tool": "grasp_object",
-                "count": 1,
-                "seconds": 2.5
-              }
-            ]
-          },
-          "agent_tool_counts": {
-            "look": 4,
-            "find_by_pointing": 3,
-            "unproject_pixel": 3,
-            "get_arm_pose": 2,
-            "exec_python": 2,
-            "is_holding": 2,
-            "find_pixel": 2,
-            "grasp_object": 1,
-            "place_object_in": 1,
-            "?": 1
-          },
-          "agent_failure_counts": {
-            "primary:placement": 1,
-            "contrib:planning": 1
-          },
-          "agent_mode": "single",
-          "agent_tool_calls": 21
+          "agent_thinking_s": null,
+          "agent_time_breakdown": {},
+          "agent_tool_counts": {},
+          "agent_failure_counts": {},
+          "agent_mode": null,
+          "agent_tool_calls": null
         },
         {
           "id": "libero_10/1",
@@ -6621,8 +6544,8 @@
           "video_status": "pending",
           "success_video_url": null,
           "blender_status": "built",
-          "failure_video_url": null,
-          "failure_video_status": "pending",
+          "failure_video_url": "data/videos/agent/BM-048-last-failure.mp4",
+          "failure_video_status": "published",
           "video_kind": null,
           "exec_status": "pending",
           "exec_success_rate": null,
@@ -6638,13 +6561,13 @@
           "agent_status": "pending",
           "agent_attempts": 0,
           "agent_rounds": 0,
-          "agent_started_at": null,
+          "agent_started_at": "2026-11-10T16:31:01.992061+00:00",
           "agent_finished_at": null,
           "agent_duration_s": 0.0,
           "agent_failure_reason": null,
           "agent_analysis": {},
           "agent_success_video_url": null,
-          "agent_last_failure_video_url": null,
+          "agent_last_failure_video_url": "data/videos/agent/BM-048-last-failure.mp4",
           "agent_clean_success": false,
           "agent_success_kind": null,
           "agent_success_note": null,
@@ -6657,12 +6580,99 @@
           "agent_replay_attempts": null,
           "agent_replay_finished_at": null,
           "agent_replay_note": null,
-          "agent_thinking_s": null,
-          "agent_time_breakdown": {},
-          "agent_tool_counts": {},
-          "agent_failure_counts": {},
-          "agent_mode": null,
-          "agent_tool_calls": null
+          "agent_thinking_s": 625.619,
+          "agent_time_breakdown": {
+            "tool_total_s": 787.8,
+            "perception_s": 143.8,
+            "action_s": 27.6,
+            "recovery_s": 0.5,
+            "other_s": 615.8,
+            "llm_overhead_s": 0.0,
+            "tool_calls": 45,
+            "steps": 39,
+            "tool_counts": {
+              "look": 9,
+              "observe_orbit": 5,
+              "grep": 5,
+              "read": 5,
+              "unproject_pixel": 4,
+              "find_by_pointing": 3,
+              "exec_python": 3,
+              "get_arm_pose": 2,
+              "pull_drawer": 2,
+              "home": 2,
+              "grasp_object": 1,
+              "gripper": 1,
+              "get_grasp_pose": 1,
+              "move_to_pose": 1,
+              "?": 1
+            },
+            "top_tools": [
+              {
+                "tool": "look",
+                "count": 9,
+                "seconds": 2.0
+              },
+              {
+                "tool": "observe_orbit",
+                "count": 5,
+                "seconds": 1.2
+              },
+              {
+                "tool": "grep",
+                "count": 5,
+                "seconds": 0.0
+              },
+              {
+                "tool": "read",
+                "count": 5,
+                "seconds": 0.0
+              },
+              {
+                "tool": "unproject_pixel",
+                "count": 4,
+                "seconds": 1.1
+              },
+              {
+                "tool": "find_by_pointing",
+                "count": 3,
+                "seconds": 68.3
+              },
+              {
+                "tool": "exec_python",
+                "count": 3,
+                "seconds": 1.5
+              },
+              {
+                "tool": "get_arm_pose",
+                "count": 2,
+                "seconds": 0.4
+              }
+            ]
+          },
+          "agent_tool_counts": {
+            "look": 9,
+            "observe_orbit": 5,
+            "grep": 5,
+            "read": 5,
+            "unproject_pixel": 4,
+            "find_by_pointing": 3,
+            "exec_python": 3,
+            "get_arm_pose": 2,
+            "pull_drawer": 2,
+            "home": 2,
+            "grasp_object": 1,
+            "gripper": 1,
+            "get_grasp_pose": 1,
+            "move_to_pose": 1,
+            "?": 1
+          },
+          "agent_failure_counts": {
+            "primary:placement": 1,
+            "contrib:planning": 1
+          },
+          "agent_mode": "single",
+          "agent_tool_calls": 45
         },
         {
           "id": "libero_90/8",
@@ -6702,7 +6712,7 @@
           "agent_analysis": {},
           "agent_success_video_url": null,
           "agent_last_failure_video_url": null,
-          "agent_clean_success": false,
+          "agent_clean_success": null,
           "agent_success_kind": null,
           "agent_success_note": null,
           "agent_clean_grasp_trajectory_url": null,
@@ -28970,9 +28980,9 @@
       "failure_video_url": "data/videos/agent/BM-031-last-failure.mp4",
       "failure_video_status": "published",
       "video_kind": null,
-      "exec_status": "pending",
+      "exec_status": "running",
       "exec_success_rate": null,
-      "exec_attempts": 0,
+      "exec_attempts": 1,
       "exec_rounds": 0,
       "exec_duration_s": 0.0,
       "exec_failure_reason": null,
@@ -28981,17 +28991,17 @@
       "agent_success_count": 0,
       "agent_loop_updated_at": null,
       "success_video_label": "待执行",
-      "agent_status": "pending",
-      "agent_attempts": 0,
+      "agent_status": "running",
+      "agent_attempts": 1,
       "agent_rounds": 0,
-      "agent_started_at": "2026-11-10T14:03:56.706619+00:00",
+      "agent_started_at": "2026-11-10T16:50:23.096618+00:00",
       "agent_finished_at": null,
       "agent_duration_s": 0.0,
       "agent_failure_reason": null,
       "agent_analysis": {},
       "agent_success_video_url": null,
       "agent_last_failure_video_url": "data/videos/agent/BM-031-last-failure.mp4",
-      "agent_clean_success": false,
+      "agent_clean_success": null,
       "agent_success_kind": null,
       "agent_success_note": null,
       "agent_clean_grasp_trajectory_url": "data/trajectories/BM-031-last-clean-grasp.json",
@@ -29003,89 +29013,12 @@
       "agent_replay_attempts": null,
       "agent_replay_finished_at": null,
       "agent_replay_note": null,
-      "agent_thinking_s": 611.578,
-      "agent_time_breakdown": {
-        "tool_total_s": 1135.6,
-        "perception_s": 530.8,
-        "action_s": 3.3,
-        "recovery_s": 0.0,
-        "other_s": 601.5,
-        "llm_overhead_s": 0.0,
-        "tool_calls": 21,
-        "steps": 16,
-        "tool_counts": {
-          "look": 4,
-          "find_by_pointing": 3,
-          "unproject_pixel": 3,
-          "get_arm_pose": 2,
-          "exec_python": 2,
-          "is_holding": 2,
-          "find_pixel": 2,
-          "grasp_object": 1,
-          "place_object_in": 1,
-          "?": 1
-        },
-        "top_tools": [
-          {
-            "tool": "look",
-            "count": 4,
-            "seconds": 0.9
-          },
-          {
-            "tool": "find_by_pointing",
-            "count": 3,
-            "seconds": 291.6
-          },
-          {
-            "tool": "unproject_pixel",
-            "count": 3,
-            "seconds": 0.7
-          },
-          {
-            "tool": "get_arm_pose",
-            "count": 2,
-            "seconds": 0.4
-          },
-          {
-            "tool": "exec_python",
-            "count": 2,
-            "seconds": 1.1
-          },
-          {
-            "tool": "is_holding",
-            "count": 2,
-            "seconds": 0.4
-          },
-          {
-            "tool": "find_pixel",
-            "count": 2,
-            "seconds": 235.7
-          },
-          {
-            "tool": "grasp_object",
-            "count": 1,
-            "seconds": 2.5
-          }
-        ]
-      },
-      "agent_tool_counts": {
-        "look": 4,
-        "find_by_pointing": 3,
-        "unproject_pixel": 3,
-        "get_arm_pose": 2,
-        "exec_python": 2,
-        "is_holding": 2,
-        "find_pixel": 2,
-        "grasp_object": 1,
-        "place_object_in": 1,
-        "?": 1
-      },
-      "agent_failure_counts": {
-        "primary:placement": 1,
-        "contrib:planning": 1
-      },
-      "agent_mode": "single",
-      "agent_tool_calls": 21
+      "agent_thinking_s": null,
+      "agent_time_breakdown": {},
+      "agent_tool_counts": {},
+      "agent_failure_counts": {},
+      "agent_mode": null,
+      "agent_tool_calls": null
     },
     {
       "id": "libero_10/1",
@@ -31177,8 +31110,8 @@
       "video_status": "pending",
       "success_video_url": null,
       "blender_status": "built",
-      "failure_video_url": null,
-      "failure_video_status": "pending",
+      "failure_video_url": "data/videos/agent/BM-048-last-failure.mp4",
+      "failure_video_status": "published",
       "video_kind": null,
       "exec_status": "pending",
       "exec_success_rate": null,
@@ -31194,13 +31127,13 @@
       "agent_status": "pending",
       "agent_attempts": 0,
       "agent_rounds": 0,
-      "agent_started_at": null,
+      "agent_started_at": "2026-11-10T16:31:01.992061+00:00",
       "agent_finished_at": null,
       "agent_duration_s": 0.0,
       "agent_failure_reason": null,
       "agent_analysis": {},
       "agent_success_video_url": null,
-      "agent_last_failure_video_url": null,
+      "agent_last_failure_video_url": "data/videos/agent/BM-048-last-failure.mp4",
       "agent_clean_success": false,
       "agent_success_kind": null,
       "agent_success_note": null,
@@ -31213,12 +31146,99 @@
       "agent_replay_attempts": null,
       "agent_replay_finished_at": null,
       "agent_replay_note": null,
-      "agent_thinking_s": null,
-      "agent_time_breakdown": {},
-      "agent_tool_counts": {},
-      "agent_failure_counts": {},
-      "agent_mode": null,
-      "agent_tool_calls": null
+      "agent_thinking_s": 625.619,
+      "agent_time_breakdown": {
+        "tool_total_s": 787.8,
+        "perception_s": 143.8,
+        "action_s": 27.6,
+        "recovery_s": 0.5,
+        "other_s": 615.8,
+        "llm_overhead_s": 0.0,
+        "tool_calls": 45,
+        "steps": 39,
+        "tool_counts": {
+          "look": 9,
+          "observe_orbit": 5,
+          "grep": 5,
+          "read": 5,
+          "unproject_pixel": 4,
+          "find_by_pointing": 3,
+          "exec_python": 3,
+          "get_arm_pose": 2,
+          "pull_drawer": 2,
+          "home": 2,
+          "grasp_object": 1,
+          "gripper": 1,
+          "get_grasp_pose": 1,
+          "move_to_pose": 1,
+          "?": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 9,
+            "seconds": 2.0
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 5,
+            "seconds": 1.2
+          },
+          {
+            "tool": "grep",
+            "count": 5,
+            "seconds": 0.0
+          },
+          {
+            "tool": "read",
+            "count": 5,
+            "seconds": 0.0
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 4,
+            "seconds": 1.1
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 3,
+            "seconds": 68.3
+          },
+          {
+            "tool": "exec_python",
+            "count": 3,
+            "seconds": 1.5
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 2,
+            "seconds": 0.4
+          }
+        ]
+      },
+      "agent_tool_counts": {
+        "look": 9,
+        "observe_orbit": 5,
+        "grep": 5,
+        "read": 5,
+        "unproject_pixel": 4,
+        "find_by_pointing": 3,
+        "exec_python": 3,
+        "get_arm_pose": 2,
+        "pull_drawer": 2,
+        "home": 2,
+        "grasp_object": 1,
+        "gripper": 1,
+        "get_grasp_pose": 1,
+        "move_to_pose": 1,
+        "?": 1
+      },
+      "agent_failure_counts": {
+        "primary:placement": 1,
+        "contrib:planning": 1
+      },
+      "agent_mode": "single",
+      "agent_tool_calls": 45
     },
     {
       "id": "libero_90/8",
@@ -31258,7 +31278,7 @@
       "agent_analysis": {},
       "agent_success_video_url": null,
       "agent_last_failure_video_url": null,
-      "agent_clean_success": false,
+      "agent_clean_success": null,
       "agent_success_kind": null,
       "agent_success_note": null,
       "agent_clean_grasp_trajectory_url": null,
@@ -49085,7 +49105,7 @@
     }
   ],
   "results_summary": {
-    "generated_at": "2026-11-10T16:30:54.011826+00:00",
+    "generated_at": "2026-11-10T16:50:59.754716+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -49093,8 +49113,8 @@
     "failure": 21,
     "infra": 6,
     "blocked": 100,
-    "pending": 191,
-    "running": 0,
+    "pending": 190,
+    "running": 1,
     "clean_success": 14,
     "soft_success": 1,
     "confirmed_success": 2,
@@ -49104,9 +49124,9 @@
     "success_rate": 0.4166666666666667,
     "clean_success_rate": 0.3888888888888889,
     "publish": {
-      "at": "2026-11-10T16:18:40.548515+00:00",
-      "returncode": 0,
-      "tail": "正在更新文件: 100% (4/4) | 正在更新文件: 100% (4/4), 完成. | To https://github.com/SUN4-4/project-intro.git |    101fd10..ac50aa3  main -> main",
+      "at": "2026-11-10T16:44:31.204604+00:00",
+      "returncode": 1,
+      "tail": "2026-11-10T16:44:31Z fetch failed | fatal: 无法访问 'https://github.com/SUN4-4/project-intro.git/'：Operation too slow. Less than 1000 bytes/sec transferred the last 60 seconds",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
