@@ -821,11 +821,11 @@
           "agent_success_note": "Agent 闭环成功轨迹：IK 末端控制 + VLM 视觉确认，最多 10 轮。",
           "agent_clean_grasp_trajectory_url": "data/trajectories/BM-013-last-clean-grasp.json",
           "agent_confirmed_success": false,
-          "agent_replay_status": null,
+          "agent_replay_status": "running",
           "agent_replay_success": null,
           "agent_replay_video_url": null,
           "agent_replay_failure_video_url": null,
-          "agent_replay_attempts": 0,
+          "agent_replay_attempts": 1,
           "agent_replay_finished_at": null,
           "agent_replay_note": "复核修正：最终 Reviewer 判定 done 且 relation_holds=true，最终帧 VLM 复核成功；撤销原先的 vlm_overclaimed/预算失败判定。当前为首次成功，等待按空间位置复现确认。",
           "agent_thinking_s": null,
@@ -20455,11 +20455,11 @@
       "agent_success_note": "Agent 闭环成功轨迹：IK 末端控制 + VLM 视觉确认，最多 10 轮。",
       "agent_clean_grasp_trajectory_url": "data/trajectories/BM-013-last-clean-grasp.json",
       "agent_confirmed_success": false,
-      "agent_replay_status": null,
+      "agent_replay_status": "running",
       "agent_replay_success": null,
       "agent_replay_video_url": null,
       "agent_replay_failure_video_url": null,
-      "agent_replay_attempts": 0,
+      "agent_replay_attempts": 1,
       "agent_replay_finished_at": null,
       "agent_replay_note": "复核修正：最终 Reviewer 判定 done 且 relation_holds=true，最终帧 VLM 复核成功；撤销原先的 vlm_overclaimed/预算失败判定。当前为首次成功，等待按空间位置复现确认。",
       "agent_thinking_s": null,
@@ -39241,7 +39241,7 @@
     }
   ],
   "results_summary": {
-    "generated_at": "2026-11-10T07:14:32.993245+00:00",
+    "generated_at": "2026-11-10T07:14:38.668809+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -39260,9 +39260,9 @@
     "success_rate": 0.42857142857142855,
     "clean_success_rate": 0.38095238095238093,
     "publish": {
-      "at": "2026-11-10T07:11:58.245193+00:00",
+      "at": "2026-11-10T07:14:38.631308+00:00",
       "returncode": 0,
-      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    4d62a61..614d6de  main -> main",
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    614d6de..520bfe0  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
