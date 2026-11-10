@@ -1,41 +1,35 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T15:30:25.963352+00:00",
+  "generated_at": "2026-11-10T15:49:25.097104+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T15:30:25.952744+00:00",
+    "generated_at": "2026-11-10T15:49:25.091691+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 15,
-    "failure": 17,
+    "failure": 18,
     "infra": 6,
     "blocked": 100,
     "pending": 194,
-    "running": 1,
+    "running": 0,
     "clean_success": 14,
     "soft_success": 1,
     "confirmed_success": 2,
     "replay_pending": 11,
     "replay_failed": 2,
-    "valid_verdicts": 32,
-    "success_rate": 0.46875,
-    "clean_success_rate": 0.4375,
+    "valid_verdicts": 33,
+    "success_rate": 0.45454545454545453,
+    "clean_success_rate": 0.42424242424242425,
     "publish": {
-      "at": "2026-11-10T15:21:31.557284+00:00",
-      "returncode": 0,
-      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    06cea5f..6ad2997  main -> main",
+      "at": "2026-11-10T15:36:21.390160+00:00",
+      "returncode": 1,
+      "tail": "2026-11-10T15:36:21Z fetch failed | fatal: 无法访问 'https://github.com/SUN4-4/project-intro.git/'：Failed to connect to github.com port 443 after 133292 ms: Couldn't connect to server",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
   },
-  "current": {
-    "bm_id": "BM-043",
-    "task_id": "libero_90/2",
-    "benchmark": "libero",
-    "attempt": 1,
-    "started_at": "2026-11-10T15:21:31.568881+00:00"
-  },
+  "current": null,
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -4198,24 +4192,117 @@
       "bm_id": "BM-043",
       "task_id": "libero_90/2",
       "benchmark": "libero",
-      "status": "running",
+      "status": "failure",
       "attempts": 1,
-      "rounds": 0,
-      "duration_s": 0.0,
-      "thinking_s": null,
-      "time_breakdown": {},
-      "tool_counts": {},
-      "failure_counts": {},
-      "failure_reason": null,
+      "rounds": 1,
+      "duration_s": 643.438,
+      "thinking_s": 637.365,
+      "time_breakdown": {
+        "tool_total_s": 944.8,
+        "perception_s": 276.3,
+        "action_s": 40.8,
+        "recovery_s": 0.3,
+        "other_s": 627.4,
+        "llm_overhead_s": 0.0,
+        "tool_calls": 58,
+        "steps": 53,
+        "tool_counts": {
+          "look": 14,
+          "unproject_pixel": 6,
+          "get_arm_pose": 5,
+          "observe_orbit": 5,
+          "find_by_detector": 5,
+          "find_by_pointing": 4,
+          "grasp_object": 3,
+          "exec_python": 3,
+          "pull_drawer": 2,
+          "is_holding": 2,
+          "move_to_pose": 2,
+          "find_pixel": 1,
+          "place_object_in": 1,
+          "home": 1,
+          "grep": 1,
+          "move_ee_delta": 1,
+          "get_grasp_pose": 1,
+          "?": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 14,
+            "seconds": 3.1
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 6,
+            "seconds": 1.3
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 5,
+            "seconds": 1.1
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 5,
+            "seconds": 1.1
+          },
+          {
+            "tool": "find_by_detector",
+            "count": 5,
+            "seconds": 6.3
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 4,
+            "seconds": 72.6
+          },
+          {
+            "tool": "grasp_object",
+            "count": 3,
+            "seconds": 19.8
+          },
+          {
+            "tool": "exec_python",
+            "count": 3,
+            "seconds": 1.8
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 14,
+        "unproject_pixel": 6,
+        "get_arm_pose": 5,
+        "observe_orbit": 5,
+        "find_by_detector": 5,
+        "find_by_pointing": 4,
+        "grasp_object": 3,
+        "exec_python": 3,
+        "pull_drawer": 2,
+        "is_holding": 2,
+        "move_to_pose": 2,
+        "find_pixel": 1,
+        "place_object_in": 1,
+        "home": 1,
+        "grep": 1,
+        "move_ee_delta": 1,
+        "get_grasp_pose": 1,
+        "?": 1
+      },
+      "failure_counts": {
+        "primary:grasp_generation": 1,
+        "contrib:planning": 1
+      },
+      "failure_reason": "single-agent episode",
       "success_video_url": null,
-      "last_failure_video_url": null,
+      "last_failure_video_url": "data/videos/agent/BM-043-last-failure.mp4",
       "clean_grasp_trajectory_url": null,
       "confirmed_success": null,
       "replay_status": null,
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": null
+      "finished_at": "2026-11-10T15:34:07.981727+00:00"
     },
     {
       "bm_id": "BM-044",
@@ -4225,14 +4312,105 @@
       "attempts": 0,
       "rounds": 0,
       "duration_s": 0.0,
-      "thinking_s": null,
-      "time_breakdown": {},
-      "tool_counts": {},
-      "failure_counts": {},
+      "thinking_s": 610.718,
+      "time_breakdown": {
+        "tool_total_s": 905.5,
+        "perception_s": 275.1,
+        "action_s": 29.2,
+        "recovery_s": 0.5,
+        "other_s": 600.7,
+        "llm_overhead_s": 0.0,
+        "tool_calls": 52,
+        "steps": 46,
+        "tool_counts": {
+          "look": 9,
+          "unproject_pixel": 5,
+          "observe_orbit": 5,
+          "move_to_pose": 5,
+          "find_by_pointing": 4,
+          "grasp_object": 4,
+          "is_holding": 4,
+          "get_arm_pose": 2,
+          "find_pixel": 2,
+          "gripper": 2,
+          "home": 2,
+          "trajectory_refine": 2,
+          "place_object_in": 2,
+          "get_grasp_pose": 1,
+          "find_by_detector": 1,
+          "exec_python": 1,
+          "?": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 9,
+            "seconds": 2.0
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 5,
+            "seconds": 1.3
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 5,
+            "seconds": 1.2
+          },
+          {
+            "tool": "move_to_pose",
+            "count": 5,
+            "seconds": 1.4
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 4,
+            "seconds": 29.9
+          },
+          {
+            "tool": "grasp_object",
+            "count": 4,
+            "seconds": 26.3
+          },
+          {
+            "tool": "is_holding",
+            "count": 4,
+            "seconds": 0.9
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 2,
+            "seconds": 0.4
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 9,
+        "unproject_pixel": 5,
+        "observe_orbit": 5,
+        "move_to_pose": 5,
+        "find_by_pointing": 4,
+        "grasp_object": 4,
+        "is_holding": 4,
+        "get_arm_pose": 2,
+        "find_pixel": 2,
+        "gripper": 2,
+        "home": 2,
+        "trajectory_refine": 2,
+        "place_object_in": 2,
+        "get_grasp_pose": 1,
+        "find_by_detector": 1,
+        "exec_python": 1,
+        "?": 1
+      },
+      "failure_counts": {
+        "primary:transport": 1,
+        "contrib:planning": 1
+      },
       "failure_reason": null,
       "success_video_url": null,
-      "last_failure_video_url": null,
-      "clean_grasp_trajectory_url": null,
+      "last_failure_video_url": "data/videos/agent/BM-044-last-failure.mp4",
+      "clean_grasp_trajectory_url": "data/trajectories/BM-044-last-clean-grasp.json",
       "confirmed_success": null,
       "replay_status": null,
       "replay_success": null,
