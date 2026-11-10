@@ -1,9 +1,9 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T07:11:47.182776+00:00",
+  "generated_at": "2026-11-10T07:11:52.961412+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T07:11:47.178778+00:00",
+    "generated_at": "2026-11-10T07:11:52.955986+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -22,14 +22,21 @@
     "success_rate": 0.42857142857142855,
     "clean_success_rate": 0.38095238095238093,
     "publish": {
-      "at": "2026-11-10T07:05:45.518563+00:00",
+      "at": "2026-11-10T07:11:52.919523+00:00",
       "returncode": 0,
-      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    92f3654..3364da7  main -> main",
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    3364da7..4d62a61  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
   },
-  "current": null,
+  "current": {
+    "bm_id": "BM-010",
+    "task_id": "libero_goal/9",
+    "benchmark": "libero",
+    "replay": true,
+    "attempt": 2,
+    "started_at": "2026-11-10T07:11:52.929340+00:00"
+  },
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -274,7 +281,7 @@
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": "data/trajectories/BM-010-last-clean-grasp.json",
       "confirmed_success": false,
-      "replay_status": null,
+      "replay_status": "running",
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
