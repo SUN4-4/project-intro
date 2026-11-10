@@ -1,41 +1,41 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T05:22:16.144725+00:00",
+  "generated_at": "2026-11-10T05:27:59.886499+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T05:22:16.139184+00:00",
+    "generated_at": "2026-11-10T05:27:59.882173+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
-    "success": 6,
-    "failure": 15,
+    "success": 9,
+    "failure": 12,
     "infra": 0,
     "blocked": 100,
     "pending": 212,
     "running": 0,
-    "clean_success": 5,
+    "clean_success": 8,
     "soft_success": 1,
     "confirmed_success": 0,
-    "replay_pending": 3,
-    "replay_failed": 4,
+    "replay_pending": 9,
+    "replay_failed": 1,
     "valid_verdicts": 21,
-    "success_rate": 0.2857142857142857,
-    "clean_success_rate": 0.23809523809523808,
+    "success_rate": 0.42857142857142855,
+    "clean_success_rate": 0.38095238095238093,
     "publish": {
-      "at": "2026-11-10T05:22:16.102132+00:00",
-      "returncode": 0,
-      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    4cb9d2b..ea90091  main -> main",
+      "at": "2026-11-10T05:24:19.255760+00:00",
+      "returncode": 1,
+      "tail": "2026-11-10T05:24:19Z fetch failed | fatal: 无法访问 'https://github.com/SUN4-4/project-intro.git/'：Operation too slow. Less than 1000 bytes/sec transferred the last 60 seconds",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
   },
   "current": {
-    "bm_id": "BM-016",
-    "task_id": "libero_object/5",
+    "bm_id": "BM-003",
+    "task_id": "libero_goal/2",
     "benchmark": "libero",
     "replay": true,
-    "attempt": 1,
-    "started_at": "2026-11-10T05:22:16.112160+00:00"
+    "attempt": 2,
+    "started_at": "2026-11-10T05:26:24.754827+00:00"
   },
   "tasks": [
     {
@@ -89,10 +89,10 @@
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": "data/trajectories/BM-003-last-clean-grasp.json",
       "confirmed_success": false,
-      "replay_status": "infra",
+      "replay_status": "running",
       "replay_success": false,
       "replay_video_url": null,
-      "replay_finished_at": "2026-11-10T05:19:35.247450+00:00",
+      "replay_finished_at": null,
       "finished_at": "2026-11-09T16:45:23.918722+00:00"
     },
     {
@@ -203,10 +203,10 @@
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": "data/trajectories/BM-009-last-clean-grasp.json",
       "confirmed_success": false,
-      "replay_status": "infra",
-      "replay_success": false,
+      "replay_status": null,
+      "replay_success": null,
       "replay_video_url": null,
-      "replay_finished_at": "2026-11-10T05:20:33.728195+00:00",
+      "replay_finished_at": null,
       "finished_at": "2026-11-09T19:55:03.761758+00:00"
     },
     {
@@ -222,10 +222,10 @@
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": "data/trajectories/BM-010-last-clean-grasp.json",
       "confirmed_success": false,
-      "replay_status": "infra",
-      "replay_success": false,
+      "replay_status": null,
+      "replay_success": null,
       "replay_video_url": null,
-      "replay_finished_at": "2026-11-10T05:22:10.919917+00:00",
+      "replay_finished_at": null,
       "finished_at": "2026-11-09T19:59:26.468469+00:00"
     },
     {
@@ -270,15 +270,15 @@
       "bm_id": "BM-013",
       "task_id": "libero_object/2",
       "benchmark": "libero",
-      "status": "failure",
+      "status": "success",
       "attempts": 1,
       "rounds": 10,
       "duration_s": 3300.599,
-      "failure_reason": "n/a — round 10 succeeded: grasp_object held the bottle (gap 0.0378, holding_visual true), place_object_in(basket, z_offset 0.06) released inside and is_holding returned open (not held).",
-      "success_video_url": null,
-      "last_failure_video_url": "data/videos/agent/BM-013-last-failure.mp4",
+      "failure_reason": null,
+      "success_video_url": "data/videos/agent/BM-013-success.mp4",
+      "last_failure_video_url": null,
       "clean_grasp_trajectory_url": "data/trajectories/BM-013-last-clean-grasp.json",
-      "confirmed_success": null,
+      "confirmed_success": false,
       "replay_status": null,
       "replay_success": null,
       "replay_video_url": null,
@@ -336,8 +336,8 @@
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": "data/trajectories/BM-016-last-clean-grasp.json",
       "confirmed_success": false,
-      "replay_status": "running",
-      "replay_success": false,
+      "replay_status": null,
+      "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
       "finished_at": "2026-11-10T00:06:01.569778+00:00"
@@ -365,15 +365,15 @@
       "bm_id": "BM-018",
       "task_id": "libero_object/7",
       "benchmark": "libero",
-      "status": "failure",
+      "status": "success",
       "attempts": 1,
       "rounds": 9,
       "duration_s": 3515.611,
-      "failure_reason": "✗ **libero_pick_place** seed=0 · budget_exceeded (144 tool calls)\nMode: `evolve`\n\nWorkspace: `/home/sunhe/.roborsi-bm-agent/home/workspaces/libero_pick_place-20261110-085248-3c1728`\n  plan.md · summary.md · review.md\n\nReviewer verdict: `blocked` · proposal: `NO_PROPOSAL`",
-      "success_video_url": null,
-      "last_failure_video_url": "data/videos/agent/BM-018-last-failure.mp4",
+      "failure_reason": null,
+      "success_video_url": "data/videos/agent/BM-018-success.mp4",
+      "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "confirmed_success": null,
+      "confirmed_success": false,
       "replay_status": null,
       "replay_success": null,
       "replay_video_url": null,
@@ -392,7 +392,7 @@
       "success_video_url": "data/videos/agent/BM-019-success.mp4",
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": "data/trajectories/BM-019-last-clean-grasp.json",
-      "confirmed_success": null,
+      "confirmed_success": false,
       "replay_status": null,
       "replay_success": null,
       "replay_video_url": null,
@@ -441,15 +441,15 @@
       "bm_id": "BM-022",
       "task_id": "libero_spatial/1",
       "benchmark": "libero",
-      "status": "failure",
+      "status": "success",
       "attempts": 1,
       "rounds": 2,
       "duration_s": 504.904,
-      "failure_reason": "✗ **libero_pick_place** seed=0 · budget_exceeded (32 tool calls)\nMode: `evolve`\n\nWorkspace: `/home/sunhe/.roborsi-bm-agent/home/workspaces/libero_pick_place-20261110-112941-cb040b`\n  plan.md · summary.md · review.md\n\nReviewer verdict: `blocked` · proposal: `NO_PROPOSAL`",
-      "success_video_url": null,
-      "last_failure_video_url": "data/videos/agent/BM-022-last-failure.mp4",
+      "failure_reason": null,
+      "success_video_url": "data/videos/agent/BM-022-success.mp4",
+      "last_failure_video_url": null,
       "clean_grasp_trajectory_url": "data/trajectories/BM-022-last-clean-grasp.json",
-      "confirmed_success": null,
+      "confirmed_success": false,
       "replay_status": null,
       "replay_success": null,
       "replay_video_url": null,
@@ -3475,7 +3475,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054840+00:00"
+      "finished_at": "2026-11-10T05:26:24.664343+00:00"
     },
     {
       "bm_id": "BM-182",
@@ -3494,7 +3494,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054854+00:00"
+      "finished_at": "2026-11-10T05:26:24.664360+00:00"
     },
     {
       "bm_id": "BM-183",
@@ -3513,7 +3513,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054858+00:00"
+      "finished_at": "2026-11-10T05:26:24.664364+00:00"
     },
     {
       "bm_id": "BM-184",
@@ -3532,7 +3532,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054861+00:00"
+      "finished_at": "2026-11-10T05:26:24.664366+00:00"
     },
     {
       "bm_id": "BM-185",
@@ -3551,7 +3551,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054863+00:00"
+      "finished_at": "2026-11-10T05:26:24.664368+00:00"
     },
     {
       "bm_id": "BM-186",
@@ -3570,7 +3570,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054865+00:00"
+      "finished_at": "2026-11-10T05:26:24.664370+00:00"
     },
     {
       "bm_id": "BM-187",
@@ -3589,7 +3589,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054866+00:00"
+      "finished_at": "2026-11-10T05:26:24.664372+00:00"
     },
     {
       "bm_id": "BM-188",
@@ -3608,7 +3608,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054868+00:00"
+      "finished_at": "2026-11-10T05:26:24.664373+00:00"
     },
     {
       "bm_id": "BM-189",
@@ -3627,7 +3627,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054869+00:00"
+      "finished_at": "2026-11-10T05:26:24.664376+00:00"
     },
     {
       "bm_id": "BM-190",
@@ -3646,7 +3646,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054871+00:00"
+      "finished_at": "2026-11-10T05:26:24.664378+00:00"
     },
     {
       "bm_id": "BM-191",
@@ -3665,7 +3665,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054873+00:00"
+      "finished_at": "2026-11-10T05:26:24.664380+00:00"
     },
     {
       "bm_id": "BM-192",
@@ -3684,7 +3684,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054874+00:00"
+      "finished_at": "2026-11-10T05:26:24.664382+00:00"
     },
     {
       "bm_id": "BM-193",
@@ -3703,7 +3703,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054876+00:00"
+      "finished_at": "2026-11-10T05:26:24.664384+00:00"
     },
     {
       "bm_id": "BM-194",
@@ -3722,7 +3722,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054878+00:00"
+      "finished_at": "2026-11-10T05:26:24.664385+00:00"
     },
     {
       "bm_id": "BM-195",
@@ -3741,7 +3741,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054879+00:00"
+      "finished_at": "2026-11-10T05:26:24.664387+00:00"
     },
     {
       "bm_id": "BM-196",
@@ -3760,7 +3760,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054880+00:00"
+      "finished_at": "2026-11-10T05:26:24.664388+00:00"
     },
     {
       "bm_id": "BM-197",
@@ -3779,7 +3779,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054882+00:00"
+      "finished_at": "2026-11-10T05:26:24.664390+00:00"
     },
     {
       "bm_id": "BM-198",
@@ -3798,7 +3798,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054883+00:00"
+      "finished_at": "2026-11-10T05:26:24.664392+00:00"
     },
     {
       "bm_id": "BM-199",
@@ -3817,7 +3817,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054885+00:00"
+      "finished_at": "2026-11-10T05:26:24.664394+00:00"
     },
     {
       "bm_id": "BM-200",
@@ -3836,7 +3836,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054886+00:00"
+      "finished_at": "2026-11-10T05:26:24.664396+00:00"
     },
     {
       "bm_id": "BM-201",
@@ -3855,7 +3855,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054888+00:00"
+      "finished_at": "2026-11-10T05:26:24.664398+00:00"
     },
     {
       "bm_id": "BM-202",
@@ -3874,7 +3874,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054889+00:00"
+      "finished_at": "2026-11-10T05:26:24.664399+00:00"
     },
     {
       "bm_id": "BM-203",
@@ -3893,7 +3893,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054891+00:00"
+      "finished_at": "2026-11-10T05:26:24.664401+00:00"
     },
     {
       "bm_id": "BM-204",
@@ -3912,7 +3912,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054892+00:00"
+      "finished_at": "2026-11-10T05:26:24.664403+00:00"
     },
     {
       "bm_id": "BM-205",
@@ -3931,7 +3931,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054894+00:00"
+      "finished_at": "2026-11-10T05:26:24.664404+00:00"
     },
     {
       "bm_id": "BM-206",
@@ -3950,7 +3950,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054895+00:00"
+      "finished_at": "2026-11-10T05:26:24.664406+00:00"
     },
     {
       "bm_id": "BM-207",
@@ -3969,7 +3969,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054897+00:00"
+      "finished_at": "2026-11-10T05:26:24.664408+00:00"
     },
     {
       "bm_id": "BM-208",
@@ -3988,7 +3988,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054898+00:00"
+      "finished_at": "2026-11-10T05:26:24.664409+00:00"
     },
     {
       "bm_id": "BM-209",
@@ -4007,7 +4007,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054899+00:00"
+      "finished_at": "2026-11-10T05:26:24.664411+00:00"
     },
     {
       "bm_id": "BM-210",
@@ -4026,7 +4026,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054901+00:00"
+      "finished_at": "2026-11-10T05:26:24.664412+00:00"
     },
     {
       "bm_id": "BM-211",
@@ -4045,7 +4045,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054902+00:00"
+      "finished_at": "2026-11-10T05:26:24.664414+00:00"
     },
     {
       "bm_id": "BM-212",
@@ -4064,7 +4064,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054904+00:00"
+      "finished_at": "2026-11-10T05:26:24.664415+00:00"
     },
     {
       "bm_id": "BM-213",
@@ -4083,7 +4083,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054906+00:00"
+      "finished_at": "2026-11-10T05:26:24.664417+00:00"
     },
     {
       "bm_id": "BM-214",
@@ -4102,7 +4102,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054907+00:00"
+      "finished_at": "2026-11-10T05:26:24.664418+00:00"
     },
     {
       "bm_id": "BM-215",
@@ -4121,7 +4121,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054908+00:00"
+      "finished_at": "2026-11-10T05:26:24.664420+00:00"
     },
     {
       "bm_id": "BM-216",
@@ -4140,7 +4140,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054910+00:00"
+      "finished_at": "2026-11-10T05:26:24.664421+00:00"
     },
     {
       "bm_id": "BM-217",
@@ -4159,7 +4159,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054911+00:00"
+      "finished_at": "2026-11-10T05:26:24.664422+00:00"
     },
     {
       "bm_id": "BM-218",
@@ -4178,7 +4178,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054913+00:00"
+      "finished_at": "2026-11-10T05:26:24.664424+00:00"
     },
     {
       "bm_id": "BM-219",
@@ -4197,7 +4197,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054914+00:00"
+      "finished_at": "2026-11-10T05:26:24.664425+00:00"
     },
     {
       "bm_id": "BM-220",
@@ -4216,7 +4216,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054916+00:00"
+      "finished_at": "2026-11-10T05:26:24.664427+00:00"
     },
     {
       "bm_id": "BM-221",
@@ -4235,7 +4235,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054917+00:00"
+      "finished_at": "2026-11-10T05:26:24.664429+00:00"
     },
     {
       "bm_id": "BM-222",
@@ -4254,7 +4254,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054918+00:00"
+      "finished_at": "2026-11-10T05:26:24.664431+00:00"
     },
     {
       "bm_id": "BM-223",
@@ -4273,7 +4273,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054919+00:00"
+      "finished_at": "2026-11-10T05:26:24.664432+00:00"
     },
     {
       "bm_id": "BM-224",
@@ -4292,7 +4292,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054921+00:00"
+      "finished_at": "2026-11-10T05:26:24.664433+00:00"
     },
     {
       "bm_id": "BM-225",
@@ -4311,7 +4311,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054922+00:00"
+      "finished_at": "2026-11-10T05:26:24.664434+00:00"
     },
     {
       "bm_id": "BM-226",
@@ -4330,7 +4330,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054924+00:00"
+      "finished_at": "2026-11-10T05:26:24.664436+00:00"
     },
     {
       "bm_id": "BM-227",
@@ -4349,7 +4349,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054925+00:00"
+      "finished_at": "2026-11-10T05:26:24.664438+00:00"
     },
     {
       "bm_id": "BM-228",
@@ -4368,7 +4368,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054926+00:00"
+      "finished_at": "2026-11-10T05:26:24.664440+00:00"
     },
     {
       "bm_id": "BM-229",
@@ -4387,7 +4387,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054928+00:00"
+      "finished_at": "2026-11-10T05:26:24.664441+00:00"
     },
     {
       "bm_id": "BM-230",
@@ -4406,7 +4406,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054929+00:00"
+      "finished_at": "2026-11-10T05:26:24.664443+00:00"
     },
     {
       "bm_id": "BM-231",
@@ -4425,7 +4425,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054931+00:00"
+      "finished_at": "2026-11-10T05:26:24.664445+00:00"
     },
     {
       "bm_id": "BM-232",
@@ -4444,7 +4444,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054933+00:00"
+      "finished_at": "2026-11-10T05:26:24.664446+00:00"
     },
     {
       "bm_id": "BM-233",
@@ -4463,7 +4463,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054934+00:00"
+      "finished_at": "2026-11-10T05:26:24.664448+00:00"
     },
     {
       "bm_id": "BM-234",
@@ -4482,7 +4482,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054936+00:00"
+      "finished_at": "2026-11-10T05:26:24.664449+00:00"
     },
     {
       "bm_id": "BM-235",
@@ -4501,7 +4501,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054937+00:00"
+      "finished_at": "2026-11-10T05:26:24.664451+00:00"
     },
     {
       "bm_id": "BM-236",
@@ -4520,7 +4520,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054939+00:00"
+      "finished_at": "2026-11-10T05:26:24.664452+00:00"
     },
     {
       "bm_id": "BM-237",
@@ -4539,7 +4539,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054940+00:00"
+      "finished_at": "2026-11-10T05:26:24.664454+00:00"
     },
     {
       "bm_id": "BM-238",
@@ -4558,7 +4558,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054942+00:00"
+      "finished_at": "2026-11-10T05:26:24.664455+00:00"
     },
     {
       "bm_id": "BM-239",
@@ -4577,7 +4577,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054943+00:00"
+      "finished_at": "2026-11-10T05:26:24.664457+00:00"
     },
     {
       "bm_id": "BM-240",
@@ -4596,7 +4596,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054945+00:00"
+      "finished_at": "2026-11-10T05:26:24.664459+00:00"
     },
     {
       "bm_id": "BM-241",
@@ -4615,7 +4615,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054947+00:00"
+      "finished_at": "2026-11-10T05:26:24.664460+00:00"
     },
     {
       "bm_id": "BM-242",
@@ -4634,7 +4634,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054949+00:00"
+      "finished_at": "2026-11-10T05:26:24.664462+00:00"
     },
     {
       "bm_id": "BM-243",
@@ -4653,7 +4653,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054950+00:00"
+      "finished_at": "2026-11-10T05:26:24.664463+00:00"
     },
     {
       "bm_id": "BM-244",
@@ -4672,7 +4672,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054951+00:00"
+      "finished_at": "2026-11-10T05:26:24.664465+00:00"
     },
     {
       "bm_id": "BM-245",
@@ -4691,7 +4691,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054953+00:00"
+      "finished_at": "2026-11-10T05:26:24.664467+00:00"
     },
     {
       "bm_id": "BM-246",
@@ -4710,7 +4710,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054954+00:00"
+      "finished_at": "2026-11-10T05:26:24.664468+00:00"
     },
     {
       "bm_id": "BM-247",
@@ -4729,7 +4729,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054956+00:00"
+      "finished_at": "2026-11-10T05:26:24.664470+00:00"
     },
     {
       "bm_id": "BM-248",
@@ -4748,7 +4748,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054958+00:00"
+      "finished_at": "2026-11-10T05:26:24.664471+00:00"
     },
     {
       "bm_id": "BM-249",
@@ -4767,7 +4767,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054959+00:00"
+      "finished_at": "2026-11-10T05:26:24.664472+00:00"
     },
     {
       "bm_id": "BM-250",
@@ -4786,7 +4786,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054961+00:00"
+      "finished_at": "2026-11-10T05:26:24.664473+00:00"
     },
     {
       "bm_id": "BM-251",
@@ -4805,7 +4805,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054963+00:00"
+      "finished_at": "2026-11-10T05:26:24.664475+00:00"
     },
     {
       "bm_id": "BM-252",
@@ -4824,7 +4824,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054965+00:00"
+      "finished_at": "2026-11-10T05:26:24.664476+00:00"
     },
     {
       "bm_id": "BM-253",
@@ -4843,7 +4843,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054967+00:00"
+      "finished_at": "2026-11-10T05:26:24.664478+00:00"
     },
     {
       "bm_id": "BM-254",
@@ -4862,7 +4862,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054969+00:00"
+      "finished_at": "2026-11-10T05:26:24.664480+00:00"
     },
     {
       "bm_id": "BM-255",
@@ -4881,7 +4881,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054970+00:00"
+      "finished_at": "2026-11-10T05:26:24.664482+00:00"
     },
     {
       "bm_id": "BM-256",
@@ -4900,7 +4900,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054972+00:00"
+      "finished_at": "2026-11-10T05:26:24.664483+00:00"
     },
     {
       "bm_id": "BM-257",
@@ -4919,7 +4919,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054973+00:00"
+      "finished_at": "2026-11-10T05:26:24.664485+00:00"
     },
     {
       "bm_id": "BM-258",
@@ -4938,7 +4938,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054975+00:00"
+      "finished_at": "2026-11-10T05:26:24.664486+00:00"
     },
     {
       "bm_id": "BM-259",
@@ -4957,7 +4957,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054976+00:00"
+      "finished_at": "2026-11-10T05:26:24.664487+00:00"
     },
     {
       "bm_id": "BM-260",
@@ -4976,7 +4976,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054978+00:00"
+      "finished_at": "2026-11-10T05:26:24.664489+00:00"
     },
     {
       "bm_id": "BM-261",
@@ -4995,7 +4995,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054979+00:00"
+      "finished_at": "2026-11-10T05:26:24.664490+00:00"
     },
     {
       "bm_id": "BM-262",
@@ -5014,7 +5014,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054981+00:00"
+      "finished_at": "2026-11-10T05:26:24.664492+00:00"
     },
     {
       "bm_id": "BM-263",
@@ -5033,7 +5033,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054982+00:00"
+      "finished_at": "2026-11-10T05:26:24.664494+00:00"
     },
     {
       "bm_id": "BM-264",
@@ -5052,7 +5052,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054983+00:00"
+      "finished_at": "2026-11-10T05:26:24.664495+00:00"
     },
     {
       "bm_id": "BM-265",
@@ -5071,7 +5071,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054985+00:00"
+      "finished_at": "2026-11-10T05:26:24.664496+00:00"
     },
     {
       "bm_id": "BM-266",
@@ -5090,7 +5090,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054986+00:00"
+      "finished_at": "2026-11-10T05:26:24.664497+00:00"
     },
     {
       "bm_id": "BM-267",
@@ -5109,7 +5109,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054987+00:00"
+      "finished_at": "2026-11-10T05:26:24.664499+00:00"
     },
     {
       "bm_id": "BM-268",
@@ -5128,7 +5128,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054988+00:00"
+      "finished_at": "2026-11-10T05:26:24.664501+00:00"
     },
     {
       "bm_id": "BM-269",
@@ -5147,7 +5147,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054990+00:00"
+      "finished_at": "2026-11-10T05:26:24.664503+00:00"
     },
     {
       "bm_id": "BM-270",
@@ -5166,7 +5166,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054991+00:00"
+      "finished_at": "2026-11-10T05:26:24.664505+00:00"
     },
     {
       "bm_id": "BM-271",
@@ -5185,7 +5185,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054992+00:00"
+      "finished_at": "2026-11-10T05:26:24.664506+00:00"
     },
     {
       "bm_id": "BM-272",
@@ -5204,7 +5204,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054994+00:00"
+      "finished_at": "2026-11-10T05:26:24.664507+00:00"
     },
     {
       "bm_id": "BM-273",
@@ -5223,7 +5223,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054995+00:00"
+      "finished_at": "2026-11-10T05:26:24.664509+00:00"
     },
     {
       "bm_id": "BM-274",
@@ -5242,7 +5242,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054996+00:00"
+      "finished_at": "2026-11-10T05:26:24.664510+00:00"
     },
     {
       "bm_id": "BM-275",
@@ -5261,7 +5261,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054998+00:00"
+      "finished_at": "2026-11-10T05:26:24.664512+00:00"
     },
     {
       "bm_id": "BM-276",
@@ -5280,7 +5280,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.054999+00:00"
+      "finished_at": "2026-11-10T05:26:24.664513+00:00"
     },
     {
       "bm_id": "BM-277",
@@ -5299,7 +5299,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.055000+00:00"
+      "finished_at": "2026-11-10T05:26:24.664515+00:00"
     },
     {
       "bm_id": "BM-278",
@@ -5318,7 +5318,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.055002+00:00"
+      "finished_at": "2026-11-10T05:26:24.664516+00:00"
     },
     {
       "bm_id": "BM-279",
@@ -5337,7 +5337,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.055003+00:00"
+      "finished_at": "2026-11-10T05:26:24.664517+00:00"
     },
     {
       "bm_id": "BM-280",
@@ -5356,7 +5356,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T05:15:19.055004+00:00"
+      "finished_at": "2026-11-10T05:26:24.664519+00:00"
     },
     {
       "bm_id": "BM-281",
