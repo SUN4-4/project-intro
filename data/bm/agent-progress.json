@@ -1,9 +1,9 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T05:09:30.172637+00:00",
+  "generated_at": "2026-11-10T05:15:19.161936+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T05:09:30.169194+00:00",
+    "generated_at": "2026-11-10T05:15:19.157792+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -15,6 +15,9 @@
     "running": 0,
     "clean_success": 5,
     "soft_success": 1,
+    "confirmed_success": 0,
+    "replay_pending": 6,
+    "replay_failed": 1,
     "valid_verdicts": 21,
     "success_rate": 0.2857142857142857,
     "clean_success_rate": 0.23809523809523808,
@@ -24,13 +27,16 @@
       "tail": "2026-11-10T05:04:41Z fetch failed",
       "url": "https://sun4-4.github.io/project-intro/"
     },
-    "paused": {
-      "reason": "DeepSeek API Insufficient Balance",
-      "at": "2026-11-10T05:09:25.322659+00:00",
-      "requeued": 191
-    }
+    "paused": null
   },
-  "current": null,
+  "current": {
+    "bm_id": "BM-003",
+    "task_id": "libero_goal/2",
+    "benchmark": "libero",
+    "replay": true,
+    "attempt": 1,
+    "started_at": "2026-11-10T05:15:19.136033+00:00"
+  },
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -44,6 +50,11 @@
       "success_video_url": null,
       "last_failure_video_url": "data/videos/agent/BM-001-last-failure.mp4",
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-09T15:35:06.675544+00:00"
     },
     {
@@ -58,6 +69,11 @@
       "success_video_url": null,
       "last_failure_video_url": "data/videos/agent/BM-002-last-failure.mp4",
       "clean_grasp_trajectory_url": "data/trajectories/BM-002-last-clean-grasp.json",
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-09T15:56:53.753970+00:00"
     },
     {
@@ -72,6 +88,11 @@
       "success_video_url": "data/videos/agent/BM-003-success.mp4",
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": "data/trajectories/BM-003-last-clean-grasp.json",
+      "confirmed_success": false,
+      "replay_status": "running",
+      "replay_success": false,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-09T16:45:23.918722+00:00"
     },
     {
@@ -86,6 +107,11 @@
       "success_video_url": null,
       "last_failure_video_url": "data/videos/agent/BM-004-last-failure.mp4",
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-09T17:43:36.775329+00:00"
     },
     {
@@ -100,6 +126,11 @@
       "success_video_url": null,
       "last_failure_video_url": "data/videos/agent/BM-005-last-failure.mp4",
       "clean_grasp_trajectory_url": "data/trajectories/BM-005-last-clean-grasp.json",
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-09T18:41:08.359427+00:00"
     },
     {
@@ -114,6 +145,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -128,6 +164,11 @@
       "success_video_url": null,
       "last_failure_video_url": "data/videos/agent/BM-007-last-failure.mp4",
       "clean_grasp_trajectory_url": "data/trajectories/BM-007-last-clean-grasp.json",
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-09T19:09:55.541631+00:00"
     },
     {
@@ -142,6 +183,11 @@
       "success_video_url": null,
       "last_failure_video_url": "data/videos/agent/BM-008-last-failure.mp4",
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-09T19:52:59.868955+00:00"
     },
     {
@@ -156,6 +202,11 @@
       "success_video_url": "data/videos/agent/BM-009-success.mp4",
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": "data/trajectories/BM-009-last-clean-grasp.json",
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-09T19:55:03.761758+00:00"
     },
     {
@@ -170,6 +221,11 @@
       "success_video_url": "data/videos/agent/BM-010-success.mp4",
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": "data/trajectories/BM-010-last-clean-grasp.json",
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-09T19:59:26.468469+00:00"
     },
     {
@@ -184,6 +240,11 @@
       "success_video_url": null,
       "last_failure_video_url": "data/videos/agent/BM-011-last-failure.mp4",
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-09T20:53:04.626056+00:00"
     },
     {
@@ -198,6 +259,11 @@
       "success_video_url": null,
       "last_failure_video_url": "data/videos/agent/BM-012-last-failure.mp4",
       "clean_grasp_trajectory_url": "data/trajectories/BM-012-last-clean-grasp.json",
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-09T21:01:56.741192+00:00"
     },
     {
@@ -212,6 +278,11 @@
       "success_video_url": null,
       "last_failure_video_url": "data/videos/agent/BM-013-last-failure.mp4",
       "clean_grasp_trajectory_url": "data/trajectories/BM-013-last-clean-grasp.json",
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-09T21:57:10.243646+00:00"
     },
     {
@@ -226,6 +297,11 @@
       "success_video_url": null,
       "last_failure_video_url": "data/videos/agent/BM-014-last-failure.mp4",
       "clean_grasp_trajectory_url": "data/trajectories/BM-014-last-clean-grasp.json",
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-09T22:52:46.779724+00:00"
     },
     {
@@ -240,6 +316,11 @@
       "success_video_url": null,
       "last_failure_video_url": "data/videos/agent/BM-015-last-failure.mp4",
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-09T23:57:45.103094+00:00"
     },
     {
@@ -254,6 +335,11 @@
       "success_video_url": "data/videos/agent/BM-016-success.mp4",
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": "data/trajectories/BM-016-last-clean-grasp.json",
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-10T00:06:01.569778+00:00"
     },
     {
@@ -268,6 +354,11 @@
       "success_video_url": null,
       "last_failure_video_url": "data/videos/agent/BM-017-last-failure.mp4",
       "clean_grasp_trajectory_url": "data/trajectories/BM-017-last-clean-grasp.json",
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-10T00:51:48.217858+00:00"
     },
     {
@@ -282,6 +373,11 @@
       "success_video_url": null,
       "last_failure_video_url": "data/videos/agent/BM-018-last-failure.mp4",
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-10T01:51:36.869382+00:00"
     },
     {
@@ -296,6 +392,11 @@
       "success_video_url": "data/videos/agent/BM-019-success.mp4",
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": "data/trajectories/BM-019-last-clean-grasp.json",
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-10T02:07:44.030458+00:00"
     },
     {
@@ -310,6 +411,11 @@
       "success_video_url": null,
       "last_failure_video_url": "data/videos/agent/BM-020-last-failure.mp4",
       "clean_grasp_trajectory_url": "data/trajectories/BM-020-last-clean-grasp.json",
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-10T03:08:23.091810+00:00"
     },
     {
@@ -324,6 +430,11 @@
       "success_video_url": "data/videos/agent/BM-021-success.mp4",
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": "data/trajectories/BM-021-last-clean-grasp.json",
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-10T03:29:34.795437+00:00"
     },
     {
@@ -338,6 +449,11 @@
       "success_video_url": null,
       "last_failure_video_url": "data/videos/agent/BM-022-last-failure.mp4",
       "clean_grasp_trajectory_url": "data/trajectories/BM-022-last-clean-grasp.json",
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": "2026-11-10T03:38:18.670409+00:00"
     },
     {
@@ -352,6 +468,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -366,6 +487,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -380,6 +506,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -394,6 +525,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -408,6 +544,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -422,6 +563,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -436,6 +582,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -450,6 +601,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -464,6 +620,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -478,6 +639,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -492,6 +658,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -506,6 +677,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -520,6 +696,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -534,6 +715,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -548,6 +734,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -562,6 +753,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -576,6 +772,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -590,6 +791,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -604,6 +810,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -618,6 +829,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -632,6 +848,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -646,6 +867,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -660,6 +886,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -674,6 +905,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -688,6 +924,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -702,6 +943,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -716,6 +962,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -730,6 +981,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -744,6 +1000,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -758,6 +1019,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -772,6 +1038,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -786,6 +1057,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -800,6 +1076,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -814,6 +1095,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -828,6 +1114,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -842,6 +1133,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -856,6 +1152,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -870,6 +1171,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -884,6 +1190,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -898,6 +1209,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -912,6 +1228,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -926,6 +1247,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -940,6 +1266,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -954,6 +1285,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -968,6 +1304,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -982,6 +1323,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -996,6 +1342,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1010,6 +1361,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1024,6 +1380,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1038,6 +1399,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1052,6 +1418,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1066,6 +1437,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1080,6 +1456,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1094,6 +1475,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1108,6 +1494,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1122,6 +1513,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1136,6 +1532,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1150,6 +1551,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1164,6 +1570,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1178,6 +1589,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1192,6 +1608,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1206,6 +1627,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1220,6 +1646,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1234,6 +1665,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1248,6 +1684,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1262,6 +1703,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1276,6 +1722,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1290,6 +1741,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1304,6 +1760,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1318,6 +1779,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1332,6 +1798,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1346,6 +1817,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1360,6 +1836,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1374,6 +1855,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1388,6 +1874,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1402,6 +1893,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1416,6 +1912,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1430,6 +1931,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1444,6 +1950,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1458,6 +1969,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1472,6 +1988,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1486,6 +2007,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1500,6 +2026,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1514,6 +2045,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1528,6 +2064,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1542,6 +2083,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1556,6 +2102,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1570,6 +2121,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1584,6 +2140,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1598,6 +2159,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1612,6 +2178,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1626,6 +2197,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1640,6 +2216,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1654,6 +2235,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1668,6 +2254,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1682,6 +2273,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1696,6 +2292,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1710,6 +2311,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1724,6 +2330,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1738,6 +2349,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1752,6 +2368,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1766,6 +2387,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1780,6 +2406,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1794,6 +2425,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1808,6 +2444,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1822,6 +2463,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1836,6 +2482,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1850,6 +2501,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1864,6 +2520,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1878,6 +2539,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1892,6 +2558,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1906,6 +2577,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1920,6 +2596,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1934,6 +2615,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1948,6 +2634,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1962,6 +2653,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1976,6 +2672,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -1990,6 +2691,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2004,6 +2710,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2018,6 +2729,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2032,6 +2748,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2046,6 +2767,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2060,6 +2786,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2074,6 +2805,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2088,6 +2824,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2102,6 +2843,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2116,6 +2862,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2130,6 +2881,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2144,6 +2900,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2158,6 +2919,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2172,6 +2938,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2186,6 +2957,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2200,6 +2976,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2214,6 +2995,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2228,6 +3014,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2242,6 +3033,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2256,6 +3052,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2270,6 +3071,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2284,6 +3090,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2298,6 +3109,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2312,6 +3128,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2326,6 +3147,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2340,6 +3166,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2354,6 +3185,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2368,6 +3204,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2382,6 +3223,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2396,6 +3242,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2410,6 +3261,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2424,6 +3280,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2438,6 +3299,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2452,6 +3318,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2466,6 +3337,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2480,6 +3356,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2494,6 +3375,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2508,6 +3394,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2522,6 +3413,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2536,6 +3432,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2550,6 +3451,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -2564,7 +3470,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988114+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054840+00:00"
     },
     {
       "bm_id": "BM-182",
@@ -2578,7 +3489,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988152+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054854+00:00"
     },
     {
       "bm_id": "BM-183",
@@ -2592,7 +3508,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988167+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054858+00:00"
     },
     {
       "bm_id": "BM-184",
@@ -2606,7 +3527,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988175+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054861+00:00"
     },
     {
       "bm_id": "BM-185",
@@ -2620,7 +3546,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988181+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054863+00:00"
     },
     {
       "bm_id": "BM-186",
@@ -2634,7 +3565,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988188+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054865+00:00"
     },
     {
       "bm_id": "BM-187",
@@ -2648,7 +3584,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988194+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054866+00:00"
     },
     {
       "bm_id": "BM-188",
@@ -2662,7 +3603,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988201+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054868+00:00"
     },
     {
       "bm_id": "BM-189",
@@ -2676,7 +3622,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988208+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054869+00:00"
     },
     {
       "bm_id": "BM-190",
@@ -2690,7 +3641,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988215+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054871+00:00"
     },
     {
       "bm_id": "BM-191",
@@ -2704,7 +3660,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988221+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054873+00:00"
     },
     {
       "bm_id": "BM-192",
@@ -2718,7 +3679,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988227+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054874+00:00"
     },
     {
       "bm_id": "BM-193",
@@ -2732,7 +3698,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988234+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054876+00:00"
     },
     {
       "bm_id": "BM-194",
@@ -2746,7 +3717,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988240+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054878+00:00"
     },
     {
       "bm_id": "BM-195",
@@ -2760,7 +3736,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988247+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054879+00:00"
     },
     {
       "bm_id": "BM-196",
@@ -2774,7 +3755,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988253+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054880+00:00"
     },
     {
       "bm_id": "BM-197",
@@ -2788,7 +3774,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988260+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054882+00:00"
     },
     {
       "bm_id": "BM-198",
@@ -2802,7 +3793,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988266+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054883+00:00"
     },
     {
       "bm_id": "BM-199",
@@ -2816,7 +3812,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988272+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054885+00:00"
     },
     {
       "bm_id": "BM-200",
@@ -2830,7 +3831,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988279+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054886+00:00"
     },
     {
       "bm_id": "BM-201",
@@ -2844,7 +3850,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988284+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054888+00:00"
     },
     {
       "bm_id": "BM-202",
@@ -2858,7 +3869,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988290+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054889+00:00"
     },
     {
       "bm_id": "BM-203",
@@ -2872,7 +3888,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988297+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054891+00:00"
     },
     {
       "bm_id": "BM-204",
@@ -2886,7 +3907,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988302+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054892+00:00"
     },
     {
       "bm_id": "BM-205",
@@ -2900,7 +3926,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988308+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054894+00:00"
     },
     {
       "bm_id": "BM-206",
@@ -2914,7 +3945,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988313+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054895+00:00"
     },
     {
       "bm_id": "BM-207",
@@ -2928,7 +3964,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988318+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054897+00:00"
     },
     {
       "bm_id": "BM-208",
@@ -2942,7 +3983,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988324+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054898+00:00"
     },
     {
       "bm_id": "BM-209",
@@ -2956,7 +4002,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988329+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054899+00:00"
     },
     {
       "bm_id": "BM-210",
@@ -2970,7 +4021,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988334+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054901+00:00"
     },
     {
       "bm_id": "BM-211",
@@ -2984,7 +4040,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988339+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054902+00:00"
     },
     {
       "bm_id": "BM-212",
@@ -2998,7 +4059,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988344+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054904+00:00"
     },
     {
       "bm_id": "BM-213",
@@ -3012,7 +4078,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988349+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054906+00:00"
     },
     {
       "bm_id": "BM-214",
@@ -3026,7 +4097,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988354+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054907+00:00"
     },
     {
       "bm_id": "BM-215",
@@ -3040,7 +4116,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988359+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054908+00:00"
     },
     {
       "bm_id": "BM-216",
@@ -3054,7 +4135,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988364+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054910+00:00"
     },
     {
       "bm_id": "BM-217",
@@ -3068,7 +4154,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988369+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054911+00:00"
     },
     {
       "bm_id": "BM-218",
@@ -3082,7 +4173,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988374+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054913+00:00"
     },
     {
       "bm_id": "BM-219",
@@ -3096,7 +4192,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988379+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054914+00:00"
     },
     {
       "bm_id": "BM-220",
@@ -3110,7 +4211,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988384+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054916+00:00"
     },
     {
       "bm_id": "BM-221",
@@ -3124,7 +4230,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988389+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054917+00:00"
     },
     {
       "bm_id": "BM-222",
@@ -3138,7 +4249,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988394+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054918+00:00"
     },
     {
       "bm_id": "BM-223",
@@ -3152,7 +4268,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988399+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054919+00:00"
     },
     {
       "bm_id": "BM-224",
@@ -3166,7 +4287,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988404+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054921+00:00"
     },
     {
       "bm_id": "BM-225",
@@ -3180,7 +4306,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988408+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054922+00:00"
     },
     {
       "bm_id": "BM-226",
@@ -3194,7 +4325,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988413+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054924+00:00"
     },
     {
       "bm_id": "BM-227",
@@ -3208,7 +4344,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988419+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054925+00:00"
     },
     {
       "bm_id": "BM-228",
@@ -3222,7 +4363,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988424+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054926+00:00"
     },
     {
       "bm_id": "BM-229",
@@ -3236,7 +4382,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988429+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054928+00:00"
     },
     {
       "bm_id": "BM-230",
@@ -3250,7 +4401,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988434+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054929+00:00"
     },
     {
       "bm_id": "BM-231",
@@ -3264,7 +4420,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988439+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054931+00:00"
     },
     {
       "bm_id": "BM-232",
@@ -3278,7 +4439,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988445+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054933+00:00"
     },
     {
       "bm_id": "BM-233",
@@ -3292,7 +4458,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988450+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054934+00:00"
     },
     {
       "bm_id": "BM-234",
@@ -3306,7 +4477,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988456+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054936+00:00"
     },
     {
       "bm_id": "BM-235",
@@ -3320,7 +4496,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988460+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054937+00:00"
     },
     {
       "bm_id": "BM-236",
@@ -3334,7 +4515,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988465+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054939+00:00"
     },
     {
       "bm_id": "BM-237",
@@ -3348,7 +4534,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988470+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054940+00:00"
     },
     {
       "bm_id": "BM-238",
@@ -3362,7 +4553,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988475+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054942+00:00"
     },
     {
       "bm_id": "BM-239",
@@ -3376,7 +4572,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988479+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054943+00:00"
     },
     {
       "bm_id": "BM-240",
@@ -3390,7 +4591,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988484+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054945+00:00"
     },
     {
       "bm_id": "BM-241",
@@ -3404,7 +4610,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988489+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054947+00:00"
     },
     {
       "bm_id": "BM-242",
@@ -3418,7 +4629,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988494+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054949+00:00"
     },
     {
       "bm_id": "BM-243",
@@ -3432,7 +4648,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988499+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054950+00:00"
     },
     {
       "bm_id": "BM-244",
@@ -3446,7 +4667,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988503+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054951+00:00"
     },
     {
       "bm_id": "BM-245",
@@ -3460,7 +4686,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988509+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054953+00:00"
     },
     {
       "bm_id": "BM-246",
@@ -3474,7 +4705,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988513+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054954+00:00"
     },
     {
       "bm_id": "BM-247",
@@ -3488,7 +4724,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988518+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054956+00:00"
     },
     {
       "bm_id": "BM-248",
@@ -3502,7 +4743,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988523+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054958+00:00"
     },
     {
       "bm_id": "BM-249",
@@ -3516,7 +4762,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988528+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054959+00:00"
     },
     {
       "bm_id": "BM-250",
@@ -3530,7 +4781,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988533+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054961+00:00"
     },
     {
       "bm_id": "BM-251",
@@ -3544,7 +4800,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988537+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054963+00:00"
     },
     {
       "bm_id": "BM-252",
@@ -3558,7 +4819,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988542+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054965+00:00"
     },
     {
       "bm_id": "BM-253",
@@ -3572,7 +4838,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988547+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054967+00:00"
     },
     {
       "bm_id": "BM-254",
@@ -3586,7 +4857,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988551+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054969+00:00"
     },
     {
       "bm_id": "BM-255",
@@ -3600,7 +4876,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988556+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054970+00:00"
     },
     {
       "bm_id": "BM-256",
@@ -3614,7 +4895,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988561+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054972+00:00"
     },
     {
       "bm_id": "BM-257",
@@ -3628,7 +4914,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988566+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054973+00:00"
     },
     {
       "bm_id": "BM-258",
@@ -3642,7 +4933,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988571+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054975+00:00"
     },
     {
       "bm_id": "BM-259",
@@ -3656,7 +4952,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988576+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054976+00:00"
     },
     {
       "bm_id": "BM-260",
@@ -3670,7 +4971,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988581+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054978+00:00"
     },
     {
       "bm_id": "BM-261",
@@ -3684,7 +4990,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988585+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054979+00:00"
     },
     {
       "bm_id": "BM-262",
@@ -3698,7 +5009,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988591+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054981+00:00"
     },
     {
       "bm_id": "BM-263",
@@ -3712,7 +5028,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988596+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054982+00:00"
     },
     {
       "bm_id": "BM-264",
@@ -3726,7 +5047,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988601+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054983+00:00"
     },
     {
       "bm_id": "BM-265",
@@ -3740,7 +5066,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988606+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054985+00:00"
     },
     {
       "bm_id": "BM-266",
@@ -3754,7 +5085,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988611+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054986+00:00"
     },
     {
       "bm_id": "BM-267",
@@ -3768,7 +5104,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988615+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054987+00:00"
     },
     {
       "bm_id": "BM-268",
@@ -3782,7 +5123,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988619+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054988+00:00"
     },
     {
       "bm_id": "BM-269",
@@ -3796,7 +5142,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988624+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054990+00:00"
     },
     {
       "bm_id": "BM-270",
@@ -3810,7 +5161,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988628+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054991+00:00"
     },
     {
       "bm_id": "BM-271",
@@ -3824,7 +5180,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988633+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054992+00:00"
     },
     {
       "bm_id": "BM-272",
@@ -3838,7 +5199,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988637+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054994+00:00"
     },
     {
       "bm_id": "BM-273",
@@ -3852,7 +5218,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988642+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054995+00:00"
     },
     {
       "bm_id": "BM-274",
@@ -3866,7 +5237,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988647+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054996+00:00"
     },
     {
       "bm_id": "BM-275",
@@ -3880,7 +5256,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988653+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054998+00:00"
     },
     {
       "bm_id": "BM-276",
@@ -3894,7 +5275,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988657+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.054999+00:00"
     },
     {
       "bm_id": "BM-277",
@@ -3908,7 +5294,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988662+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.055000+00:00"
     },
     {
       "bm_id": "BM-278",
@@ -3922,7 +5313,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988667+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.055002+00:00"
     },
     {
       "bm_id": "BM-279",
@@ -3936,7 +5332,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988672+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.055003+00:00"
     },
     {
       "bm_id": "BM-280",
@@ -3950,7 +5351,12 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": "2026-11-09T18:00:33.988677+00:00"
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-10T05:15:19.055004+00:00"
     },
     {
       "bm_id": "BM-281",
@@ -3964,6 +5370,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -3978,6 +5389,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -3992,6 +5408,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4006,6 +5427,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4020,6 +5446,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4034,6 +5465,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4048,6 +5484,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4062,6 +5503,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4076,6 +5522,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4090,6 +5541,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4104,6 +5560,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4118,6 +5579,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4132,6 +5598,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4146,6 +5617,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4160,6 +5636,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4174,6 +5655,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4188,6 +5674,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4202,6 +5693,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4216,6 +5712,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4230,6 +5731,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4244,6 +5750,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4258,6 +5769,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4272,6 +5788,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4286,6 +5807,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4300,6 +5826,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4314,6 +5845,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4328,6 +5864,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4342,6 +5883,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4356,6 +5902,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4370,6 +5921,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4384,6 +5940,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     },
     {
@@ -4398,6 +5959,11 @@
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
       "finished_at": null
     }
   ]

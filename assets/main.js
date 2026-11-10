@@ -290,10 +290,20 @@ function createTaskCard(task, dataDir) {
 
     const badge = document.createElement("span");
     badge.className = "exec-badge";
-    badge.textContent =
-      execStatus === "success" && task.agent_success_kind === "soft"
-        ? "软成功"
-        : statusLabels[execStatus] || execStatus;
+    if (execStatus === "success") {
+      if (task.agent_confirmed_success === true) {
+        badge.textContent = "成功（已复现）";
+      } else if (task.agent_replay_status === "running") {
+        badge.textContent = "成功（复现中）";
+      } else if (task.agent_confirmed_success === false) {
+        badge.textContent = "成功（未复现）";
+      } else {
+        badge.textContent =
+          task.agent_success_kind === "soft" ? "软成功" : "成功";
+      }
+    } else {
+      badge.textContent = statusLabels[execStatus] || execStatus;
+    }
     exec.append(badge);
 
     const metrics = [];

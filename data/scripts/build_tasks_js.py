@@ -134,6 +134,14 @@ _EXEC_FIELDS = (
     "agent_success_kind",
     "agent_success_note",
     "agent_clean_grasp_trajectory_url",
+    "agent_confirmed_success",
+    "agent_replay_status",
+    "agent_replay_success",
+    "agent_replay_video_url",
+    "agent_replay_failure_video_url",
+    "agent_replay_attempts",
+    "agent_replay_finished_at",
+    "agent_replay_note",
 )
 
 
