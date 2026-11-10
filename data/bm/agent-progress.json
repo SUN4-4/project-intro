@@ -1,18 +1,18 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T10:00:27.638593+00:00",
+  "generated_at": "2026-11-10T10:10:45.417805+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T10:00:27.634427+00:00",
+    "generated_at": "2026-11-10T10:10:45.413853+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 9,
     "failure": 13,
-    "infra": 0,
+    "infra": 1,
     "blocked": 100,
     "pending": 210,
-    "running": 1,
+    "running": 0,
     "clean_success": 8,
     "soft_success": 1,
     "confirmed_success": 2,
@@ -22,20 +22,14 @@
     "success_rate": 0.4090909090909091,
     "clean_success_rate": 0.36363636363636365,
     "publish": {
-      "at": "2026-11-10T09:31:21.133264+00:00",
+      "at": "2026-11-10T09:59:01.950328+00:00",
       "returncode": 0,
-      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    d35f402..44e42b5  main -> main",
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    6861530..b858ab4  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
   },
-  "current": {
-    "bm_id": "BM-006",
-    "task_id": "libero_goal/5",
-    "benchmark": "libero",
-    "attempt": 1,
-    "started_at": "2026-11-10T09:58:56.542608+00:00"
-  },
+  "current": null,
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -177,13 +171,13 @@
       "bm_id": "BM-006",
       "task_id": "libero_goal/5",
       "benchmark": "libero",
-      "status": "running",
+      "status": "infra",
       "attempts": 1,
       "rounds": 0,
-      "duration_s": 0.0,
-      "thinking_s": null,
+      "duration_s": 701.388,
+      "thinking_s": 0.0,
       "failure_counts": {},
-      "failure_reason": null,
+      "failure_reason": "InternalServerError: litellm.InternalServerError: InternalServerError: DeepseekException - {\"error\":{\"message\":\"Internal Server Error (request_id: 0d246376-1532-4de0-a45a-f0eba4117b21)\",\"type\":\"internal_error\",\"param\":null,\"code\":\"internal_error\"}}",
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
@@ -192,7 +186,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": null
+      "finished_at": "2026-11-10T10:10:45.393914+00:00"
     },
     {
       "bm_id": "BM-007",
