@@ -1,23 +1,23 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T03:00:10.073027+00:00",
+  "generated_at": "2026-11-10T03:08:23.113830+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T03:00:10.069808+00:00",
+    "generated_at": "2026-11-10T03:08:23.110493+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 5,
-    "failure": 13,
+    "failure": 14,
     "infra": 1,
     "blocked": 100,
     "pending": 213,
-    "running": 1,
+    "running": 0,
     "clean_success": 4,
     "soft_success": 1,
-    "valid_verdicts": 18,
-    "success_rate": 0.2777777777777778,
-    "clean_success_rate": 0.2222222222222222,
+    "valid_verdicts": 19,
+    "success_rate": 0.2631578947368421,
+    "clean_success_rate": 0.21052631578947367,
     "publish": {
       "at": "2026-11-10T02:07:52.173215+00:00",
       "returncode": 0,
@@ -25,13 +25,7 @@
       "url": "https://sun4-4.github.io/project-intro/"
     }
   },
-  "current": {
-    "bm_id": "BM-020",
-    "task_id": "libero_object/9",
-    "benchmark": "libero",
-    "attempt": 1,
-    "started_at": "2026-11-10T02:07:52.182156+00:00"
-  },
+  "current": null,
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -303,15 +297,15 @@
       "bm_id": "BM-020",
       "task_id": "libero_object/9",
       "benchmark": "libero",
-      "status": "running",
+      "status": "failure",
       "attempts": 1,
-      "rounds": 0,
-      "duration_s": 0.0,
-      "failure_reason": null,
+      "rounds": 10,
+      "duration_s": 3617.673,
+      "failure_reason": "Orange juice carton never grasped or placed: final head view shows it still standing on the table centre-left at xy≈(0.00,0.247) while the basket is at (0.156,0.224); round 8 step 5 grasp_object returned grasped=false/do_not_regrasp=false (empty close at grasp_point [0.0975,0.2443,0.0912]) and round 10 spent all 16 calls on perception without any grasp attempt.",
       "success_video_url": null,
-      "last_failure_video_url": null,
-      "clean_grasp_trajectory_url": null,
-      "finished_at": null
+      "last_failure_video_url": "data/videos/agent/BM-020-last-failure.mp4",
+      "clean_grasp_trajectory_url": "data/trajectories/BM-020-last-clean-grasp.json",
+      "finished_at": "2026-11-10T03:08:23.091810+00:00"
     },
     {
       "bm_id": "BM-131",
