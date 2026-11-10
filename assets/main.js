@@ -348,7 +348,10 @@ function createTaskCard(task, dataDir) {
       trajectory.className = "task-card__trajectory-link";
       trajectory.href = task.agent_clean_grasp_trajectory_url;
       trajectory.download = "";
-      trajectory.textContent = "下载最后一次干净抓取轨迹 (JSON)";
+      trajectory.textContent =
+        task.agent_status === "success"
+          ? "下载最后一次干净抓取轨迹 (JSON)"
+          : "下载最后一次成功抓取动作轨迹（任务未完成）";
       body.append(trajectory);
     }
   }
