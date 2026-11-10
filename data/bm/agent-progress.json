@@ -1,9 +1,9 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T13:35:27.806240+00:00",
+  "generated_at": "2026-11-10T13:50:27.701928+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T13:35:27.801165+00:00",
+    "generated_at": "2026-11-10T13:50:27.696704+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -22,9 +22,9 @@
     "success_rate": 0.4666666666666667,
     "clean_success_rate": 0.43333333333333335,
     "publish": {
-      "at": "2026-11-10T13:21:02.791242+00:00",
+      "at": "2026-11-10T13:35:34.559136+00:00",
       "returncode": 0,
-      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    136f97a..966acec  main -> main",
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    d4275fc..8aee4c6  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
@@ -3786,7 +3786,7 @@
       "attempts": 0,
       "rounds": 0,
       "duration_s": 0.0,
-      "thinking_s": null,
+      "thinking_s": 0.0,
       "time_breakdown": {},
       "tool_counts": {},
       "failure_counts": {},

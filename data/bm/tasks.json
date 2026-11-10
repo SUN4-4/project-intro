@@ -5343,7 +5343,7 @@
           "agent_status": "pending",
           "agent_attempts": 0,
           "agent_rounds": 0,
-          "agent_started_at": null,
+          "agent_started_at": "2026-11-10T13:35:34.663775+00:00",
           "agent_finished_at": null,
           "agent_duration_s": 0.0,
           "agent_failure_reason": null,
@@ -5362,12 +5362,12 @@
           "agent_replay_attempts": null,
           "agent_replay_finished_at": null,
           "agent_replay_note": null,
-          "agent_thinking_s": null,
+          "agent_thinking_s": 0.0,
           "agent_time_breakdown": {},
           "agent_tool_counts": {},
           "agent_failure_counts": {},
-          "agent_mode": null,
-          "agent_tool_calls": null
+          "agent_mode": "single",
+          "agent_tool_calls": 0
         },
         {
           "id": "libero_90/0",
@@ -29060,7 +29060,7 @@
       "agent_status": "pending",
       "agent_attempts": 0,
       "agent_rounds": 0,
-      "agent_started_at": null,
+      "agent_started_at": "2026-11-10T13:35:34.663775+00:00",
       "agent_finished_at": null,
       "agent_duration_s": 0.0,
       "agent_failure_reason": null,
@@ -29079,12 +29079,12 @@
       "agent_replay_attempts": null,
       "agent_replay_finished_at": null,
       "agent_replay_note": null,
-      "agent_thinking_s": null,
+      "agent_thinking_s": 0.0,
       "agent_time_breakdown": {},
       "agent_tool_counts": {},
       "agent_failure_counts": {},
-      "agent_mode": null,
-      "agent_tool_calls": null
+      "agent_mode": "single",
+      "agent_tool_calls": 0
     },
     {
       "id": "libero_90/0",
@@ -47407,7 +47407,7 @@
     }
   ],
   "results_summary": {
-    "generated_at": "2026-11-10T13:35:27.801165+00:00",
+    "generated_at": "2026-11-10T13:50:27.696704+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -47426,9 +47426,9 @@
     "success_rate": 0.4666666666666667,
     "clean_success_rate": 0.43333333333333335,
     "publish": {
-      "at": "2026-11-10T13:21:02.791242+00:00",
+      "at": "2026-11-10T13:35:34.559136+00:00",
       "returncode": 0,
-      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    136f97a..966acec  main -> main",
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    d4275fc..8aee4c6  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
