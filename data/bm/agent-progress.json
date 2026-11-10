@@ -1,9 +1,9 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T17:00:12.631780+00:00",
+  "generated_at": "2026-11-10T17:02:31.236229+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T17:00:12.626557+00:00",
+    "generated_at": "2026-11-10T17:02:31.230886+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -11,8 +11,8 @@
     "failure": 21,
     "infra": 6,
     "blocked": 100,
-    "pending": 190,
-    "running": 1,
+    "pending": 191,
+    "running": 0,
     "clean_success": 14,
     "soft_success": 1,
     "confirmed_success": 2,
@@ -29,13 +29,7 @@
     },
     "paused": null
   },
-  "current": {
-    "bm_id": "BM-031",
-    "task_id": "libero_10/0",
-    "benchmark": "libero",
-    "attempt": 1,
-    "started_at": "2026-11-10T16:50:23.096622+00:00"
-  },
+  "current": null,
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -3209,18 +3203,104 @@
       "bm_id": "BM-031",
       "task_id": "libero_10/0",
       "benchmark": "libero",
-      "status": "running",
-      "attempts": 1,
+      "status": "pending",
+      "attempts": 0,
       "rounds": 0,
       "duration_s": 0.0,
-      "thinking_s": null,
-      "time_breakdown": {},
-      "tool_counts": {},
-      "failure_counts": {},
+      "thinking_s": 626.994,
+      "time_breakdown": {
+        "tool_total_s": 1125.4,
+        "perception_s": 358.2,
+        "action_s": 150.3,
+        "recovery_s": 0.0,
+        "other_s": 617.0,
+        "llm_overhead_s": 0.0,
+        "tool_calls": 30,
+        "steps": 24,
+        "tool_counts": {
+          "find_by_pointing": 5,
+          "look": 4,
+          "unproject_pixel": 4,
+          "grasp_object": 3,
+          "find_pixel": 3,
+          "gripper": 2,
+          "place_object_in": 1,
+          "exec_python": 1,
+          "find_by_detector": 1,
+          "get_arm_pose": 1,
+          "move_to_pose": 1,
+          "descend_tcp_to_z": 1,
+          "observe_orbit": 1,
+          "get_grasp_pose": 1,
+          "?": 1
+        },
+        "top_tools": [
+          {
+            "tool": "find_by_pointing",
+            "count": 5,
+            "seconds": 233.3
+          },
+          {
+            "tool": "look",
+            "count": 4,
+            "seconds": 0.9
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 4,
+            "seconds": 0.9
+          },
+          {
+            "tool": "grasp_object",
+            "count": 3,
+            "seconds": 29.8
+          },
+          {
+            "tool": "find_pixel",
+            "count": 3,
+            "seconds": 121.4
+          },
+          {
+            "tool": "gripper",
+            "count": 2,
+            "seconds": 0.7
+          },
+          {
+            "tool": "place_object_in",
+            "count": 1,
+            "seconds": 119.3
+          },
+          {
+            "tool": "exec_python",
+            "count": 1,
+            "seconds": 0.6
+          }
+        ]
+      },
+      "tool_counts": {
+        "find_by_pointing": 5,
+        "look": 4,
+        "unproject_pixel": 4,
+        "grasp_object": 3,
+        "find_pixel": 3,
+        "gripper": 2,
+        "place_object_in": 1,
+        "exec_python": 1,
+        "find_by_detector": 1,
+        "get_arm_pose": 1,
+        "move_to_pose": 1,
+        "descend_tcp_to_z": 1,
+        "observe_orbit": 1,
+        "get_grasp_pose": 1,
+        "?": 1
+      },
+      "failure_counts": {
+        "primary:grasp_generation": 1
+      },
       "failure_reason": null,
       "success_video_url": null,
       "last_failure_video_url": "data/videos/agent/BM-031-last-failure.mp4",
-      "clean_grasp_trajectory_url": "data/trajectories/BM-031-last-clean-grasp.json",
+      "clean_grasp_trajectory_url": null,
       "confirmed_success": null,
       "replay_status": null,
       "replay_success": null,
