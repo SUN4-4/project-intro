@@ -1,18 +1,18 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T09:08:03.726791+00:00",
+  "generated_at": "2026-11-10T09:18:05.206744+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T09:08:03.721180+00:00",
+    "generated_at": "2026-11-10T09:18:05.202875+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 9,
     "failure": 12,
-    "infra": 1,
+    "infra": 2,
     "blocked": 100,
     "pending": 210,
-    "running": 1,
+    "running": 0,
     "clean_success": 8,
     "soft_success": 1,
     "confirmed_success": 2,
@@ -29,13 +29,7 @@
     },
     "paused": null
   },
-  "current": {
-    "bm_id": "BM-023",
-    "task_id": "libero_spatial/2",
-    "benchmark": "libero",
-    "attempt": 1,
-    "started_at": "2026-11-10T09:08:03.694674+00:00"
-  },
+  "current": null,
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -600,13 +594,13 @@
       "bm_id": "BM-023",
       "task_id": "libero_spatial/2",
       "benchmark": "libero",
-      "status": "running",
+      "status": "infra",
       "attempts": 1,
       "rounds": 0,
-      "duration_s": 0.0,
-      "thinking_s": null,
+      "duration_s": 599.328,
+      "thinking_s": 0.0,
       "failure_counts": {},
-      "failure_reason": null,
+      "failure_reason": "AttributeError: 'dict' object has no attribute 'prompt_tokens'",
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
@@ -615,7 +609,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": null
+      "finished_at": "2026-11-10T09:18:05.174352+00:00"
     },
     {
       "bm_id": "BM-024",
