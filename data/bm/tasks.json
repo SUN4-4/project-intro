@@ -5280,7 +5280,7 @@
           "agent_status": "pending",
           "agent_attempts": 0,
           "agent_rounds": 0,
-          "agent_started_at": "2026-11-10T14:29:43.105493+00:00",
+          "agent_started_at": "2026-11-10T17:15:13.499275+00:00",
           "agent_finished_at": null,
           "agent_duration_s": 0.0,
           "agent_failure_reason": null,
@@ -5299,58 +5299,56 @@
           "agent_replay_attempts": null,
           "agent_replay_finished_at": null,
           "agent_replay_note": null,
-          "agent_thinking_s": 624.539,
+          "agent_thinking_s": 610.481,
           "agent_time_breakdown": {
-            "tool_total_s": 655.4,
-            "perception_s": 28.9,
-            "action_s": 11.5,
-            "recovery_s": 0.3,
-            "other_s": 614.7,
+            "tool_total_s": 672.1,
+            "perception_s": 55.6,
+            "action_s": 14.8,
+            "recovery_s": 1.1,
+            "other_s": 600.6,
             "llm_overhead_s": 0.0,
-            "tool_calls": 82,
-            "steps": 60,
+            "tool_calls": 62,
+            "steps": 62,
             "tool_counts": {
-              "unproject_pixel": 20,
-              "look": 13,
-              "move_to_pose": 11,
-              "find_pixel": 5,
-              "grasp_object": 5,
+              "look": 10,
+              "unproject_pixel": 8,
+              "find_pixel": 6,
+              "find_by_pointing": 5,
               "observe_orbit": 5,
-              "get_arm_pose": 4,
+              "move_to_pose": 5,
               "exec_python": 4,
-              "gripper": 4,
-              "find_by_pointing": 3,
-              "is_holding": 3,
-              "?": 2,
+              "grasp_object": 4,
+              "home": 4,
+              "gripper": 2,
+              "trajectory_refine": 2,
               "find_by_detector": 1,
-              "home": 1,
-              "verify_pick_complete": 1
+              "get_grasp_pose": 1,
+              "get_arm_pose": 1,
+              "is_holding": 1,
+              "descend_tcp_to_z": 1,
+              "recover_joint_posture": 1,
+              "?": 1
             },
             "top_tools": [
               {
-                "tool": "unproject_pixel",
-                "count": 20,
-                "seconds": 4.4
-              },
-              {
                 "tool": "look",
-                "count": 13,
-                "seconds": 2.8
+                "count": 10,
+                "seconds": 2.2
               },
               {
-                "tool": "move_to_pose",
-                "count": 11,
-                "seconds": 3.3
+                "tool": "unproject_pixel",
+                "count": 8,
+                "seconds": 1.7
               },
               {
                 "tool": "find_pixel",
-                "count": 5,
-                "seconds": 2.6
+                "count": 6,
+                "seconds": 16.3
               },
               {
-                "tool": "grasp_object",
+                "tool": "find_by_pointing",
                 "count": 5,
-                "seconds": 6.7
+                "seconds": 25.4
               },
               {
                 "tool": "observe_orbit",
@@ -5358,39 +5356,47 @@
                 "seconds": 1.2
               },
               {
-                "tool": "get_arm_pose",
-                "count": 4,
-                "seconds": 0.9
+                "tool": "move_to_pose",
+                "count": 5,
+                "seconds": 1.6
               },
               {
                 "tool": "exec_python",
                 "count": 4,
-                "seconds": 2.0
+                "seconds": 2.1
+              },
+              {
+                "tool": "grasp_object",
+                "count": 4,
+                "seconds": 11.9
               }
             ]
           },
           "agent_tool_counts": {
-            "unproject_pixel": 20,
-            "look": 13,
-            "move_to_pose": 11,
-            "find_pixel": 5,
-            "grasp_object": 5,
+            "look": 10,
+            "unproject_pixel": 8,
+            "find_pixel": 6,
+            "find_by_pointing": 5,
             "observe_orbit": 5,
-            "get_arm_pose": 4,
+            "move_to_pose": 5,
             "exec_python": 4,
-            "gripper": 4,
-            "find_by_pointing": 3,
-            "is_holding": 3,
-            "?": 2,
+            "grasp_object": 4,
+            "home": 4,
+            "gripper": 2,
+            "trajectory_refine": 2,
             "find_by_detector": 1,
-            "home": 1,
-            "verify_pick_complete": 1
+            "get_grasp_pose": 1,
+            "get_arm_pose": 1,
+            "is_holding": 1,
+            "descend_tcp_to_z": 1,
+            "recover_joint_posture": 1,
+            "?": 1
           },
           "agent_failure_counts": {
             "contrib:planning": 1
           },
           "agent_mode": "single",
-          "agent_tool_calls": 82
+          "agent_tool_calls": 62
         },
         {
           "id": "libero_10/9",
@@ -29941,7 +29947,7 @@
       "agent_status": "pending",
       "agent_attempts": 0,
       "agent_rounds": 0,
-      "agent_started_at": "2026-11-10T14:29:43.105493+00:00",
+      "agent_started_at": "2026-11-10T17:15:13.499275+00:00",
       "agent_finished_at": null,
       "agent_duration_s": 0.0,
       "agent_failure_reason": null,
@@ -29960,58 +29966,56 @@
       "agent_replay_attempts": null,
       "agent_replay_finished_at": null,
       "agent_replay_note": null,
-      "agent_thinking_s": 624.539,
+      "agent_thinking_s": 610.481,
       "agent_time_breakdown": {
-        "tool_total_s": 655.4,
-        "perception_s": 28.9,
-        "action_s": 11.5,
-        "recovery_s": 0.3,
-        "other_s": 614.7,
+        "tool_total_s": 672.1,
+        "perception_s": 55.6,
+        "action_s": 14.8,
+        "recovery_s": 1.1,
+        "other_s": 600.6,
         "llm_overhead_s": 0.0,
-        "tool_calls": 82,
-        "steps": 60,
+        "tool_calls": 62,
+        "steps": 62,
         "tool_counts": {
-          "unproject_pixel": 20,
-          "look": 13,
-          "move_to_pose": 11,
-          "find_pixel": 5,
-          "grasp_object": 5,
+          "look": 10,
+          "unproject_pixel": 8,
+          "find_pixel": 6,
+          "find_by_pointing": 5,
           "observe_orbit": 5,
-          "get_arm_pose": 4,
+          "move_to_pose": 5,
           "exec_python": 4,
-          "gripper": 4,
-          "find_by_pointing": 3,
-          "is_holding": 3,
-          "?": 2,
+          "grasp_object": 4,
+          "home": 4,
+          "gripper": 2,
+          "trajectory_refine": 2,
           "find_by_detector": 1,
-          "home": 1,
-          "verify_pick_complete": 1
+          "get_grasp_pose": 1,
+          "get_arm_pose": 1,
+          "is_holding": 1,
+          "descend_tcp_to_z": 1,
+          "recover_joint_posture": 1,
+          "?": 1
         },
         "top_tools": [
           {
-            "tool": "unproject_pixel",
-            "count": 20,
-            "seconds": 4.4
-          },
-          {
             "tool": "look",
-            "count": 13,
-            "seconds": 2.8
+            "count": 10,
+            "seconds": 2.2
           },
           {
-            "tool": "move_to_pose",
-            "count": 11,
-            "seconds": 3.3
+            "tool": "unproject_pixel",
+            "count": 8,
+            "seconds": 1.7
           },
           {
             "tool": "find_pixel",
-            "count": 5,
-            "seconds": 2.6
+            "count": 6,
+            "seconds": 16.3
           },
           {
-            "tool": "grasp_object",
+            "tool": "find_by_pointing",
             "count": 5,
-            "seconds": 6.7
+            "seconds": 25.4
           },
           {
             "tool": "observe_orbit",
@@ -30019,39 +30023,47 @@
             "seconds": 1.2
           },
           {
-            "tool": "get_arm_pose",
-            "count": 4,
-            "seconds": 0.9
+            "tool": "move_to_pose",
+            "count": 5,
+            "seconds": 1.6
           },
           {
             "tool": "exec_python",
             "count": 4,
-            "seconds": 2.0
+            "seconds": 2.1
+          },
+          {
+            "tool": "grasp_object",
+            "count": 4,
+            "seconds": 11.9
           }
         ]
       },
       "agent_tool_counts": {
-        "unproject_pixel": 20,
-        "look": 13,
-        "move_to_pose": 11,
-        "find_pixel": 5,
-        "grasp_object": 5,
+        "look": 10,
+        "unproject_pixel": 8,
+        "find_pixel": 6,
+        "find_by_pointing": 5,
         "observe_orbit": 5,
-        "get_arm_pose": 4,
+        "move_to_pose": 5,
         "exec_python": 4,
-        "gripper": 4,
-        "find_by_pointing": 3,
-        "is_holding": 3,
-        "?": 2,
+        "grasp_object": 4,
+        "home": 4,
+        "gripper": 2,
+        "trajectory_refine": 2,
         "find_by_detector": 1,
-        "home": 1,
-        "verify_pick_complete": 1
+        "get_grasp_pose": 1,
+        "get_arm_pose": 1,
+        "is_holding": 1,
+        "descend_tcp_to_z": 1,
+        "recover_joint_posture": 1,
+        "?": 1
       },
       "agent_failure_counts": {
         "contrib:planning": 1
       },
       "agent_mode": "single",
-      "agent_tool_calls": 82
+      "agent_tool_calls": 62
     },
     {
       "id": "libero_10/9",
@@ -49295,7 +49307,7 @@
     }
   ],
   "results_summary": {
-    "generated_at": "2026-11-10T17:15:06.723245+00:00",
+    "generated_at": "2026-11-10T17:27:15.795097+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -49314,9 +49326,9 @@
     "success_rate": 0.4166666666666667,
     "clean_success_rate": 0.3888888888888889,
     "publish": {
-      "at": "2026-11-10T17:02:40.883867+00:00",
+      "at": "2026-11-10T17:15:13.392942+00:00",
       "returncode": 0,
-      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    4a7bcd1..f4d3933  main -> main",
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    f4d3933..8bb64b9  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
