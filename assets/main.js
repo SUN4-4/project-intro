@@ -354,7 +354,7 @@ function createTaskCard(task, dataDir) {
     if (failureEntries.length) {
       const failures = document.createElement("p");
       failures.className = "task-card__exec-reason";
-      failures.textContent = `失败判定：${failureEntries
+      failures.textContent = `历史失败判定：${failureEntries
         .map(([key, count]) => `${key.replace(/^(label|code|primary|contrib):/, "")}×${count}`)
         .join(" · ")}`;
       body.append(failures);
