@@ -1,35 +1,41 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T15:49:25.097104+00:00",
+  "generated_at": "2026-11-10T16:06:15.482239+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T15:49:25.091691+00:00",
+    "generated_at": "2026-11-10T16:06:15.474938+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 15,
-    "failure": 18,
+    "failure": 19,
     "infra": 6,
     "blocked": 100,
-    "pending": 194,
-    "running": 0,
+    "pending": 192,
+    "running": 1,
     "clean_success": 14,
     "soft_success": 1,
     "confirmed_success": 2,
     "replay_pending": 11,
     "replay_failed": 2,
-    "valid_verdicts": 33,
-    "success_rate": 0.45454545454545453,
-    "clean_success_rate": 0.42424242424242425,
+    "valid_verdicts": 34,
+    "success_rate": 0.4411764705882353,
+    "clean_success_rate": 0.4117647058823529,
     "publish": {
-      "at": "2026-11-10T15:36:21.390160+00:00",
+      "at": "2026-11-10T16:06:15.438744+00:00",
       "returncode": 1,
-      "tail": "2026-11-10T15:36:21Z fetch failed | fatal: 无法访问 'https://github.com/SUN4-4/project-intro.git/'：Failed to connect to github.com port 443 after 133292 ms: Couldn't connect to server",
+      "tail": "2026-11-10T16:06:15Z fetch failed | fatal: 无法访问 'https://github.com/SUN4-4/project-intro.git/'：Failed to connect to github.com port 443 after 135156 ms: Couldn't connect to server",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
   },
-  "current": null,
+  "current": {
+    "bm_id": "BM-046",
+    "task_id": "libero_90/5",
+    "benchmark": "libero",
+    "attempt": 1,
+    "started_at": "2026-11-10T16:06:15.450356+00:00"
+  },
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -4422,31 +4428,124 @@
       "bm_id": "BM-045",
       "task_id": "libero_90/4",
       "benchmark": "libero",
-      "status": "pending",
-      "attempts": 0,
-      "rounds": 0,
-      "duration_s": 0.0,
-      "thinking_s": null,
-      "time_breakdown": {},
-      "tool_counts": {},
-      "failure_counts": {},
-      "failure_reason": null,
+      "status": "failure",
+      "attempts": 1,
+      "rounds": 1,
+      "duration_s": 626.23,
+      "thinking_s": 620.243,
+      "time_breakdown": {
+        "tool_total_s": 808.1,
+        "perception_s": 177.8,
+        "action_s": 19.7,
+        "recovery_s": 0.3,
+        "other_s": 610.3,
+        "llm_overhead_s": 0.0,
+        "tool_calls": 83,
+        "steps": 73,
+        "tool_counts": {
+          "look": 14,
+          "move_to_pose": 14,
+          "find_by_pointing": 11,
+          "unproject_pixel": 11,
+          "observe_orbit": 7,
+          "gripper": 5,
+          "is_holding": 4,
+          "grasp_object": 3,
+          "exec_python": 3,
+          "descend_tcp_to_z": 2,
+          "place_object_in": 2,
+          "find_pixel": 1,
+          "get_arm_pose": 1,
+          "find_by_detector": 1,
+          "get_grasp_pose": 1,
+          "move_to_pixel": 1,
+          "home": 1,
+          "?": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 14,
+            "seconds": 3.0
+          },
+          {
+            "tool": "move_to_pose",
+            "count": 14,
+            "seconds": 3.7
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 11,
+            "seconds": 92.5
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 11,
+            "seconds": 2.6
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 7,
+            "seconds": 1.7
+          },
+          {
+            "tool": "gripper",
+            "count": 5,
+            "seconds": 2.1
+          },
+          {
+            "tool": "is_holding",
+            "count": 4,
+            "seconds": 0.9
+          },
+          {
+            "tool": "grasp_object",
+            "count": 3,
+            "seconds": 12.7
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 14,
+        "move_to_pose": 14,
+        "find_by_pointing": 11,
+        "unproject_pixel": 11,
+        "observe_orbit": 7,
+        "gripper": 5,
+        "is_holding": 4,
+        "grasp_object": 3,
+        "exec_python": 3,
+        "descend_tcp_to_z": 2,
+        "place_object_in": 2,
+        "find_pixel": 1,
+        "get_arm_pose": 1,
+        "find_by_detector": 1,
+        "get_grasp_pose": 1,
+        "move_to_pixel": 1,
+        "home": 1,
+        "?": 1
+      },
+      "failure_counts": {
+        "primary:placement": 1,
+        "contrib:planning": 1
+      },
+      "failure_reason": "single-agent episode",
       "success_video_url": null,
-      "last_failure_video_url": null,
+      "last_failure_video_url": "data/videos/agent/BM-045-last-failure.mp4",
       "clean_grasp_trajectory_url": null,
       "confirmed_success": null,
       "replay_status": null,
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": null
+      "finished_at": "2026-11-10T16:02:50.147397+00:00"
     },
     {
       "bm_id": "BM-046",
       "task_id": "libero_90/5",
       "benchmark": "libero",
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
