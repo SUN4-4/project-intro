@@ -37799,7 +37799,7 @@
     }
   ],
   "results_summary": {
-    "generated_at": "2026-11-10T05:27:59.882173+00:00",
+    "generated_at": "2026-11-10T05:31:07.126852+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -37813,7 +37813,7 @@
     "soft_success": 1,
     "confirmed_success": 0,
     "replay_pending": 9,
-    "replay_failed": 1,
+    "replay_failed": 0,
     "valid_verdicts": 21,
     "success_rate": 0.42857142857142855,
     "clean_success_rate": 0.38095238095238093,
