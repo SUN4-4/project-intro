@@ -1,26 +1,26 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T12:03:08.409776+00:00",
+  "generated_at": "2026-11-10T12:06:40.169579+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T12:03:08.404625+00:00",
+    "generated_at": "2026-11-10T12:06:40.162942+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
-    "success": 12,
+    "success": 13,
     "failure": 15,
     "infra": 2,
     "blocked": 100,
     "pending": 203,
-    "running": 1,
-    "clean_success": 11,
+    "running": 0,
+    "clean_success": 12,
     "soft_success": 1,
     "confirmed_success": 2,
-    "replay_pending": 8,
+    "replay_pending": 9,
     "replay_failed": 2,
-    "valid_verdicts": 27,
-    "success_rate": 0.4444444444444444,
-    "clean_success_rate": 0.4074074074074074,
+    "valid_verdicts": 28,
+    "success_rate": 0.4642857142857143,
+    "clean_success_rate": 0.42857142857142855,
     "publish": {
       "at": "2026-11-10T11:56:17.852716+00:00",
       "returncode": 1,
@@ -29,13 +29,7 @@
     },
     "paused": null
   },
-  "current": {
-    "bm_id": "BM-030",
-    "task_id": "libero_spatial/9",
-    "benchmark": "libero",
-    "attempt": 1,
-    "started_at": "2026-11-10T12:03:08.386585+00:00"
-  },
+  "current": null,
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -3112,24 +3106,98 @@
       "bm_id": "BM-030",
       "task_id": "libero_spatial/9",
       "benchmark": "libero",
-      "status": "running",
+      "status": "success",
       "attempts": 1,
-      "rounds": 0,
-      "duration_s": 0.0,
-      "thinking_s": null,
-      "time_breakdown": {},
-      "tool_counts": {},
-      "failure_counts": {},
+      "rounds": 1,
+      "duration_s": 178.484,
+      "thinking_s": 81.2,
+      "time_breakdown": {
+        "tool_total_s": 97.3,
+        "perception_s": 53.1,
+        "action_s": 43.9,
+        "recovery_s": 0.3,
+        "other_s": 0.0,
+        "llm_overhead_s": 81.2,
+        "tool_calls": 14,
+        "steps": 11,
+        "tool_counts": {
+          "look": 3,
+          "find_by_detector": 3,
+          "unproject_pixel": 2,
+          "find_by_pointing": 1,
+          "grasp_object": 1,
+          "is_holding": 1,
+          "place_on_surface": 1,
+          "home": 1,
+          "done": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 3,
+            "seconds": 0.7
+          },
+          {
+            "tool": "find_by_detector",
+            "count": 3,
+            "seconds": 4.8
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 2,
+            "seconds": 0.5
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 1,
+            "seconds": 47.0
+          },
+          {
+            "tool": "grasp_object",
+            "count": 1,
+            "seconds": 42.9
+          },
+          {
+            "tool": "is_holding",
+            "count": 1,
+            "seconds": 0.2
+          },
+          {
+            "tool": "place_on_surface",
+            "count": 1,
+            "seconds": 1.0
+          },
+          {
+            "tool": "home",
+            "count": 1,
+            "seconds": 0.3
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 3,
+        "find_by_detector": 3,
+        "unproject_pixel": 2,
+        "find_by_pointing": 1,
+        "grasp_object": 1,
+        "is_holding": 1,
+        "place_on_surface": 1,
+        "home": 1,
+        "done": 1
+      },
+      "failure_counts": {
+        "primary:none": 1
+      },
       "failure_reason": null,
-      "success_video_url": null,
+      "success_video_url": "data/videos/agent/BM-030-success.mp4",
       "last_failure_video_url": null,
-      "clean_grasp_trajectory_url": null,
+      "clean_grasp_trajectory_url": "data/trajectories/BM-030-last-clean-grasp.json",
       "confirmed_success": null,
       "replay_status": null,
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": null
+      "finished_at": "2026-11-10T12:06:40.131784+00:00"
     },
     {
       "bm_id": "BM-031",
