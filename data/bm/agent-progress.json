@@ -1,17 +1,17 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T08:37:23.827667+00:00",
+  "generated_at": "2026-11-10T09:08:03.726791+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T08:37:23.823614+00:00",
+    "generated_at": "2026-11-10T09:08:03.721180+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 9,
     "failure": 12,
-    "infra": 0,
+    "infra": 1,
     "blocked": 100,
-    "pending": 211,
+    "pending": 210,
     "running": 1,
     "clean_success": 8,
     "soft_success": 1,
@@ -22,19 +22,19 @@
     "success_rate": 0.42857142857142855,
     "clean_success_rate": 0.38095238095238093,
     "publish": {
-      "at": "2026-11-10T08:34:50.700258+00:00",
-      "returncode": 0,
-      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    8866585..d72cf7e  main -> main",
+      "at": "2026-11-10T09:08:03.682699+00:00",
+      "returncode": 1,
+      "tail": "[publish-website] timed out after 120s waiting for another publish",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
   },
   "current": {
-    "bm_id": "BM-006",
-    "task_id": "libero_goal/5",
+    "bm_id": "BM-023",
+    "task_id": "libero_spatial/2",
     "benchmark": "libero",
     "attempt": 1,
-    "started_at": "2026-11-10T08:36:49.404216+00:00"
+    "started_at": "2026-11-10T09:08:03.694674+00:00"
   },
   "tasks": [
     {
@@ -177,13 +177,13 @@
       "bm_id": "BM-006",
       "task_id": "libero_goal/5",
       "benchmark": "libero",
-      "status": "running",
+      "status": "infra",
       "attempts": 1,
       "rounds": 0,
-      "duration_s": 0.0,
-      "thinking_s": null,
+      "duration_s": 1752.034,
+      "thinking_s": 0.0,
       "failure_counts": {},
-      "failure_reason": null,
+      "failure_reason": "AttributeError: 'dict' object has no attribute 'prompt_tokens'",
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
@@ -192,7 +192,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": null
+      "finished_at": "2026-11-10T09:06:03.587704+00:00"
     },
     {
       "bm_id": "BM-007",
@@ -600,11 +600,11 @@
       "bm_id": "BM-023",
       "task_id": "libero_spatial/2",
       "benchmark": "libero",
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "rounds": 0,
       "duration_s": 0.0,
-      "thinking_s": 0.0,
+      "thinking_s": null,
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
