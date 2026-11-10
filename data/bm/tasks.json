@@ -573,11 +573,11 @@
           "agent_success_note": "Agent 闭环成功轨迹：IK 末端控制 + VLM 视觉确认，最多 10 轮。",
           "agent_clean_grasp_trajectory_url": "data/trajectories/BM-009-last-clean-grasp.json",
           "agent_confirmed_success": false,
-          "agent_replay_status": null,
+          "agent_replay_status": "running",
           "agent_replay_success": null,
           "agent_replay_video_url": null,
           "agent_replay_failure_video_url": null,
-          "agent_replay_attempts": 1,
+          "agent_replay_attempts": 2,
           "agent_replay_finished_at": null,
           "agent_replay_note": "首次成功，但按空间位置复现未成功；保留首次成功视频，复现失败视频单独保留。",
           "agent_thinking_s": null,
@@ -20207,11 +20207,11 @@
       "agent_success_note": "Agent 闭环成功轨迹：IK 末端控制 + VLM 视觉确认，最多 10 轮。",
       "agent_clean_grasp_trajectory_url": "data/trajectories/BM-009-last-clean-grasp.json",
       "agent_confirmed_success": false,
-      "agent_replay_status": null,
+      "agent_replay_status": "running",
       "agent_replay_success": null,
       "agent_replay_video_url": null,
       "agent_replay_failure_video_url": null,
-      "agent_replay_attempts": 1,
+      "agent_replay_attempts": 2,
       "agent_replay_finished_at": null,
       "agent_replay_note": "首次成功，但按空间位置复现未成功；保留首次成功视频，复现失败视频单独保留。",
       "agent_thinking_s": null,
@@ -39241,7 +39241,7 @@
     }
   ],
   "results_summary": {
-    "generated_at": "2026-11-10T07:05:32.711963+00:00",
+    "generated_at": "2026-11-10T07:05:38.648289+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -39260,9 +39260,9 @@
     "success_rate": 0.42857142857142855,
     "clean_success_rate": 0.38095238095238093,
     "publish": {
-      "at": "2026-11-10T06:07:46.581052+00:00",
+      "at": "2026-11-10T07:05:38.615236+00:00",
       "returncode": 0,
-      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    ed4e8e6..fdd3c26  main -> main",
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    76ce30e..92f3654  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
