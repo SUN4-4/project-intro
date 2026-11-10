@@ -367,6 +367,41 @@ function createTaskCard(task, dataDir) {
         .join(" · ")}`;
       body.append(failures);
     }
+    const timeBreakdown = task.agent_time_breakdown || {};
+    if (Object.keys(timeBreakdown).length) {
+      const parts = [];
+      if (typeof timeBreakdown.llm_overhead_s === "number") {
+        parts.push(`LLM/回合 ${Math.round(timeBreakdown.llm_overhead_s)}s`);
+      }
+      if (typeof timeBreakdown.perception_s === "number") {
+        parts.push(`感知 ${Math.round(timeBreakdown.perception_s)}s`);
+      }
+      if (typeof timeBreakdown.action_s === "number") {
+        parts.push(`动作 ${Math.round(timeBreakdown.action_s)}s`);
+      }
+      if (typeof timeBreakdown.recovery_s === "number") {
+        parts.push(`恢复 ${Math.round(timeBreakdown.recovery_s)}s`);
+      }
+      if (parts.length) {
+        const ledger = document.createElement("p");
+        ledger.className = "task-card__exec-reason";
+        ledger.textContent = `时间账本：${parts.join(" · ")}`;
+        body.append(ledger);
+      }
+    }
+    const toolCounts = task.agent_tool_counts || {};
+    const toolEntries = Object.entries(toolCounts)
+      .filter(([, count]) => typeof count === "number" && count > 0)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 4);
+    if (toolEntries.length) {
+      const tools = document.createElement("p");
+      tools.className = "task-card__exec-reason";
+      tools.textContent = `工具分布：${toolEntries
+        .map(([name, count]) => `${name}×${count}`)
+        .join(" · ")}`;
+      body.append(tools);
+    }
   }
 
   const meta = [

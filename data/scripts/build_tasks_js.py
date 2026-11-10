@@ -143,6 +143,8 @@ _EXEC_FIELDS = (
     "agent_replay_finished_at",
     "agent_replay_note",
     "agent_thinking_s",
+    "agent_time_breakdown",
+    "agent_tool_counts",
     "agent_failure_counts",
     "agent_mode",
     "agent_tool_calls",

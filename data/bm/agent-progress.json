@@ -1,18 +1,18 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T11:01:21.475019+00:00",
+  "generated_at": "2026-11-10T11:31:03.010309+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T11:01:21.470187+00:00",
+    "generated_at": "2026-11-10T11:31:03.005422+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 10,
     "failure": 13,
-    "infra": 0,
+    "infra": 2,
     "blocked": 100,
-    "pending": 209,
-    "running": 1,
+    "pending": 206,
+    "running": 2,
     "clean_success": 9,
     "soft_success": 1,
     "confirmed_success": 2,
@@ -22,19 +22,19 @@
     "success_rate": 0.43478260869565216,
     "clean_success_rate": 0.391304347826087,
     "publish": {
-      "at": "2026-11-10T10:50:09.197177+00:00",
-      "returncode": 0,
-      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    45e9113..162f4e9  main -> main",
+      "at": "2026-11-10T11:24:33.256259+00:00",
+      "returncode": 1,
+      "tail": "2026-11-10T11:24:33Z fetch failed | fatal: 无法访问 'https://github.com/SUN4-4/project-intro.git/'：Operation too slow. Less than 1000 bytes/sec transferred the last 60 seconds",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
   },
   "current": {
-    "bm_id": "BM-006",
-    "task_id": "libero_goal/5",
+    "bm_id": "BM-026",
+    "task_id": "libero_spatial/5",
     "benchmark": "libero",
     "attempt": 1,
-    "started_at": "2026-11-10T11:01:21.453606+00:00"
+    "started_at": "2026-11-10T11:30:39.053229+00:00"
   },
   "tasks": [
     {
@@ -46,6 +46,96 @@
       "rounds": 10,
       "duration_s": 3671.87,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 1165.4,
+        "perception_s": 1164.8,
+        "action_s": 0.0,
+        "recovery_s": 0.6,
+        "other_s": 0.0,
+        "llm_overhead_s": 2506.5,
+        "tool_calls": 160,
+        "steps": 13,
+        "tool_counts": {
+          "unproject_pixel": 35,
+          "find_by_pointing": 25,
+          "observe_orbit": 24,
+          "look": 22,
+          "find_pixel": 13,
+          "get_arm_pose": 10,
+          "mark_orbit_point": 6,
+          "is_holding": 5,
+          "list": 5,
+          "pull_drawer": 3,
+          "read_skill_code": 3,
+          "find_by_detector": 2,
+          "get_grasp_pose": 2,
+          "home": 2,
+          "is_reachable": 1,
+          "glob": 1,
+          "read": 1
+        },
+        "top_tools": [
+          {
+            "tool": "unproject_pixel",
+            "count": 35,
+            "seconds": 7.6
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 25,
+            "seconds": 598.3
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 24,
+            "seconds": 5.7
+          },
+          {
+            "tool": "look",
+            "count": 22,
+            "seconds": 4.8
+          },
+          {
+            "tool": "find_pixel",
+            "count": 13,
+            "seconds": 419.8
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 10,
+            "seconds": 2.2
+          },
+          {
+            "tool": "mark_orbit_point",
+            "count": 6,
+            "seconds": 1.3
+          },
+          {
+            "tool": "is_holding",
+            "count": 5,
+            "seconds": 1.1
+          }
+        ]
+      },
+      "tool_counts": {
+        "unproject_pixel": 35,
+        "find_by_pointing": 25,
+        "observe_orbit": 24,
+        "look": 22,
+        "find_pixel": 13,
+        "get_arm_pose": 10,
+        "mark_orbit_point": 6,
+        "is_holding": 5,
+        "list": 5,
+        "pull_drawer": 3,
+        "read_skill_code": 3,
+        "find_by_detector": 2,
+        "get_grasp_pose": 2,
+        "home": 2,
+        "is_reachable": 1,
+        "glob": 1,
+        "read": 1
+      },
       "failure_counts": {
         "label:placement": 3,
         "code:MANIPULATION_FAILED": 3,
@@ -73,6 +163,90 @@
       "rounds": 2,
       "duration_s": 304.687,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 35.5,
+        "perception_s": 31.5,
+        "action_s": 3.7,
+        "recovery_s": 0.3,
+        "other_s": 0.0,
+        "llm_overhead_s": 269.2,
+        "tool_calls": 31,
+        "steps": 11,
+        "tool_counts": {
+          "look": 8,
+          "find_by_pointing": 5,
+          "unproject_pixel": 4,
+          "is_holding": 3,
+          "get_grasp_pose": 2,
+          "find_by_detector": 1,
+          "grasp_object": 1,
+          "verify_pick_complete": 1,
+          "move_ee_delta": 1,
+          "get_arm_pose": 1,
+          "place_held_at_target_servo": 1,
+          "observe_orbit": 1,
+          "home": 1,
+          "done": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 8,
+            "seconds": 1.7
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 5,
+            "seconds": 26.4
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 4,
+            "seconds": 1.1
+          },
+          {
+            "tool": "is_holding",
+            "count": 3,
+            "seconds": 0.6
+          },
+          {
+            "tool": "get_grasp_pose",
+            "count": 2,
+            "seconds": 0.8
+          },
+          {
+            "tool": "find_by_detector",
+            "count": 1,
+            "seconds": 0.2
+          },
+          {
+            "tool": "grasp_object",
+            "count": 1,
+            "seconds": 2.7
+          },
+          {
+            "tool": "verify_pick_complete",
+            "count": 1,
+            "seconds": 0.2
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 8,
+        "find_by_pointing": 5,
+        "unproject_pixel": 4,
+        "is_holding": 3,
+        "get_grasp_pose": 2,
+        "find_by_detector": 1,
+        "grasp_object": 1,
+        "verify_pick_complete": 1,
+        "move_ee_delta": 1,
+        "get_arm_pose": 1,
+        "place_held_at_target_servo": 1,
+        "observe_orbit": 1,
+        "home": 1,
+        "done": 1
+      },
       "failure_counts": {
         "label:grasp_generation": 1,
         "code:PERCEPTION_FAILED": 1,
@@ -98,6 +272,94 @@
       "rounds": 8,
       "duration_s": 2830.754,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 563.5,
+        "perception_s": 554.3,
+        "action_s": 8.4,
+        "recovery_s": 0.8,
+        "other_s": 0.0,
+        "llm_overhead_s": 2267.3,
+        "tool_calls": 128,
+        "steps": 14,
+        "tool_counts": {
+          "unproject_pixel": 30,
+          "look": 25,
+          "find_by_pointing": 19,
+          "find_pixel": 14,
+          "get_arm_pose": 11,
+          "is_holding": 10,
+          "observe_orbit": 3,
+          "is_reachable": 3,
+          "grasp_object": 3,
+          "home": 3,
+          "move_ee_delta": 2,
+          "verify_pick_complete": 1,
+          "place_held_at_target_servo": 1,
+          "get_grasp_pose": 1,
+          "move_to_pose": 1,
+          "trajectory_refine": 1
+        },
+        "top_tools": [
+          {
+            "tool": "unproject_pixel",
+            "count": 30,
+            "seconds": 6.6
+          },
+          {
+            "tool": "look",
+            "count": 25,
+            "seconds": 5.6
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 19,
+            "seconds": 248.8
+          },
+          {
+            "tool": "find_pixel",
+            "count": 14,
+            "seconds": 285.3
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 11,
+            "seconds": 2.4
+          },
+          {
+            "tool": "is_holding",
+            "count": 10,
+            "seconds": 2.2
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 3,
+            "seconds": 0.7
+          },
+          {
+            "tool": "is_reachable",
+            "count": 3,
+            "seconds": 0.7
+          }
+        ]
+      },
+      "tool_counts": {
+        "unproject_pixel": 30,
+        "look": 25,
+        "find_by_pointing": 19,
+        "find_pixel": 14,
+        "get_arm_pose": 11,
+        "is_holding": 10,
+        "observe_orbit": 3,
+        "is_reachable": 3,
+        "grasp_object": 3,
+        "home": 3,
+        "move_ee_delta": 2,
+        "verify_pick_complete": 1,
+        "place_held_at_target_servo": 1,
+        "get_grasp_pose": 1,
+        "move_to_pose": 1,
+        "trajectory_refine": 1
+      },
       "failure_counts": {
         "label:placement": 1,
         "code:MANIPULATION_FAILED": 1,
@@ -126,6 +388,104 @@
       "rounds": 10,
       "duration_s": 2497.054,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 354.6,
+        "perception_s": 327.1,
+        "action_s": 26.1,
+        "recovery_s": 1.4,
+        "other_s": 0.0,
+        "llm_overhead_s": 2142.4,
+        "tool_calls": 160,
+        "steps": 16,
+        "tool_counts": {
+          "look": 36,
+          "unproject_pixel": 16,
+          "observe_orbit": 16,
+          "get_arm_pose": 14,
+          "find_by_pointing": 11,
+          "is_holding": 10,
+          "preview_move_to_pose": 9,
+          "find_pixel": 8,
+          "execute_previewed_move": 7,
+          "is_reachable": 5,
+          "home": 5,
+          "pull_drawer": 4,
+          "gripper": 4,
+          "find_by_detector": 3,
+          "move_to_pose": 3,
+          "move_ee_delta": 2,
+          "descend_tcp_to_z": 2,
+          "grasp_object": 2,
+          "read_skill_code": 1,
+          "get_grasp_pose": 1,
+          "move_to_pixel": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 36,
+            "seconds": 8.0
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 16,
+            "seconds": 3.5
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 16,
+            "seconds": 3.8
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 14,
+            "seconds": 3.0
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 11,
+            "seconds": 171.9
+          },
+          {
+            "tool": "is_holding",
+            "count": 10,
+            "seconds": 2.3
+          },
+          {
+            "tool": "preview_move_to_pose",
+            "count": 9,
+            "seconds": 2.8
+          },
+          {
+            "tool": "find_pixel",
+            "count": 8,
+            "seconds": 38.2
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 36,
+        "unproject_pixel": 16,
+        "observe_orbit": 16,
+        "get_arm_pose": 14,
+        "find_by_pointing": 11,
+        "is_holding": 10,
+        "preview_move_to_pose": 9,
+        "find_pixel": 8,
+        "execute_previewed_move": 7,
+        "is_reachable": 5,
+        "home": 5,
+        "pull_drawer": 4,
+        "gripper": 4,
+        "find_by_detector": 3,
+        "move_to_pose": 3,
+        "move_ee_delta": 2,
+        "descend_tcp_to_z": 2,
+        "grasp_object": 2,
+        "read_skill_code": 1,
+        "get_grasp_pose": 1,
+        "move_to_pixel": 1
+      },
       "failure_counts": {
         "label:placement": 3,
         "code:PERCEPTION_FAILED": 2,
@@ -155,6 +515,98 @@
       "rounds": 10,
       "duration_s": 2361.438,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 419.4,
+        "perception_s": 405.5,
+        "action_s": 13.9,
+        "recovery_s": 0.0,
+        "other_s": 0.0,
+        "llm_overhead_s": 1942.1,
+        "tool_calls": 160,
+        "steps": 16,
+        "tool_counts": {
+          "unproject_pixel": 45,
+          "look": 29,
+          "find_by_pointing": 19,
+          "find_pixel": 12,
+          "get_arm_pose": 11,
+          "observe_orbit": 9,
+          "is_holding": 7,
+          "get_grasp_pose": 6,
+          "grasp_object": 5,
+          "find_by_detector": 4,
+          "read": 4,
+          "place_held_at_target_servo": 2,
+          "list": 2,
+          "is_reachable": 1,
+          "move_to_pose": 1,
+          "visual_pick_place": 1,
+          "grep": 1,
+          "gripper": 1
+        },
+        "top_tools": [
+          {
+            "tool": "unproject_pixel",
+            "count": 45,
+            "seconds": 10.0
+          },
+          {
+            "tool": "look",
+            "count": 29,
+            "seconds": 6.5
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 19,
+            "seconds": 199.1
+          },
+          {
+            "tool": "find_pixel",
+            "count": 12,
+            "seconds": 170.6
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 11,
+            "seconds": 2.4
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 9,
+            "seconds": 2.2
+          },
+          {
+            "tool": "is_holding",
+            "count": 7,
+            "seconds": 1.5
+          },
+          {
+            "tool": "get_grasp_pose",
+            "count": 6,
+            "seconds": 2.5
+          }
+        ]
+      },
+      "tool_counts": {
+        "unproject_pixel": 45,
+        "look": 29,
+        "find_by_pointing": 19,
+        "find_pixel": 12,
+        "get_arm_pose": 11,
+        "observe_orbit": 9,
+        "is_holding": 7,
+        "get_grasp_pose": 6,
+        "grasp_object": 5,
+        "find_by_detector": 4,
+        "read": 4,
+        "place_held_at_target_servo": 2,
+        "list": 2,
+        "is_reachable": 1,
+        "move_to_pose": 1,
+        "visual_pick_place": 1,
+        "grep": 1,
+        "gripper": 1
+      },
       "failure_counts": {
         "label:placement": 1,
         "code:MANIPULATION_FAILED": 1,
@@ -177,13 +629,15 @@
       "bm_id": "BM-006",
       "task_id": "libero_goal/5",
       "benchmark": "libero",
-      "status": "running",
+      "status": "infra",
       "attempts": 1,
       "rounds": 0,
-      "duration_s": 0.0,
-      "thinking_s": null,
+      "duration_s": 91.983,
+      "thinking_s": 0.0,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
-      "failure_reason": null,
+      "failure_reason": "DeepSeek 500 during single-agent episode; fast-fail/requeue fix active; retry later.",
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
@@ -192,7 +646,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": null
+      "finished_at": "2026-11-10T11:23:24.139281+00:00"
     },
     {
       "bm_id": "BM-007",
@@ -203,6 +657,96 @@
       "rounds": 4,
       "duration_s": 948.229,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 321.3,
+        "perception_s": 315.0,
+        "action_s": 5.5,
+        "recovery_s": 0.8,
+        "other_s": 0.0,
+        "llm_overhead_s": 627.0,
+        "tool_calls": 64,
+        "steps": 12,
+        "tool_counts": {
+          "look": 17,
+          "find_by_pointing": 10,
+          "unproject_pixel": 7,
+          "is_holding": 6,
+          "get_arm_pose": 6,
+          "find_pixel": 3,
+          "home": 3,
+          "is_reachable": 2,
+          "trajectory_refine": 2,
+          "grasp_object": 1,
+          "verify_pick_complete": 1,
+          "place_object_in": 1,
+          "move_to_pose": 1,
+          "descend_tcp_to_z": 1,
+          "observe_orbit": 1,
+          "measure_distance": 1,
+          "gripper": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 17,
+            "seconds": 3.7
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 10,
+            "seconds": 224.9
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 7,
+            "seconds": 1.7
+          },
+          {
+            "tool": "is_holding",
+            "count": 6,
+            "seconds": 1.5
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 6,
+            "seconds": 1.3
+          },
+          {
+            "tool": "find_pixel",
+            "count": 3,
+            "seconds": 78.3
+          },
+          {
+            "tool": "home",
+            "count": 3,
+            "seconds": 0.8
+          },
+          {
+            "tool": "is_reachable",
+            "count": 2,
+            "seconds": 0.4
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 17,
+        "find_by_pointing": 10,
+        "unproject_pixel": 7,
+        "is_holding": 6,
+        "get_arm_pose": 6,
+        "find_pixel": 3,
+        "home": 3,
+        "is_reachable": 2,
+        "trajectory_refine": 2,
+        "grasp_object": 1,
+        "verify_pick_complete": 1,
+        "place_object_in": 1,
+        "move_to_pose": 1,
+        "descend_tcp_to_z": 1,
+        "observe_orbit": 1,
+        "measure_distance": 1,
+        "gripper": 1
+      },
       "failure_counts": {
         "label:transport": 1,
         "label:placement": 1,
@@ -229,6 +773,102 @@
       "rounds": 10,
       "duration_s": 2563.159,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 110.4,
+        "perception_s": 101.6,
+        "action_s": 7.7,
+        "recovery_s": 1.1,
+        "other_s": 0.0,
+        "llm_overhead_s": 2452.7,
+        "tool_calls": 160,
+        "steps": 16,
+        "tool_counts": {
+          "look": 42,
+          "unproject_pixel": 22,
+          "observe_orbit": 19,
+          "get_arm_pose": 12,
+          "find_pixel": 10,
+          "gripper": 8,
+          "move_ee_delta": 8,
+          "find_by_pointing": 5,
+          "descend_tcp_to_z": 5,
+          "is_holding": 5,
+          "find_by_detector": 4,
+          "home": 4,
+          "move_to_pose": 4,
+          "is_reachable": 3,
+          "get_grasp_pose": 3,
+          "read": 2,
+          "preview_move_to_pose": 1,
+          "execute_previewed_move": 1,
+          "measure_distance": 1,
+          "glob": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 42,
+            "seconds": 9.1
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 22,
+            "seconds": 5.0
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 19,
+            "seconds": 4.5
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 12,
+            "seconds": 2.6
+          },
+          {
+            "tool": "find_pixel",
+            "count": 10,
+            "seconds": 6.5
+          },
+          {
+            "tool": "gripper",
+            "count": 8,
+            "seconds": 2.6
+          },
+          {
+            "tool": "move_ee_delta",
+            "count": 8,
+            "seconds": 2.3
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 5,
+            "seconds": 65.6
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 42,
+        "unproject_pixel": 22,
+        "observe_orbit": 19,
+        "get_arm_pose": 12,
+        "find_pixel": 10,
+        "gripper": 8,
+        "move_ee_delta": 8,
+        "find_by_pointing": 5,
+        "descend_tcp_to_z": 5,
+        "is_holding": 5,
+        "find_by_detector": 4,
+        "home": 4,
+        "move_to_pose": 4,
+        "is_reachable": 3,
+        "get_grasp_pose": 3,
+        "read": 2,
+        "preview_move_to_pose": 1,
+        "execute_previewed_move": 1,
+        "measure_distance": 1,
+        "glob": 1
+      },
       "failure_counts": {
         "label:grasp_generation": 2,
         "code:GRASP_FAILED": 3
@@ -253,6 +893,78 @@
       "rounds": 1,
       "duration_s": 105.229,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 16.2,
+        "perception_s": 14.4,
+        "action_s": 1.8,
+        "recovery_s": 0.0,
+        "other_s": 0.0,
+        "llm_overhead_s": 89.0,
+        "tool_calls": 16,
+        "steps": 11,
+        "tool_counts": {
+          "todowrite": 5,
+          "look": 4,
+          "find_by_pointing": 2,
+          "grasp_object": 1,
+          "verify_pick_complete": 1,
+          "place_on_surface": 1,
+          "is_holding": 1,
+          "observe_orbit": 1
+        },
+        "top_tools": [
+          {
+            "tool": "todowrite",
+            "count": 5,
+            "seconds": 0.0
+          },
+          {
+            "tool": "look",
+            "count": 4,
+            "seconds": 0.9
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 2,
+            "seconds": 12.7
+          },
+          {
+            "tool": "grasp_object",
+            "count": 1,
+            "seconds": 0.9
+          },
+          {
+            "tool": "verify_pick_complete",
+            "count": 1,
+            "seconds": 0.4
+          },
+          {
+            "tool": "place_on_surface",
+            "count": 1,
+            "seconds": 0.9
+          },
+          {
+            "tool": "is_holding",
+            "count": 1,
+            "seconds": 0.2
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 1,
+            "seconds": 0.2
+          }
+        ]
+      },
+      "tool_counts": {
+        "todowrite": 5,
+        "look": 4,
+        "find_by_pointing": 2,
+        "grasp_object": 1,
+        "verify_pick_complete": 1,
+        "place_on_surface": 1,
+        "is_holding": 1,
+        "observe_orbit": 1
+      },
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": "data/videos/agent/BM-009-success.mp4",
@@ -274,6 +986,82 @@
       "rounds": 1,
       "duration_s": 249.959,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 52.1,
+        "perception_s": 47.3,
+        "action_s": 4.9,
+        "recovery_s": 0.0,
+        "other_s": 0.0,
+        "llm_overhead_s": 197.8,
+        "tool_calls": 16,
+        "steps": 13,
+        "tool_counts": {
+          "look": 3,
+          "find_by_pointing": 3,
+          "unproject_pixel": 2,
+          "observe_orbit": 2,
+          "get_arm_pose": 1,
+          "is_reachable": 1,
+          "grasp_object": 1,
+          "is_holding": 1,
+          "todowrite": 1,
+          "place_on_surface": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 3,
+            "seconds": 0.7
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 3,
+            "seconds": 44.9
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 2,
+            "seconds": 0.4
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 2,
+            "seconds": 0.7
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 1,
+            "seconds": 0.2
+          },
+          {
+            "tool": "is_reachable",
+            "count": 1,
+            "seconds": 0.2
+          },
+          {
+            "tool": "grasp_object",
+            "count": 1,
+            "seconds": 3.4
+          },
+          {
+            "tool": "is_holding",
+            "count": 1,
+            "seconds": 0.2
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 3,
+        "find_by_pointing": 3,
+        "unproject_pixel": 2,
+        "observe_orbit": 2,
+        "get_arm_pose": 1,
+        "is_reachable": 1,
+        "grasp_object": 1,
+        "is_holding": 1,
+        "todowrite": 1,
+        "place_on_surface": 1
+      },
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": "data/videos/agent/BM-010-success.mp4",
@@ -295,6 +1083,100 @@
       "rounds": 10,
       "duration_s": 3205.157,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 903.8,
+        "perception_s": 794.6,
+        "action_s": 107.9,
+        "recovery_s": 1.3,
+        "other_s": 0.0,
+        "llm_overhead_s": 2301.3,
+        "tool_calls": 160,
+        "steps": 15,
+        "tool_counts": {
+          "look": 38,
+          "unproject_pixel": 27,
+          "find_by_pointing": 17,
+          "observe_orbit": 13,
+          "get_arm_pose": 13,
+          "grasp_object": 8,
+          "find_pixel": 7,
+          "find_by_detector": 7,
+          "gripper": 6,
+          "get_grasp_pose": 4,
+          "home": 4,
+          "is_reachable": 3,
+          "is_holding": 3,
+          "descend_tcp_to_z": 3,
+          "move_to_pixel": 2,
+          "move_to_pose": 2,
+          "todowrite": 1,
+          "visual_pick_place": 1,
+          "move_ee_delta": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 38,
+            "seconds": 8.4
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 27,
+            "seconds": 5.8
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 17,
+            "seconds": 325.6
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 13,
+            "seconds": 3.1
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 13,
+            "seconds": 2.8
+          },
+          {
+            "tool": "grasp_object",
+            "count": 8,
+            "seconds": 103.8
+          },
+          {
+            "tool": "find_pixel",
+            "count": 7,
+            "seconds": 440.1
+          },
+          {
+            "tool": "find_by_detector",
+            "count": 7,
+            "seconds": 2.9
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 38,
+        "unproject_pixel": 27,
+        "find_by_pointing": 17,
+        "observe_orbit": 13,
+        "get_arm_pose": 13,
+        "grasp_object": 8,
+        "find_pixel": 7,
+        "find_by_detector": 7,
+        "gripper": 6,
+        "get_grasp_pose": 4,
+        "home": 4,
+        "is_reachable": 3,
+        "is_holding": 3,
+        "descend_tcp_to_z": 3,
+        "move_to_pixel": 2,
+        "move_to_pose": 2,
+        "todowrite": 1,
+        "visual_pick_place": 1,
+        "move_ee_delta": 1
+      },
       "failure_counts": {
         "code:PERCEPTION_FAILED": 5,
         "code:GRASP_FAILED": 4,
@@ -321,6 +1203,94 @@
       "rounds": 2,
       "duration_s": 510.395,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 147.5,
+        "perception_s": 81.6,
+        "action_s": 65.6,
+        "recovery_s": 0.3,
+        "other_s": 0.0,
+        "llm_overhead_s": 362.9,
+        "tool_calls": 32,
+        "steps": 12,
+        "tool_counts": {
+          "look": 7,
+          "find_by_pointing": 4,
+          "unproject_pixel": 4,
+          "get_arm_pose": 2,
+          "find_by_detector": 2,
+          "verify_pick_complete": 2,
+          "is_holding": 2,
+          "grasp_object": 1,
+          "place_object_in": 1,
+          "observe_orbit": 1,
+          "place_held_at_target_servo": 1,
+          "is_reachable": 1,
+          "move_to_pose": 1,
+          "descend_tcp_to_z": 1,
+          "gripper": 1,
+          "home": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 7,
+            "seconds": 1.5
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 4,
+            "seconds": 75.7
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 4,
+            "seconds": 0.9
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 2,
+            "seconds": 0.4
+          },
+          {
+            "tool": "find_by_detector",
+            "count": 2,
+            "seconds": 1.8
+          },
+          {
+            "tool": "verify_pick_complete",
+            "count": 2,
+            "seconds": 0.4
+          },
+          {
+            "tool": "is_holding",
+            "count": 2,
+            "seconds": 0.4
+          },
+          {
+            "tool": "grasp_object",
+            "count": 1,
+            "seconds": 64.0
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 7,
+        "find_by_pointing": 4,
+        "unproject_pixel": 4,
+        "get_arm_pose": 2,
+        "find_by_detector": 2,
+        "verify_pick_complete": 2,
+        "is_holding": 2,
+        "grasp_object": 1,
+        "place_object_in": 1,
+        "observe_orbit": 1,
+        "place_held_at_target_servo": 1,
+        "is_reachable": 1,
+        "move_to_pose": 1,
+        "descend_tcp_to_z": 1,
+        "gripper": 1,
+        "home": 1
+      },
       "failure_counts": {
         "label:placement": 2,
         "code:PERCEPTION_FAILED": 1,
@@ -346,6 +1316,102 @@
       "rounds": 10,
       "duration_s": 3300.599,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 1647.0,
+        "perception_s": 1494.2,
+        "action_s": 152.2,
+        "recovery_s": 0.6,
+        "other_s": 0.0,
+        "llm_overhead_s": 1653.6,
+        "tool_calls": 158,
+        "steps": 16,
+        "tool_counts": {
+          "look": 38,
+          "unproject_pixel": 24,
+          "find_by_pointing": 20,
+          "get_arm_pose": 11,
+          "is_holding": 11,
+          "grasp_object": 6,
+          "find_by_detector": 5,
+          "observe_orbit": 5,
+          "gripper": 5,
+          "move_ee_delta": 5,
+          "is_reachable": 4,
+          "move_to_pose": 4,
+          "find_pixel": 4,
+          "get_grasp_pose": 4,
+          "verify_pick_complete": 3,
+          "descend_tcp_to_z": 3,
+          "trajectory_refine": 2,
+          "home": 2,
+          "place_object_in": 1,
+          "done": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 38,
+            "seconds": 8.2
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 24,
+            "seconds": 5.2
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 20,
+            "seconds": 1013.2
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 11,
+            "seconds": 2.5
+          },
+          {
+            "tool": "is_holding",
+            "count": 11,
+            "seconds": 2.5
+          },
+          {
+            "tool": "grasp_object",
+            "count": 6,
+            "seconds": 27.0
+          },
+          {
+            "tool": "find_by_detector",
+            "count": 5,
+            "seconds": 1.1
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 5,
+            "seconds": 1.2
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 38,
+        "unproject_pixel": 24,
+        "find_by_pointing": 20,
+        "get_arm_pose": 11,
+        "is_holding": 11,
+        "grasp_object": 6,
+        "find_by_detector": 5,
+        "observe_orbit": 5,
+        "gripper": 5,
+        "move_ee_delta": 5,
+        "is_reachable": 4,
+        "move_to_pose": 4,
+        "find_pixel": 4,
+        "get_grasp_pose": 4,
+        "verify_pick_complete": 3,
+        "descend_tcp_to_z": 3,
+        "trajectory_refine": 2,
+        "home": 2,
+        "place_object_in": 1,
+        "done": 1
+      },
       "failure_counts": {
         "code:PERCEPTION_FAILED": 6,
         "code:GRASP_FAILED": 3,
@@ -373,6 +1439,98 @@
       "rounds": 10,
       "duration_s": 3317.55,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 1321.6,
+        "perception_s": 1256.8,
+        "action_s": 63.9,
+        "recovery_s": 0.8,
+        "other_s": 0.0,
+        "llm_overhead_s": 1996.0,
+        "tool_calls": 160,
+        "steps": 15,
+        "tool_counts": {
+          "unproject_pixel": 34,
+          "look": 28,
+          "find_by_pointing": 21,
+          "observe_orbit": 17,
+          "find_pixel": 12,
+          "is_holding": 10,
+          "get_arm_pose": 8,
+          "grasp_object": 6,
+          "find_by_detector": 6,
+          "verify_pick_complete": 3,
+          "move_to_pose": 3,
+          "home": 3,
+          "gripper": 2,
+          "preview_move_to_pose": 2,
+          "get_grasp_pose": 2,
+          "place_object_in": 1,
+          "execute_previewed_move": 1,
+          "descend_tcp_to_z": 1
+        },
+        "top_tools": [
+          {
+            "tool": "unproject_pixel",
+            "count": 34,
+            "seconds": 7.4
+          },
+          {
+            "tool": "look",
+            "count": 28,
+            "seconds": 6.1
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 21,
+            "seconds": 854.3
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 17,
+            "seconds": 4.2
+          },
+          {
+            "tool": "find_pixel",
+            "count": 12,
+            "seconds": 376.2
+          },
+          {
+            "tool": "is_holding",
+            "count": 10,
+            "seconds": 2.2
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 8,
+            "seconds": 1.7
+          },
+          {
+            "tool": "grasp_object",
+            "count": 6,
+            "seconds": 60.7
+          }
+        ]
+      },
+      "tool_counts": {
+        "unproject_pixel": 34,
+        "look": 28,
+        "find_by_pointing": 21,
+        "observe_orbit": 17,
+        "find_pixel": 12,
+        "is_holding": 10,
+        "get_arm_pose": 8,
+        "grasp_object": 6,
+        "find_by_detector": 6,
+        "verify_pick_complete": 3,
+        "move_to_pose": 3,
+        "home": 3,
+        "gripper": 2,
+        "preview_move_to_pose": 2,
+        "get_grasp_pose": 2,
+        "place_object_in": 1,
+        "execute_previewed_move": 1,
+        "descend_tcp_to_z": 1
+      },
       "failure_counts": {
         "code:PERCEPTION_FAILED": 5,
         "code:MOTION_FAILED": 2,
@@ -399,6 +1557,102 @@
       "rounds": 10,
       "duration_s": 3825.465,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 2133.9,
+        "perception_s": 2111.7,
+        "action_s": 21.9,
+        "recovery_s": 0.3,
+        "other_s": 0.0,
+        "llm_overhead_s": 1691.5,
+        "tool_calls": 160,
+        "steps": 16,
+        "tool_counts": {
+          "unproject_pixel": 39,
+          "look": 27,
+          "find_pixel": 21,
+          "find_by_pointing": 19,
+          "observe_orbit": 15,
+          "get_arm_pose": 9,
+          "grasp_object": 8,
+          "gripper": 4,
+          "find_by_detector": 4,
+          "place_object_in": 2,
+          "get_grasp_pose": 2,
+          "move_to_pose": 2,
+          "verify_pick_complete": 1,
+          "todowrite": 1,
+          "home": 1,
+          "visual_pick_place": 1,
+          "trajectory_refine": 1,
+          "is_holding": 1,
+          "is_reachable": 1,
+          "read_skill_code": 1
+        },
+        "top_tools": [
+          {
+            "tool": "unproject_pixel",
+            "count": 39,
+            "seconds": 8.5
+          },
+          {
+            "tool": "look",
+            "count": 27,
+            "seconds": 5.8
+          },
+          {
+            "tool": "find_pixel",
+            "count": 21,
+            "seconds": 1226.0
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 19,
+            "seconds": 820.0
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 15,
+            "seconds": 3.7
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 9,
+            "seconds": 1.9
+          },
+          {
+            "tool": "grasp_object",
+            "count": 8,
+            "seconds": 19.2
+          },
+          {
+            "tool": "gripper",
+            "count": 4,
+            "seconds": 1.3
+          }
+        ]
+      },
+      "tool_counts": {
+        "unproject_pixel": 39,
+        "look": 27,
+        "find_pixel": 21,
+        "find_by_pointing": 19,
+        "observe_orbit": 15,
+        "get_arm_pose": 9,
+        "grasp_object": 8,
+        "gripper": 4,
+        "find_by_detector": 4,
+        "place_object_in": 2,
+        "get_grasp_pose": 2,
+        "move_to_pose": 2,
+        "verify_pick_complete": 1,
+        "todowrite": 1,
+        "home": 1,
+        "visual_pick_place": 1,
+        "trajectory_refine": 1,
+        "is_holding": 1,
+        "is_reachable": 1,
+        "read_skill_code": 1
+      },
       "failure_counts": {
         "label:placement": 2,
         "code:MANIPULATION_FAILED": 2,
@@ -425,6 +1679,86 @@
       "rounds": 2,
       "duration_s": 475.468,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 230.8,
+        "perception_s": 180.2,
+        "action_s": 49.8,
+        "recovery_s": 0.8,
+        "other_s": 0.0,
+        "llm_overhead_s": 244.6,
+        "tool_calls": 32,
+        "steps": 16,
+        "tool_counts": {
+          "find_by_pointing": 7,
+          "look": 4,
+          "unproject_pixel": 4,
+          "home": 3,
+          "is_holding": 3,
+          "is_reachable": 2,
+          "grasp_object": 2,
+          "place_object_in": 2,
+          "observe_orbit": 2,
+          "find_by_detector": 1,
+          "find_pixel": 1,
+          "get_arm_pose": 1
+        },
+        "top_tools": [
+          {
+            "tool": "find_by_pointing",
+            "count": 7,
+            "seconds": 126.1
+          },
+          {
+            "tool": "look",
+            "count": 4,
+            "seconds": 0.9
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 4,
+            "seconds": 0.9
+          },
+          {
+            "tool": "home",
+            "count": 3,
+            "seconds": 0.8
+          },
+          {
+            "tool": "is_holding",
+            "count": 3,
+            "seconds": 0.6
+          },
+          {
+            "tool": "is_reachable",
+            "count": 2,
+            "seconds": 0.4
+          },
+          {
+            "tool": "grasp_object",
+            "count": 2,
+            "seconds": 2.5
+          },
+          {
+            "tool": "place_object_in",
+            "count": 2,
+            "seconds": 47.3
+          }
+        ]
+      },
+      "tool_counts": {
+        "find_by_pointing": 7,
+        "look": 4,
+        "unproject_pixel": 4,
+        "home": 3,
+        "is_holding": 3,
+        "is_reachable": 2,
+        "grasp_object": 2,
+        "place_object_in": 2,
+        "observe_orbit": 2,
+        "find_by_detector": 1,
+        "find_pixel": 1,
+        "get_arm_pose": 1
+      },
       "failure_counts": {
         "label:placement": 1,
         "code:PERCEPTION_FAILED": 1,
@@ -451,6 +1785,106 @@
       "rounds": 10,
       "duration_s": 2733.601,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 1156.3,
+        "perception_s": 1136.0,
+        "action_s": 19.4,
+        "recovery_s": 0.8,
+        "other_s": 0.0,
+        "llm_overhead_s": 1577.3,
+        "tool_calls": 160,
+        "steps": 14,
+        "tool_counts": {
+          "look": 37,
+          "unproject_pixel": 20,
+          "observe_orbit": 14,
+          "find_by_pointing": 12,
+          "get_arm_pose": 12,
+          "find_pixel": 10,
+          "find_by_detector": 7,
+          "is_holding": 7,
+          "grasp_object": 6,
+          "gripper": 5,
+          "move_ee_delta": 5,
+          "get_grasp_pose": 4,
+          "is_reachable": 3,
+          "move_to_pixel": 3,
+          "descend_tcp_to_z": 3,
+          "home": 3,
+          "mark_orbit_point": 3,
+          "read_skill_code": 2,
+          "move_to_pose": 1,
+          "todowrite": 1,
+          "verify_pick_complete": 1,
+          "place_object_in": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 37,
+            "seconds": 8.1
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 20,
+            "seconds": 4.3
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 14,
+            "seconds": 3.3
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 12,
+            "seconds": 574.5
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 12,
+            "seconds": 2.6
+          },
+          {
+            "tool": "find_pixel",
+            "count": 10,
+            "seconds": 535.8
+          },
+          {
+            "tool": "find_by_detector",
+            "count": 7,
+            "seconds": 1.5
+          },
+          {
+            "tool": "is_holding",
+            "count": 7,
+            "seconds": 1.5
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 37,
+        "unproject_pixel": 20,
+        "observe_orbit": 14,
+        "find_by_pointing": 12,
+        "get_arm_pose": 12,
+        "find_pixel": 10,
+        "find_by_detector": 7,
+        "is_holding": 7,
+        "grasp_object": 6,
+        "gripper": 5,
+        "move_ee_delta": 5,
+        "get_grasp_pose": 4,
+        "is_reachable": 3,
+        "move_to_pixel": 3,
+        "descend_tcp_to_z": 3,
+        "home": 3,
+        "mark_orbit_point": 3,
+        "read_skill_code": 2,
+        "move_to_pose": 1,
+        "todowrite": 1,
+        "verify_pick_complete": 1,
+        "place_object_in": 1
+      },
       "failure_counts": {
         "label:grasp_generation": 3,
         "code:PERCEPTION_FAILED": 5,
@@ -479,6 +1913,106 @@
       "rounds": 9,
       "duration_s": 3515.611,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 693.6,
+        "perception_s": 640.8,
+        "action_s": 51.5,
+        "recovery_s": 1.4,
+        "other_s": 0.0,
+        "llm_overhead_s": 2822.0,
+        "tool_calls": 144,
+        "steps": 13,
+        "tool_counts": {
+          "look": 30,
+          "unproject_pixel": 21,
+          "find_by_pointing": 15,
+          "find_pixel": 12,
+          "get_arm_pose": 10,
+          "is_holding": 10,
+          "observe_orbit": 8,
+          "find_by_detector": 5,
+          "home": 5,
+          "move_to_pose": 4,
+          "move_ee_delta": 4,
+          "grasp_object": 3,
+          "gripper": 3,
+          "read": 3,
+          "is_reachable": 2,
+          "get_grasp_pose": 2,
+          "list": 2,
+          "visual_pick_place": 1,
+          "read_skill_code": 1,
+          "descend_tcp_to_z": 1,
+          "verify_pick_complete": 1,
+          "place_held_at_target_servo": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 30,
+            "seconds": 6.5
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 21,
+            "seconds": 4.8
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 15,
+            "seconds": 341.2
+          },
+          {
+            "tool": "find_pixel",
+            "count": 12,
+            "seconds": 275.2
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 10,
+            "seconds": 2.2
+          },
+          {
+            "tool": "is_holding",
+            "count": 10,
+            "seconds": 2.1
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 8,
+            "seconds": 2.1
+          },
+          {
+            "tool": "find_by_detector",
+            "count": 5,
+            "seconds": 2.5
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 30,
+        "unproject_pixel": 21,
+        "find_by_pointing": 15,
+        "find_pixel": 12,
+        "get_arm_pose": 10,
+        "is_holding": 10,
+        "observe_orbit": 8,
+        "find_by_detector": 5,
+        "home": 5,
+        "move_to_pose": 4,
+        "move_ee_delta": 4,
+        "grasp_object": 3,
+        "gripper": 3,
+        "read": 3,
+        "is_reachable": 2,
+        "get_grasp_pose": 2,
+        "list": 2,
+        "visual_pick_place": 1,
+        "read_skill_code": 1,
+        "descend_tcp_to_z": 1,
+        "verify_pick_complete": 1,
+        "place_held_at_target_servo": 1
+      },
       "failure_counts": {
         "code:PERCEPTION_FAILED": 4,
         "code:GRASP_FAILED": 2,
@@ -504,6 +2038,92 @@
       "rounds": 4,
       "duration_s": 891.876,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 287.6,
+        "perception_s": 215.5,
+        "action_s": 71.6,
+        "recovery_s": 0.5,
+        "other_s": 0.0,
+        "llm_overhead_s": 604.2,
+        "tool_calls": 64,
+        "steps": 16,
+        "tool_counts": {
+          "look": 15,
+          "unproject_pixel": 11,
+          "find_by_pointing": 10,
+          "get_arm_pose": 5,
+          "observe_orbit": 5,
+          "find_by_detector": 3,
+          "gripper": 3,
+          "is_holding": 3,
+          "home": 2,
+          "get_grasp_pose": 2,
+          "visual_pick_place": 1,
+          "descend_tcp_to_z": 1,
+          "grasp_object": 1,
+          "is_reachable": 1,
+          "place_object_in": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 15,
+            "seconds": 3.3
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 11,
+            "seconds": 2.4
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 10,
+            "seconds": 201.8
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 5,
+            "seconds": 1.1
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 5,
+            "seconds": 1.2
+          },
+          {
+            "tool": "find_by_detector",
+            "count": 3,
+            "seconds": 2.2
+          },
+          {
+            "tool": "gripper",
+            "count": 3,
+            "seconds": 1.0
+          },
+          {
+            "tool": "is_holding",
+            "count": 3,
+            "seconds": 0.6
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 15,
+        "unproject_pixel": 11,
+        "find_by_pointing": 10,
+        "get_arm_pose": 5,
+        "observe_orbit": 5,
+        "find_by_detector": 3,
+        "gripper": 3,
+        "is_holding": 3,
+        "home": 2,
+        "get_grasp_pose": 2,
+        "visual_pick_place": 1,
+        "descend_tcp_to_z": 1,
+        "grasp_object": 1,
+        "is_reachable": 1,
+        "place_object_in": 1
+      },
       "failure_counts": {
         "code:PERCEPTION_FAILED": 2,
         "code:GRASP_FAILED": 2,
@@ -529,6 +2149,100 @@
       "rounds": 10,
       "duration_s": 3617.673,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 867.1,
+        "perception_s": 818.2,
+        "action_s": 47.9,
+        "recovery_s": 1.1,
+        "other_s": 0.0,
+        "llm_overhead_s": 2750.5,
+        "tool_calls": 160,
+        "steps": 16,
+        "tool_counts": {
+          "look": 30,
+          "unproject_pixel": 27,
+          "find_pixel": 20,
+          "find_by_pointing": 19,
+          "observe_orbit": 12,
+          "get_arm_pose": 10,
+          "find_by_detector": 8,
+          "gripper": 6,
+          "is_holding": 6,
+          "grasp_object": 5,
+          "get_grasp_pose": 4,
+          "home": 4,
+          "move_to_pose": 2,
+          "descend_tcp_to_z": 2,
+          "move_ee_delta": 1,
+          "visual_pick_place": 1,
+          "verify_pick_complete": 1,
+          "place_object_in": 1,
+          "read": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 30,
+            "seconds": 6.8
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 27,
+            "seconds": 6.0
+          },
+          {
+            "tool": "find_pixel",
+            "count": 20,
+            "seconds": 374.3
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 19,
+            "seconds": 412.5
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 12,
+            "seconds": 2.9
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 10,
+            "seconds": 2.2
+          },
+          {
+            "tool": "find_by_detector",
+            "count": 8,
+            "seconds": 3.4
+          },
+          {
+            "tool": "gripper",
+            "count": 6,
+            "seconds": 1.9
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 30,
+        "unproject_pixel": 27,
+        "find_pixel": 20,
+        "find_by_pointing": 19,
+        "observe_orbit": 12,
+        "get_arm_pose": 10,
+        "find_by_detector": 8,
+        "gripper": 6,
+        "is_holding": 6,
+        "grasp_object": 5,
+        "get_grasp_pose": 4,
+        "home": 4,
+        "move_to_pose": 2,
+        "descend_tcp_to_z": 2,
+        "move_ee_delta": 1,
+        "visual_pick_place": 1,
+        "verify_pick_complete": 1,
+        "place_object_in": 1,
+        "read": 1
+      },
       "failure_counts": {
         "code:GRASP_FAILED": 4,
         "code:PERCEPTION_FAILED": 6,
@@ -554,6 +2268,92 @@
       "rounds": 5,
       "duration_s": 1251.78,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 332.4,
+        "perception_s": 294.8,
+        "action_s": 37.4,
+        "recovery_s": 0.3,
+        "other_s": 0.0,
+        "llm_overhead_s": 919.3,
+        "tool_calls": 80,
+        "steps": 16,
+        "tool_counts": {
+          "look": 14,
+          "unproject_pixel": 14,
+          "find_by_pointing": 13,
+          "observe_orbit": 10,
+          "get_arm_pose": 6,
+          "find_pixel": 5,
+          "find_by_detector": 4,
+          "grasp_object": 3,
+          "get_grasp_pose": 3,
+          "is_holding": 2,
+          "gripper": 2,
+          "verify_pick_complete": 1,
+          "is_reachable": 1,
+          "place_on_surface": 1,
+          "home": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 14,
+            "seconds": 3.1
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 14,
+            "seconds": 3.1
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 13,
+            "seconds": 258.6
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 10,
+            "seconds": 2.4
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 6,
+            "seconds": 1.3
+          },
+          {
+            "tool": "find_pixel",
+            "count": 5,
+            "seconds": 19.1
+          },
+          {
+            "tool": "find_by_detector",
+            "count": 4,
+            "seconds": 5.1
+          },
+          {
+            "tool": "grasp_object",
+            "count": 3,
+            "seconds": 36.0
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 14,
+        "unproject_pixel": 14,
+        "find_by_pointing": 13,
+        "observe_orbit": 10,
+        "get_arm_pose": 6,
+        "find_pixel": 5,
+        "find_by_detector": 4,
+        "grasp_object": 3,
+        "get_grasp_pose": 3,
+        "is_holding": 2,
+        "gripper": 2,
+        "verify_pick_complete": 1,
+        "is_reachable": 1,
+        "place_on_surface": 1,
+        "home": 1
+      },
       "failure_counts": {
         "label:placement": 1,
         "code:MANIPULATION_FAILED": 1,
@@ -580,6 +2380,88 @@
       "rounds": 2,
       "duration_s": 504.904,
       "thinking_s": null,
+      "time_breakdown": {
+        "tool_total_s": 92.6,
+        "perception_s": 84.8,
+        "action_s": 7.5,
+        "recovery_s": 0.3,
+        "other_s": 0.0,
+        "llm_overhead_s": 412.3,
+        "tool_calls": 32,
+        "steps": 12,
+        "tool_counts": {
+          "find_by_pointing": 7,
+          "look": 6,
+          "unproject_pixel": 3,
+          "find_by_detector": 3,
+          "find_pixel": 2,
+          "place_on_surface": 2,
+          "get_arm_pose": 2,
+          "is_holding": 2,
+          "grasp_object": 1,
+          "verify_pick_complete": 1,
+          "home": 1,
+          "is_reachable": 1,
+          "place_held_at_target_servo": 1
+        },
+        "top_tools": [
+          {
+            "tool": "find_by_pointing",
+            "count": 7,
+            "seconds": 61.4
+          },
+          {
+            "tool": "look",
+            "count": 6,
+            "seconds": 1.3
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 3,
+            "seconds": 0.7
+          },
+          {
+            "tool": "find_by_detector",
+            "count": 3,
+            "seconds": 3.0
+          },
+          {
+            "tool": "find_pixel",
+            "count": 2,
+            "seconds": 17.2
+          },
+          {
+            "tool": "place_on_surface",
+            "count": 2,
+            "seconds": 0.9
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 2,
+            "seconds": 0.4
+          },
+          {
+            "tool": "is_holding",
+            "count": 2,
+            "seconds": 0.4
+          }
+        ]
+      },
+      "tool_counts": {
+        "find_by_pointing": 7,
+        "look": 6,
+        "unproject_pixel": 3,
+        "find_by_detector": 3,
+        "find_pixel": 2,
+        "place_on_surface": 2,
+        "get_arm_pose": 2,
+        "is_holding": 2,
+        "grasp_object": 1,
+        "verify_pick_complete": 1,
+        "home": 1,
+        "is_reachable": 1,
+        "place_held_at_target_servo": 1
+      },
       "failure_counts": {
         "label:placement": 1,
         "code:PERCEPTION_FAILED": 1,
@@ -604,7 +2486,91 @@
       "attempts": 1,
       "rounds": 1,
       "duration_s": 254.995,
-      "thinking_s": 247.695,
+      "thinking_s": 223.0,
+      "time_breakdown": {
+        "tool_total_s": 31.9,
+        "perception_s": 23.8,
+        "action_s": 7.9,
+        "recovery_s": 0.3,
+        "other_s": 0.0,
+        "llm_overhead_s": 223.0,
+        "tool_calls": 39,
+        "steps": 36,
+        "tool_counts": {
+          "look": 9,
+          "find_pixel": 6,
+          "unproject_pixel": 6,
+          "observe_orbit": 4,
+          "get_arm_pose": 3,
+          "place_on_surface": 2,
+          "read": 2,
+          "grasp_object": 1,
+          "home": 1,
+          "move_to_pose": 1,
+          "glob": 1,
+          "is_holding": 1,
+          "find_by_pointing": 1,
+          "done": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 9,
+            "seconds": 2.0
+          },
+          {
+            "tool": "find_pixel",
+            "count": 6,
+            "seconds": 5.1
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 6,
+            "seconds": 1.5
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 4,
+            "seconds": 0.9
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 3,
+            "seconds": 0.6
+          },
+          {
+            "tool": "place_on_surface",
+            "count": 2,
+            "seconds": 1.8
+          },
+          {
+            "tool": "read",
+            "count": 2,
+            "seconds": 0.0
+          },
+          {
+            "tool": "grasp_object",
+            "count": 1,
+            "seconds": 5.8
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 9,
+        "find_pixel": 6,
+        "unproject_pixel": 6,
+        "observe_orbit": 4,
+        "get_arm_pose": 3,
+        "place_on_surface": 2,
+        "read": 2,
+        "grasp_object": 1,
+        "home": 1,
+        "move_to_pose": 1,
+        "glob": 1,
+        "is_holding": 1,
+        "find_by_pointing": 1,
+        "done": 1
+      },
       "failure_counts": {
         "contrib:verification": 1,
         "contrib:planning": 1
@@ -628,7 +2594,87 @@
       "attempts": 1,
       "rounds": 1,
       "duration_s": 281.657,
-      "thinking_s": 274.243,
+      "thinking_s": 106.5,
+      "time_breakdown": {
+        "tool_total_s": 175.2,
+        "perception_s": 76.1,
+        "action_s": 99.0,
+        "recovery_s": 0.0,
+        "other_s": 0.0,
+        "llm_overhead_s": 106.5,
+        "tool_calls": 23,
+        "steps": 17,
+        "tool_counts": {
+          "find_pixel": 6,
+          "look": 4,
+          "find_by_pointing": 2,
+          "grasp_object": 2,
+          "get_arm_pose": 2,
+          "observe_orbit": 1,
+          "get_grasp_pose": 1,
+          "unproject_pixel": 1,
+          "place_on_surface": 1,
+          "is_holding": 1,
+          "gripper": 1,
+          "done": 1
+        },
+        "top_tools": [
+          {
+            "tool": "find_pixel",
+            "count": 6,
+            "seconds": 73.1
+          },
+          {
+            "tool": "look",
+            "count": 4,
+            "seconds": 0.9
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 2,
+            "seconds": 0.6
+          },
+          {
+            "tool": "grasp_object",
+            "count": 2,
+            "seconds": 98.0
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 2,
+            "seconds": 0.4
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 1,
+            "seconds": 0.3
+          },
+          {
+            "tool": "get_grasp_pose",
+            "count": 1,
+            "seconds": 0.4
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 1,
+            "seconds": 0.2
+          }
+        ]
+      },
+      "tool_counts": {
+        "find_pixel": 6,
+        "look": 4,
+        "find_by_pointing": 2,
+        "grasp_object": 2,
+        "get_arm_pose": 2,
+        "observe_orbit": 1,
+        "get_grasp_pose": 1,
+        "unproject_pixel": 1,
+        "place_on_surface": 1,
+        "is_holding": 1,
+        "gripper": 1,
+        "done": 1
+      },
       "failure_counts": {
         "primary:none": 1
       },
@@ -647,13 +2693,15 @@
       "bm_id": "BM-025",
       "task_id": "libero_spatial/4",
       "benchmark": "libero",
-      "status": "pending",
-      "attempts": 0,
+      "status": "infra",
+      "attempts": 1,
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
-      "failure_reason": null,
+      "failure_reason": "Deferred after a 17.5-minute single-agent run; retry in the failure phase.",
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
@@ -662,22 +2710,24 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": null
+      "finished_at": "2026-11-10T11:23:24.139269+00:00"
     },
     {
       "bm_id": "BM-026",
       "task_id": "libero_spatial/5",
       "benchmark": "libero",
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
-      "last_failure_video_url": null,
-      "clean_grasp_trajectory_url": null,
+      "last_failure_video_url": "data/videos/agent/BM-026-last-failure.mp4",
+      "clean_grasp_trajectory_url": "data/trajectories/BM-026-last-clean-grasp.json",
       "confirmed_success": null,
       "replay_status": null,
       "replay_success": null,
@@ -689,11 +2739,13 @@
       "bm_id": "BM-027",
       "task_id": "libero_spatial/6",
       "benchmark": "libero",
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -715,6 +2767,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -736,6 +2790,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -757,6 +2813,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -778,6 +2836,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -799,6 +2859,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -820,6 +2882,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -841,6 +2905,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -862,6 +2928,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -883,6 +2951,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -904,6 +2974,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -925,6 +2997,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -946,6 +3020,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -967,6 +3043,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -988,6 +3066,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1009,6 +3089,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1030,6 +3112,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1051,6 +3135,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1072,6 +3158,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1093,6 +3181,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1114,6 +3204,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1135,6 +3227,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1156,6 +3250,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1177,6 +3273,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1198,6 +3296,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1219,6 +3319,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1240,6 +3342,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1261,6 +3365,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1282,6 +3388,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1303,6 +3411,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1324,6 +3434,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1345,6 +3457,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1366,6 +3480,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1387,6 +3503,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1408,6 +3526,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1429,6 +3549,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1450,6 +3572,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1471,6 +3595,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1492,6 +3618,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1513,6 +3641,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1534,6 +3664,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1555,6 +3687,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1576,6 +3710,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1597,6 +3733,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1618,6 +3756,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1639,6 +3779,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1660,6 +3802,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1681,6 +3825,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1702,6 +3848,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1723,6 +3871,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1744,6 +3894,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1765,6 +3917,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1786,6 +3940,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1807,6 +3963,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1828,6 +3986,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1849,6 +4009,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1870,6 +4032,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1891,6 +4055,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1912,6 +4078,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1933,6 +4101,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1954,6 +4124,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1975,6 +4147,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -1996,6 +4170,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2017,6 +4193,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2038,6 +4216,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2059,6 +4239,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2080,6 +4262,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2101,6 +4285,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2122,6 +4308,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2143,6 +4331,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2164,6 +4354,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2185,6 +4377,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2206,6 +4400,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2227,6 +4423,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2248,6 +4446,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2269,6 +4469,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2290,6 +4492,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2311,6 +4515,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2332,6 +4538,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2353,6 +4561,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2374,6 +4584,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2395,6 +4607,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2416,6 +4630,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2437,6 +4653,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2458,6 +4676,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2479,6 +4699,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2500,6 +4722,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2521,6 +4745,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2542,6 +4768,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2563,6 +4791,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2584,6 +4814,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2605,6 +4837,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2626,6 +4860,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2647,6 +4883,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2668,6 +4906,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2689,6 +4929,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2710,6 +4952,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2731,6 +4975,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2752,6 +4998,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2773,6 +5021,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2794,6 +5044,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2815,6 +5067,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2836,6 +5090,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2857,6 +5113,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2878,6 +5136,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2899,6 +5159,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2920,6 +5182,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2941,6 +5205,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2962,6 +5228,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -2983,6 +5251,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3004,6 +5274,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3025,6 +5297,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3046,6 +5320,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3067,6 +5343,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3088,6 +5366,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3109,6 +5389,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3130,6 +5412,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3151,6 +5435,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3172,6 +5458,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3193,6 +5481,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3214,6 +5504,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3235,6 +5527,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3256,6 +5550,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3277,6 +5573,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3298,6 +5596,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3319,6 +5619,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3340,6 +5642,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3361,6 +5665,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3382,6 +5688,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3403,6 +5711,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3424,6 +5734,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3445,6 +5757,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3466,6 +5780,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3487,6 +5803,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3508,6 +5826,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3529,6 +5849,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3550,6 +5872,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3571,6 +5895,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3592,6 +5918,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3613,6 +5941,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3634,6 +5964,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3655,6 +5987,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3676,6 +6010,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3697,6 +6033,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3718,6 +6056,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3739,6 +6079,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3760,6 +6102,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3781,6 +6125,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3802,6 +6148,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3823,6 +6171,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3844,6 +6194,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3865,6 +6217,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3886,6 +6240,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3907,6 +6263,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -3928,6 +6286,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -3938,7 +6298,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373682+00:00"
+      "finished_at": "2026-11-10T11:30:38.963370+00:00"
     },
     {
       "bm_id": "BM-182",
@@ -3949,6 +6309,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -3959,7 +6321,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373699+00:00"
+      "finished_at": "2026-11-10T11:30:38.963387+00:00"
     },
     {
       "bm_id": "BM-183",
@@ -3970,6 +6332,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -3980,7 +6344,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373703+00:00"
+      "finished_at": "2026-11-10T11:30:38.963391+00:00"
     },
     {
       "bm_id": "BM-184",
@@ -3991,6 +6355,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4001,7 +6367,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373705+00:00"
+      "finished_at": "2026-11-10T11:30:38.963394+00:00"
     },
     {
       "bm_id": "BM-185",
@@ -4012,6 +6378,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4022,7 +6390,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373707+00:00"
+      "finished_at": "2026-11-10T11:30:38.963396+00:00"
     },
     {
       "bm_id": "BM-186",
@@ -4033,6 +6401,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4043,7 +6413,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373710+00:00"
+      "finished_at": "2026-11-10T11:30:38.963397+00:00"
     },
     {
       "bm_id": "BM-187",
@@ -4054,6 +6424,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4064,7 +6436,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373711+00:00"
+      "finished_at": "2026-11-10T11:30:38.963399+00:00"
     },
     {
       "bm_id": "BM-188",
@@ -4075,6 +6447,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4085,7 +6459,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373713+00:00"
+      "finished_at": "2026-11-10T11:30:38.963401+00:00"
     },
     {
       "bm_id": "BM-189",
@@ -4096,6 +6470,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4106,7 +6482,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373715+00:00"
+      "finished_at": "2026-11-10T11:30:38.963402+00:00"
     },
     {
       "bm_id": "BM-190",
@@ -4117,6 +6493,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4127,7 +6505,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373717+00:00"
+      "finished_at": "2026-11-10T11:30:38.963403+00:00"
     },
     {
       "bm_id": "BM-191",
@@ -4138,6 +6516,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4148,7 +6528,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373720+00:00"
+      "finished_at": "2026-11-10T11:30:38.963405+00:00"
     },
     {
       "bm_id": "BM-192",
@@ -4159,6 +6539,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4169,7 +6551,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373721+00:00"
+      "finished_at": "2026-11-10T11:30:38.963407+00:00"
     },
     {
       "bm_id": "BM-193",
@@ -4180,6 +6562,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4190,7 +6574,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373723+00:00"
+      "finished_at": "2026-11-10T11:30:38.963409+00:00"
     },
     {
       "bm_id": "BM-194",
@@ -4201,6 +6585,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4211,7 +6597,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373725+00:00"
+      "finished_at": "2026-11-10T11:30:38.963410+00:00"
     },
     {
       "bm_id": "BM-195",
@@ -4222,6 +6608,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4232,7 +6620,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373726+00:00"
+      "finished_at": "2026-11-10T11:30:38.963412+00:00"
     },
     {
       "bm_id": "BM-196",
@@ -4243,6 +6631,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4253,7 +6643,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373728+00:00"
+      "finished_at": "2026-11-10T11:30:38.963414+00:00"
     },
     {
       "bm_id": "BM-197",
@@ -4264,6 +6654,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4274,7 +6666,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373730+00:00"
+      "finished_at": "2026-11-10T11:30:38.963415+00:00"
     },
     {
       "bm_id": "BM-198",
@@ -4285,6 +6677,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4295,7 +6689,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373731+00:00"
+      "finished_at": "2026-11-10T11:30:38.963417+00:00"
     },
     {
       "bm_id": "BM-199",
@@ -4306,6 +6700,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4316,7 +6712,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373733+00:00"
+      "finished_at": "2026-11-10T11:30:38.963418+00:00"
     },
     {
       "bm_id": "BM-200",
@@ -4327,6 +6723,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4337,7 +6735,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373735+00:00"
+      "finished_at": "2026-11-10T11:30:38.963420+00:00"
     },
     {
       "bm_id": "BM-201",
@@ -4348,6 +6746,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4358,7 +6758,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373736+00:00"
+      "finished_at": "2026-11-10T11:30:38.963421+00:00"
     },
     {
       "bm_id": "BM-202",
@@ -4369,6 +6769,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4379,7 +6781,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373738+00:00"
+      "finished_at": "2026-11-10T11:30:38.963422+00:00"
     },
     {
       "bm_id": "BM-203",
@@ -4390,6 +6792,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4400,7 +6804,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373740+00:00"
+      "finished_at": "2026-11-10T11:30:38.963424+00:00"
     },
     {
       "bm_id": "BM-204",
@@ -4411,6 +6815,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4421,7 +6827,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373742+00:00"
+      "finished_at": "2026-11-10T11:30:38.963426+00:00"
     },
     {
       "bm_id": "BM-205",
@@ -4432,6 +6838,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4442,7 +6850,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373743+00:00"
+      "finished_at": "2026-11-10T11:30:38.963427+00:00"
     },
     {
       "bm_id": "BM-206",
@@ -4453,6 +6861,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4463,7 +6873,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373745+00:00"
+      "finished_at": "2026-11-10T11:30:38.963429+00:00"
     },
     {
       "bm_id": "BM-207",
@@ -4474,6 +6884,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4484,7 +6896,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373746+00:00"
+      "finished_at": "2026-11-10T11:30:38.963430+00:00"
     },
     {
       "bm_id": "BM-208",
@@ -4495,6 +6907,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4505,7 +6919,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373748+00:00"
+      "finished_at": "2026-11-10T11:30:38.963431+00:00"
     },
     {
       "bm_id": "BM-209",
@@ -4516,6 +6930,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4526,7 +6942,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373749+00:00"
+      "finished_at": "2026-11-10T11:30:38.963432+00:00"
     },
     {
       "bm_id": "BM-210",
@@ -4537,6 +6953,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4547,7 +6965,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373750+00:00"
+      "finished_at": "2026-11-10T11:30:38.963433+00:00"
     },
     {
       "bm_id": "BM-211",
@@ -4558,6 +6976,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4568,7 +6988,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373752+00:00"
+      "finished_at": "2026-11-10T11:30:38.963434+00:00"
     },
     {
       "bm_id": "BM-212",
@@ -4579,6 +6999,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4589,7 +7011,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373753+00:00"
+      "finished_at": "2026-11-10T11:30:38.963436+00:00"
     },
     {
       "bm_id": "BM-213",
@@ -4600,6 +7022,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4610,7 +7034,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373755+00:00"
+      "finished_at": "2026-11-10T11:30:38.963437+00:00"
     },
     {
       "bm_id": "BM-214",
@@ -4621,6 +7045,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4631,7 +7057,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373756+00:00"
+      "finished_at": "2026-11-10T11:30:38.963438+00:00"
     },
     {
       "bm_id": "BM-215",
@@ -4642,6 +7068,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4652,7 +7080,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373758+00:00"
+      "finished_at": "2026-11-10T11:30:38.963439+00:00"
     },
     {
       "bm_id": "BM-216",
@@ -4663,6 +7091,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4673,7 +7103,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373759+00:00"
+      "finished_at": "2026-11-10T11:30:38.963441+00:00"
     },
     {
       "bm_id": "BM-217",
@@ -4684,6 +7114,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4694,7 +7126,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373761+00:00"
+      "finished_at": "2026-11-10T11:30:38.963442+00:00"
     },
     {
       "bm_id": "BM-218",
@@ -4705,6 +7137,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4715,7 +7149,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373762+00:00"
+      "finished_at": "2026-11-10T11:30:38.963443+00:00"
     },
     {
       "bm_id": "BM-219",
@@ -4726,6 +7160,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4736,7 +7172,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373764+00:00"
+      "finished_at": "2026-11-10T11:30:38.963445+00:00"
     },
     {
       "bm_id": "BM-220",
@@ -4747,6 +7183,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4757,7 +7195,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373766+00:00"
+      "finished_at": "2026-11-10T11:30:38.963446+00:00"
     },
     {
       "bm_id": "BM-221",
@@ -4768,6 +7206,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4778,7 +7218,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373768+00:00"
+      "finished_at": "2026-11-10T11:30:38.963448+00:00"
     },
     {
       "bm_id": "BM-222",
@@ -4789,6 +7229,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4799,7 +7241,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373770+00:00"
+      "finished_at": "2026-11-10T11:30:38.963450+00:00"
     },
     {
       "bm_id": "BM-223",
@@ -4810,6 +7252,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4820,7 +7264,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373771+00:00"
+      "finished_at": "2026-11-10T11:30:38.963451+00:00"
     },
     {
       "bm_id": "BM-224",
@@ -4831,6 +7275,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4841,7 +7287,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373773+00:00"
+      "finished_at": "2026-11-10T11:30:38.963452+00:00"
     },
     {
       "bm_id": "BM-225",
@@ -4852,6 +7298,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4862,7 +7310,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373775+00:00"
+      "finished_at": "2026-11-10T11:30:38.963454+00:00"
     },
     {
       "bm_id": "BM-226",
@@ -4873,6 +7321,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4883,7 +7333,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373776+00:00"
+      "finished_at": "2026-11-10T11:30:38.963455+00:00"
     },
     {
       "bm_id": "BM-227",
@@ -4894,6 +7344,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4904,7 +7356,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373778+00:00"
+      "finished_at": "2026-11-10T11:30:38.963457+00:00"
     },
     {
       "bm_id": "BM-228",
@@ -4915,6 +7367,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4925,7 +7379,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373779+00:00"
+      "finished_at": "2026-11-10T11:30:38.963458+00:00"
     },
     {
       "bm_id": "BM-229",
@@ -4936,6 +7390,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4946,7 +7402,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373781+00:00"
+      "finished_at": "2026-11-10T11:30:38.963459+00:00"
     },
     {
       "bm_id": "BM-230",
@@ -4957,6 +7413,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4967,7 +7425,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373782+00:00"
+      "finished_at": "2026-11-10T11:30:38.963461+00:00"
     },
     {
       "bm_id": "BM-231",
@@ -4978,6 +7436,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -4988,7 +7448,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373784+00:00"
+      "finished_at": "2026-11-10T11:30:38.963462+00:00"
     },
     {
       "bm_id": "BM-232",
@@ -4999,6 +7459,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5009,7 +7471,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373785+00:00"
+      "finished_at": "2026-11-10T11:30:38.963464+00:00"
     },
     {
       "bm_id": "BM-233",
@@ -5020,6 +7482,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5030,7 +7494,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373787+00:00"
+      "finished_at": "2026-11-10T11:30:38.963465+00:00"
     },
     {
       "bm_id": "BM-234",
@@ -5041,6 +7505,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5051,7 +7517,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373788+00:00"
+      "finished_at": "2026-11-10T11:30:38.963467+00:00"
     },
     {
       "bm_id": "BM-235",
@@ -5062,6 +7528,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5072,7 +7540,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373790+00:00"
+      "finished_at": "2026-11-10T11:30:38.963468+00:00"
     },
     {
       "bm_id": "BM-236",
@@ -5083,6 +7551,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5093,7 +7563,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373791+00:00"
+      "finished_at": "2026-11-10T11:30:38.963470+00:00"
     },
     {
       "bm_id": "BM-237",
@@ -5104,6 +7574,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5114,7 +7586,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373792+00:00"
+      "finished_at": "2026-11-10T11:30:38.963471+00:00"
     },
     {
       "bm_id": "BM-238",
@@ -5125,6 +7597,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5135,7 +7609,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373794+00:00"
+      "finished_at": "2026-11-10T11:30:38.963472+00:00"
     },
     {
       "bm_id": "BM-239",
@@ -5146,6 +7620,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5156,7 +7632,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373796+00:00"
+      "finished_at": "2026-11-10T11:30:38.963473+00:00"
     },
     {
       "bm_id": "BM-240",
@@ -5167,6 +7643,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5177,7 +7655,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373797+00:00"
+      "finished_at": "2026-11-10T11:30:38.963475+00:00"
     },
     {
       "bm_id": "BM-241",
@@ -5188,6 +7666,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5198,7 +7678,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373799+00:00"
+      "finished_at": "2026-11-10T11:30:38.963476+00:00"
     },
     {
       "bm_id": "BM-242",
@@ -5209,6 +7689,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5219,7 +7701,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373800+00:00"
+      "finished_at": "2026-11-10T11:30:38.963477+00:00"
     },
     {
       "bm_id": "BM-243",
@@ -5230,6 +7712,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5240,7 +7724,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373802+00:00"
+      "finished_at": "2026-11-10T11:30:38.963478+00:00"
     },
     {
       "bm_id": "BM-244",
@@ -5251,6 +7735,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5261,7 +7747,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373803+00:00"
+      "finished_at": "2026-11-10T11:30:38.963479+00:00"
     },
     {
       "bm_id": "BM-245",
@@ -5272,6 +7758,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5282,7 +7770,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373805+00:00"
+      "finished_at": "2026-11-10T11:30:38.963481+00:00"
     },
     {
       "bm_id": "BM-246",
@@ -5293,6 +7781,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5303,7 +7793,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373806+00:00"
+      "finished_at": "2026-11-10T11:30:38.963482+00:00"
     },
     {
       "bm_id": "BM-247",
@@ -5314,6 +7804,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5324,7 +7816,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373808+00:00"
+      "finished_at": "2026-11-10T11:30:38.963483+00:00"
     },
     {
       "bm_id": "BM-248",
@@ -5335,6 +7827,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5345,7 +7839,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373810+00:00"
+      "finished_at": "2026-11-10T11:30:38.963485+00:00"
     },
     {
       "bm_id": "BM-249",
@@ -5356,6 +7850,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5366,7 +7862,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373811+00:00"
+      "finished_at": "2026-11-10T11:30:38.963487+00:00"
     },
     {
       "bm_id": "BM-250",
@@ -5377,6 +7873,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5387,7 +7885,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373817+00:00"
+      "finished_at": "2026-11-10T11:30:38.963488+00:00"
     },
     {
       "bm_id": "BM-251",
@@ -5398,6 +7896,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5408,7 +7908,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373820+00:00"
+      "finished_at": "2026-11-10T11:30:38.963489+00:00"
     },
     {
       "bm_id": "BM-252",
@@ -5419,6 +7919,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5429,7 +7931,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373821+00:00"
+      "finished_at": "2026-11-10T11:30:38.963491+00:00"
     },
     {
       "bm_id": "BM-253",
@@ -5440,6 +7942,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5450,7 +7954,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373823+00:00"
+      "finished_at": "2026-11-10T11:30:38.963493+00:00"
     },
     {
       "bm_id": "BM-254",
@@ -5461,6 +7965,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5471,7 +7977,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373825+00:00"
+      "finished_at": "2026-11-10T11:30:38.963494+00:00"
     },
     {
       "bm_id": "BM-255",
@@ -5482,6 +7988,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5492,7 +8000,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373827+00:00"
+      "finished_at": "2026-11-10T11:30:38.963496+00:00"
     },
     {
       "bm_id": "BM-256",
@@ -5503,6 +8011,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5513,7 +8023,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373828+00:00"
+      "finished_at": "2026-11-10T11:30:38.963497+00:00"
     },
     {
       "bm_id": "BM-257",
@@ -5524,6 +8034,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5534,7 +8046,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373830+00:00"
+      "finished_at": "2026-11-10T11:30:38.963498+00:00"
     },
     {
       "bm_id": "BM-258",
@@ -5545,6 +8057,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5555,7 +8069,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373831+00:00"
+      "finished_at": "2026-11-10T11:30:38.963500+00:00"
     },
     {
       "bm_id": "BM-259",
@@ -5566,6 +8080,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5576,7 +8092,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373833+00:00"
+      "finished_at": "2026-11-10T11:30:38.963501+00:00"
     },
     {
       "bm_id": "BM-260",
@@ -5587,6 +8103,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5597,7 +8115,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373834+00:00"
+      "finished_at": "2026-11-10T11:30:38.963503+00:00"
     },
     {
       "bm_id": "BM-261",
@@ -5608,6 +8126,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5618,7 +8138,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373836+00:00"
+      "finished_at": "2026-11-10T11:30:38.963504+00:00"
     },
     {
       "bm_id": "BM-262",
@@ -5629,6 +8149,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5639,7 +8161,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373838+00:00"
+      "finished_at": "2026-11-10T11:30:38.963505+00:00"
     },
     {
       "bm_id": "BM-263",
@@ -5650,6 +8172,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5660,7 +8184,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373840+00:00"
+      "finished_at": "2026-11-10T11:30:38.963507+00:00"
     },
     {
       "bm_id": "BM-264",
@@ -5671,6 +8195,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5681,7 +8207,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373842+00:00"
+      "finished_at": "2026-11-10T11:30:38.963508+00:00"
     },
     {
       "bm_id": "BM-265",
@@ -5692,6 +8218,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5702,7 +8230,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373843+00:00"
+      "finished_at": "2026-11-10T11:30:38.963510+00:00"
     },
     {
       "bm_id": "BM-266",
@@ -5713,6 +8241,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5723,7 +8253,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373844+00:00"
+      "finished_at": "2026-11-10T11:30:38.963511+00:00"
     },
     {
       "bm_id": "BM-267",
@@ -5734,6 +8264,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5744,7 +8276,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373845+00:00"
+      "finished_at": "2026-11-10T11:30:38.963512+00:00"
     },
     {
       "bm_id": "BM-268",
@@ -5755,6 +8287,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5765,7 +8299,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373847+00:00"
+      "finished_at": "2026-11-10T11:30:38.963514+00:00"
     },
     {
       "bm_id": "BM-269",
@@ -5776,6 +8310,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5786,7 +8322,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373848+00:00"
+      "finished_at": "2026-11-10T11:30:38.963515+00:00"
     },
     {
       "bm_id": "BM-270",
@@ -5797,6 +8333,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5807,7 +8345,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373849+00:00"
+      "finished_at": "2026-11-10T11:30:38.963516+00:00"
     },
     {
       "bm_id": "BM-271",
@@ -5818,6 +8356,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5828,7 +8368,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373851+00:00"
+      "finished_at": "2026-11-10T11:30:38.963517+00:00"
     },
     {
       "bm_id": "BM-272",
@@ -5839,6 +8379,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5849,7 +8391,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373852+00:00"
+      "finished_at": "2026-11-10T11:30:38.963518+00:00"
     },
     {
       "bm_id": "BM-273",
@@ -5860,6 +8402,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5870,7 +8414,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373853+00:00"
+      "finished_at": "2026-11-10T11:30:38.963519+00:00"
     },
     {
       "bm_id": "BM-274",
@@ -5881,6 +8425,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5891,7 +8437,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373854+00:00"
+      "finished_at": "2026-11-10T11:30:38.963520+00:00"
     },
     {
       "bm_id": "BM-275",
@@ -5902,6 +8448,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5912,7 +8460,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373856+00:00"
+      "finished_at": "2026-11-10T11:30:38.963522+00:00"
     },
     {
       "bm_id": "BM-276",
@@ -5923,6 +8471,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5933,7 +8483,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373857+00:00"
+      "finished_at": "2026-11-10T11:30:38.963523+00:00"
     },
     {
       "bm_id": "BM-277",
@@ -5944,6 +8494,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5954,7 +8506,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373859+00:00"
+      "finished_at": "2026-11-10T11:30:38.963524+00:00"
     },
     {
       "bm_id": "BM-278",
@@ -5965,6 +8517,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5975,7 +8529,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373860+00:00"
+      "finished_at": "2026-11-10T11:30:38.963525+00:00"
     },
     {
       "bm_id": "BM-279",
@@ -5986,6 +8540,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -5996,7 +8552,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373861+00:00"
+      "finished_at": "2026-11-10T11:30:38.963527+00:00"
     },
     {
       "bm_id": "BM-280",
@@ -6007,6 +8563,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": "OmniGibson imports, but RoboRSI has no registered behavior backend (needs R1 controller / policy websocket); task execution is blocked",
       "success_video_url": null,
@@ -6017,7 +8575,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T11:01:21.373863+00:00"
+      "finished_at": "2026-11-10T11:30:38.963529+00:00"
     },
     {
       "bm_id": "BM-281",
@@ -6028,6 +8586,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6049,6 +8609,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6070,6 +8632,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6091,6 +8655,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6112,6 +8678,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6133,6 +8701,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6154,6 +8724,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6175,6 +8747,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6196,6 +8770,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6217,6 +8793,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6238,6 +8816,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6259,6 +8839,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6280,6 +8862,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6301,6 +8885,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6322,6 +8908,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6343,6 +8931,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6364,6 +8954,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6385,6 +8977,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6406,6 +9000,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6427,6 +9023,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6448,6 +9046,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6469,6 +9069,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6490,6 +9092,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6511,6 +9115,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6532,6 +9138,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6553,6 +9161,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6574,6 +9184,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6595,6 +9207,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6616,6 +9230,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6637,6 +9253,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6658,6 +9276,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
@@ -6679,6 +9299,8 @@
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
+      "time_breakdown": {},
+      "tool_counts": {},
       "failure_counts": {},
       "failure_reason": null,
       "success_video_url": null,
