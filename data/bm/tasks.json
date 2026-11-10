@@ -3847,37 +3847,46 @@
           "bm_seq": 27,
           "benchmark": "libero",
           "benchmark_label": "LIBERO",
-          "video_status": "pending",
-          "success_video_url": null,
+          "video_status": "published",
+          "success_video_url": "data/videos/agent/BM-027-success.mp4",
           "blender_status": "built",
           "failure_video_url": null,
           "failure_video_status": "pending",
-          "video_kind": null,
-          "exec_status": "pending",
-          "exec_success_rate": null,
-          "exec_attempts": 0,
-          "exec_rounds": 0,
-          "exec_duration_s": 0.0,
+          "video_kind": "success",
+          "exec_status": "success",
+          "exec_success_rate": 1.0,
+          "exec_attempts": 1,
+          "exec_rounds": 1,
+          "exec_duration_s": 320.33,
           "exec_failure_reason": null,
           "exec_note": "Agent 闭环：IK 末端控制 + DeepSeek VLM 摄像机观察，最多 10 轮；成功/最后一次失败视频已上传。",
-          "exec_checked_at": null,
-          "agent_success_count": 0,
-          "agent_loop_updated_at": null,
-          "success_video_label": "待执行",
-          "agent_status": "pending",
-          "agent_attempts": 0,
-          "agent_rounds": 0,
-          "agent_started_at": null,
-          "agent_finished_at": null,
-          "agent_duration_s": 0.0,
+          "exec_checked_at": "2026-11-10T11:41:47.089790+00:00",
+          "agent_success_videos": [
+            "data/videos/agent/BM-027-success.mp4"
+          ],
+          "agent_success_count": 1,
+          "agent_loop_updated_at": "2026-11-10T11:41:47.089790+00:00",
+          "success_video_label": "Agent 成功视频（等待按空间位置复现）",
+          "agent_status": "success",
+          "agent_attempts": 1,
+          "agent_rounds": 1,
+          "agent_started_at": "2026-11-10T11:35:47.930508+00:00",
+          "agent_finished_at": "2026-11-10T11:41:47.089790+00:00",
+          "agent_duration_s": 320.33,
           "agent_failure_reason": null,
-          "agent_analysis": {},
-          "agent_success_video_url": null,
+          "agent_analysis": {
+            "outcome": "vlm_declared_done",
+            "failure_category": "none",
+            "reviewer_verdict": "done",
+            "tool_calls": 23,
+            "last_round_reason": "single-agent episode"
+          },
+          "agent_success_video_url": "data/videos/agent/BM-027-success.mp4",
           "agent_last_failure_video_url": null,
-          "agent_clean_success": null,
-          "agent_success_kind": null,
-          "agent_success_note": null,
-          "agent_clean_grasp_trajectory_url": null,
+          "agent_clean_success": true,
+          "agent_success_kind": "clean",
+          "agent_success_note": "Agent 闭环成功轨迹：IK 末端控制 + VLM 视觉确认，最多 10 轮。",
+          "agent_clean_grasp_trajectory_url": "data/trajectories/BM-027-last-clean-grasp.json",
           "agent_confirmed_success": null,
           "agent_replay_status": null,
           "agent_replay_success": null,
@@ -3886,12 +3895,92 @@
           "agent_replay_attempts": null,
           "agent_replay_finished_at": null,
           "agent_replay_note": null,
-          "agent_thinking_s": null,
-          "agent_time_breakdown": {},
-          "agent_tool_counts": {},
-          "agent_failure_counts": {},
-          "agent_mode": null,
-          "agent_tool_calls": null
+          "agent_thinking_s": 149.3,
+          "agent_time_breakdown": {
+            "tool_total_s": 171.0,
+            "perception_s": 141.2,
+            "action_s": 29.8,
+            "recovery_s": 0.0,
+            "other_s": 0.0,
+            "llm_overhead_s": 149.3,
+            "tool_calls": 23,
+            "steps": 18,
+            "tool_counts": {
+              "unproject_pixel": 4,
+              "look": 3,
+              "find_by_pointing": 3,
+              "exec_python": 3,
+              "find_pixel": 2,
+              "find_by_detector": 2,
+              "observe_orbit": 1,
+              "get_arm_pose": 1,
+              "grasp_object": 1,
+              "verify_pick_complete": 1,
+              "place_on_surface": 1,
+              "done": 1
+            },
+            "top_tools": [
+              {
+                "tool": "unproject_pixel",
+                "count": 4,
+                "seconds": 0.9
+              },
+              {
+                "tool": "look",
+                "count": 3,
+                "seconds": 0.7
+              },
+              {
+                "tool": "find_by_pointing",
+                "count": 3,
+                "seconds": 66.4
+              },
+              {
+                "tool": "exec_python",
+                "count": 3,
+                "seconds": 1.7
+              },
+              {
+                "tool": "find_pixel",
+                "count": 2,
+                "seconds": 68.0
+              },
+              {
+                "tool": "find_by_detector",
+                "count": 2,
+                "seconds": 2.7
+              },
+              {
+                "tool": "observe_orbit",
+                "count": 1,
+                "seconds": 0.4
+              },
+              {
+                "tool": "get_arm_pose",
+                "count": 1,
+                "seconds": 0.2
+              }
+            ]
+          },
+          "agent_tool_counts": {
+            "unproject_pixel": 4,
+            "look": 3,
+            "find_by_pointing": 3,
+            "exec_python": 3,
+            "find_pixel": 2,
+            "find_by_detector": 2,
+            "observe_orbit": 1,
+            "get_arm_pose": 1,
+            "grasp_object": 1,
+            "verify_pick_complete": 1,
+            "place_on_surface": 1,
+            "done": 1
+          },
+          "agent_failure_counts": {
+            "primary:none": 1
+          },
+          "agent_mode": "single",
+          "agent_tool_calls": 23
         },
         {
           "id": "libero_spatial/7",
@@ -3924,7 +4013,7 @@
           "agent_status": "pending",
           "agent_attempts": 0,
           "agent_rounds": 0,
-          "agent_started_at": null,
+          "agent_started_at": "2026-11-10T11:41:47.267315+00:00",
           "agent_finished_at": null,
           "agent_duration_s": 0.0,
           "agent_failure_reason": null,
@@ -3943,12 +4032,12 @@
           "agent_replay_attempts": null,
           "agent_replay_finished_at": null,
           "agent_replay_note": null,
-          "agent_thinking_s": null,
+          "agent_thinking_s": 0.0,
           "agent_time_breakdown": {},
           "agent_tool_counts": {},
           "agent_failure_counts": {},
-          "agent_mode": null,
-          "agent_tool_calls": null
+          "agent_mode": "single",
+          "agent_tool_calls": 0
         },
         {
           "id": "libero_spatial/8",
@@ -26829,37 +26918,46 @@
       "bm_seq": 27,
       "benchmark": "libero",
       "benchmark_label": "LIBERO",
-      "video_status": "pending",
-      "success_video_url": null,
+      "video_status": "published",
+      "success_video_url": "data/videos/agent/BM-027-success.mp4",
       "blender_status": "built",
       "failure_video_url": null,
       "failure_video_status": "pending",
-      "video_kind": null,
-      "exec_status": "pending",
-      "exec_success_rate": null,
-      "exec_attempts": 0,
-      "exec_rounds": 0,
-      "exec_duration_s": 0.0,
+      "video_kind": "success",
+      "exec_status": "success",
+      "exec_success_rate": 1.0,
+      "exec_attempts": 1,
+      "exec_rounds": 1,
+      "exec_duration_s": 320.33,
       "exec_failure_reason": null,
       "exec_note": "Agent 闭环：IK 末端控制 + DeepSeek VLM 摄像机观察，最多 10 轮；成功/最后一次失败视频已上传。",
-      "exec_checked_at": null,
-      "agent_success_count": 0,
-      "agent_loop_updated_at": null,
-      "success_video_label": "待执行",
-      "agent_status": "pending",
-      "agent_attempts": 0,
-      "agent_rounds": 0,
-      "agent_started_at": null,
-      "agent_finished_at": null,
-      "agent_duration_s": 0.0,
+      "exec_checked_at": "2026-11-10T11:41:47.089790+00:00",
+      "agent_success_videos": [
+        "data/videos/agent/BM-027-success.mp4"
+      ],
+      "agent_success_count": 1,
+      "agent_loop_updated_at": "2026-11-10T11:41:47.089790+00:00",
+      "success_video_label": "Agent 成功视频（等待按空间位置复现）",
+      "agent_status": "success",
+      "agent_attempts": 1,
+      "agent_rounds": 1,
+      "agent_started_at": "2026-11-10T11:35:47.930508+00:00",
+      "agent_finished_at": "2026-11-10T11:41:47.089790+00:00",
+      "agent_duration_s": 320.33,
       "agent_failure_reason": null,
-      "agent_analysis": {},
-      "agent_success_video_url": null,
+      "agent_analysis": {
+        "outcome": "vlm_declared_done",
+        "failure_category": "none",
+        "reviewer_verdict": "done",
+        "tool_calls": 23,
+        "last_round_reason": "single-agent episode"
+      },
+      "agent_success_video_url": "data/videos/agent/BM-027-success.mp4",
       "agent_last_failure_video_url": null,
-      "agent_clean_success": null,
-      "agent_success_kind": null,
-      "agent_success_note": null,
-      "agent_clean_grasp_trajectory_url": null,
+      "agent_clean_success": true,
+      "agent_success_kind": "clean",
+      "agent_success_note": "Agent 闭环成功轨迹：IK 末端控制 + VLM 视觉确认，最多 10 轮。",
+      "agent_clean_grasp_trajectory_url": "data/trajectories/BM-027-last-clean-grasp.json",
       "agent_confirmed_success": null,
       "agent_replay_status": null,
       "agent_replay_success": null,
@@ -26868,12 +26966,92 @@
       "agent_replay_attempts": null,
       "agent_replay_finished_at": null,
       "agent_replay_note": null,
-      "agent_thinking_s": null,
-      "agent_time_breakdown": {},
-      "agent_tool_counts": {},
-      "agent_failure_counts": {},
-      "agent_mode": null,
-      "agent_tool_calls": null
+      "agent_thinking_s": 149.3,
+      "agent_time_breakdown": {
+        "tool_total_s": 171.0,
+        "perception_s": 141.2,
+        "action_s": 29.8,
+        "recovery_s": 0.0,
+        "other_s": 0.0,
+        "llm_overhead_s": 149.3,
+        "tool_calls": 23,
+        "steps": 18,
+        "tool_counts": {
+          "unproject_pixel": 4,
+          "look": 3,
+          "find_by_pointing": 3,
+          "exec_python": 3,
+          "find_pixel": 2,
+          "find_by_detector": 2,
+          "observe_orbit": 1,
+          "get_arm_pose": 1,
+          "grasp_object": 1,
+          "verify_pick_complete": 1,
+          "place_on_surface": 1,
+          "done": 1
+        },
+        "top_tools": [
+          {
+            "tool": "unproject_pixel",
+            "count": 4,
+            "seconds": 0.9
+          },
+          {
+            "tool": "look",
+            "count": 3,
+            "seconds": 0.7
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 3,
+            "seconds": 66.4
+          },
+          {
+            "tool": "exec_python",
+            "count": 3,
+            "seconds": 1.7
+          },
+          {
+            "tool": "find_pixel",
+            "count": 2,
+            "seconds": 68.0
+          },
+          {
+            "tool": "find_by_detector",
+            "count": 2,
+            "seconds": 2.7
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 1,
+            "seconds": 0.4
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 1,
+            "seconds": 0.2
+          }
+        ]
+      },
+      "agent_tool_counts": {
+        "unproject_pixel": 4,
+        "look": 3,
+        "find_by_pointing": 3,
+        "exec_python": 3,
+        "find_pixel": 2,
+        "find_by_detector": 2,
+        "observe_orbit": 1,
+        "get_arm_pose": 1,
+        "grasp_object": 1,
+        "verify_pick_complete": 1,
+        "place_on_surface": 1,
+        "done": 1
+      },
+      "agent_failure_counts": {
+        "primary:none": 1
+      },
+      "agent_mode": "single",
+      "agent_tool_calls": 23
     },
     {
       "id": "libero_spatial/7",
@@ -26906,7 +27084,7 @@
       "agent_status": "pending",
       "agent_attempts": 0,
       "agent_rounds": 0,
-      "agent_started_at": null,
+      "agent_started_at": "2026-11-10T11:41:47.267315+00:00",
       "agent_finished_at": null,
       "agent_duration_s": 0.0,
       "agent_failure_reason": null,
@@ -26925,12 +27103,12 @@
       "agent_replay_attempts": null,
       "agent_replay_finished_at": null,
       "agent_replay_note": null,
-      "agent_thinking_s": null,
+      "agent_thinking_s": 0.0,
       "agent_time_breakdown": {},
       "agent_tool_counts": {},
       "agent_failure_counts": {},
-      "agent_mode": null,
-      "agent_tool_calls": null
+      "agent_mode": "single",
+      "agent_tool_calls": 0
     },
     {
       "id": "libero_spatial/8",
@@ -45937,28 +46115,28 @@
     }
   ],
   "results_summary": {
-    "generated_at": "2026-11-10T11:35:41.651034+00:00",
+    "generated_at": "2026-11-10T11:51:10.327798+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
-    "success": 10,
+    "success": 11,
     "failure": 14,
     "infra": 2,
     "blocked": 100,
-    "pending": 207,
+    "pending": 206,
     "running": 0,
-    "clean_success": 9,
+    "clean_success": 10,
     "soft_success": 1,
     "confirmed_success": 2,
-    "replay_pending": 6,
+    "replay_pending": 7,
     "replay_failed": 2,
-    "valid_verdicts": 24,
-    "success_rate": 0.4166666666666667,
-    "clean_success_rate": 0.375,
+    "valid_verdicts": 25,
+    "success_rate": 0.44,
+    "clean_success_rate": 0.4,
     "publish": {
-      "at": "2026-11-10T11:24:33.256259+00:00",
-      "returncode": 1,
-      "tail": "2026-11-10T11:24:33Z fetch failed | fatal: 无法访问 'https://github.com/SUN4-4/project-intro.git/'：Operation too slow. Less than 1000 bytes/sec transferred the last 60 seconds",
+      "at": "2026-11-10T11:35:47.832375+00:00",
+      "returncode": 0,
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    d6dd0f9..22bfbd7  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
