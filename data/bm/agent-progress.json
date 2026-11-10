@@ -1,9 +1,9 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T12:06:40.169579+00:00",
+  "generated_at": "2026-11-10T12:21:01.133158+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T12:06:40.162942+00:00",
+    "generated_at": "2026-11-10T12:21:01.127802+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -22,9 +22,9 @@
     "success_rate": 0.4642857142857143,
     "clean_success_rate": 0.42857142857142855,
     "publish": {
-      "at": "2026-11-10T11:56:17.852716+00:00",
-      "returncode": 1,
-      "tail": "2026-11-10T11:56:17Z fetch failed | fatal: 无法访问 'https://github.com/SUN4-4/project-intro.git/'：Operation too slow. Less than 1000 bytes/sec transferred the last 60 seconds",
+      "at": "2026-11-10T12:06:49.521943+00:00",
+      "returncode": 0,
+      "tail": "正在更新文件: 100% (7/7) | 正在更新文件: 100% (7/7), 完成. | To https://github.com/SUN4-4/project-intro.git |    7423419..32a1416  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
@@ -3207,13 +3207,104 @@
       "attempts": 0,
       "rounds": 0,
       "duration_s": 0.0,
-      "thinking_s": null,
-      "time_breakdown": {},
-      "tool_counts": {},
-      "failure_counts": {},
+      "thinking_s": 772.531,
+      "time_breakdown": {
+        "tool_total_s": 1194.7,
+        "perception_s": 392.5,
+        "action_s": 37.3,
+        "recovery_s": 2.2,
+        "other_s": 762.6,
+        "llm_overhead_s": 0.0,
+        "tool_calls": 57,
+        "steps": 41,
+        "tool_counts": {
+          "look": 9,
+          "find_by_pointing": 6,
+          "unproject_pixel": 6,
+          "get_arm_pose": 4,
+          "find_by_detector": 4,
+          "grasp_object": 4,
+          "is_holding": 3,
+          "find_pixel": 3,
+          "trajectory_refine": 3,
+          "gripper": 3,
+          "mark_orbit_point": 3,
+          "place_object_in": 2,
+          "observe_orbit": 2,
+          "get_grasp_pose": 2,
+          "exec_python": 1,
+          "reset_scene": 1,
+          "?": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 9,
+            "seconds": 2.0
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 6,
+            "seconds": 260.9
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 6,
+            "seconds": 1.3
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 4,
+            "seconds": 0.9
+          },
+          {
+            "tool": "find_by_detector",
+            "count": 4,
+            "seconds": 4.7
+          },
+          {
+            "tool": "grasp_object",
+            "count": 4,
+            "seconds": 35.4
+          },
+          {
+            "tool": "is_holding",
+            "count": 3,
+            "seconds": 0.7
+          },
+          {
+            "tool": "find_pixel",
+            "count": 3,
+            "seconds": 116.6
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 9,
+        "find_by_pointing": 6,
+        "unproject_pixel": 6,
+        "get_arm_pose": 4,
+        "find_by_detector": 4,
+        "grasp_object": 4,
+        "is_holding": 3,
+        "find_pixel": 3,
+        "trajectory_refine": 3,
+        "gripper": 3,
+        "mark_orbit_point": 3,
+        "place_object_in": 2,
+        "observe_orbit": 2,
+        "get_grasp_pose": 2,
+        "exec_python": 1,
+        "reset_scene": 1,
+        "?": 1
+      },
+      "failure_counts": {
+        "primary:grasp_generation": 1,
+        "contrib:planning": 1
+      },
       "failure_reason": null,
       "success_video_url": null,
-      "last_failure_video_url": null,
+      "last_failure_video_url": "data/videos/agent/BM-031-last-failure.mp4",
       "clean_grasp_trajectory_url": null,
       "confirmed_success": null,
       "replay_status": null,
