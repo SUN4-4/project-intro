@@ -142,6 +142,8 @@ _EXEC_FIELDS = (
     "agent_replay_attempts",
     "agent_replay_finished_at",
     "agent_replay_note",
+    "agent_thinking_s",
+    "agent_failure_counts",
 )
 
 

@@ -322,6 +322,9 @@ function createTaskCard(task, dataDir) {
     if (typeof duration === "number") {
       metrics.push(`${Math.round(duration)}s`);
     }
+    if (typeof task.agent_thinking_s === "number") {
+      metrics.push(`思考 ${Math.round(task.agent_thinking_s)}s`);
+    }
     if (metrics.length) {
       const line = document.createElement("span");
       line.className = "task-card__exec-metrics";
@@ -343,16 +346,18 @@ function createTaskCard(task, dataDir) {
       note.textContent = `注意：${task.agent_success_note}`;
       body.append(note);
     }
-    if (task.agent_clean_grasp_trajectory_url) {
-      const trajectory = document.createElement("a");
-      trajectory.className = "task-card__trajectory-link";
-      trajectory.href = task.agent_clean_grasp_trajectory_url;
-      trajectory.download = "";
-      trajectory.textContent =
-        task.agent_status === "success"
-          ? "下载最后一次干净抓取轨迹 (JSON)"
-          : "下载最后一次成功抓取动作轨迹（任务未完成）";
-      body.append(trajectory);
+    const failureCounts = task.agent_failure_counts || {};
+    const failureEntries = Object.entries(failureCounts)
+      .filter(([, count]) => typeof count === "number" && count > 0)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 5);
+    if (failureEntries.length) {
+      const failures = document.createElement("p");
+      failures.className = "task-card__exec-reason";
+      failures.textContent = `失败判定：${failureEntries
+        .map(([key, count]) => `${key.replace(/^(label|code|primary|contrib):/, "")}×${count}`)
+        .join(" · ")}`;
+      body.append(failures);
     }
   }
 
