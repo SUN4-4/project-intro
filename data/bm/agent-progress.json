@@ -1,9 +1,9 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T12:35:14.121154+00:00",
+  "generated_at": "2026-11-10T12:39:56.093700+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T12:35:14.115784+00:00",
+    "generated_at": "2026-11-10T12:39:56.082893+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -11,8 +11,8 @@
     "failure": 15,
     "infra": 2,
     "blocked": 100,
-    "pending": 202,
-    "running": 0,
+    "pending": 201,
+    "running": 1,
     "clean_success": 13,
     "soft_success": 1,
     "confirmed_success": 2,
@@ -22,14 +22,20 @@
     "success_rate": 0.4827586206896552,
     "clean_success_rate": 0.4482758620689655,
     "publish": {
-      "at": "2026-11-10T12:21:07.851736+00:00",
+      "at": "2026-11-10T12:35:20.241543+00:00",
       "returncode": 0,
-      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    32a1416..3f0c7ae  main -> main",
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    3f0c7ae..27c79f3  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
   },
-  "current": null,
+  "current": {
+    "bm_id": "BM-033",
+    "task_id": "libero_10/2",
+    "benchmark": "libero",
+    "attempt": 1,
+    "started_at": "2026-11-10T12:35:20.252753+00:00"
+  },
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -3421,8 +3427,8 @@
       "bm_id": "BM-033",
       "task_id": "libero_10/2",
       "benchmark": "libero",
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
