@@ -1,9 +1,9 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T03:29:34.816229+00:00",
+  "generated_at": "2026-11-10T03:30:09.972842+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T03:29:34.812861+00:00",
+    "generated_at": "2026-11-10T03:30:09.969329+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -11,21 +11,27 @@
     "failure": 14,
     "infra": 1,
     "blocked": 100,
-    "pending": 212,
-    "running": 0,
+    "pending": 211,
+    "running": 1,
     "clean_success": 5,
     "soft_success": 1,
     "valid_verdicts": 20,
     "success_rate": 0.3,
     "clean_success_rate": 0.25,
     "publish": {
-      "at": "2026-11-10T03:08:29.624976+00:00",
+      "at": "2026-11-10T03:29:40.626212+00:00",
       "returncode": 0,
-      "tail": " * branch            main       -> FETCH_HEAD |  + 64fa87a...41930eb main       -> origin/main  (强制更新) | To https://github.com/SUN4-4/project-intro.git |    41930eb..4e2632c  main -> main",
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    4871106..3e67816  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     }
   },
-  "current": null,
+  "current": {
+    "bm_id": "BM-022",
+    "task_id": "libero_spatial/1",
+    "benchmark": "libero",
+    "attempt": 1,
+    "started_at": "2026-11-10T03:29:40.633224+00:00"
+  },
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -320,6 +326,20 @@
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": "data/trajectories/BM-021-last-clean-grasp.json",
       "finished_at": "2026-11-10T03:29:34.795437+00:00"
+    },
+    {
+      "bm_id": "BM-022",
+      "task_id": "libero_spatial/1",
+      "benchmark": "libero",
+      "status": "running",
+      "attempts": 1,
+      "rounds": 0,
+      "duration_s": 0.0,
+      "failure_reason": null,
+      "success_video_url": null,
+      "last_failure_video_url": null,
+      "clean_grasp_trajectory_url": null,
+      "finished_at": null
     },
     {
       "bm_id": "BM-131",
