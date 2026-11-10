@@ -1,23 +1,23 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T02:00:10.143223+00:00",
+  "generated_at": "2026-11-10T02:07:44.051001+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T02:00:10.140041+00:00",
+    "generated_at": "2026-11-10T02:07:44.047694+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
-    "success": 4,
+    "success": 5,
     "failure": 13,
     "infra": 1,
     "blocked": 100,
     "pending": 214,
-    "running": 1,
-    "clean_success": 3,
+    "running": 0,
+    "clean_success": 4,
     "soft_success": 1,
-    "valid_verdicts": 17,
-    "success_rate": 0.23529411764705882,
-    "clean_success_rate": 0.17647058823529413,
+    "valid_verdicts": 18,
+    "success_rate": 0.2777777777777778,
+    "clean_success_rate": 0.2222222222222222,
     "publish": {
       "at": "2026-11-10T01:52:39.191693+00:00",
       "returncode": 124,
@@ -25,13 +25,7 @@
       "url": "https://sun4-4.github.io/project-intro/"
     }
   },
-  "current": {
-    "bm_id": "BM-019",
-    "task_id": "libero_object/8",
-    "benchmark": "libero",
-    "attempt": 1,
-    "started_at": "2026-11-10T01:52:39.199821+00:00"
-  },
+  "current": null,
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -289,15 +283,15 @@
       "bm_id": "BM-019",
       "task_id": "libero_object/8",
       "benchmark": "libero",
-      "status": "running",
+      "status": "success",
       "attempts": 1,
-      "rounds": 0,
-      "duration_s": 0.0,
+      "rounds": 4,
+      "duration_s": 891.876,
       "failure_reason": null,
-      "success_video_url": null,
+      "success_video_url": "data/videos/agent/BM-019-success.mp4",
       "last_failure_video_url": null,
-      "clean_grasp_trajectory_url": null,
-      "finished_at": null
+      "clean_grasp_trajectory_url": "data/trajectories/BM-019-last-clean-grasp.json",
+      "finished_at": "2026-11-10T02:07:44.030458+00:00"
     },
     {
       "bm_id": "BM-131",
