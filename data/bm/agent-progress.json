@@ -1,23 +1,23 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T03:30:13.327899+00:00",
+  "generated_at": "2026-11-10T03:51:55.460539+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T03:30:13.324228+00:00",
+    "generated_at": "2026-11-10T03:51:55.457161+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 6,
-    "failure": 14,
-    "infra": 1,
+    "failure": 15,
+    "infra": 2,
     "blocked": 100,
-    "pending": 211,
-    "running": 1,
+    "pending": 210,
+    "running": 0,
     "clean_success": 5,
     "soft_success": 1,
-    "valid_verdicts": 20,
-    "success_rate": 0.3,
-    "clean_success_rate": 0.25,
+    "valid_verdicts": 21,
+    "success_rate": 0.2857142857142857,
+    "clean_success_rate": 0.23809523809523808,
     "publish": {
       "at": "2026-11-10T03:29:40.626212+00:00",
       "returncode": 0,
@@ -25,13 +25,7 @@
       "url": "https://sun4-4.github.io/project-intro/"
     }
   },
-  "current": {
-    "bm_id": "BM-022",
-    "task_id": "libero_spatial/1",
-    "benchmark": "libero",
-    "attempt": 1,
-    "started_at": "2026-11-10T03:29:40.633224+00:00"
-  },
+  "current": null,
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -331,15 +325,29 @@
       "bm_id": "BM-022",
       "task_id": "libero_spatial/1",
       "benchmark": "libero",
-      "status": "running",
+      "status": "failure",
+      "attempts": 1,
+      "rounds": 2,
+      "duration_s": 504.904,
+      "failure_reason": "✗ **libero_pick_place** seed=0 · budget_exceeded (32 tool calls)\nMode: `evolve`\n\nWorkspace: `/home/sunhe/.roborsi-bm-agent/home/workspaces/libero_pick_place-20261110-112941-cb040b`\n  plan.md · summary.md · review.md\n\nReviewer verdict: `blocked` · proposal: `NO_PROPOSAL`",
+      "success_video_url": null,
+      "last_failure_video_url": "data/videos/agent/BM-022-last-failure.mp4",
+      "clean_grasp_trajectory_url": "data/trajectories/BM-022-last-clean-grasp.json",
+      "finished_at": "2026-11-10T03:38:18.670409+00:00"
+    },
+    {
+      "bm_id": "BM-023",
+      "task_id": "libero_spatial/2",
+      "benchmark": "libero",
+      "status": "infra",
       "attempts": 1,
       "rounds": 0,
-      "duration_s": 0.0,
-      "failure_reason": null,
+      "duration_s": 816.625,
+      "failure_reason": "BadRequestError: litellm.BadRequestError: DeepseekException - {\"error\":{\"message\":\"Insufficient Balance (request_id: e48477b8-9479-41c1-a5ee-0da5649f1af6)\",\"type\":\"insufficient_balance_error\",\"param\":null,\"code\":\"invalid_request_error\"}}",
       "success_video_url": null,
       "last_failure_video_url": null,
       "clean_grasp_trajectory_url": null,
-      "finished_at": null
+      "finished_at": "2026-11-10T03:51:55.444023+00:00"
     },
     {
       "bm_id": "BM-131",
