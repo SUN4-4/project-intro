@@ -69,9 +69,9 @@
       "place_tool": "place_on_surface",
       "task_clean_success": true,
       "task_status": "success",
-      "steps": 3,
+      "steps": 6,
       "file": "data/trajectories/BM-010-last-clean-grasp.json",
-      "updated_at": "2026-11-09T19:59:26.469756+00:00"
+      "updated_at": "2026-11-10T07:14:32.965961+00:00"
     },
     "BM-012": {
       "bm_id": "BM-012",
@@ -182,5 +182,5 @@
       "updated_at": "2026-11-10T03:38:18.672092+00:00"
     }
   },
-  "updated_at": "2026-11-10T07:05:32.684521+00:00"
+  "updated_at": "2026-11-10T07:14:32.965956+00:00"
 }
