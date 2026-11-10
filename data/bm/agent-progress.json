@@ -1,9 +1,9 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T13:00:29.912305+00:00",
+  "generated_at": "2026-11-10T13:07:01.829408+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T13:00:29.907296+00:00",
+    "generated_at": "2026-11-10T13:07:01.824004+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -11,8 +11,8 @@
     "failure": 15,
     "infra": 6,
     "blocked": 100,
-    "pending": 197,
-    "running": 1,
+    "pending": 198,
+    "running": 0,
     "clean_success": 13,
     "soft_success": 1,
     "confirmed_success": 2,
@@ -29,13 +29,7 @@
     },
     "paused": null
   },
-  "current": {
-    "bm_id": "BM-037",
-    "task_id": "libero_10/6",
-    "benchmark": "libero",
-    "attempt": 1,
-    "started_at": "2026-11-10T12:58:44.294106+00:00"
-  },
+  "current": null,
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -3519,11 +3513,11 @@
       "bm_id": "BM-037",
       "task_id": "libero_10/6",
       "benchmark": "libero",
-      "status": "running",
-      "attempts": 1,
+      "status": "pending",
+      "attempts": 0,
       "rounds": 0,
       "duration_s": 0.0,
-      "thinking_s": null,
+      "thinking_s": 0.0,
       "time_breakdown": {},
       "tool_counts": {},
       "failure_counts": {},
