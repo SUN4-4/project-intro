@@ -1,9 +1,9 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T17:02:31.236229+00:00",
+  "generated_at": "2026-11-10T17:15:06.728719+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T17:02:31.230886+00:00",
+    "generated_at": "2026-11-10T17:15:06.723245+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -22,9 +22,9 @@
     "success_rate": 0.4166666666666667,
     "clean_success_rate": 0.3888888888888889,
     "publish": {
-      "at": "2026-11-10T16:44:31.204604+00:00",
-      "returncode": 1,
-      "tail": "2026-11-10T16:44:31Z fetch failed | fatal: 无法访问 'https://github.com/SUN4-4/project-intro.git/'：Operation too slow. Less than 1000 bytes/sec transferred the last 60 seconds",
+      "at": "2026-11-10T17:02:40.883867+00:00",
+      "returncode": 0,
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    4a7bcd1..f4d3933  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
@@ -3512,100 +3512,109 @@
       "attempts": 0,
       "rounds": 0,
       "duration_s": 0.0,
-      "thinking_s": 640.978,
+      "thinking_s": 679.776,
       "time_breakdown": {
-        "tool_total_s": 802.4,
-        "perception_s": 138.9,
-        "action_s": 29.1,
-        "recovery_s": 3.3,
-        "other_s": 631.1,
+        "tool_total_s": 794.6,
+        "perception_s": 92.9,
+        "action_s": 28.9,
+        "recovery_s": 2.9,
+        "other_s": 669.9,
         "llm_overhead_s": 0.0,
-        "tool_calls": 74,
-        "steps": 66,
+        "tool_calls": 91,
+        "steps": 74,
         "tool_counts": {
-          "look": 13,
-          "find_by_pointing": 13,
-          "unproject_pixel": 10,
-          "exec_python": 6,
+          "look": 15,
+          "find_by_detector": 10,
+          "unproject_pixel": 9,
+          "get_arm_pose": 6,
+          "move_to_pose": 6,
+          "gripper": 6,
+          "find_by_pointing": 5,
           "grasp_object": 5,
-          "find_by_detector": 4,
-          "observe_orbit": 4,
-          "get_arm_pose": 4,
-          "home": 3,
-          "get_grasp_pose": 2,
+          "exec_python": 4,
+          "descend_tcp_to_z": 4,
+          "is_holding": 3,
+          "observe_orbit": 3,
+          "grep": 3,
+          "home": 2,
           "trajectory_refine": 2,
-          "find_pixel": 2,
-          "push_object": 1,
-          "gripper": 1,
-          "is_holding": 1,
+          "?": 2,
           "recover_joint_posture": 1,
           "reset_scene": 1,
-          "?": 1
+          "get_grasp_pose": 1,
+          "verify_pick_complete": 1,
+          "place_held_at_target_servo": 1,
+          "move_to_pixel": 1
         },
         "top_tools": [
           {
             "tool": "look",
-            "count": 13,
-            "seconds": 2.9
+            "count": 15,
+            "seconds": 3.3
           },
           {
-            "tool": "find_by_pointing",
-            "count": 13,
-            "seconds": 88.5
+            "tool": "find_by_detector",
+            "count": 10,
+            "seconds": 18.3
           },
           {
             "tool": "unproject_pixel",
-            "count": 10,
-            "seconds": 2.4
+            "count": 9,
+            "seconds": 2.1
           },
           {
-            "tool": "exec_python",
+            "tool": "get_arm_pose",
             "count": 6,
-            "seconds": 3.4
+            "seconds": 1.3
+          },
+          {
+            "tool": "move_to_pose",
+            "count": 6,
+            "seconds": 2.1
+          },
+          {
+            "tool": "gripper",
+            "count": 6,
+            "seconds": 1.9
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 5,
+            "seconds": 61.3
           },
           {
             "tool": "grasp_object",
             "count": 5,
-            "seconds": 28.7
-          },
-          {
-            "tool": "find_by_detector",
-            "count": 4,
-            "seconds": 5.0
-          },
-          {
-            "tool": "observe_orbit",
-            "count": 4,
-            "seconds": 1.0
-          },
-          {
-            "tool": "get_arm_pose",
-            "count": 4,
-            "seconds": 0.9
+            "seconds": 23.1
           }
         ]
       },
       "tool_counts": {
-        "look": 13,
-        "find_by_pointing": 13,
-        "unproject_pixel": 10,
-        "exec_python": 6,
+        "look": 15,
+        "find_by_detector": 10,
+        "unproject_pixel": 9,
+        "get_arm_pose": 6,
+        "move_to_pose": 6,
+        "gripper": 6,
+        "find_by_pointing": 5,
         "grasp_object": 5,
-        "find_by_detector": 4,
-        "observe_orbit": 4,
-        "get_arm_pose": 4,
-        "home": 3,
-        "get_grasp_pose": 2,
+        "exec_python": 4,
+        "descend_tcp_to_z": 4,
+        "is_holding": 3,
+        "observe_orbit": 3,
+        "grep": 3,
+        "home": 2,
         "trajectory_refine": 2,
-        "find_pixel": 2,
-        "push_object": 1,
-        "gripper": 1,
-        "is_holding": 1,
+        "?": 2,
         "recover_joint_posture": 1,
         "reset_scene": 1,
-        "?": 1
+        "get_grasp_pose": 1,
+        "verify_pick_complete": 1,
+        "place_held_at_target_servo": 1,
+        "move_to_pixel": 1
       },
       "failure_counts": {
+        "primary:placement": 1,
         "contrib:planning": 1
       },
       "failure_reason": null,
