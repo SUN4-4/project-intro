@@ -1,36 +1,36 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T00:30:07.985704+00:00",
+  "generated_at": "2026-11-10T01:00:09.858435+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T00:30:07.982523+00:00",
+    "generated_at": "2026-11-10T01:00:09.855221+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 4,
-    "failure": 11,
+    "failure": 12,
     "infra": 1,
     "blocked": 100,
-    "pending": 216,
+    "pending": 215,
     "running": 1,
     "clean_success": 3,
     "soft_success": 1,
-    "valid_verdicts": 15,
-    "success_rate": 0.26666666666666666,
-    "clean_success_rate": 0.2,
+    "valid_verdicts": 16,
+    "success_rate": 0.25,
+    "clean_success_rate": 0.1875,
     "publish": {
-      "at": "2026-11-09T23:57:53.137215+00:00",
-      "returncode": 0,
-      "tail": "正在更新文件: 100% (2/2) | 正在更新文件: 100% (2/2), 完成. | To https://github.com/SUN4-4/project-intro.git |    908e3a1..9fca203  main -> main",
+      "at": "2026-11-10T00:52:48.301575+00:00",
+      "returncode": 1,
+      "tail": "2026-11-10T00:52:48Z fetch failed",
       "url": "https://sun4-4.github.io/project-intro/"
     }
   },
   "current": {
-    "bm_id": "BM-017",
-    "task_id": "libero_object/6",
+    "bm_id": "BM-018",
+    "task_id": "libero_object/7",
     "benchmark": "libero",
     "attempt": 1,
-    "started_at": "2026-11-10T00:06:01.640724+00:00"
+    "started_at": "2026-11-10T00:52:48.313593+00:00"
   },
   "tasks": [
     {
@@ -260,6 +260,20 @@
     {
       "bm_id": "BM-017",
       "task_id": "libero_object/6",
+      "benchmark": "libero",
+      "status": "failure",
+      "attempts": 1,
+      "rounds": 10,
+      "duration_s": 2733.601,
+      "failure_reason": "place_object_in's basket approach was unreachable (round 10 step 5: 'could not reach the container approach pose', approach_position_error 0.105 m, ee_pos x=-0.0248 vs target x≈+0.0799) and the carton slipped out of the pads during that failed approach (step 8 is_holding: holding=False, gripper_gap=0.0012, closed_empty); the butter now lies on the table and the basket liner is empty.",
+      "success_video_url": null,
+      "last_failure_video_url": "data/videos/agent/BM-017-last-failure.mp4",
+      "clean_grasp_trajectory_url": "data/trajectories/BM-017-last-clean-grasp.json",
+      "finished_at": "2026-11-10T00:51:48.217858+00:00"
+    },
+    {
+      "bm_id": "BM-018",
+      "task_id": "libero_object/7",
       "benchmark": "libero",
       "status": "running",
       "attempts": 1,
