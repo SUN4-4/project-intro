@@ -1,9 +1,9 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T15:21:24.725925+00:00",
+  "generated_at": "2026-11-10T15:30:25.963352+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T15:21:24.720590+00:00",
+    "generated_at": "2026-11-10T15:30:25.952744+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -11,8 +11,8 @@
     "failure": 17,
     "infra": 6,
     "blocked": 100,
-    "pending": 195,
-    "running": 0,
+    "pending": 194,
+    "running": 1,
     "clean_success": 14,
     "soft_success": 1,
     "confirmed_success": 2,
@@ -22,14 +22,20 @@
     "success_rate": 0.46875,
     "clean_success_rate": 0.4375,
     "publish": {
-      "at": "2026-11-10T15:10:06.178369+00:00",
-      "returncode": 1,
-      "tail": "2026-11-10T15:10:06Z fetch failed | fatal: 无法访问 'https://github.com/SUN4-4/project-intro.git/'：Operation too slow. Less than 1000 bytes/sec transferred the last 60 seconds",
+      "at": "2026-11-10T15:21:31.557284+00:00",
+      "returncode": 0,
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    06cea5f..6ad2997  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
   },
-  "current": null,
+  "current": {
+    "bm_id": "BM-043",
+    "task_id": "libero_90/2",
+    "benchmark": "libero",
+    "attempt": 1,
+    "started_at": "2026-11-10T15:21:31.568881+00:00"
+  },
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -4192,8 +4198,8 @@
       "bm_id": "BM-043",
       "task_id": "libero_90/2",
       "benchmark": "libero",
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "rounds": 0,
       "duration_s": 0.0,
       "thinking_s": null,
