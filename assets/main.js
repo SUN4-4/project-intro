@@ -323,7 +323,15 @@ function createTaskCard(task, dataDir) {
       metrics.push(`${Math.round(duration)}s`);
     }
     if (typeof task.agent_thinking_s === "number") {
-      metrics.push(`思考 ${Math.round(task.agent_thinking_s)}s`);
+      metrics.push(
+        `${task.agent_mode === "single" ? "Agent" : "思考"} ${Math.round(task.agent_thinking_s)}s`
+      );
+    }
+    if (task.agent_mode === "single") {
+      metrics.push("单Agent");
+    }
+    if (typeof task.agent_tool_calls === "number") {
+      metrics.push(`${task.agent_tool_calls} 工具`);
     }
     if (metrics.length) {
       const line = document.createElement("span");

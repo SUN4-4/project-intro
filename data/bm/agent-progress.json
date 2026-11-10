@@ -1,9 +1,9 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-10T08:15:30.092753+00:00",
+  "generated_at": "2026-11-10T08:34:39.177608+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-10T08:15:30.088972+00:00",
+    "generated_at": "2026-11-10T08:34:39.173458+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -34,7 +34,7 @@
     "task_id": "libero_goal/5",
     "benchmark": "libero",
     "attempt": 1,
-    "started_at": "2026-11-10T08:15:30.076187+00:00"
+    "started_at": "2026-11-10T08:34:39.156572+00:00"
   },
   "tasks": [
     {
@@ -3933,7 +3933,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986278+00:00"
+      "finished_at": "2026-11-10T08:34:39.079928+00:00"
     },
     {
       "bm_id": "BM-182",
@@ -3954,7 +3954,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986294+00:00"
+      "finished_at": "2026-11-10T08:34:39.079946+00:00"
     },
     {
       "bm_id": "BM-183",
@@ -3975,7 +3975,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986298+00:00"
+      "finished_at": "2026-11-10T08:34:39.079951+00:00"
     },
     {
       "bm_id": "BM-184",
@@ -3996,7 +3996,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986300+00:00"
+      "finished_at": "2026-11-10T08:34:39.079954+00:00"
     },
     {
       "bm_id": "BM-185",
@@ -4017,7 +4017,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986302+00:00"
+      "finished_at": "2026-11-10T08:34:39.079957+00:00"
     },
     {
       "bm_id": "BM-186",
@@ -4038,7 +4038,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986304+00:00"
+      "finished_at": "2026-11-10T08:34:39.079959+00:00"
     },
     {
       "bm_id": "BM-187",
@@ -4059,7 +4059,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986306+00:00"
+      "finished_at": "2026-11-10T08:34:39.079961+00:00"
     },
     {
       "bm_id": "BM-188",
@@ -4080,7 +4080,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986308+00:00"
+      "finished_at": "2026-11-10T08:34:39.079963+00:00"
     },
     {
       "bm_id": "BM-189",
@@ -4101,7 +4101,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986310+00:00"
+      "finished_at": "2026-11-10T08:34:39.079966+00:00"
     },
     {
       "bm_id": "BM-190",
@@ -4122,7 +4122,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986312+00:00"
+      "finished_at": "2026-11-10T08:34:39.079969+00:00"
     },
     {
       "bm_id": "BM-191",
@@ -4143,7 +4143,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986315+00:00"
+      "finished_at": "2026-11-10T08:34:39.079972+00:00"
     },
     {
       "bm_id": "BM-192",
@@ -4164,7 +4164,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986316+00:00"
+      "finished_at": "2026-11-10T08:34:39.079974+00:00"
     },
     {
       "bm_id": "BM-193",
@@ -4185,7 +4185,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986317+00:00"
+      "finished_at": "2026-11-10T08:34:39.079976+00:00"
     },
     {
       "bm_id": "BM-194",
@@ -4206,7 +4206,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986319+00:00"
+      "finished_at": "2026-11-10T08:34:39.079978+00:00"
     },
     {
       "bm_id": "BM-195",
@@ -4227,7 +4227,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986320+00:00"
+      "finished_at": "2026-11-10T08:34:39.079980+00:00"
     },
     {
       "bm_id": "BM-196",
@@ -4248,7 +4248,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986321+00:00"
+      "finished_at": "2026-11-10T08:34:39.079983+00:00"
     },
     {
       "bm_id": "BM-197",
@@ -4269,7 +4269,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986323+00:00"
+      "finished_at": "2026-11-10T08:34:39.079985+00:00"
     },
     {
       "bm_id": "BM-198",
@@ -4290,7 +4290,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986324+00:00"
+      "finished_at": "2026-11-10T08:34:39.079987+00:00"
     },
     {
       "bm_id": "BM-199",
@@ -4311,7 +4311,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986326+00:00"
+      "finished_at": "2026-11-10T08:34:39.079988+00:00"
     },
     {
       "bm_id": "BM-200",
@@ -4332,7 +4332,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986328+00:00"
+      "finished_at": "2026-11-10T08:34:39.079991+00:00"
     },
     {
       "bm_id": "BM-201",
@@ -4353,7 +4353,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986330+00:00"
+      "finished_at": "2026-11-10T08:34:39.079993+00:00"
     },
     {
       "bm_id": "BM-202",
@@ -4374,7 +4374,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986331+00:00"
+      "finished_at": "2026-11-10T08:34:39.079995+00:00"
     },
     {
       "bm_id": "BM-203",
@@ -4395,7 +4395,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986333+00:00"
+      "finished_at": "2026-11-10T08:34:39.079997+00:00"
     },
     {
       "bm_id": "BM-204",
@@ -4416,7 +4416,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986334+00:00"
+      "finished_at": "2026-11-10T08:34:39.079999+00:00"
     },
     {
       "bm_id": "BM-205",
@@ -4437,7 +4437,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986336+00:00"
+      "finished_at": "2026-11-10T08:34:39.080001+00:00"
     },
     {
       "bm_id": "BM-206",
@@ -4458,7 +4458,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986338+00:00"
+      "finished_at": "2026-11-10T08:34:39.080004+00:00"
     },
     {
       "bm_id": "BM-207",
@@ -4479,7 +4479,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986339+00:00"
+      "finished_at": "2026-11-10T08:34:39.080006+00:00"
     },
     {
       "bm_id": "BM-208",
@@ -4500,7 +4500,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986341+00:00"
+      "finished_at": "2026-11-10T08:34:39.080007+00:00"
     },
     {
       "bm_id": "BM-209",
@@ -4521,7 +4521,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986342+00:00"
+      "finished_at": "2026-11-10T08:34:39.080009+00:00"
     },
     {
       "bm_id": "BM-210",
@@ -4542,7 +4542,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986343+00:00"
+      "finished_at": "2026-11-10T08:34:39.080011+00:00"
     },
     {
       "bm_id": "BM-211",
@@ -4563,7 +4563,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986345+00:00"
+      "finished_at": "2026-11-10T08:34:39.080013+00:00"
     },
     {
       "bm_id": "BM-212",
@@ -4584,7 +4584,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986346+00:00"
+      "finished_at": "2026-11-10T08:34:39.080015+00:00"
     },
     {
       "bm_id": "BM-213",
@@ -4605,7 +4605,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986348+00:00"
+      "finished_at": "2026-11-10T08:34:39.080017+00:00"
     },
     {
       "bm_id": "BM-214",
@@ -4626,7 +4626,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986349+00:00"
+      "finished_at": "2026-11-10T08:34:39.080019+00:00"
     },
     {
       "bm_id": "BM-215",
@@ -4647,7 +4647,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986350+00:00"
+      "finished_at": "2026-11-10T08:34:39.080021+00:00"
     },
     {
       "bm_id": "BM-216",
@@ -4668,7 +4668,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986352+00:00"
+      "finished_at": "2026-11-10T08:34:39.080022+00:00"
     },
     {
       "bm_id": "BM-217",
@@ -4689,7 +4689,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986353+00:00"
+      "finished_at": "2026-11-10T08:34:39.080024+00:00"
     },
     {
       "bm_id": "BM-218",
@@ -4710,7 +4710,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986354+00:00"
+      "finished_at": "2026-11-10T08:34:39.080026+00:00"
     },
     {
       "bm_id": "BM-219",
@@ -4731,7 +4731,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986356+00:00"
+      "finished_at": "2026-11-10T08:34:39.080029+00:00"
     },
     {
       "bm_id": "BM-220",
@@ -4752,7 +4752,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986357+00:00"
+      "finished_at": "2026-11-10T08:34:39.080031+00:00"
     },
     {
       "bm_id": "BM-221",
@@ -4773,7 +4773,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986359+00:00"
+      "finished_at": "2026-11-10T08:34:39.080033+00:00"
     },
     {
       "bm_id": "BM-222",
@@ -4794,7 +4794,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986361+00:00"
+      "finished_at": "2026-11-10T08:34:39.080036+00:00"
     },
     {
       "bm_id": "BM-223",
@@ -4815,7 +4815,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986362+00:00"
+      "finished_at": "2026-11-10T08:34:39.080038+00:00"
     },
     {
       "bm_id": "BM-224",
@@ -4836,7 +4836,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986364+00:00"
+      "finished_at": "2026-11-10T08:34:39.080039+00:00"
     },
     {
       "bm_id": "BM-225",
@@ -4857,7 +4857,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986365+00:00"
+      "finished_at": "2026-11-10T08:34:39.080041+00:00"
     },
     {
       "bm_id": "BM-226",
@@ -4878,7 +4878,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986366+00:00"
+      "finished_at": "2026-11-10T08:34:39.080043+00:00"
     },
     {
       "bm_id": "BM-227",
@@ -4899,7 +4899,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986367+00:00"
+      "finished_at": "2026-11-10T08:34:39.080045+00:00"
     },
     {
       "bm_id": "BM-228",
@@ -4920,7 +4920,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986369+00:00"
+      "finished_at": "2026-11-10T08:34:39.080047+00:00"
     },
     {
       "bm_id": "BM-229",
@@ -4941,7 +4941,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986370+00:00"
+      "finished_at": "2026-11-10T08:34:39.080049+00:00"
     },
     {
       "bm_id": "BM-230",
@@ -4962,7 +4962,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986371+00:00"
+      "finished_at": "2026-11-10T08:34:39.080051+00:00"
     },
     {
       "bm_id": "BM-231",
@@ -4983,7 +4983,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986373+00:00"
+      "finished_at": "2026-11-10T08:34:39.080054+00:00"
     },
     {
       "bm_id": "BM-232",
@@ -5004,7 +5004,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986375+00:00"
+      "finished_at": "2026-11-10T08:34:39.080055+00:00"
     },
     {
       "bm_id": "BM-233",
@@ -5025,7 +5025,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986376+00:00"
+      "finished_at": "2026-11-10T08:34:39.080057+00:00"
     },
     {
       "bm_id": "BM-234",
@@ -5046,7 +5046,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986377+00:00"
+      "finished_at": "2026-11-10T08:34:39.080059+00:00"
     },
     {
       "bm_id": "BM-235",
@@ -5067,7 +5067,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986378+00:00"
+      "finished_at": "2026-11-10T08:34:39.080060+00:00"
     },
     {
       "bm_id": "BM-236",
@@ -5088,7 +5088,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986379+00:00"
+      "finished_at": "2026-11-10T08:34:39.080062+00:00"
     },
     {
       "bm_id": "BM-237",
@@ -5109,7 +5109,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986381+00:00"
+      "finished_at": "2026-11-10T08:34:39.080064+00:00"
     },
     {
       "bm_id": "BM-238",
@@ -5130,7 +5130,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986382+00:00"
+      "finished_at": "2026-11-10T08:34:39.080066+00:00"
     },
     {
       "bm_id": "BM-239",
@@ -5151,7 +5151,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986384+00:00"
+      "finished_at": "2026-11-10T08:34:39.080068+00:00"
     },
     {
       "bm_id": "BM-240",
@@ -5172,7 +5172,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986385+00:00"
+      "finished_at": "2026-11-10T08:34:39.080070+00:00"
     },
     {
       "bm_id": "BM-241",
@@ -5193,7 +5193,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986387+00:00"
+      "finished_at": "2026-11-10T08:34:39.080072+00:00"
     },
     {
       "bm_id": "BM-242",
@@ -5214,7 +5214,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986388+00:00"
+      "finished_at": "2026-11-10T08:34:39.080074+00:00"
     },
     {
       "bm_id": "BM-243",
@@ -5235,7 +5235,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986389+00:00"
+      "finished_at": "2026-11-10T08:34:39.080075+00:00"
     },
     {
       "bm_id": "BM-244",
@@ -5256,7 +5256,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986390+00:00"
+      "finished_at": "2026-11-10T08:34:39.080078+00:00"
     },
     {
       "bm_id": "BM-245",
@@ -5277,7 +5277,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986392+00:00"
+      "finished_at": "2026-11-10T08:34:39.080080+00:00"
     },
     {
       "bm_id": "BM-246",
@@ -5298,7 +5298,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986393+00:00"
+      "finished_at": "2026-11-10T08:34:39.080082+00:00"
     },
     {
       "bm_id": "BM-247",
@@ -5319,7 +5319,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986394+00:00"
+      "finished_at": "2026-11-10T08:34:39.080083+00:00"
     },
     {
       "bm_id": "BM-248",
@@ -5340,7 +5340,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986397+00:00"
+      "finished_at": "2026-11-10T08:34:39.080085+00:00"
     },
     {
       "bm_id": "BM-249",
@@ -5361,7 +5361,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986399+00:00"
+      "finished_at": "2026-11-10T08:34:39.080087+00:00"
     },
     {
       "bm_id": "BM-250",
@@ -5382,7 +5382,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986400+00:00"
+      "finished_at": "2026-11-10T08:34:39.080089+00:00"
     },
     {
       "bm_id": "BM-251",
@@ -5403,7 +5403,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986401+00:00"
+      "finished_at": "2026-11-10T08:34:39.080091+00:00"
     },
     {
       "bm_id": "BM-252",
@@ -5424,7 +5424,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986403+00:00"
+      "finished_at": "2026-11-10T08:34:39.080093+00:00"
     },
     {
       "bm_id": "BM-253",
@@ -5445,7 +5445,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986405+00:00"
+      "finished_at": "2026-11-10T08:34:39.080095+00:00"
     },
     {
       "bm_id": "BM-254",
@@ -5466,7 +5466,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986406+00:00"
+      "finished_at": "2026-11-10T08:34:39.080097+00:00"
     },
     {
       "bm_id": "BM-255",
@@ -5487,7 +5487,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986408+00:00"
+      "finished_at": "2026-11-10T08:34:39.080099+00:00"
     },
     {
       "bm_id": "BM-256",
@@ -5508,7 +5508,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986409+00:00"
+      "finished_at": "2026-11-10T08:34:39.080101+00:00"
     },
     {
       "bm_id": "BM-257",
@@ -5529,7 +5529,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986410+00:00"
+      "finished_at": "2026-11-10T08:34:39.080102+00:00"
     },
     {
       "bm_id": "BM-258",
@@ -5550,7 +5550,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986412+00:00"
+      "finished_at": "2026-11-10T08:34:39.080105+00:00"
     },
     {
       "bm_id": "BM-259",
@@ -5571,7 +5571,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986413+00:00"
+      "finished_at": "2026-11-10T08:34:39.080106+00:00"
     },
     {
       "bm_id": "BM-260",
@@ -5592,7 +5592,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986414+00:00"
+      "finished_at": "2026-11-10T08:34:39.080108+00:00"
     },
     {
       "bm_id": "BM-261",
@@ -5613,7 +5613,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986416+00:00"
+      "finished_at": "2026-11-10T08:34:39.080110+00:00"
     },
     {
       "bm_id": "BM-262",
@@ -5634,7 +5634,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986417+00:00"
+      "finished_at": "2026-11-10T08:34:39.080112+00:00"
     },
     {
       "bm_id": "BM-263",
@@ -5655,7 +5655,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986419+00:00"
+      "finished_at": "2026-11-10T08:34:39.080115+00:00"
     },
     {
       "bm_id": "BM-264",
@@ -5676,7 +5676,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986420+00:00"
+      "finished_at": "2026-11-10T08:34:39.080116+00:00"
     },
     {
       "bm_id": "BM-265",
@@ -5697,7 +5697,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986422+00:00"
+      "finished_at": "2026-11-10T08:34:39.080118+00:00"
     },
     {
       "bm_id": "BM-266",
@@ -5718,7 +5718,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986423+00:00"
+      "finished_at": "2026-11-10T08:34:39.080120+00:00"
     },
     {
       "bm_id": "BM-267",
@@ -5739,7 +5739,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986425+00:00"
+      "finished_at": "2026-11-10T08:34:39.080122+00:00"
     },
     {
       "bm_id": "BM-268",
@@ -5760,7 +5760,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986426+00:00"
+      "finished_at": "2026-11-10T08:34:39.080124+00:00"
     },
     {
       "bm_id": "BM-269",
@@ -5781,7 +5781,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986427+00:00"
+      "finished_at": "2026-11-10T08:34:39.080126+00:00"
     },
     {
       "bm_id": "BM-270",
@@ -5802,7 +5802,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986429+00:00"
+      "finished_at": "2026-11-10T08:34:39.080128+00:00"
     },
     {
       "bm_id": "BM-271",
@@ -5823,7 +5823,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986430+00:00"
+      "finished_at": "2026-11-10T08:34:39.080129+00:00"
     },
     {
       "bm_id": "BM-272",
@@ -5844,7 +5844,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986431+00:00"
+      "finished_at": "2026-11-10T08:34:39.080131+00:00"
     },
     {
       "bm_id": "BM-273",
@@ -5865,7 +5865,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986432+00:00"
+      "finished_at": "2026-11-10T08:34:39.080133+00:00"
     },
     {
       "bm_id": "BM-274",
@@ -5886,7 +5886,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986434+00:00"
+      "finished_at": "2026-11-10T08:34:39.080134+00:00"
     },
     {
       "bm_id": "BM-275",
@@ -5907,7 +5907,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986435+00:00"
+      "finished_at": "2026-11-10T08:34:39.080136+00:00"
     },
     {
       "bm_id": "BM-276",
@@ -5928,7 +5928,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986437+00:00"
+      "finished_at": "2026-11-10T08:34:39.080138+00:00"
     },
     {
       "bm_id": "BM-277",
@@ -5949,7 +5949,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986438+00:00"
+      "finished_at": "2026-11-10T08:34:39.080140+00:00"
     },
     {
       "bm_id": "BM-278",
@@ -5970,7 +5970,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986439+00:00"
+      "finished_at": "2026-11-10T08:34:39.080141+00:00"
     },
     {
       "bm_id": "BM-279",
@@ -5991,7 +5991,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986441+00:00"
+      "finished_at": "2026-11-10T08:34:39.080143+00:00"
     },
     {
       "bm_id": "BM-280",
@@ -6012,7 +6012,7 @@
       "replay_success": null,
       "replay_video_url": null,
       "replay_finished_at": null,
-      "finished_at": "2026-11-10T08:15:29.986442+00:00"
+      "finished_at": "2026-11-10T08:34:39.080145+00:00"
     },
     {
       "bm_id": "BM-281",
