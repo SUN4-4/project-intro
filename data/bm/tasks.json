@@ -496,7 +496,7 @@
           ],
           "agent_success_count": 1,
           "agent_loop_updated_at": "2026-11-09T19:55:03.761758+00:00",
-          "success_video_label": "Agent 成功视频（等待按空间位置复现）",
+          "success_video_label": "Agent 成功视频（复现未成功）",
           "agent_status": "success",
           "agent_attempts": 1,
           "agent_rounds": 1,
@@ -518,13 +518,13 @@
           "agent_success_note": "Agent 闭环成功轨迹：IK 末端控制 + VLM 视觉确认，最多 10 轮。",
           "agent_clean_grasp_trajectory_url": "data/trajectories/BM-009-last-clean-grasp.json",
           "agent_confirmed_success": false,
-          "agent_replay_status": "running",
+          "agent_replay_status": "infra",
           "agent_replay_success": false,
           "agent_replay_video_url": null,
           "agent_replay_failure_video_url": null,
           "agent_replay_attempts": 1,
-          "agent_replay_finished_at": null,
-          "agent_replay_note": null
+          "agent_replay_finished_at": "2026-11-10T05:20:33.728195+00:00",
+          "agent_replay_note": "首次成功，但按空间位置复现未成功；保留首次成功视频，复现失败视频单独保留。"
         },
         {
           "id": "libero_goal/9",
@@ -19400,7 +19400,7 @@
       ],
       "agent_success_count": 1,
       "agent_loop_updated_at": "2026-11-09T19:55:03.761758+00:00",
-      "success_video_label": "Agent 成功视频（等待按空间位置复现）",
+      "success_video_label": "Agent 成功视频（复现未成功）",
       "agent_status": "success",
       "agent_attempts": 1,
       "agent_rounds": 1,
@@ -19422,13 +19422,13 @@
       "agent_success_note": "Agent 闭环成功轨迹：IK 末端控制 + VLM 视觉确认，最多 10 轮。",
       "agent_clean_grasp_trajectory_url": "data/trajectories/BM-009-last-clean-grasp.json",
       "agent_confirmed_success": false,
-      "agent_replay_status": "running",
+      "agent_replay_status": "infra",
       "agent_replay_success": false,
       "agent_replay_video_url": null,
       "agent_replay_failure_video_url": null,
       "agent_replay_attempts": 1,
-      "agent_replay_finished_at": null,
-      "agent_replay_note": null
+      "agent_replay_finished_at": "2026-11-10T05:20:33.728195+00:00",
+      "agent_replay_note": "首次成功，但按空间位置复现未成功；保留首次成功视频，复现失败视频单独保留。"
     },
     {
       "id": "libero_goal/9",
@@ -37781,7 +37781,7 @@
     }
   ],
   "results_summary": {
-    "generated_at": "2026-11-10T05:19:40.896053+00:00",
+    "generated_at": "2026-11-10T05:20:33.751858+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -37794,15 +37794,15 @@
     "clean_success": 5,
     "soft_success": 1,
     "confirmed_success": 0,
-    "replay_pending": 5,
+    "replay_pending": 4,
     "replay_failed": 2,
     "valid_verdicts": 21,
     "success_rate": 0.2857142857142857,
     "clean_success_rate": 0.23809523809523808,
     "publish": {
-      "at": "2026-11-10T05:19:40.860173+00:00",
+      "at": "2026-11-10T05:19:46.168490+00:00",
       "returncode": 0,
-      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    97df104..25eeeef  main -> main",
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    25eeeef..8d91451  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
