@@ -257,13 +257,13 @@
       "bm_id": "BM-031",
       "task_id": "libero_10/0",
       "benchmark": "libero",
-      "tool": "grasp_object",
-      "place_tool": "place_object_in",
+      "tool": "visual_pick_place",
+      "place_tool": null,
       "task_clean_success": false,
       "task_status": "failure",
-      "steps": 33,
+      "steps": 16,
       "file": "data/trajectories/BM-031-last-clean-grasp.json",
-      "updated_at": "2026-11-11T05:17:19.799941+00:00"
+      "updated_at": "2026-11-11T06:23:30.138277+00:00"
     },
     "BM-042": {
       "bm_id": "BM-042",
@@ -300,7 +300,19 @@
       "steps": 6,
       "file": "data/trajectories/BM-046-last-clean-grasp.json",
       "updated_at": "2026-11-10T16:18:31.942715+00:00"
+    },
+    "BM-050": {
+      "bm_id": "BM-050",
+      "task_id": "libero_90/9",
+      "benchmark": "libero",
+      "tool": "grasp_object",
+      "place_tool": null,
+      "task_clean_success": true,
+      "task_status": "success",
+      "steps": 7,
+      "file": "data/trajectories/BM-050-last-clean-grasp.json",
+      "updated_at": "2026-11-11T06:27:29.245498+00:00"
     }
   },
-  "updated_at": "2026-11-11T05:17:19.799891+00:00"
+  "updated_at": "2026-11-11T06:27:29.245486+00:00"
 }

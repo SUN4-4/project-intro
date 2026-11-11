@@ -80,18 +80,13 @@ test("every task has an id, name, instruction and an existing image", () => {
   assert.deepEqual(missing, []);
 });
 
-test("every task reserves a success-video slot", () => {
+test("source catalog contains definitions, not runtime execution state", () => {
+  assert.equal(catalog.results_summary, undefined);
   for (const task of allTasks) {
-    if (task.video_status === "published") {
-      assert.ok(task.success_video_url, `${task.bm_id}: published video URL`);
-      assert.ok(
-        existsSync(localPath(task.success_video_url)),
-        `${task.bm_id}: published video file`,
-      );
-      continue;
-    }
-    assert.equal(task.video_status, "pending", `${task.bm_id}: video status`);
-    assert.equal(task.success_video_url, null, `${task.bm_id}: success video`);
+    assert.equal(task.exec_status, undefined, `${task.bm_id}: exec status`);
+    assert.equal(task.agent_status, undefined, `${task.bm_id}: agent status`);
+    assert.equal(task.success_video_url, undefined, `${task.bm_id}: video URL`);
+    assert.equal(task.failure_video_url, undefined, `${task.bm_id}: failure URL`);
   }
 });
 
@@ -146,13 +141,17 @@ test("generated JSON catalog matches the browser catalog", () => {
   );
 });
 
-test("published failure replays point at real files", () => {
+test("runtime video URLs stay inside the staged data directory", () => {
   for (const task of allTasks) {
-    if (task.failure_video_status !== "published") continue;
-    assert.ok(task.failure_video_url, `${task.bm_id}: failure video URL`);
-    assert.ok(
-      existsSync(localPath(task.failure_video_url)),
-      `${task.bm_id}: failure video file`,
-    );
+    for (const field of [
+      "success_video_url",
+      "failure_video_url",
+      "agent_success_video_url",
+      "agent_last_failure_video_url",
+    ]) {
+      if (!task[field]) continue;
+      assert.match(task[field], /^data\/(videos|trajectories)\//, `${task.bm_id}: ${field}`);
+      assert.doesNotMatch(task[field], /\.\./, `${task.bm_id}: ${field}`);
+    }
   }
 });
