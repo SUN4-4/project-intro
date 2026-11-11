@@ -1,9 +1,9 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-11T06:03:15.420797+00:00",
+  "generated_at": "2026-11-11T06:09:42.389352+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-11T06:03:15.415400+00:00",
+    "generated_at": "2026-11-11T06:09:42.383988+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -37,7 +37,7 @@
     "worker": 4,
     "gpu": "4",
     "parallel": true,
-    "started_at": "2026-11-11T06:03:00.602017+00:00"
+    "started_at": "2026-11-11T06:09:31.281656+00:00"
   },
   "tasks": [
     {

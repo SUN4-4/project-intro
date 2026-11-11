@@ -145,6 +145,8 @@ _EXEC_FIELDS = (
     "agent_thinking_s",
     "agent_time_breakdown",
     "agent_tool_counts",
+    "agent_thinking",
+    "agent_reflections",
     "agent_failure_counts",
     "agent_mode",
     "agent_tool_calls",

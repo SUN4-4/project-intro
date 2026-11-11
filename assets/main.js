@@ -402,6 +402,46 @@ function createTaskCard(task, dataDir) {
         .join(" · ")}`;
       body.append(tools);
     }
+
+    const thinking = task.agent_thinking || {};
+    const reflections = task.agent_reflections || [];
+    if (Object.keys(thinking).length || reflections.length) {
+      const details = document.createElement("details");
+      details.className = "task-card__thinking";
+      const heading = document.createElement("summary");
+      heading.textContent = "Agent 思考记录（问题 / 改动 / 失败原因）";
+      details.append(heading);
+      const appendLine = (label, value) => {
+        if (!value) return;
+        const line = document.createElement("p");
+        line.textContent = `${label}：${value}`;
+        details.append(line);
+      };
+      appendLine("概述", thinking.summary);
+      appendLine("为什么失败", thinking.why_failed);
+      if (Array.isArray(thinking.changes) && thinking.changes.length) {
+        appendLine("做了哪些改动", thinking.changes.join("；"));
+      }
+      appendLine("时间去向", thinking.time_used);
+      if (Array.isArray(thinking.timeline) && thinking.timeline.length) {
+        const timeline = document.createElement("ul");
+        for (const step of thinking.timeline.slice(-10)) {
+          const item = document.createElement("li");
+          item.textContent = step;
+          timeline.append(item);
+        }
+        details.append(timeline);
+      }
+      for (const reflection of reflections.slice(-4)) {
+        appendLine(
+          "反思",
+          [reflection.problem, reflection.change, reflection.next_plan]
+            .filter(Boolean)
+            .join(" → ")
+        );
+      }
+      body.append(details);
+    }
   }
 
   const meta = [

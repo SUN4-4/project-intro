@@ -2230,3 +2230,29 @@ ol {
   background: rgba(255, 201, 196, 0.92);
   border-color: rgba(107, 17, 17, 0.15);
 }
+
+.task-card__thinking {
+  margin-top: 0.55rem;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid rgba(23, 23, 20, 0.12);
+  border-radius: 8px;
+  background: rgba(23, 23, 20, 0.025);
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: rgba(23, 23, 20, 0.72);
+}
+
+.task-card__thinking summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: rgba(23, 23, 20, 0.82);
+}
+
+.task-card__thinking p {
+  margin: 0.35rem 0 0;
+}
+
+.task-card__thinking ul {
+  margin: 0.35rem 0 0;
+  padding-left: 1.1rem;
+}
