@@ -830,31 +830,36 @@
           "video_status": "pending",
           "success_video_url": null,
           "blender_status": "built",
-          "failure_video_url": null,
-          "failure_video_status": "pending",
-          "video_kind": null,
-          "exec_status": "running",
-          "exec_success_rate": null,
+          "failure_video_url": "data/videos/agent/BM-006-last-failure.mp4",
+          "failure_video_status": "published",
+          "video_kind": "failure",
+          "exec_status": "failure",
+          "exec_success_rate": 0.0,
           "exec_attempts": 2,
-          "exec_rounds": 0,
-          "exec_duration_s": 0.0,
-          "exec_failure_reason": null,
+          "exec_rounds": 1,
+          "exec_duration_s": 651.732,
+          "exec_failure_reason": "single-agent episode",
           "exec_note": "Agent 闭环：IK 末端控制 + DeepSeek VLM 摄像机观察，最多 10 轮；成功/最后一次失败视频已上传。",
-          "exec_checked_at": null,
+          "exec_checked_at": "2026-11-11T19:11:29.999321+00:00",
           "agent_success_count": 0,
-          "agent_loop_updated_at": null,
-          "success_video_label": "待执行",
-          "agent_status": "running",
+          "agent_loop_updated_at": "2026-11-11T19:11:29.999321+00:00",
+          "success_video_label": "Agent 最后一次失败回放",
+          "agent_status": "failure",
           "agent_attempts": 2,
-          "agent_rounds": 0,
-          "agent_started_at": "2026-11-11T18:57:02.342367+00:00",
-          "agent_finished_at": null,
-          "agent_duration_s": 0.0,
-          "agent_failure_reason": null,
-          "agent_analysis": {},
+          "agent_rounds": 1,
+          "agent_started_at": "2026-11-11T18:57:02.674164+00:00",
+          "agent_finished_at": "2026-11-11T19:11:29.999321+00:00",
+          "agent_duration_s": 651.732,
+          "agent_failure_reason": "single-agent episode",
+          "agent_analysis": {
+            "outcome": "time_budget",
+            "failure_category": "planning",
+            "reviewer_verdict": "blocked",
+            "tool_calls": 56
+          },
           "agent_success_video_url": null,
-          "agent_last_failure_video_url": null,
-          "agent_clean_success": null,
+          "agent_last_failure_video_url": "data/videos/agent/BM-006-last-failure.mp4",
+          "agent_clean_success": false,
           "agent_success_kind": null,
           "agent_success_note": null,
           "agent_clean_grasp_trajectory_url": null,
@@ -866,14 +871,157 @@
           "agent_replay_attempts": null,
           "agent_replay_finished_at": null,
           "agent_replay_note": null,
-          "agent_thinking_s": null,
-          "agent_time_breakdown": {},
-          "agent_tool_counts": {},
-          "agent_thinking": {},
-          "agent_reflections": [],
-          "agent_failure_counts": {},
-          "agent_mode": null,
-          "agent_tool_calls": null
+          "agent_thinking_s": 628.469,
+          "agent_time_breakdown": {
+            "tool_total_s": 740.1,
+            "perception_s": 133.5,
+            "action_s": 3.6,
+            "recovery_s": 0.0,
+            "other_s": 603.1,
+            "llm_overhead_s": 0.0,
+            "tool_calls": 56,
+            "steps": 36,
+            "tool_counts": {
+              "unproject_pixel": 10,
+              "find_by_pointing": 8,
+              "look": 6,
+              "get_arm_pose": 5,
+              "find_pixel": 4,
+              "push_object": 4,
+              "is_reachable": 4,
+              "record_reflection": 3,
+              "trajectory_refine": 3,
+              "observe_orbit": 2,
+              "move_to_pose": 2,
+              "recover_joint_posture": 2,
+              "move_ee_delta": 1,
+              "read_skill_code": 1,
+              "?": 1
+            },
+            "top_tools": [
+              {
+                "tool": "unproject_pixel",
+                "count": 10,
+                "seconds": 6.0
+              },
+              {
+                "tool": "find_by_pointing",
+                "count": 8,
+                "seconds": 61.5
+              },
+              {
+                "tool": "look",
+                "count": 6,
+                "seconds": 3.4
+              },
+              {
+                "tool": "get_arm_pose",
+                "count": 5,
+                "seconds": 2.9
+              },
+              {
+                "tool": "find_pixel",
+                "count": 4,
+                "seconds": 14.5
+              },
+              {
+                "tool": "push_object",
+                "count": 4,
+                "seconds": 5.2
+              },
+              {
+                "tool": "is_reachable",
+                "count": 4,
+                "seconds": 2.2
+              },
+              {
+                "tool": "record_reflection",
+                "count": 3,
+                "seconds": 0.0
+              }
+            ]
+          },
+          "agent_tool_counts": {
+            "unproject_pixel": 10,
+            "find_by_pointing": 8,
+            "look": 6,
+            "get_arm_pose": 5,
+            "find_pixel": 4,
+            "push_object": 4,
+            "is_reachable": 4,
+            "record_reflection": 3,
+            "trajectory_refine": 3,
+            "observe_orbit": 2,
+            "move_to_pose": 2,
+            "recover_joint_posture": 2,
+            "move_ee_delta": 1,
+            "read_skill_code": 1,
+            "?": 1
+          },
+          "agent_thinking": {
+            "summary": "# Engineer Summary · libero_pick_place (seed=0)",
+            "why_failed": "push_object failed 4x (stale semantic point / unreachable hover pose) and the direct move_to_pose to a single push pose missed by 0.09 m; the arm cannot hit arbitrary single-pose Cartesian targets here, but a 7-waypoint trajectory_refine did execute fully earlier this episode.",
+            "next_time": "Execute the closed-loop push trajectory, then look and unproject the plate to confirm it sits in front of the stove.",
+            "time_used": "tool_total=740s; perception=134s; action=4s; recovery=0s",
+            "problems": [
+              "The push failed because the source pixel was not freshly established by a pointing/detector call in the current frame (stale semantic point), and I burned the perception budget on repeated localizations without any robot action.",
+              "The composite push_object cannot find an IK-reachable planar-push hover pose from its self-chosen orientation, so it aborts before contact. It also mislabels the source as stale unless the pixel was set by the immediately preceding perception call.",
+              "push_object failed 4x (stale semantic point / unreachable hover pose) and the direct move_to_pose to a single push pose missed by 0.09 m; the arm cannot hit arbitrary single-pose Cartesian targets here, but a 7-waypoint trajectory_refine did execute fully earlier this episode."
+            ],
+            "changes": [
+              "Reset the perception budget with a real motion, park the arm out of the camera's way, then take ONE fresh look and exactly two localizations (plate, stove) and immediately call push_object with those fresh pixels in the same frame — no extra perception rounds.",
+              "Stop using the composite push and drive the push explicitly: an explicit waypoint trajectory with quat [1,0,0,0] (the orientation that reliably reaches in this campaign), starting behind the plate on the push axis, descending to plate-top height, then translating along the push axis in 3 stages.",
+              "Abandon push_object and single-pose moves. Use trajectory_refine with an explicit waypoint list: descend with a closed gripper behind the plate (world ~[0.105,-0.095,0.925]), sweep at plate height (z~0.915) through the plate toward [-0.085,0.125,0.915] (front of stove), then lift."
+            ],
+            "timeline": [
+              "- is_reachable({\"pos\": [0.05, -0.03, 1.0]}) [perception, 0.6s] ok=True reason=within workspace envelope",
+              "- is_reachable({\"pos\": [0.05, -0.1, 0.924]}) [perception, 0.6s] ok=True reason=within workspace envelope",
+              "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- unproject_pixel({\"u\": 124, \"v\": 146, \"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- unproject_pixel({\"u\": 186, \"v\": 140, \"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- find_by_pointing({\"object\": \"the white plate on the table in front of the stove\"}) [perception, 0.0s] ok=False reason=PERCEPTION LOOP GUARD: too many perception calls without an action. Do not localize again now. Use the geometry you already have and take an action, or call exe",
+              "- move_to_pose({\"pos\": [0.045, -0.03, 1.06], \"gripper\": \"close\"}) [action, 1.5s] ok=False reason=target pose was not reached",
+              "- unproject_pixel({\"camera\": \"head\", \"u\": 185, \"v\": 148}) [perception, 0.6s] ok=True",
+              "- unproject_pixel({\"camera\": \"head\", \"u\": 160, \"v\": 150}) [perception, 0.6s] ok=True",
+              "- get_arm_pose({}) [perception, 0.6s] ok=True",
+              "- record_reflection({\"observation\": \"Head view: white plate on table directly in front-left of the stove; plate pixel [118,182] -> world [0.05,-0.03,0.909], stove near/front edge pixels (160,150)/(185,148) -> world [-0.10,0.11]/[-0.11,0.19]) [perception, 0.0s] ok=True",
+              "- trajectory_refine({\"waypoints\": [{\"pos\": [0.115, -0.105, 0.99], \"quat\": [1, 0, 0, 0], \"gripper\": \"close\", \"label\": \"pre\"}, {\"pos\": [0.105, -0.095, 0.925], \"quat\": [1, 0, 0, 0], \"gripper\": \"close\", \"label\": \"descend\"}, {\"pos\": [0.062, -0.0) [perception, 13.9s] ok=True",
+              "- recover_joint_posture({\"max_iters\": 240}) [perception, 1.3s] ok=True reason=None",
+              "- find_by_pointing({\"object\": \"the table area in front of the stove\"}) [perception, 15.8s] ok=True",
+              "- find_by_pointing({\"object\": \"the white plate with pink rim on the table\"}) [perception, 12.0s] ok=True",
+              "- unproject_pixel({\"camera\": \"head\", \"u\": 144, \"v\": 180}) [perception, 0.6s] ok=True",
+              "- unproject_pixel({\"camera\": \"head\", \"u\": 117, \"v\": 183}) [perception, 0.6s] ok=True",
+              "- ?({}) [other, 603.1s] "
+            ]
+          },
+          "agent_reflections": [
+            {
+              "timestamp": "2026-11-11T18:58:59.938948+00:00",
+              "observation": "Head/orbit views show the tabletop with a light flat object left-of-center at image [118,182] (unprojected [0.045,-0.030,0.909]) and a dark flat slab upper-right at [185,121] (unprojected [-0.225,0.206,0.929]) which the detector labels stove (conf 0.625). Arm is parked high at [-0.215,-0.004,1.169] with an open 0.0785 gripper. push_object with my cached pixels was rejected as 'source semantic point missing or stale', and the perception loop guard blocked further localization.",
+              "problem": "The push failed because the source pixel was not freshly established by a pointing/detector call in the current frame (stale semantic point), and I burned the perception budget on repeated localizations without any robot action.",
+              "change": "Reset the perception budget with a real motion, park the arm out of the camera's way, then take ONE fresh look and exactly two localizations (plate, stove) and immediately call push_object with those fresh pixels in the same frame — no extra perception rounds.",
+              "next_plan": "move_ee_delta upward/sideways to clear the view, look(head), find_by_pointing('white plate'), find_by_pointing('stove'), then push the plate toward the stove-front target pixel."
+            },
+            {
+              "timestamp": "2026-11-11T19:00:57.650300+00:00",
+              "observation": "push_object got as far as 'hover_recovery_reached' then failed with 'could not reach the planar-push hover pose' (visual_contact_backoff 0.0417, effective_standoff 0.0483). Arm ended at [0.1398,-0.0546,0.9979] with quat [0.915,-0.4027,0.0131,-0.0221] and a closed-empty gripper (gap 0.001). Plate is at world [0.053,-0.030,0.909]; stove center detector pixel [185,117] → about [-0.22,0.21,0.93], so the push axis is roughly (-0.5,+0.8).",
+              "problem": "The composite push_object cannot find an IK-reachable planar-push hover pose from its self-chosen orientation, so it aborts before contact. It also mislabels the source as stale unless the pixel was set by the immediately preceding perception call.",
+              "change": "Stop using the composite push and drive the push explicitly: an explicit waypoint trajectory with quat [1,0,0,0] (the orientation that reliably reaches in this campaign), starting behind the plate on the push axis, descending to plate-top height, then translating along the push axis in 3 stages.",
+              "next_plan": "trajectory_refine: hover behind plate → descend to z 0.912 → three forward push segments toward [-0.15,0.21]; then look and measure whether the plate moved toward the stove front."
+            },
+            {
+              "timestamp": "2026-11-11T19:06:06.367286+00:00",
+              "observation": "Head view: white plate on table directly in front-left of the stove; plate pixel [118,182] -> world [0.05,-0.03,0.909], stove near/front edge pixels (160,150)/(185,148) -> world [-0.10,0.11]/[-0.11,0.19] at z 0.902, so the stove front edge is ~0.2 m in the (-x,+y) direction from the plate. Arm ended at [0.067,0.058,1.075] after the move_to_pose target missed by 9 cm.",
+              "problem": "push_object failed 4x (stale semantic point / unreachable hover pose) and the direct move_to_pose to a single push pose missed by 0.09 m; the arm cannot hit arbitrary single-pose Cartesian targets here, but a 7-waypoint trajectory_refine did execute fully earlier this episode.",
+              "change": "Abandon push_object and single-pose moves. Use trajectory_refine with an explicit waypoint list: descend with a closed gripper behind the plate (world ~[0.105,-0.095,0.925]), sweep at plate height (z~0.915) through the plate toward [-0.085,0.125,0.915] (front of stove), then lift.",
+              "next_plan": "Execute the closed-loop push trajectory, then look and unproject the plate to confirm it sits in front of the stove."
+            }
+          ],
+          "agent_failure_counts": {
+            "contrib:planning": 1
+          },
+          "agent_mode": "single",
+          "agent_tool_calls": 56
         },
         {
           "id": "libero_goal/6",
@@ -3701,31 +3849,36 @@
           "video_status": "pending",
           "success_video_url": null,
           "blender_status": "built",
-          "failure_video_url": null,
-          "failure_video_status": "pending",
-          "video_kind": null,
-          "exec_status": "running",
-          "exec_success_rate": null,
+          "failure_video_url": "data/videos/agent/BM-025-last-failure.mp4",
+          "failure_video_status": "published",
+          "video_kind": "failure",
+          "exec_status": "failure",
+          "exec_success_rate": 0.0,
           "exec_attempts": 2,
-          "exec_rounds": 0,
-          "exec_duration_s": 0.0,
-          "exec_failure_reason": null,
+          "exec_rounds": 1,
+          "exec_duration_s": 648.842,
+          "exec_failure_reason": "single-agent episode",
           "exec_note": "Agent 闭环：IK 末端控制 + DeepSeek VLM 摄像机观察，最多 10 轮；成功/最后一次失败视频已上传。",
-          "exec_checked_at": null,
+          "exec_checked_at": "2026-11-11T19:11:30.277757+00:00",
           "agent_success_count": 0,
-          "agent_loop_updated_at": null,
-          "success_video_label": "待执行",
-          "agent_status": "running",
+          "agent_loop_updated_at": "2026-11-11T19:11:30.277757+00:00",
+          "success_video_label": "Agent 最后一次失败回放",
+          "agent_status": "failure",
           "agent_attempts": 2,
-          "agent_rounds": 0,
-          "agent_started_at": "2026-11-11T18:57:02.674291+00:00",
-          "agent_finished_at": null,
-          "agent_duration_s": 0.0,
-          "agent_failure_reason": null,
-          "agent_analysis": {},
+          "agent_rounds": 1,
+          "agent_started_at": "2026-11-11T18:57:03.082864+00:00",
+          "agent_finished_at": "2026-11-11T19:11:30.277757+00:00",
+          "agent_duration_s": 648.842,
+          "agent_failure_reason": "single-agent episode",
+          "agent_analysis": {
+            "outcome": "time_budget",
+            "failure_category": "planning",
+            "reviewer_verdict": "blocked",
+            "tool_calls": 55
+          },
           "agent_success_video_url": null,
-          "agent_last_failure_video_url": null,
-          "agent_clean_success": null,
+          "agent_last_failure_video_url": "data/videos/agent/BM-025-last-failure.mp4",
+          "agent_clean_success": false,
           "agent_success_kind": null,
           "agent_success_note": null,
           "agent_clean_grasp_trajectory_url": null,
@@ -3737,14 +3890,149 @@
           "agent_replay_attempts": null,
           "agent_replay_finished_at": null,
           "agent_replay_note": null,
-          "agent_thinking_s": null,
-          "agent_time_breakdown": {},
-          "agent_tool_counts": {},
-          "agent_thinking": {},
-          "agent_reflections": [],
-          "agent_failure_counts": {},
-          "agent_mode": null,
-          "agent_tool_calls": null
+          "agent_thinking_s": 626.336,
+          "agent_time_breakdown": {
+            "tool_total_s": 782.5,
+            "perception_s": 83.6,
+            "action_s": 97.0,
+            "recovery_s": 0.9,
+            "other_s": 601.0,
+            "llm_overhead_s": 0.0,
+            "tool_calls": 55,
+            "steps": 47,
+            "tool_counts": {
+              "look": 14,
+              "unproject_pixel": 5,
+              "find_by_pointing": 4,
+              "observe_orbit": 4,
+              "todowrite": 3,
+              "get_arm_pose": 3,
+              "move_to_pose": 3,
+              "grasp_object": 2,
+              "move_ee_delta": 2,
+              "get_grasp_pose": 2,
+              "preview_move_to_pose": 2,
+              "execute_previewed_move": 2,
+              "is_reachable": 2,
+              "descend_tcp_to_z": 1,
+              "gripper": 1,
+              "is_holding": 1,
+              "record_reflection": 1,
+              "home": 1,
+              "recover_joint_posture": 1,
+              "?": 1
+            },
+            "top_tools": [
+              {
+                "tool": "look",
+                "count": 14,
+                "seconds": 8.0
+              },
+              {
+                "tool": "unproject_pixel",
+                "count": 5,
+                "seconds": 2.9
+              },
+              {
+                "tool": "find_by_pointing",
+                "count": 4,
+                "seconds": 61.0
+              },
+              {
+                "tool": "observe_orbit",
+                "count": 4,
+                "seconds": 2.5
+              },
+              {
+                "tool": "todowrite",
+                "count": 3,
+                "seconds": 0.0
+              },
+              {
+                "tool": "get_arm_pose",
+                "count": 3,
+                "seconds": 1.7
+              },
+              {
+                "tool": "move_to_pose",
+                "count": 3,
+                "seconds": 2.3
+              },
+              {
+                "tool": "grasp_object",
+                "count": 2,
+                "seconds": 80.0
+              }
+            ]
+          },
+          "agent_tool_counts": {
+            "look": 14,
+            "unproject_pixel": 5,
+            "find_by_pointing": 4,
+            "observe_orbit": 4,
+            "todowrite": 3,
+            "get_arm_pose": 3,
+            "move_to_pose": 3,
+            "grasp_object": 2,
+            "move_ee_delta": 2,
+            "get_grasp_pose": 2,
+            "preview_move_to_pose": 2,
+            "execute_previewed_move": 2,
+            "is_reachable": 2,
+            "descend_tcp_to_z": 1,
+            "gripper": 1,
+            "is_holding": 1,
+            "record_reflection": 1,
+            "home": 1,
+            "recover_joint_posture": 1,
+            "?": 1
+          },
+          "agent_thinking": {
+            "summary": "# Engineer Summary · libero_pick_place (seed=0)",
+            "why_failed": "Cartesian descent stalls ~1.6-1.9 cm above the bowl grasp point: move_to_pose to z=1.082 ended at z=1.0973 (MOTION_FAILED), descend_tcp_to_z to 1.075 ended at 1.098, and gripper close there gives gap 0.02 closed_empty (pads met on air). So the TCP cannot reach the bowl's inner-surface z from that xy with the current configuration; the earlier close was on air, not on the rim.",
+            "next_time": "Preview a joint-space move to [0.068,-0.138,1.083] with the gripper open, inspect the rendered target, execute it, then close and verify the hold.",
+            "time_used": "tool_total=782s; perception=84s; action=97s; recovery=1s",
+            "problems": [
+              "Cartesian descent stalls ~1.6-1.9 cm above the bowl grasp point: move_to_pose to z=1.082 ended at z=1.0973 (MOTION_FAILED), descend_tcp_to_z to 1.075 ended at 1.098, and gripper close there gives gap 0.02 closed_empty (pads met on air). So the TCP cannot reach the bowl's inner-surface z from that xy with the current configuration; the earlier close was on air, not on the rim."
+            ],
+            "changes": [
+              "Switch from Cartesian servo to a joint-space planned trajectory (preview_move_to_pose) which can pick a different IK branch and possibly reach lower; if it also stalls, grasp the bowl RIM (higher than the inner surface) with a raised close height instead of the bowl center."
+            ],
+            "timeline": [
+              "- grasp_object({\"object\": \"akita black bowl in the top layer of the wooden cabinet\", \"hover\": 0.09}) [action, 54.3s] ok=True holding=False grasped=False reason=None",
+              "- look({\"camera\": \"wrist\"}) [perception, 0.6s] ok=True",
+              "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- move_ee_delta({\"dpos\": [0, 0, -0.035], \"gripper\": \"open\"}) [action, 3.0s] ok=False reason=target pose was not reached",
+              "- preview_move_to_pose({\"gripper\": \"open\", \"pos\": [-0.018, -0.291, 1.15], \"quat\": [0, 0.3827, 0, 0.9239]}) [perception, 0.8s] ok=True",
+              "- execute_previewed_move({\"preview_id\": \"move-preview-0002\"}) [action, 7.2s] ok=False reason=target pose was not reached",
+              "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- get_arm_pose({}) [perception, 0.6s] ok=True",
+              "- recover_joint_posture({\"max_iters\": 240}) [perception, 2.4s] ok=True reason=None",
+              "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- look({\"camera\": \"wrist\"}) [perception, 0.6s] ok=True",
+              "- observe_orbit({}) [perception, 0.6s] ok=True",
+              "- get_grasp_pose({\"pixel\": [18, 104], \"top_k\": 5}) [perception, 1.0s] ok=False reason=grasp candidates lacked finite 6-DoF poses",
+              "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- unproject_pixel({\"u\": 54, \"v\": 139, \"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- unproject_pixel({\"camera\": \"head\", \"u\": 94, \"v\": 139}) [perception, 0.6s] ok=True",
+              "- todowrite({\"todos\": [{\"content\": \"Grasp the akita black bowl at rim height (z~1.135), not inside the mouth\", \"status\": \"in_progress\", \"priority\": \"high\"}, {\"content\": \"Place bowl on the plate\", \"status\": \"pending\", \"priority\": \"hi) [perception, 0.0s] ok=True",
+              "- ?({}) [other, 601.0s] "
+            ]
+          },
+          "agent_reflections": [
+            {
+              "timestamp": "2026-11-11T19:00:32.511997+00:00",
+              "observation": "Head view: Panda hovers over the cabinet top layer; the black patterned akita bowl sits in the top shelf at ~pixel (74,139) -> world [0.049,-0.141,1.081]. Plate is the pink/white round dish on the right (~[0.0566,0.2089,0.9087]).",
+              "problem": "Cartesian descent stalls ~1.6-1.9 cm above the bowl grasp point: move_to_pose to z=1.082 ended at z=1.0973 (MOTION_FAILED), descend_tcp_to_z to 1.075 ended at 1.098, and gripper close there gives gap 0.02 closed_empty (pads met on air). So the TCP cannot reach the bowl's inner-surface z from that xy with the current configuration; the earlier close was on air, not on the rim.",
+              "change": "Switch from Cartesian servo to a joint-space planned trajectory (preview_move_to_pose) which can pick a different IK branch and possibly reach lower; if it also stalls, grasp the bowl RIM (higher than the inner surface) with a raised close height instead of the bowl center.",
+              "next_plan": "Preview a joint-space move to [0.068,-0.138,1.083] with the gripper open, inspect the rendered target, execute it, then close and verify the hold."
+            }
+          ],
+          "agent_failure_counts": {
+            "contrib:planning": 1
+          },
+          "agent_mode": "single",
+          "agent_tool_calls": 55
         },
         {
           "id": "libero_spatial/5",
@@ -4800,31 +5088,36 @@
           "video_status": "pending",
           "success_video_url": null,
           "blender_status": "built",
-          "failure_video_url": null,
-          "failure_video_status": "pending",
-          "video_kind": null,
-          "exec_status": "running",
-          "exec_success_rate": null,
+          "failure_video_url": "data/videos/agent/BM-033-last-failure.mp4",
+          "failure_video_status": "published",
+          "video_kind": "failure",
+          "exec_status": "failure",
+          "exec_success_rate": 0.0,
           "exec_attempts": 2,
-          "exec_rounds": 0,
-          "exec_duration_s": 0.0,
-          "exec_failure_reason": null,
+          "exec_rounds": 1,
+          "exec_duration_s": 644.599,
+          "exec_failure_reason": "single-agent episode",
           "exec_note": "Agent 闭环：IK 末端控制 + DeepSeek VLM 摄像机观察，最多 10 轮；成功/最后一次失败视频已上传。",
-          "exec_checked_at": null,
+          "exec_checked_at": "2026-11-11T19:11:28.660397+00:00",
           "agent_success_count": 0,
-          "agent_loop_updated_at": null,
-          "success_video_label": "待执行",
-          "agent_status": "running",
+          "agent_loop_updated_at": "2026-11-11T19:11:28.660397+00:00",
+          "success_video_label": "Agent 最后一次失败回放",
+          "agent_status": "failure",
           "agent_attempts": 2,
-          "agent_rounds": 0,
-          "agent_started_at": "2026-11-11T18:57:03.082974+00:00",
-          "agent_finished_at": null,
-          "agent_duration_s": 0.0,
-          "agent_failure_reason": null,
-          "agent_analysis": {},
+          "agent_rounds": 1,
+          "agent_started_at": "2026-11-11T18:57:03.493384+00:00",
+          "agent_finished_at": "2026-11-11T19:11:28.660397+00:00",
+          "agent_duration_s": 644.599,
+          "agent_failure_reason": "single-agent episode",
+          "agent_analysis": {
+            "outcome": "time_budget",
+            "failure_category": "planning",
+            "reviewer_verdict": "blocked",
+            "tool_calls": 77
+          },
           "agent_success_video_url": null,
-          "agent_last_failure_video_url": null,
-          "agent_clean_success": null,
+          "agent_last_failure_video_url": "data/videos/agent/BM-033-last-failure.mp4",
+          "agent_clean_success": false,
           "agent_success_kind": null,
           "agent_success_note": null,
           "agent_clean_grasp_trajectory_url": null,
@@ -4836,14 +5129,133 @@
           "agent_replay_attempts": null,
           "agent_replay_finished_at": null,
           "agent_replay_note": null,
-          "agent_thinking_s": null,
-          "agent_time_breakdown": {},
-          "agent_tool_counts": {},
-          "agent_thinking": {},
+          "agent_thinking_s": 628.22,
+          "agent_time_breakdown": {
+            "tool_total_s": 682.4,
+            "perception_s": 60.2,
+            "action_s": 18.9,
+            "recovery_s": 1.6,
+            "other_s": 601.8,
+            "llm_overhead_s": 0.0,
+            "tool_calls": 77,
+            "steps": 64,
+            "tool_counts": {
+              "exec_python": 16,
+              "unproject_pixel": 14,
+              "look": 6,
+              "observe_orbit": 6,
+              "get_arm_pose": 5,
+              "move_to_pose": 5,
+              "find_pixel": 4,
+              "mark_orbit_point": 4,
+              "gripper": 4,
+              "find_by_pointing": 3,
+              "read": 2,
+              "home": 2,
+              "grasp_object": 2,
+              "grep": 1,
+              "trajectory_refine": 1,
+              "descend_tcp_to_z": 1,
+              "?": 1
+            },
+            "top_tools": [
+              {
+                "tool": "exec_python",
+                "count": 16,
+                "seconds": 18.7
+              },
+              {
+                "tool": "unproject_pixel",
+                "count": 14,
+                "seconds": 8.3
+              },
+              {
+                "tool": "look",
+                "count": 6,
+                "seconds": 3.5
+              },
+              {
+                "tool": "observe_orbit",
+                "count": 6,
+                "seconds": 3.2
+              },
+              {
+                "tool": "get_arm_pose",
+                "count": 5,
+                "seconds": 2.9
+              },
+              {
+                "tool": "move_to_pose",
+                "count": 5,
+                "seconds": 9.2
+              },
+              {
+                "tool": "find_pixel",
+                "count": 4,
+                "seconds": 17.9
+              },
+              {
+                "tool": "mark_orbit_point",
+                "count": 4,
+                "seconds": 2.4
+              }
+            ]
+          },
+          "agent_tool_counts": {
+            "exec_python": 16,
+            "unproject_pixel": 14,
+            "look": 6,
+            "observe_orbit": 6,
+            "get_arm_pose": 5,
+            "move_to_pose": 5,
+            "find_pixel": 4,
+            "mark_orbit_point": 4,
+            "gripper": 4,
+            "find_by_pointing": 3,
+            "read": 2,
+            "home": 2,
+            "grasp_object": 2,
+            "grep": 1,
+            "trajectory_refine": 1,
+            "descend_tcp_to_z": 1,
+            "?": 1
+          },
+          "agent_thinking": {
+            "summary": "# Engineer Summary · libero_pick_place (seed=0)",
+            "why_failed": "time_budget",
+            "next_time": "",
+            "time_used": "tool_total=682s; perception=60s; action=19s; recovery=2s",
+            "problems": [
+              "time_budget"
+            ],
+            "changes": [],
+            "timeline": [
+              "- descend_tcp_to_z({\"gripper\": \"open\", \"target_z\": 0.945, \"x\": -0.216, \"y\": 0.198}) [action, 0.7s] ok=True reason=None",
+              "- gripper({\"state\": \"close\"}) [action, 0.8s] ok=True reason=None",
+              "- get_arm_pose({}) [perception, 0.6s] ok=True",
+              "- move_to_pose({\"gripper\": \"close\", \"max_iters\": 100, \"pos\": [-0.216, 0.2032, 0.9499], \"quat\": [0.92706, 0.37501, -0.00281, -0.00208]}) [action, 0.9s] ok=True reason=None",
+              "- move_to_pose({\"gripper\": \"close\", \"max_iters\": 100, \"pos\": [-0.2149, 0.2036, 0.9506], \"quat\": [0.7071, 0.7071, 0, 0]}) [action, 0.9s] ok=True reason=None",
+              "- gripper({\"state\": \"open\"}) [action, 0.9s] ok=True reason=None",
+              "- exec_python({\"code\": \"out = {}\\nh = home(lift=0.20)\\nout[\\\"home\\\"] = {k: h.get(k) for k in (\\\"ok\\\",\\\"reached\\\",\\\"ee_pos\\\")}\\nfp = find_pixel(object=\\\"moka pot\\\", location=\\\"middle of the table\\\")\\nout[\\\"moka_px\\\"] = fp\\nburn = find_) [perception, 1.1s] ok=False",
+              "- exec_python({\"code\": \"return_dict[\\\"n\\\"] = sorted(k for k in globals().keys() if not k.startswith(\\\"_\\\"))\", \"description\": \"List bound names in CaP sandbox\"}) [perception, 1.1s] ok=False",
+              "- exec_python({\"code\": \"return_dict[\\\"n\\\"] = sorted(dir())\", \"description\": \"List available names\"}) [perception, 1.1s] ok=True",
+              "- home({\"lift\": 0.22}) [recovery, 0.7s] ok=True reason=None",
+              "- find_pixel({\"object\": \"moka pot\", \"location\": \"tabletop, center-left\"}) [perception, 1.0s] ok=True",
+              "- unproject_pixel({\"u\": 76, \"v\": 154, \"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- find_by_pointing({\"object\": \"the silver moka pot standing on the wooden table\"}) [perception, 0.6s] ok=True",
+              "- grasp_object({\"object\": \"moka pot\", \"pixel\": [76, 154], \"hover\": 0.12}) [action, 2.4s] ok=True holding=False grasped=False reason=None",
+              "- unproject_pixel({\"u\": 191, \"v\": 190, \"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- grasp_object({\"object\": \"moka pot\", \"pixel\": [196, 170], \"hover\": 0.12}) [action, 3.2s] ok=True holding=False grasped=False reason=None",
+              "- ?({}) [other, 601.8s] "
+            ]
+          },
           "agent_reflections": [],
-          "agent_failure_counts": {},
-          "agent_mode": null,
-          "agent_tool_calls": null
+          "agent_failure_counts": {
+            "contrib:planning": 1
+          },
+          "agent_mode": "single",
+          "agent_tool_calls": 77
         },
         {
           "id": "libero_10/3",
@@ -4859,34 +5271,39 @@
           "video_status": "pending",
           "success_video_url": null,
           "blender_status": "built",
-          "failure_video_url": null,
-          "failure_video_status": "pending",
-          "video_kind": null,
-          "exec_status": "running",
-          "exec_success_rate": null,
+          "failure_video_url": "data/videos/agent/BM-034-last-failure.mp4",
+          "failure_video_status": "published",
+          "video_kind": "failure",
+          "exec_status": "failure",
+          "exec_success_rate": 0.0,
           "exec_attempts": 2,
-          "exec_rounds": 0,
-          "exec_duration_s": 0.0,
-          "exec_failure_reason": null,
+          "exec_rounds": 1,
+          "exec_duration_s": 710.776,
+          "exec_failure_reason": "single-agent episode",
           "exec_note": "Agent 闭环：IK 末端控制 + DeepSeek VLM 摄像机观察，最多 10 轮；成功/最后一次失败视频已上传。",
-          "exec_checked_at": null,
+          "exec_checked_at": "2026-11-11T19:10:13.451109+00:00",
           "agent_success_count": 0,
-          "agent_loop_updated_at": null,
-          "success_video_label": "待执行",
-          "agent_status": "running",
+          "agent_loop_updated_at": "2026-11-11T19:10:13.451109+00:00",
+          "success_video_label": "Agent 最后一次失败回放",
+          "agent_status": "failure",
           "agent_attempts": 2,
-          "agent_rounds": 0,
-          "agent_started_at": "2026-11-11T18:57:03.493494+00:00",
-          "agent_finished_at": null,
-          "agent_duration_s": 0.0,
-          "agent_failure_reason": null,
-          "agent_analysis": {},
+          "agent_rounds": 1,
+          "agent_started_at": "2026-11-11T18:57:03.905584+00:00",
+          "agent_finished_at": "2026-11-11T19:10:13.451109+00:00",
+          "agent_duration_s": 710.776,
+          "agent_failure_reason": "single-agent episode",
+          "agent_analysis": {
+            "outcome": "time_budget",
+            "failure_category": "planning",
+            "reviewer_verdict": "blocked",
+            "tool_calls": 45
+          },
           "agent_success_video_url": null,
-          "agent_last_failure_video_url": null,
-          "agent_clean_success": null,
+          "agent_last_failure_video_url": "data/videos/agent/BM-034-last-failure.mp4",
+          "agent_clean_success": false,
           "agent_success_kind": null,
           "agent_success_note": null,
-          "agent_clean_grasp_trajectory_url": null,
+          "agent_clean_grasp_trajectory_url": "data/trajectories/BM-034-last-clean-grasp.json",
           "agent_confirmed_success": null,
           "agent_replay_status": null,
           "agent_replay_success": null,
@@ -4895,14 +5312,141 @@
           "agent_replay_attempts": null,
           "agent_replay_finished_at": null,
           "agent_replay_note": null,
-          "agent_thinking_s": null,
-          "agent_time_breakdown": {},
-          "agent_tool_counts": {},
-          "agent_thinking": {},
-          "agent_reflections": [],
-          "agent_failure_counts": {},
-          "agent_mode": null,
-          "agent_tool_calls": null
+          "agent_thinking_s": 691.565,
+          "agent_time_breakdown": {
+            "tool_total_s": 1093.5,
+            "perception_s": 411.8,
+            "action_s": 15.6,
+            "recovery_s": 0.8,
+            "other_s": 665.3,
+            "llm_overhead_s": 0.0,
+            "tool_calls": 45,
+            "steps": 39,
+            "tool_counts": {
+              "look": 8,
+              "find_pixel": 6,
+              "exec_python": 5,
+              "find_by_pointing": 4,
+              "find_by_detector": 4,
+              "observe_orbit": 3,
+              "unproject_pixel": 3,
+              "close_drawer": 3,
+              "get_arm_pose": 2,
+              "grasp_object": 1,
+              "place_object_in": 1,
+              "is_holding": 1,
+              "record_reflection": 1,
+              "home": 1,
+              "pull_drawer": 1,
+              "?": 1
+            },
+            "top_tools": [
+              {
+                "tool": "look",
+                "count": 8,
+                "seconds": 4.7
+              },
+              {
+                "tool": "find_pixel",
+                "count": 6,
+                "seconds": 88.6
+              },
+              {
+                "tool": "exec_python",
+                "count": 5,
+                "seconds": 6.4
+              },
+              {
+                "tool": "find_by_pointing",
+                "count": 4,
+                "seconds": 39.8
+              },
+              {
+                "tool": "find_by_detector",
+                "count": 4,
+                "seconds": 3.5
+              },
+              {
+                "tool": "observe_orbit",
+                "count": 3,
+                "seconds": 1.9
+              },
+              {
+                "tool": "unproject_pixel",
+                "count": 3,
+                "seconds": 1.7
+              },
+              {
+                "tool": "close_drawer",
+                "count": 3,
+                "seconds": 216.4
+              }
+            ]
+          },
+          "agent_tool_counts": {
+            "look": 8,
+            "find_pixel": 6,
+            "exec_python": 5,
+            "find_by_pointing": 4,
+            "find_by_detector": 4,
+            "observe_orbit": 3,
+            "unproject_pixel": 3,
+            "close_drawer": 3,
+            "get_arm_pose": 2,
+            "grasp_object": 1,
+            "place_object_in": 1,
+            "is_holding": 1,
+            "record_reflection": 1,
+            "home": 1,
+            "pull_drawer": 1,
+            "?": 1
+          },
+          "agent_thinking": {
+            "summary": "# Engineer Summary · libero_pick_place (seed=0)",
+            "why_failed": "The bowl made it into the open bottom drawer (task's first half is done), but the drawer is still open and close_drawer needs a pixel that actually lies on the drawer front/handle in the current head frame.",
+            "next_time": "look(head) → identify the drawer front/handle pixel → close_drawer with that pixel and a short push distance → verify with a fresh head frame that the drawer is flush.",
+            "time_used": "tool_total=1094s; perception=412s; action=16s; recovery=1s",
+            "problems": [
+              "The bowl made it into the open bottom drawer (task's first half is done), but the drawer is still open and close_drawer needs a pixel that actually lies on the drawer front/handle in the current head frame."
+            ],
+            "changes": [
+              "Re-observe the head view and choose a pixel directly on the visible light drawer front face / metal handle bar, not on the drawer interior or the bowl."
+            ],
+            "timeline": [
+              "- close_drawer({\"object\": \"bottom drawer of the cabinet\", \"pixel\": [174, 164], \"push_distance\": 0.2}) [perception, 73.1s] ok=False reason=drawer pixel was not visually verified",
+              "- record_reflection({\"observation\": \"Head frame after the failed place_object_in shows the black bowl resting in the already-pulled-out lower drawer; gripper is closed_empty (gap 0.0051) at [-0.0355,0.1443,1.0591]. close_drawer rejected pix) [perception, 0.0s] ok=True",
+              "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- find_by_detector({\"object\": \"drawer handle\"}) [perception, 0.0s] ok=False reason=PERCEPTION LOOP GUARD: too many perception calls without an action. Do not localize again now. Use the geometry you already have and take an action, or call exe",
+              "- close_drawer({\"object\": \"bottom drawer of the cabinet\", \"pixel\": [170, 196], \"push_distance\": 0.22, \"approach\": 0.1}) [perception, 142.7s] ok=True reason=drawer close motion measured; arm retraction failed",
+              "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- find_pixel({\"object\": \"black bowl\", \"location\": \"current scene\"}) [perception, 1.0s] ok=True",
+              "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- get_arm_pose({}) [perception, 0.6s] ok=True",
+              "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- find_by_detector({\"object\": \"black bowl\"}) [perception, 0.0s] ok=False reason=PERCEPTION LOOP GUARD: too many perception calls without an action. Do not localize again now. Use the geometry you already have and take an action, or call exe",
+              "- home({\"lift\": 0.15}) [recovery, 0.8s] ok=True reason=None",
+              "- find_by_pointing({\"object\": \"the bowl sitting on the table in front of the cabinet\"}) [perception, 13.3s] ok=True",
+              "- find_by_pointing({\"object\": \"the handle of the bottom drawer of the cabinet\"}) [perception, 25.4s] ok=True",
+              "- unproject_pixel({\"u\": 171, \"v\": 214, \"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- unproject_pixel({\"u\": 192, \"v\": 171, \"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- pull_drawer({\"object\": \"bottom drawer handle of the cabinet\", \"pixel\": [192, 171], \"pull_distance\": 0.14, \"approach\": 0.09}) [perception, 47.1s] ok=False reason=could not reach the handle approach pose",
+              "- ?({}) [other, 665.3s] "
+            ]
+          },
+          "agent_reflections": [
+            {
+              "timestamp": "2026-11-11T19:02:53.619936+00:00",
+              "observation": "Head frame after the failed place_object_in shows the black bowl resting in the already-pulled-out lower drawer; gripper is closed_empty (gap 0.0051) at [-0.0355,0.1443,1.0591]. close_drawer rejected pixel [385,190] (out of the 256x256 head frame) and pixel [174,164] as \"not visually verified\".",
+              "problem": "The bowl made it into the open bottom drawer (task's first half is done), but the drawer is still open and close_drawer needs a pixel that actually lies on the drawer front/handle in the current head frame.",
+              "change": "Re-observe the head view and choose a pixel directly on the visible light drawer front face / metal handle bar, not on the drawer interior or the bowl.",
+              "next_plan": "look(head) → identify the drawer front/handle pixel → close_drawer with that pixel and a short push distance → verify with a fresh head frame that the drawer is flush."
+            }
+          ],
+          "agent_failure_counts": {
+            "contrib:planning": 1
+          },
+          "agent_mode": "single",
+          "agent_tool_calls": 45
         },
         {
           "id": "libero_10/4",
@@ -4918,31 +5462,36 @@
           "video_status": "pending",
           "success_video_url": null,
           "blender_status": "built",
-          "failure_video_url": null,
-          "failure_video_status": "pending",
-          "video_kind": null,
-          "exec_status": "running",
-          "exec_success_rate": null,
+          "failure_video_url": "data/videos/agent/BM-035-last-failure.mp4",
+          "failure_video_status": "published",
+          "video_kind": "failure",
+          "exec_status": "failure",
+          "exec_success_rate": 0.0,
           "exec_attempts": 2,
-          "exec_rounds": 0,
-          "exec_duration_s": 0.0,
-          "exec_failure_reason": null,
+          "exec_rounds": 1,
+          "exec_duration_s": 667.306,
+          "exec_failure_reason": "single-agent episode",
           "exec_note": "Agent 闭环：IK 末端控制 + DeepSeek VLM 摄像机观察，最多 10 轮；成功/最后一次失败视频已上传。",
-          "exec_checked_at": null,
+          "exec_checked_at": "2026-11-11T19:11:50.165515+00:00",
           "agent_success_count": 0,
-          "agent_loop_updated_at": null,
-          "success_video_label": "待执行",
-          "agent_status": "running",
+          "agent_loop_updated_at": "2026-11-11T19:11:50.165515+00:00",
+          "success_video_label": "Agent 最后一次失败回放",
+          "agent_status": "failure",
           "agent_attempts": 2,
-          "agent_rounds": 0,
-          "agent_started_at": "2026-11-11T18:57:03.905698+00:00",
-          "agent_finished_at": null,
-          "agent_duration_s": 0.0,
-          "agent_failure_reason": null,
-          "agent_analysis": {},
+          "agent_rounds": 1,
+          "agent_started_at": "2026-11-11T18:57:04.315497+00:00",
+          "agent_finished_at": "2026-11-11T19:11:50.165515+00:00",
+          "agent_duration_s": 667.306,
+          "agent_failure_reason": "single-agent episode",
+          "agent_analysis": {
+            "outcome": "time_budget",
+            "failure_category": "planning",
+            "reviewer_verdict": "blocked",
+            "tool_calls": 64
+          },
           "agent_success_video_url": null,
-          "agent_last_failure_video_url": null,
-          "agent_clean_success": null,
+          "agent_last_failure_video_url": "data/videos/agent/BM-035-last-failure.mp4",
+          "agent_clean_success": false,
           "agent_success_kind": null,
           "agent_success_note": null,
           "agent_clean_grasp_trajectory_url": null,
@@ -4954,14 +5503,151 @@
           "agent_replay_attempts": null,
           "agent_replay_finished_at": null,
           "agent_replay_note": null,
-          "agent_thinking_s": null,
-          "agent_time_breakdown": {},
-          "agent_tool_counts": {},
-          "agent_thinking": {},
-          "agent_reflections": [],
-          "agent_failure_counts": {},
-          "agent_mode": null,
-          "agent_tool_calls": null
+          "agent_thinking_s": 640.254,
+          "agent_time_breakdown": {
+            "tool_total_s": 774.0,
+            "perception_s": 80.7,
+            "action_s": 68.2,
+            "recovery_s": 11.6,
+            "other_s": 613.5,
+            "llm_overhead_s": 0.0,
+            "tool_calls": 64,
+            "steps": 48,
+            "tool_counts": {
+              "look": 10,
+              "exec_python": 10,
+              "unproject_pixel": 10,
+              "find_pixel": 9,
+              "grasp_object": 4,
+              "find_by_pointing": 3,
+              "move_to_pose": 2,
+              "reset_scene": 2,
+              "observe_orbit": 2,
+              "get_arm_pose": 1,
+              "home": 1,
+              "record_reflection": 1,
+              "glob": 1,
+              "trajectory_refine": 1,
+              "is_holding": 1,
+              "descend_tcp_to_z": 1,
+              "get_grasp_pose": 1,
+              "grep": 1,
+              "read": 1,
+              "list_base_skills": 1,
+              "?": 1
+            },
+            "top_tools": [
+              {
+                "tool": "look",
+                "count": 10,
+                "seconds": 6.0
+              },
+              {
+                "tool": "exec_python",
+                "count": 10,
+                "seconds": 11.9
+              },
+              {
+                "tool": "unproject_pixel",
+                "count": 10,
+                "seconds": 5.9
+              },
+              {
+                "tool": "find_pixel",
+                "count": 9,
+                "seconds": 35.8
+              },
+              {
+                "tool": "grasp_object",
+                "count": 4,
+                "seconds": 63.0
+              },
+              {
+                "tool": "find_by_pointing",
+                "count": 3,
+                "seconds": 12.3
+              },
+              {
+                "tool": "move_to_pose",
+                "count": 2,
+                "seconds": 3.1
+              },
+              {
+                "tool": "reset_scene",
+                "count": 2,
+                "seconds": 10.9
+              }
+            ]
+          },
+          "agent_tool_counts": {
+            "look": 10,
+            "exec_python": 10,
+            "unproject_pixel": 10,
+            "find_pixel": 9,
+            "grasp_object": 4,
+            "find_by_pointing": 3,
+            "move_to_pose": 2,
+            "reset_scene": 2,
+            "observe_orbit": 2,
+            "get_arm_pose": 1,
+            "home": 1,
+            "record_reflection": 1,
+            "glob": 1,
+            "trajectory_refine": 1,
+            "is_holding": 1,
+            "descend_tcp_to_z": 1,
+            "get_grasp_pose": 1,
+            "grep": 1,
+            "read": 1,
+            "list_base_skills": 1,
+            "?": 1
+          },
+          "agent_thinking": {
+            "summary": "# Engineer Summary · libero_pick_place (seed=0)",
+            "why_failed": "Composite grasp_object approached the mug rim/upper body, pushed each mug over instead of straddling it, and never closed. Scene now contaminated (two toppled mugs) so the original upright grasp geometry no longer applies.",
+            "next_time": "reset_scene → look → localize both mugs and both plates → manual grasp of white mug to left plate, then yellow-white mug to right plate.",
+            "time_used": "tool_total=774s; perception=81s; action=68s; recovery=12s",
+            "problems": [
+              "Composite grasp_object approached the mug rim/upper body, pushed each mug over instead of straddling it, and never closed. Scene now contaminated (two toppled mugs) so the original upright grasp geometry no longer applies."
+            ],
+            "changes": [
+              "Reset the scene, then do an explicit top-down grasp: hover above the mug body center at z~0.66, descend to the mug mid-body height, close, lift, and verify with is_holding — instead of relying on the composite's grasp candidates."
+            ],
+            "timeline": [
+              "- descend_tcp_to_z({\"target_z\": 0.482, \"x\": -0.044, \"y\": -0.163, \"gripper\": \"open\", \"max_iters\": 70}) [action, 2.1s] ok=False reason=target pose was not reached",
+              "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- get_grasp_pose({\"pixel\": [63, 134], \"top_k\": 5}) [perception, 1.0s] ok=False reason=grasp candidates lacked finite 6-DoF poses",
+              "- exec_python({\"code\": \"names = [\\\"look\\\",\\\"find_pixel\\\",\\\"find_by_pointing\\\",\\\"find_by_detector\\\",\\\"unproject_pixel\\\",\\\"get_arm_pose\\\",\\n         \\\"grasp_object\\\",\\\"gripper\\\",\\\"home\\\",\\\"is_holding\\\",\\\"move_to_pose\\\",\\\"move_ee_delta\\\") [perception, 1.2s] ok=True",
+              "- grep({\"pattern\": \"bound\\\\[|_dispatch_tool|globals|def _bind|skill_fn\", \"path\": \"/home/sh/RoboRSI/roborsi/embodied/skills/base/exec_python/libero/policy.py\", \"context\": 3}) [perception, 0.0s] ok=True",
+              "- read({\"filePath\": \"/home/sh/RoboRSI/roborsi/embodied/skills/base/exec_python/libero/policy.py\", \"offset\": 20, \"limit\": 120}) [perception, 0.0s] ok=True",
+              "- list_base_skills({}) [perception, 1.9s] ok=True",
+              "- exec_python({\"code\": \"out = {}\\nfor n in [\\\"move_to_pose\\\", \\\"gripper\\\", \\\"descend_tcp_to_z\\\", \\\"is_holding\\\", \\\"unproject_pixel\\\",\\n          \\\"find_pixel\\\", \\\"grasp_object\\\", \\\"home\\\", \\\"place_on_surface\\\", \\\"place_object_in\\\",\\n ) [perception, 1.2s] ok=True",
+              "- unproject_pixel({\"u\": 42, \"v\": 136, \"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- unproject_pixel({\"camera\": \"head\", \"u\": 95, \"v\": 136}) [perception, 0.6s] ok=True",
+              "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- observe_orbit({}) [perception, 2.2s] ok=True",
+              "- observe_orbit({\"view\": \"orbit_top\", \"image_size\": 512}) [perception, 0.6s] ok=True",
+              "- exec_python({\"code\": \"out = {}\\n\\ndef center_px(fr):\\n    bb = fr.get(\\\"bbox\\\")\\n    if bb:\\n        return (int((bb[0]+bb[2])/2), int((bb[1]+bb[3])/2), bb)\\n    return (fr.get(\\\"u\\\"), fr.get(\\\"v\\\"), None)\\n\\nfp = find_pixel(object=) [perception, 1.3s] ok=False",
+              "- find_pixel({\"object\": \"white mug\", \"location\": \"left side of tabletop\"}) [perception, 0.9s] ok=True",
+              "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- find_by_pointing({\"object\": \"the white mug on the left side of the table\"}) [perception, 0.6s] ok=True",
+              "- ?({}) [other, 613.5s] "
+            ]
+          },
+          "agent_reflections": [
+            {
+              "timestamp": "2026-11-11T19:02:06.319672+00:00",
+              "observation": "grasp_object at [70,130] (white mug) and [164,147] (yellow-white mug) both returned grasped=false with gripper_gap 0.079 (fully open) and the head view now shows BOTH mugs knocked on their sides, with the arm folded in front of the camera.",
+              "problem": "Composite grasp_object approached the mug rim/upper body, pushed each mug over instead of straddling it, and never closed. Scene now contaminated (two toppled mugs) so the original upright grasp geometry no longer applies.",
+              "change": "Reset the scene, then do an explicit top-down grasp: hover above the mug body center at z~0.66, descend to the mug mid-body height, close, lift, and verify with is_holding — instead of relying on the composite's grasp candidates.",
+              "next_plan": "reset_scene → look → localize both mugs and both plates → manual grasp of white mug to left plate, then yellow-white mug to right plate."
+            }
+          ],
+          "agent_failure_counts": {
+            "contrib:planning": 1
+          },
+          "agent_mode": "single",
+          "agent_tool_calls": 64
         },
         {
           "id": "libero_10/5",
@@ -4977,30 +5663,35 @@
           "video_status": "pending",
           "success_video_url": null,
           "blender_status": "built",
-          "failure_video_url": null,
-          "failure_video_status": "pending",
-          "video_kind": null,
-          "exec_status": "pending",
-          "exec_success_rate": null,
-          "exec_attempts": 1,
-          "exec_rounds": 0,
-          "exec_duration_s": 0.0,
-          "exec_failure_reason": null,
+          "failure_video_url": "data/videos/agent/BM-036-last-failure.mp4",
+          "failure_video_status": "published",
+          "video_kind": "failure",
+          "exec_status": "failure",
+          "exec_success_rate": 0.0,
+          "exec_attempts": 2,
+          "exec_rounds": 1,
+          "exec_duration_s": 680.201,
+          "exec_failure_reason": "single-agent episode",
           "exec_note": "Agent 闭环：IK 末端控制 + DeepSeek VLM 摄像机观察，最多 10 轮；成功/最后一次失败视频已上传。",
-          "exec_checked_at": null,
+          "exec_checked_at": "2026-11-11T19:22:52.206474+00:00",
           "agent_success_count": 0,
-          "agent_loop_updated_at": null,
-          "success_video_label": "待执行",
-          "agent_status": "pending",
-          "agent_attempts": 1,
-          "agent_rounds": 0,
-          "agent_started_at": "2026-11-10T12:51:53.874331+00:00",
-          "agent_finished_at": null,
-          "agent_duration_s": 0.0,
-          "agent_failure_reason": null,
-          "agent_analysis": {},
+          "agent_loop_updated_at": "2026-11-11T19:22:52.206474+00:00",
+          "success_video_label": "Agent 最后一次失败回放",
+          "agent_status": "failure",
+          "agent_attempts": 2,
+          "agent_rounds": 1,
+          "agent_started_at": "2026-11-11T19:10:14.151372+00:00",
+          "agent_finished_at": "2026-11-11T19:22:52.206474+00:00",
+          "agent_duration_s": 680.201,
+          "agent_failure_reason": "single-agent episode",
+          "agent_analysis": {
+            "outcome": "time_budget",
+            "failure_category": "planning",
+            "reviewer_verdict": "blocked",
+            "tool_calls": 48
+          },
           "agent_success_video_url": null,
-          "agent_last_failure_video_url": null,
+          "agent_last_failure_video_url": "data/videos/agent/BM-036-last-failure.mp4",
           "agent_clean_success": false,
           "agent_success_kind": null,
           "agent_success_note": null,
@@ -5013,14 +5704,143 @@
           "agent_replay_attempts": null,
           "agent_replay_finished_at": null,
           "agent_replay_note": null,
-          "agent_thinking_s": 0.0,
-          "agent_time_breakdown": {},
-          "agent_tool_counts": {},
-          "agent_thinking": {},
-          "agent_reflections": [],
-          "agent_failure_counts": {},
+          "agent_thinking_s": 659.785,
+          "agent_time_breakdown": {
+            "tool_total_s": 951.4,
+            "perception_s": 287.2,
+            "action_s": 29.6,
+            "recovery_s": 0.6,
+            "other_s": 633.9,
+            "llm_overhead_s": 0.0,
+            "tool_calls": 48,
+            "steps": 36,
+            "tool_counts": {
+              "look": 8,
+              "unproject_pixel": 8,
+              "find_by_pointing": 6,
+              "exec_python": 5,
+              "get_arm_pose": 3,
+              "grasp_object": 3,
+              "observe_orbit": 3,
+              "descend_tcp_to_z": 2,
+              "get_grasp_pose": 2,
+              "home": 1,
+              "move_to_pose": 1,
+              "gripper": 1,
+              "read_joint_state": 1,
+              "move_to_pixel": 1,
+              "is_holding": 1,
+              "record_reflection": 1,
+              "?": 1
+            },
+            "top_tools": [
+              {
+                "tool": "look",
+                "count": 8,
+                "seconds": 4.6
+              },
+              {
+                "tool": "unproject_pixel",
+                "count": 8,
+                "seconds": 4.5
+              },
+              {
+                "tool": "find_by_pointing",
+                "count": 6,
+                "seconds": 265.3
+              },
+              {
+                "tool": "exec_python",
+                "count": 5,
+                "seconds": 5.6
+              },
+              {
+                "tool": "get_arm_pose",
+                "count": 3,
+                "seconds": 1.7
+              },
+              {
+                "tool": "grasp_object",
+                "count": 3,
+                "seconds": 25.1
+              },
+              {
+                "tool": "observe_orbit",
+                "count": 3,
+                "seconds": 1.9
+              },
+              {
+                "tool": "descend_tcp_to_z",
+                "count": 2,
+                "seconds": 2.1
+              }
+            ]
+          },
+          "agent_tool_counts": {
+            "look": 8,
+            "unproject_pixel": 8,
+            "find_by_pointing": 6,
+            "exec_python": 5,
+            "get_arm_pose": 3,
+            "grasp_object": 3,
+            "observe_orbit": 3,
+            "descend_tcp_to_z": 2,
+            "get_grasp_pose": 2,
+            "home": 1,
+            "move_to_pose": 1,
+            "gripper": 1,
+            "read_joint_state": 1,
+            "move_to_pixel": 1,
+            "is_holding": 1,
+            "record_reflection": 1,
+            "?": 1
+          },
+          "agent_thinking": {
+            "summary": "# Engineer Summary · libero_pick_place (seed=0)",
+            "why_failed": "The gripper close is happening too LOW: the fingertip/TCP descends to the object surface z (0.917/0.907), which the servo cannot even reach (stalls at 0.921), so the fingers end up below/around the book bottom and close on empty air. Negative grasp_z_offset pushed the close even lower.",
+            "next_time": "Re-localize the book and the caddy's back compartment from a fresh head frame, unproject both, build hover→descend→close→lift waypoints, verify hold, then hover above the back compartment and release low.",
+            "time_used": "tool_total=951s; perception=287s; action=30s; recovery=1s",
+            "problems": [
+              "The gripper close is happening too LOW: the fingertip/TCP descends to the object surface z (0.917/0.907), which the servo cannot even reach (stalls at 0.921), so the fingers end up below/around the book bottom and close on empty air. Negative grasp_z_offset pushed the close even lower."
+            ],
+            "changes": [
+              "Close HIGHER: use an explicit trajectory_refine waypoint chain with the TCP at z≈0.95-0.96 (about 4-5 cm above the perceived book surface) so the open fingers straddle the book's sides, then close and lift; verify the hold proprioceptively before transporting."
+            ],
+            "timeline": [
+              "- look({\"camera\": \"wrist\"}) [perception, 0.6s] ok=True",
+              "- observe_orbit({}) [perception, 0.6s] ok=True",
+              "- observe_orbit({\"view\": \"orbit_top\", \"image_size\": 512}) [perception, 0.6s] ok=True",
+              "- descend_tcp_to_z({\"target_z\": 0.905, \"gripper\": \"open\"}) [action, 0.6s] ok=False reason=target pose was not reached",
+              "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- look({\"camera\": \"wrist\"}) [perception, 0.6s] ok=True",
+              "- is_holding({\"object\": \"book\"}) [perception, 0.6s] ok=True holding=False",
+              "- get_grasp_pose({\"pixel\": [230, 190], \"top_k\": 3}) [perception, 1.7s] ok=False reason=no camera-depth grasp candidates at that pixel",
+              "- look({\"camera\": \"head\"}) [perception, 0.7s] ok=True",
+              "- record_reflection({\"observation\": \"Two grasp_object calls on the book (pixels [184,155] and [189,181], grasp_z_offset 0.0 and -0.01) returned grasped=false; proprioception showed gripper closed_empty (gap 0.0022) and descend_tcp_to_z to z) [perception, 0.0s] ok=True",
+              "- find_by_pointing({\"object\": \"the black book lying on the table\"}) [perception, 25.3s] ok=True",
+              "- unproject_pixel({\"u\": 199, \"v\": 170, \"camera\": \"head\"}) [perception, 0.6s] ok=True",
+              "- grasp_object({\"object\": \"book\", \"pixel\": [199, 170], \"grasp_z_offset\": 0.04, \"hover\": 0.12}) [action, 10.0s] ok=True holding=False grasped=False reason=None",
+              "- unproject_pixel({\"camera\": \"head\", \"u\": 220, \"v\": 192}) [perception, 0.6s] ok=True",
+              "- unproject_pixel({\"camera\": \"head\", \"u\": 200, \"v\": 176}) [perception, 0.6s] ok=True",
+              "- unproject_pixel({\"camera\": \"head\", \"u\": 241, \"v\": 209}) [perception, 0.6s] ok=True",
+              "- get_arm_pose({}) [perception, 0.6s] ok=True",
+              "- ?({}) [other, 633.9s] "
+            ]
+          },
+          "agent_reflections": [
+            {
+              "timestamp": "2026-11-11T19:20:09.123623+00:00",
+              "observation": "Two grasp_object calls on the book (pixels [184,155] and [189,181], grasp_z_offset 0.0 and -0.01) returned grasped=false; proprioception showed gripper closed_empty (gap 0.0022) and descend_tcp_to_z to z=0.905/0.894 stalled at ee z=0.921. EE now (-0.117,0.236,0.921). Book surface unprojects to z≈0.917-0.989; caddy rim unprojects to z≈1.05.",
+              "problem": "The gripper close is happening too LOW: the fingertip/TCP descends to the object surface z (0.917/0.907), which the servo cannot even reach (stalls at 0.921), so the fingers end up below/around the book bottom and close on empty air. Negative grasp_z_offset pushed the close even lower.",
+              "change": "Close HIGHER: use an explicit trajectory_refine waypoint chain with the TCP at z≈0.95-0.96 (about 4-5 cm above the perceived book surface) so the open fingers straddle the book's sides, then close and lift; verify the hold proprioceptively before transporting.",
+              "next_plan": "Re-localize the book and the caddy's back compartment from a fresh head frame, unproject both, build hover→descend→close→lift waypoints, verify hold, then hover above the back compartment and release low."
+            }
+          ],
+          "agent_failure_counts": {
+            "contrib:planning": 1
+          },
           "agent_mode": "single",
-          "agent_tool_calls": 0
+          "agent_tool_calls": 48
         },
         {
           "id": "libero_10/6",
@@ -37603,31 +38423,36 @@
       "video_status": "pending",
       "success_video_url": null,
       "blender_status": "built",
-      "failure_video_url": null,
-      "failure_video_status": "pending",
-      "video_kind": null,
-      "exec_status": "running",
-      "exec_success_rate": null,
+      "failure_video_url": "data/videos/agent/BM-006-last-failure.mp4",
+      "failure_video_status": "published",
+      "video_kind": "failure",
+      "exec_status": "failure",
+      "exec_success_rate": 0.0,
       "exec_attempts": 2,
-      "exec_rounds": 0,
-      "exec_duration_s": 0.0,
-      "exec_failure_reason": null,
+      "exec_rounds": 1,
+      "exec_duration_s": 651.732,
+      "exec_failure_reason": "single-agent episode",
       "exec_note": "Agent 闭环：IK 末端控制 + DeepSeek VLM 摄像机观察，最多 10 轮；成功/最后一次失败视频已上传。",
-      "exec_checked_at": null,
+      "exec_checked_at": "2026-11-11T19:11:29.999321+00:00",
       "agent_success_count": 0,
-      "agent_loop_updated_at": null,
-      "success_video_label": "待执行",
-      "agent_status": "running",
+      "agent_loop_updated_at": "2026-11-11T19:11:29.999321+00:00",
+      "success_video_label": "Agent 最后一次失败回放",
+      "agent_status": "failure",
       "agent_attempts": 2,
-      "agent_rounds": 0,
-      "agent_started_at": "2026-11-11T18:57:02.342367+00:00",
-      "agent_finished_at": null,
-      "agent_duration_s": 0.0,
-      "agent_failure_reason": null,
-      "agent_analysis": {},
+      "agent_rounds": 1,
+      "agent_started_at": "2026-11-11T18:57:02.674164+00:00",
+      "agent_finished_at": "2026-11-11T19:11:29.999321+00:00",
+      "agent_duration_s": 651.732,
+      "agent_failure_reason": "single-agent episode",
+      "agent_analysis": {
+        "outcome": "time_budget",
+        "failure_category": "planning",
+        "reviewer_verdict": "blocked",
+        "tool_calls": 56
+      },
       "agent_success_video_url": null,
-      "agent_last_failure_video_url": null,
-      "agent_clean_success": null,
+      "agent_last_failure_video_url": "data/videos/agent/BM-006-last-failure.mp4",
+      "agent_clean_success": false,
       "agent_success_kind": null,
       "agent_success_note": null,
       "agent_clean_grasp_trajectory_url": null,
@@ -37639,14 +38464,157 @@
       "agent_replay_attempts": null,
       "agent_replay_finished_at": null,
       "agent_replay_note": null,
-      "agent_thinking_s": null,
-      "agent_time_breakdown": {},
-      "agent_tool_counts": {},
-      "agent_thinking": {},
-      "agent_reflections": [],
-      "agent_failure_counts": {},
-      "agent_mode": null,
-      "agent_tool_calls": null
+      "agent_thinking_s": 628.469,
+      "agent_time_breakdown": {
+        "tool_total_s": 740.1,
+        "perception_s": 133.5,
+        "action_s": 3.6,
+        "recovery_s": 0.0,
+        "other_s": 603.1,
+        "llm_overhead_s": 0.0,
+        "tool_calls": 56,
+        "steps": 36,
+        "tool_counts": {
+          "unproject_pixel": 10,
+          "find_by_pointing": 8,
+          "look": 6,
+          "get_arm_pose": 5,
+          "find_pixel": 4,
+          "push_object": 4,
+          "is_reachable": 4,
+          "record_reflection": 3,
+          "trajectory_refine": 3,
+          "observe_orbit": 2,
+          "move_to_pose": 2,
+          "recover_joint_posture": 2,
+          "move_ee_delta": 1,
+          "read_skill_code": 1,
+          "?": 1
+        },
+        "top_tools": [
+          {
+            "tool": "unproject_pixel",
+            "count": 10,
+            "seconds": 6.0
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 8,
+            "seconds": 61.5
+          },
+          {
+            "tool": "look",
+            "count": 6,
+            "seconds": 3.4
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 5,
+            "seconds": 2.9
+          },
+          {
+            "tool": "find_pixel",
+            "count": 4,
+            "seconds": 14.5
+          },
+          {
+            "tool": "push_object",
+            "count": 4,
+            "seconds": 5.2
+          },
+          {
+            "tool": "is_reachable",
+            "count": 4,
+            "seconds": 2.2
+          },
+          {
+            "tool": "record_reflection",
+            "count": 3,
+            "seconds": 0.0
+          }
+        ]
+      },
+      "agent_tool_counts": {
+        "unproject_pixel": 10,
+        "find_by_pointing": 8,
+        "look": 6,
+        "get_arm_pose": 5,
+        "find_pixel": 4,
+        "push_object": 4,
+        "is_reachable": 4,
+        "record_reflection": 3,
+        "trajectory_refine": 3,
+        "observe_orbit": 2,
+        "move_to_pose": 2,
+        "recover_joint_posture": 2,
+        "move_ee_delta": 1,
+        "read_skill_code": 1,
+        "?": 1
+      },
+      "agent_thinking": {
+        "summary": "# Engineer Summary · libero_pick_place (seed=0)",
+        "why_failed": "push_object failed 4x (stale semantic point / unreachable hover pose) and the direct move_to_pose to a single push pose missed by 0.09 m; the arm cannot hit arbitrary single-pose Cartesian targets here, but a 7-waypoint trajectory_refine did execute fully earlier this episode.",
+        "next_time": "Execute the closed-loop push trajectory, then look and unproject the plate to confirm it sits in front of the stove.",
+        "time_used": "tool_total=740s; perception=134s; action=4s; recovery=0s",
+        "problems": [
+          "The push failed because the source pixel was not freshly established by a pointing/detector call in the current frame (stale semantic point), and I burned the perception budget on repeated localizations without any robot action.",
+          "The composite push_object cannot find an IK-reachable planar-push hover pose from its self-chosen orientation, so it aborts before contact. It also mislabels the source as stale unless the pixel was set by the immediately preceding perception call.",
+          "push_object failed 4x (stale semantic point / unreachable hover pose) and the direct move_to_pose to a single push pose missed by 0.09 m; the arm cannot hit arbitrary single-pose Cartesian targets here, but a 7-waypoint trajectory_refine did execute fully earlier this episode."
+        ],
+        "changes": [
+          "Reset the perception budget with a real motion, park the arm out of the camera's way, then take ONE fresh look and exactly two localizations (plate, stove) and immediately call push_object with those fresh pixels in the same frame — no extra perception rounds.",
+          "Stop using the composite push and drive the push explicitly: an explicit waypoint trajectory with quat [1,0,0,0] (the orientation that reliably reaches in this campaign), starting behind the plate on the push axis, descending to plate-top height, then translating along the push axis in 3 stages.",
+          "Abandon push_object and single-pose moves. Use trajectory_refine with an explicit waypoint list: descend with a closed gripper behind the plate (world ~[0.105,-0.095,0.925]), sweep at plate height (z~0.915) through the plate toward [-0.085,0.125,0.915] (front of stove), then lift."
+        ],
+        "timeline": [
+          "- is_reachable({\"pos\": [0.05, -0.03, 1.0]}) [perception, 0.6s] ok=True reason=within workspace envelope",
+          "- is_reachable({\"pos\": [0.05, -0.1, 0.924]}) [perception, 0.6s] ok=True reason=within workspace envelope",
+          "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- unproject_pixel({\"u\": 124, \"v\": 146, \"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- unproject_pixel({\"u\": 186, \"v\": 140, \"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- find_by_pointing({\"object\": \"the white plate on the table in front of the stove\"}) [perception, 0.0s] ok=False reason=PERCEPTION LOOP GUARD: too many perception calls without an action. Do not localize again now. Use the geometry you already have and take an action, or call exe",
+          "- move_to_pose({\"pos\": [0.045, -0.03, 1.06], \"gripper\": \"close\"}) [action, 1.5s] ok=False reason=target pose was not reached",
+          "- unproject_pixel({\"camera\": \"head\", \"u\": 185, \"v\": 148}) [perception, 0.6s] ok=True",
+          "- unproject_pixel({\"camera\": \"head\", \"u\": 160, \"v\": 150}) [perception, 0.6s] ok=True",
+          "- get_arm_pose({}) [perception, 0.6s] ok=True",
+          "- record_reflection({\"observation\": \"Head view: white plate on table directly in front-left of the stove; plate pixel [118,182] -> world [0.05,-0.03,0.909], stove near/front edge pixels (160,150)/(185,148) -> world [-0.10,0.11]/[-0.11,0.19]) [perception, 0.0s] ok=True",
+          "- trajectory_refine({\"waypoints\": [{\"pos\": [0.115, -0.105, 0.99], \"quat\": [1, 0, 0, 0], \"gripper\": \"close\", \"label\": \"pre\"}, {\"pos\": [0.105, -0.095, 0.925], \"quat\": [1, 0, 0, 0], \"gripper\": \"close\", \"label\": \"descend\"}, {\"pos\": [0.062, -0.0) [perception, 13.9s] ok=True",
+          "- recover_joint_posture({\"max_iters\": 240}) [perception, 1.3s] ok=True reason=None",
+          "- find_by_pointing({\"object\": \"the table area in front of the stove\"}) [perception, 15.8s] ok=True",
+          "- find_by_pointing({\"object\": \"the white plate with pink rim on the table\"}) [perception, 12.0s] ok=True",
+          "- unproject_pixel({\"camera\": \"head\", \"u\": 144, \"v\": 180}) [perception, 0.6s] ok=True",
+          "- unproject_pixel({\"camera\": \"head\", \"u\": 117, \"v\": 183}) [perception, 0.6s] ok=True",
+          "- ?({}) [other, 603.1s] "
+        ]
+      },
+      "agent_reflections": [
+        {
+          "timestamp": "2026-11-11T18:58:59.938948+00:00",
+          "observation": "Head/orbit views show the tabletop with a light flat object left-of-center at image [118,182] (unprojected [0.045,-0.030,0.909]) and a dark flat slab upper-right at [185,121] (unprojected [-0.225,0.206,0.929]) which the detector labels stove (conf 0.625). Arm is parked high at [-0.215,-0.004,1.169] with an open 0.0785 gripper. push_object with my cached pixels was rejected as 'source semantic point missing or stale', and the perception loop guard blocked further localization.",
+          "problem": "The push failed because the source pixel was not freshly established by a pointing/detector call in the current frame (stale semantic point), and I burned the perception budget on repeated localizations without any robot action.",
+          "change": "Reset the perception budget with a real motion, park the arm out of the camera's way, then take ONE fresh look and exactly two localizations (plate, stove) and immediately call push_object with those fresh pixels in the same frame — no extra perception rounds.",
+          "next_plan": "move_ee_delta upward/sideways to clear the view, look(head), find_by_pointing('white plate'), find_by_pointing('stove'), then push the plate toward the stove-front target pixel."
+        },
+        {
+          "timestamp": "2026-11-11T19:00:57.650300+00:00",
+          "observation": "push_object got as far as 'hover_recovery_reached' then failed with 'could not reach the planar-push hover pose' (visual_contact_backoff 0.0417, effective_standoff 0.0483). Arm ended at [0.1398,-0.0546,0.9979] with quat [0.915,-0.4027,0.0131,-0.0221] and a closed-empty gripper (gap 0.001). Plate is at world [0.053,-0.030,0.909]; stove center detector pixel [185,117] → about [-0.22,0.21,0.93], so the push axis is roughly (-0.5,+0.8).",
+          "problem": "The composite push_object cannot find an IK-reachable planar-push hover pose from its self-chosen orientation, so it aborts before contact. It also mislabels the source as stale unless the pixel was set by the immediately preceding perception call.",
+          "change": "Stop using the composite push and drive the push explicitly: an explicit waypoint trajectory with quat [1,0,0,0] (the orientation that reliably reaches in this campaign), starting behind the plate on the push axis, descending to plate-top height, then translating along the push axis in 3 stages.",
+          "next_plan": "trajectory_refine: hover behind plate → descend to z 0.912 → three forward push segments toward [-0.15,0.21]; then look and measure whether the plate moved toward the stove front."
+        },
+        {
+          "timestamp": "2026-11-11T19:06:06.367286+00:00",
+          "observation": "Head view: white plate on table directly in front-left of the stove; plate pixel [118,182] -> world [0.05,-0.03,0.909], stove near/front edge pixels (160,150)/(185,148) -> world [-0.10,0.11]/[-0.11,0.19] at z 0.902, so the stove front edge is ~0.2 m in the (-x,+y) direction from the plate. Arm ended at [0.067,0.058,1.075] after the move_to_pose target missed by 9 cm.",
+          "problem": "push_object failed 4x (stale semantic point / unreachable hover pose) and the direct move_to_pose to a single push pose missed by 0.09 m; the arm cannot hit arbitrary single-pose Cartesian targets here, but a 7-waypoint trajectory_refine did execute fully earlier this episode.",
+          "change": "Abandon push_object and single-pose moves. Use trajectory_refine with an explicit waypoint list: descend with a closed gripper behind the plate (world ~[0.105,-0.095,0.925]), sweep at plate height (z~0.915) through the plate toward [-0.085,0.125,0.915] (front of stove), then lift.",
+          "next_plan": "Execute the closed-loop push trajectory, then look and unproject the plate to confirm it sits in front of the stove."
+        }
+      ],
+      "agent_failure_counts": {
+        "contrib:planning": 1
+      },
+      "agent_mode": "single",
+      "agent_tool_calls": 56
     },
     {
       "id": "libero_goal/6",
@@ -40474,31 +41442,36 @@
       "video_status": "pending",
       "success_video_url": null,
       "blender_status": "built",
-      "failure_video_url": null,
-      "failure_video_status": "pending",
-      "video_kind": null,
-      "exec_status": "running",
-      "exec_success_rate": null,
+      "failure_video_url": "data/videos/agent/BM-025-last-failure.mp4",
+      "failure_video_status": "published",
+      "video_kind": "failure",
+      "exec_status": "failure",
+      "exec_success_rate": 0.0,
       "exec_attempts": 2,
-      "exec_rounds": 0,
-      "exec_duration_s": 0.0,
-      "exec_failure_reason": null,
+      "exec_rounds": 1,
+      "exec_duration_s": 648.842,
+      "exec_failure_reason": "single-agent episode",
       "exec_note": "Agent 闭环：IK 末端控制 + DeepSeek VLM 摄像机观察，最多 10 轮；成功/最后一次失败视频已上传。",
-      "exec_checked_at": null,
+      "exec_checked_at": "2026-11-11T19:11:30.277757+00:00",
       "agent_success_count": 0,
-      "agent_loop_updated_at": null,
-      "success_video_label": "待执行",
-      "agent_status": "running",
+      "agent_loop_updated_at": "2026-11-11T19:11:30.277757+00:00",
+      "success_video_label": "Agent 最后一次失败回放",
+      "agent_status": "failure",
       "agent_attempts": 2,
-      "agent_rounds": 0,
-      "agent_started_at": "2026-11-11T18:57:02.674291+00:00",
-      "agent_finished_at": null,
-      "agent_duration_s": 0.0,
-      "agent_failure_reason": null,
-      "agent_analysis": {},
+      "agent_rounds": 1,
+      "agent_started_at": "2026-11-11T18:57:03.082864+00:00",
+      "agent_finished_at": "2026-11-11T19:11:30.277757+00:00",
+      "agent_duration_s": 648.842,
+      "agent_failure_reason": "single-agent episode",
+      "agent_analysis": {
+        "outcome": "time_budget",
+        "failure_category": "planning",
+        "reviewer_verdict": "blocked",
+        "tool_calls": 55
+      },
       "agent_success_video_url": null,
-      "agent_last_failure_video_url": null,
-      "agent_clean_success": null,
+      "agent_last_failure_video_url": "data/videos/agent/BM-025-last-failure.mp4",
+      "agent_clean_success": false,
       "agent_success_kind": null,
       "agent_success_note": null,
       "agent_clean_grasp_trajectory_url": null,
@@ -40510,14 +41483,149 @@
       "agent_replay_attempts": null,
       "agent_replay_finished_at": null,
       "agent_replay_note": null,
-      "agent_thinking_s": null,
-      "agent_time_breakdown": {},
-      "agent_tool_counts": {},
-      "agent_thinking": {},
-      "agent_reflections": [],
-      "agent_failure_counts": {},
-      "agent_mode": null,
-      "agent_tool_calls": null
+      "agent_thinking_s": 626.336,
+      "agent_time_breakdown": {
+        "tool_total_s": 782.5,
+        "perception_s": 83.6,
+        "action_s": 97.0,
+        "recovery_s": 0.9,
+        "other_s": 601.0,
+        "llm_overhead_s": 0.0,
+        "tool_calls": 55,
+        "steps": 47,
+        "tool_counts": {
+          "look": 14,
+          "unproject_pixel": 5,
+          "find_by_pointing": 4,
+          "observe_orbit": 4,
+          "todowrite": 3,
+          "get_arm_pose": 3,
+          "move_to_pose": 3,
+          "grasp_object": 2,
+          "move_ee_delta": 2,
+          "get_grasp_pose": 2,
+          "preview_move_to_pose": 2,
+          "execute_previewed_move": 2,
+          "is_reachable": 2,
+          "descend_tcp_to_z": 1,
+          "gripper": 1,
+          "is_holding": 1,
+          "record_reflection": 1,
+          "home": 1,
+          "recover_joint_posture": 1,
+          "?": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 14,
+            "seconds": 8.0
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 5,
+            "seconds": 2.9
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 4,
+            "seconds": 61.0
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 4,
+            "seconds": 2.5
+          },
+          {
+            "tool": "todowrite",
+            "count": 3,
+            "seconds": 0.0
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 3,
+            "seconds": 1.7
+          },
+          {
+            "tool": "move_to_pose",
+            "count": 3,
+            "seconds": 2.3
+          },
+          {
+            "tool": "grasp_object",
+            "count": 2,
+            "seconds": 80.0
+          }
+        ]
+      },
+      "agent_tool_counts": {
+        "look": 14,
+        "unproject_pixel": 5,
+        "find_by_pointing": 4,
+        "observe_orbit": 4,
+        "todowrite": 3,
+        "get_arm_pose": 3,
+        "move_to_pose": 3,
+        "grasp_object": 2,
+        "move_ee_delta": 2,
+        "get_grasp_pose": 2,
+        "preview_move_to_pose": 2,
+        "execute_previewed_move": 2,
+        "is_reachable": 2,
+        "descend_tcp_to_z": 1,
+        "gripper": 1,
+        "is_holding": 1,
+        "record_reflection": 1,
+        "home": 1,
+        "recover_joint_posture": 1,
+        "?": 1
+      },
+      "agent_thinking": {
+        "summary": "# Engineer Summary · libero_pick_place (seed=0)",
+        "why_failed": "Cartesian descent stalls ~1.6-1.9 cm above the bowl grasp point: move_to_pose to z=1.082 ended at z=1.0973 (MOTION_FAILED), descend_tcp_to_z to 1.075 ended at 1.098, and gripper close there gives gap 0.02 closed_empty (pads met on air). So the TCP cannot reach the bowl's inner-surface z from that xy with the current configuration; the earlier close was on air, not on the rim.",
+        "next_time": "Preview a joint-space move to [0.068,-0.138,1.083] with the gripper open, inspect the rendered target, execute it, then close and verify the hold.",
+        "time_used": "tool_total=782s; perception=84s; action=97s; recovery=1s",
+        "problems": [
+          "Cartesian descent stalls ~1.6-1.9 cm above the bowl grasp point: move_to_pose to z=1.082 ended at z=1.0973 (MOTION_FAILED), descend_tcp_to_z to 1.075 ended at 1.098, and gripper close there gives gap 0.02 closed_empty (pads met on air). So the TCP cannot reach the bowl's inner-surface z from that xy with the current configuration; the earlier close was on air, not on the rim."
+        ],
+        "changes": [
+          "Switch from Cartesian servo to a joint-space planned trajectory (preview_move_to_pose) which can pick a different IK branch and possibly reach lower; if it also stalls, grasp the bowl RIM (higher than the inner surface) with a raised close height instead of the bowl center."
+        ],
+        "timeline": [
+          "- grasp_object({\"object\": \"akita black bowl in the top layer of the wooden cabinet\", \"hover\": 0.09}) [action, 54.3s] ok=True holding=False grasped=False reason=None",
+          "- look({\"camera\": \"wrist\"}) [perception, 0.6s] ok=True",
+          "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- move_ee_delta({\"dpos\": [0, 0, -0.035], \"gripper\": \"open\"}) [action, 3.0s] ok=False reason=target pose was not reached",
+          "- preview_move_to_pose({\"gripper\": \"open\", \"pos\": [-0.018, -0.291, 1.15], \"quat\": [0, 0.3827, 0, 0.9239]}) [perception, 0.8s] ok=True",
+          "- execute_previewed_move({\"preview_id\": \"move-preview-0002\"}) [action, 7.2s] ok=False reason=target pose was not reached",
+          "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- get_arm_pose({}) [perception, 0.6s] ok=True",
+          "- recover_joint_posture({\"max_iters\": 240}) [perception, 2.4s] ok=True reason=None",
+          "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- look({\"camera\": \"wrist\"}) [perception, 0.6s] ok=True",
+          "- observe_orbit({}) [perception, 0.6s] ok=True",
+          "- get_grasp_pose({\"pixel\": [18, 104], \"top_k\": 5}) [perception, 1.0s] ok=False reason=grasp candidates lacked finite 6-DoF poses",
+          "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- unproject_pixel({\"u\": 54, \"v\": 139, \"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- unproject_pixel({\"camera\": \"head\", \"u\": 94, \"v\": 139}) [perception, 0.6s] ok=True",
+          "- todowrite({\"todos\": [{\"content\": \"Grasp the akita black bowl at rim height (z~1.135), not inside the mouth\", \"status\": \"in_progress\", \"priority\": \"high\"}, {\"content\": \"Place bowl on the plate\", \"status\": \"pending\", \"priority\": \"hi) [perception, 0.0s] ok=True",
+          "- ?({}) [other, 601.0s] "
+        ]
+      },
+      "agent_reflections": [
+        {
+          "timestamp": "2026-11-11T19:00:32.511997+00:00",
+          "observation": "Head view: Panda hovers over the cabinet top layer; the black patterned akita bowl sits in the top shelf at ~pixel (74,139) -> world [0.049,-0.141,1.081]. Plate is the pink/white round dish on the right (~[0.0566,0.2089,0.9087]).",
+          "problem": "Cartesian descent stalls ~1.6-1.9 cm above the bowl grasp point: move_to_pose to z=1.082 ended at z=1.0973 (MOTION_FAILED), descend_tcp_to_z to 1.075 ended at 1.098, and gripper close there gives gap 0.02 closed_empty (pads met on air). So the TCP cannot reach the bowl's inner-surface z from that xy with the current configuration; the earlier close was on air, not on the rim.",
+          "change": "Switch from Cartesian servo to a joint-space planned trajectory (preview_move_to_pose) which can pick a different IK branch and possibly reach lower; if it also stalls, grasp the bowl RIM (higher than the inner surface) with a raised close height instead of the bowl center.",
+          "next_plan": "Preview a joint-space move to [0.068,-0.138,1.083] with the gripper open, inspect the rendered target, execute it, then close and verify the hold."
+        }
+      ],
+      "agent_failure_counts": {
+        "contrib:planning": 1
+      },
+      "agent_mode": "single",
+      "agent_tool_calls": 55
     },
     {
       "id": "libero_spatial/5",
@@ -41573,31 +42681,36 @@
       "video_status": "pending",
       "success_video_url": null,
       "blender_status": "built",
-      "failure_video_url": null,
-      "failure_video_status": "pending",
-      "video_kind": null,
-      "exec_status": "running",
-      "exec_success_rate": null,
+      "failure_video_url": "data/videos/agent/BM-033-last-failure.mp4",
+      "failure_video_status": "published",
+      "video_kind": "failure",
+      "exec_status": "failure",
+      "exec_success_rate": 0.0,
       "exec_attempts": 2,
-      "exec_rounds": 0,
-      "exec_duration_s": 0.0,
-      "exec_failure_reason": null,
+      "exec_rounds": 1,
+      "exec_duration_s": 644.599,
+      "exec_failure_reason": "single-agent episode",
       "exec_note": "Agent 闭环：IK 末端控制 + DeepSeek VLM 摄像机观察，最多 10 轮；成功/最后一次失败视频已上传。",
-      "exec_checked_at": null,
+      "exec_checked_at": "2026-11-11T19:11:28.660397+00:00",
       "agent_success_count": 0,
-      "agent_loop_updated_at": null,
-      "success_video_label": "待执行",
-      "agent_status": "running",
+      "agent_loop_updated_at": "2026-11-11T19:11:28.660397+00:00",
+      "success_video_label": "Agent 最后一次失败回放",
+      "agent_status": "failure",
       "agent_attempts": 2,
-      "agent_rounds": 0,
-      "agent_started_at": "2026-11-11T18:57:03.082974+00:00",
-      "agent_finished_at": null,
-      "agent_duration_s": 0.0,
-      "agent_failure_reason": null,
-      "agent_analysis": {},
+      "agent_rounds": 1,
+      "agent_started_at": "2026-11-11T18:57:03.493384+00:00",
+      "agent_finished_at": "2026-11-11T19:11:28.660397+00:00",
+      "agent_duration_s": 644.599,
+      "agent_failure_reason": "single-agent episode",
+      "agent_analysis": {
+        "outcome": "time_budget",
+        "failure_category": "planning",
+        "reviewer_verdict": "blocked",
+        "tool_calls": 77
+      },
       "agent_success_video_url": null,
-      "agent_last_failure_video_url": null,
-      "agent_clean_success": null,
+      "agent_last_failure_video_url": "data/videos/agent/BM-033-last-failure.mp4",
+      "agent_clean_success": false,
       "agent_success_kind": null,
       "agent_success_note": null,
       "agent_clean_grasp_trajectory_url": null,
@@ -41609,14 +42722,133 @@
       "agent_replay_attempts": null,
       "agent_replay_finished_at": null,
       "agent_replay_note": null,
-      "agent_thinking_s": null,
-      "agent_time_breakdown": {},
-      "agent_tool_counts": {},
-      "agent_thinking": {},
+      "agent_thinking_s": 628.22,
+      "agent_time_breakdown": {
+        "tool_total_s": 682.4,
+        "perception_s": 60.2,
+        "action_s": 18.9,
+        "recovery_s": 1.6,
+        "other_s": 601.8,
+        "llm_overhead_s": 0.0,
+        "tool_calls": 77,
+        "steps": 64,
+        "tool_counts": {
+          "exec_python": 16,
+          "unproject_pixel": 14,
+          "look": 6,
+          "observe_orbit": 6,
+          "get_arm_pose": 5,
+          "move_to_pose": 5,
+          "find_pixel": 4,
+          "mark_orbit_point": 4,
+          "gripper": 4,
+          "find_by_pointing": 3,
+          "read": 2,
+          "home": 2,
+          "grasp_object": 2,
+          "grep": 1,
+          "trajectory_refine": 1,
+          "descend_tcp_to_z": 1,
+          "?": 1
+        },
+        "top_tools": [
+          {
+            "tool": "exec_python",
+            "count": 16,
+            "seconds": 18.7
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 14,
+            "seconds": 8.3
+          },
+          {
+            "tool": "look",
+            "count": 6,
+            "seconds": 3.5
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 6,
+            "seconds": 3.2
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 5,
+            "seconds": 2.9
+          },
+          {
+            "tool": "move_to_pose",
+            "count": 5,
+            "seconds": 9.2
+          },
+          {
+            "tool": "find_pixel",
+            "count": 4,
+            "seconds": 17.9
+          },
+          {
+            "tool": "mark_orbit_point",
+            "count": 4,
+            "seconds": 2.4
+          }
+        ]
+      },
+      "agent_tool_counts": {
+        "exec_python": 16,
+        "unproject_pixel": 14,
+        "look": 6,
+        "observe_orbit": 6,
+        "get_arm_pose": 5,
+        "move_to_pose": 5,
+        "find_pixel": 4,
+        "mark_orbit_point": 4,
+        "gripper": 4,
+        "find_by_pointing": 3,
+        "read": 2,
+        "home": 2,
+        "grasp_object": 2,
+        "grep": 1,
+        "trajectory_refine": 1,
+        "descend_tcp_to_z": 1,
+        "?": 1
+      },
+      "agent_thinking": {
+        "summary": "# Engineer Summary · libero_pick_place (seed=0)",
+        "why_failed": "time_budget",
+        "next_time": "",
+        "time_used": "tool_total=682s; perception=60s; action=19s; recovery=2s",
+        "problems": [
+          "time_budget"
+        ],
+        "changes": [],
+        "timeline": [
+          "- descend_tcp_to_z({\"gripper\": \"open\", \"target_z\": 0.945, \"x\": -0.216, \"y\": 0.198}) [action, 0.7s] ok=True reason=None",
+          "- gripper({\"state\": \"close\"}) [action, 0.8s] ok=True reason=None",
+          "- get_arm_pose({}) [perception, 0.6s] ok=True",
+          "- move_to_pose({\"gripper\": \"close\", \"max_iters\": 100, \"pos\": [-0.216, 0.2032, 0.9499], \"quat\": [0.92706, 0.37501, -0.00281, -0.00208]}) [action, 0.9s] ok=True reason=None",
+          "- move_to_pose({\"gripper\": \"close\", \"max_iters\": 100, \"pos\": [-0.2149, 0.2036, 0.9506], \"quat\": [0.7071, 0.7071, 0, 0]}) [action, 0.9s] ok=True reason=None",
+          "- gripper({\"state\": \"open\"}) [action, 0.9s] ok=True reason=None",
+          "- exec_python({\"code\": \"out = {}\\nh = home(lift=0.20)\\nout[\\\"home\\\"] = {k: h.get(k) for k in (\\\"ok\\\",\\\"reached\\\",\\\"ee_pos\\\")}\\nfp = find_pixel(object=\\\"moka pot\\\", location=\\\"middle of the table\\\")\\nout[\\\"moka_px\\\"] = fp\\nburn = find_) [perception, 1.1s] ok=False",
+          "- exec_python({\"code\": \"return_dict[\\\"n\\\"] = sorted(k for k in globals().keys() if not k.startswith(\\\"_\\\"))\", \"description\": \"List bound names in CaP sandbox\"}) [perception, 1.1s] ok=False",
+          "- exec_python({\"code\": \"return_dict[\\\"n\\\"] = sorted(dir())\", \"description\": \"List available names\"}) [perception, 1.1s] ok=True",
+          "- home({\"lift\": 0.22}) [recovery, 0.7s] ok=True reason=None",
+          "- find_pixel({\"object\": \"moka pot\", \"location\": \"tabletop, center-left\"}) [perception, 1.0s] ok=True",
+          "- unproject_pixel({\"u\": 76, \"v\": 154, \"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- find_by_pointing({\"object\": \"the silver moka pot standing on the wooden table\"}) [perception, 0.6s] ok=True",
+          "- grasp_object({\"object\": \"moka pot\", \"pixel\": [76, 154], \"hover\": 0.12}) [action, 2.4s] ok=True holding=False grasped=False reason=None",
+          "- unproject_pixel({\"u\": 191, \"v\": 190, \"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- grasp_object({\"object\": \"moka pot\", \"pixel\": [196, 170], \"hover\": 0.12}) [action, 3.2s] ok=True holding=False grasped=False reason=None",
+          "- ?({}) [other, 601.8s] "
+        ]
+      },
       "agent_reflections": [],
-      "agent_failure_counts": {},
-      "agent_mode": null,
-      "agent_tool_calls": null
+      "agent_failure_counts": {
+        "contrib:planning": 1
+      },
+      "agent_mode": "single",
+      "agent_tool_calls": 77
     },
     {
       "id": "libero_10/3",
@@ -41632,34 +42864,39 @@
       "video_status": "pending",
       "success_video_url": null,
       "blender_status": "built",
-      "failure_video_url": null,
-      "failure_video_status": "pending",
-      "video_kind": null,
-      "exec_status": "running",
-      "exec_success_rate": null,
+      "failure_video_url": "data/videos/agent/BM-034-last-failure.mp4",
+      "failure_video_status": "published",
+      "video_kind": "failure",
+      "exec_status": "failure",
+      "exec_success_rate": 0.0,
       "exec_attempts": 2,
-      "exec_rounds": 0,
-      "exec_duration_s": 0.0,
-      "exec_failure_reason": null,
+      "exec_rounds": 1,
+      "exec_duration_s": 710.776,
+      "exec_failure_reason": "single-agent episode",
       "exec_note": "Agent 闭环：IK 末端控制 + DeepSeek VLM 摄像机观察，最多 10 轮；成功/最后一次失败视频已上传。",
-      "exec_checked_at": null,
+      "exec_checked_at": "2026-11-11T19:10:13.451109+00:00",
       "agent_success_count": 0,
-      "agent_loop_updated_at": null,
-      "success_video_label": "待执行",
-      "agent_status": "running",
+      "agent_loop_updated_at": "2026-11-11T19:10:13.451109+00:00",
+      "success_video_label": "Agent 最后一次失败回放",
+      "agent_status": "failure",
       "agent_attempts": 2,
-      "agent_rounds": 0,
-      "agent_started_at": "2026-11-11T18:57:03.493494+00:00",
-      "agent_finished_at": null,
-      "agent_duration_s": 0.0,
-      "agent_failure_reason": null,
-      "agent_analysis": {},
+      "agent_rounds": 1,
+      "agent_started_at": "2026-11-11T18:57:03.905584+00:00",
+      "agent_finished_at": "2026-11-11T19:10:13.451109+00:00",
+      "agent_duration_s": 710.776,
+      "agent_failure_reason": "single-agent episode",
+      "agent_analysis": {
+        "outcome": "time_budget",
+        "failure_category": "planning",
+        "reviewer_verdict": "blocked",
+        "tool_calls": 45
+      },
       "agent_success_video_url": null,
-      "agent_last_failure_video_url": null,
-      "agent_clean_success": null,
+      "agent_last_failure_video_url": "data/videos/agent/BM-034-last-failure.mp4",
+      "agent_clean_success": false,
       "agent_success_kind": null,
       "agent_success_note": null,
-      "agent_clean_grasp_trajectory_url": null,
+      "agent_clean_grasp_trajectory_url": "data/trajectories/BM-034-last-clean-grasp.json",
       "agent_confirmed_success": null,
       "agent_replay_status": null,
       "agent_replay_success": null,
@@ -41668,14 +42905,141 @@
       "agent_replay_attempts": null,
       "agent_replay_finished_at": null,
       "agent_replay_note": null,
-      "agent_thinking_s": null,
-      "agent_time_breakdown": {},
-      "agent_tool_counts": {},
-      "agent_thinking": {},
-      "agent_reflections": [],
-      "agent_failure_counts": {},
-      "agent_mode": null,
-      "agent_tool_calls": null
+      "agent_thinking_s": 691.565,
+      "agent_time_breakdown": {
+        "tool_total_s": 1093.5,
+        "perception_s": 411.8,
+        "action_s": 15.6,
+        "recovery_s": 0.8,
+        "other_s": 665.3,
+        "llm_overhead_s": 0.0,
+        "tool_calls": 45,
+        "steps": 39,
+        "tool_counts": {
+          "look": 8,
+          "find_pixel": 6,
+          "exec_python": 5,
+          "find_by_pointing": 4,
+          "find_by_detector": 4,
+          "observe_orbit": 3,
+          "unproject_pixel": 3,
+          "close_drawer": 3,
+          "get_arm_pose": 2,
+          "grasp_object": 1,
+          "place_object_in": 1,
+          "is_holding": 1,
+          "record_reflection": 1,
+          "home": 1,
+          "pull_drawer": 1,
+          "?": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 8,
+            "seconds": 4.7
+          },
+          {
+            "tool": "find_pixel",
+            "count": 6,
+            "seconds": 88.6
+          },
+          {
+            "tool": "exec_python",
+            "count": 5,
+            "seconds": 6.4
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 4,
+            "seconds": 39.8
+          },
+          {
+            "tool": "find_by_detector",
+            "count": 4,
+            "seconds": 3.5
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 3,
+            "seconds": 1.9
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 3,
+            "seconds": 1.7
+          },
+          {
+            "tool": "close_drawer",
+            "count": 3,
+            "seconds": 216.4
+          }
+        ]
+      },
+      "agent_tool_counts": {
+        "look": 8,
+        "find_pixel": 6,
+        "exec_python": 5,
+        "find_by_pointing": 4,
+        "find_by_detector": 4,
+        "observe_orbit": 3,
+        "unproject_pixel": 3,
+        "close_drawer": 3,
+        "get_arm_pose": 2,
+        "grasp_object": 1,
+        "place_object_in": 1,
+        "is_holding": 1,
+        "record_reflection": 1,
+        "home": 1,
+        "pull_drawer": 1,
+        "?": 1
+      },
+      "agent_thinking": {
+        "summary": "# Engineer Summary · libero_pick_place (seed=0)",
+        "why_failed": "The bowl made it into the open bottom drawer (task's first half is done), but the drawer is still open and close_drawer needs a pixel that actually lies on the drawer front/handle in the current head frame.",
+        "next_time": "look(head) → identify the drawer front/handle pixel → close_drawer with that pixel and a short push distance → verify with a fresh head frame that the drawer is flush.",
+        "time_used": "tool_total=1094s; perception=412s; action=16s; recovery=1s",
+        "problems": [
+          "The bowl made it into the open bottom drawer (task's first half is done), but the drawer is still open and close_drawer needs a pixel that actually lies on the drawer front/handle in the current head frame."
+        ],
+        "changes": [
+          "Re-observe the head view and choose a pixel directly on the visible light drawer front face / metal handle bar, not on the drawer interior or the bowl."
+        ],
+        "timeline": [
+          "- close_drawer({\"object\": \"bottom drawer of the cabinet\", \"pixel\": [174, 164], \"push_distance\": 0.2}) [perception, 73.1s] ok=False reason=drawer pixel was not visually verified",
+          "- record_reflection({\"observation\": \"Head frame after the failed place_object_in shows the black bowl resting in the already-pulled-out lower drawer; gripper is closed_empty (gap 0.0051) at [-0.0355,0.1443,1.0591]. close_drawer rejected pix) [perception, 0.0s] ok=True",
+          "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- find_by_detector({\"object\": \"drawer handle\"}) [perception, 0.0s] ok=False reason=PERCEPTION LOOP GUARD: too many perception calls without an action. Do not localize again now. Use the geometry you already have and take an action, or call exe",
+          "- close_drawer({\"object\": \"bottom drawer of the cabinet\", \"pixel\": [170, 196], \"push_distance\": 0.22, \"approach\": 0.1}) [perception, 142.7s] ok=True reason=drawer close motion measured; arm retraction failed",
+          "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- find_pixel({\"object\": \"black bowl\", \"location\": \"current scene\"}) [perception, 1.0s] ok=True",
+          "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- get_arm_pose({}) [perception, 0.6s] ok=True",
+          "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- find_by_detector({\"object\": \"black bowl\"}) [perception, 0.0s] ok=False reason=PERCEPTION LOOP GUARD: too many perception calls without an action. Do not localize again now. Use the geometry you already have and take an action, or call exe",
+          "- home({\"lift\": 0.15}) [recovery, 0.8s] ok=True reason=None",
+          "- find_by_pointing({\"object\": \"the bowl sitting on the table in front of the cabinet\"}) [perception, 13.3s] ok=True",
+          "- find_by_pointing({\"object\": \"the handle of the bottom drawer of the cabinet\"}) [perception, 25.4s] ok=True",
+          "- unproject_pixel({\"u\": 171, \"v\": 214, \"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- unproject_pixel({\"u\": 192, \"v\": 171, \"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- pull_drawer({\"object\": \"bottom drawer handle of the cabinet\", \"pixel\": [192, 171], \"pull_distance\": 0.14, \"approach\": 0.09}) [perception, 47.1s] ok=False reason=could not reach the handle approach pose",
+          "- ?({}) [other, 665.3s] "
+        ]
+      },
+      "agent_reflections": [
+        {
+          "timestamp": "2026-11-11T19:02:53.619936+00:00",
+          "observation": "Head frame after the failed place_object_in shows the black bowl resting in the already-pulled-out lower drawer; gripper is closed_empty (gap 0.0051) at [-0.0355,0.1443,1.0591]. close_drawer rejected pixel [385,190] (out of the 256x256 head frame) and pixel [174,164] as \"not visually verified\".",
+          "problem": "The bowl made it into the open bottom drawer (task's first half is done), but the drawer is still open and close_drawer needs a pixel that actually lies on the drawer front/handle in the current head frame.",
+          "change": "Re-observe the head view and choose a pixel directly on the visible light drawer front face / metal handle bar, not on the drawer interior or the bowl.",
+          "next_plan": "look(head) → identify the drawer front/handle pixel → close_drawer with that pixel and a short push distance → verify with a fresh head frame that the drawer is flush."
+        }
+      ],
+      "agent_failure_counts": {
+        "contrib:planning": 1
+      },
+      "agent_mode": "single",
+      "agent_tool_calls": 45
     },
     {
       "id": "libero_10/4",
@@ -41691,31 +43055,36 @@
       "video_status": "pending",
       "success_video_url": null,
       "blender_status": "built",
-      "failure_video_url": null,
-      "failure_video_status": "pending",
-      "video_kind": null,
-      "exec_status": "running",
-      "exec_success_rate": null,
+      "failure_video_url": "data/videos/agent/BM-035-last-failure.mp4",
+      "failure_video_status": "published",
+      "video_kind": "failure",
+      "exec_status": "failure",
+      "exec_success_rate": 0.0,
       "exec_attempts": 2,
-      "exec_rounds": 0,
-      "exec_duration_s": 0.0,
-      "exec_failure_reason": null,
+      "exec_rounds": 1,
+      "exec_duration_s": 667.306,
+      "exec_failure_reason": "single-agent episode",
       "exec_note": "Agent 闭环：IK 末端控制 + DeepSeek VLM 摄像机观察，最多 10 轮；成功/最后一次失败视频已上传。",
-      "exec_checked_at": null,
+      "exec_checked_at": "2026-11-11T19:11:50.165515+00:00",
       "agent_success_count": 0,
-      "agent_loop_updated_at": null,
-      "success_video_label": "待执行",
-      "agent_status": "running",
+      "agent_loop_updated_at": "2026-11-11T19:11:50.165515+00:00",
+      "success_video_label": "Agent 最后一次失败回放",
+      "agent_status": "failure",
       "agent_attempts": 2,
-      "agent_rounds": 0,
-      "agent_started_at": "2026-11-11T18:57:03.905698+00:00",
-      "agent_finished_at": null,
-      "agent_duration_s": 0.0,
-      "agent_failure_reason": null,
-      "agent_analysis": {},
+      "agent_rounds": 1,
+      "agent_started_at": "2026-11-11T18:57:04.315497+00:00",
+      "agent_finished_at": "2026-11-11T19:11:50.165515+00:00",
+      "agent_duration_s": 667.306,
+      "agent_failure_reason": "single-agent episode",
+      "agent_analysis": {
+        "outcome": "time_budget",
+        "failure_category": "planning",
+        "reviewer_verdict": "blocked",
+        "tool_calls": 64
+      },
       "agent_success_video_url": null,
-      "agent_last_failure_video_url": null,
-      "agent_clean_success": null,
+      "agent_last_failure_video_url": "data/videos/agent/BM-035-last-failure.mp4",
+      "agent_clean_success": false,
       "agent_success_kind": null,
       "agent_success_note": null,
       "agent_clean_grasp_trajectory_url": null,
@@ -41727,14 +43096,151 @@
       "agent_replay_attempts": null,
       "agent_replay_finished_at": null,
       "agent_replay_note": null,
-      "agent_thinking_s": null,
-      "agent_time_breakdown": {},
-      "agent_tool_counts": {},
-      "agent_thinking": {},
-      "agent_reflections": [],
-      "agent_failure_counts": {},
-      "agent_mode": null,
-      "agent_tool_calls": null
+      "agent_thinking_s": 640.254,
+      "agent_time_breakdown": {
+        "tool_total_s": 774.0,
+        "perception_s": 80.7,
+        "action_s": 68.2,
+        "recovery_s": 11.6,
+        "other_s": 613.5,
+        "llm_overhead_s": 0.0,
+        "tool_calls": 64,
+        "steps": 48,
+        "tool_counts": {
+          "look": 10,
+          "exec_python": 10,
+          "unproject_pixel": 10,
+          "find_pixel": 9,
+          "grasp_object": 4,
+          "find_by_pointing": 3,
+          "move_to_pose": 2,
+          "reset_scene": 2,
+          "observe_orbit": 2,
+          "get_arm_pose": 1,
+          "home": 1,
+          "record_reflection": 1,
+          "glob": 1,
+          "trajectory_refine": 1,
+          "is_holding": 1,
+          "descend_tcp_to_z": 1,
+          "get_grasp_pose": 1,
+          "grep": 1,
+          "read": 1,
+          "list_base_skills": 1,
+          "?": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 10,
+            "seconds": 6.0
+          },
+          {
+            "tool": "exec_python",
+            "count": 10,
+            "seconds": 11.9
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 10,
+            "seconds": 5.9
+          },
+          {
+            "tool": "find_pixel",
+            "count": 9,
+            "seconds": 35.8
+          },
+          {
+            "tool": "grasp_object",
+            "count": 4,
+            "seconds": 63.0
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 3,
+            "seconds": 12.3
+          },
+          {
+            "tool": "move_to_pose",
+            "count": 2,
+            "seconds": 3.1
+          },
+          {
+            "tool": "reset_scene",
+            "count": 2,
+            "seconds": 10.9
+          }
+        ]
+      },
+      "agent_tool_counts": {
+        "look": 10,
+        "exec_python": 10,
+        "unproject_pixel": 10,
+        "find_pixel": 9,
+        "grasp_object": 4,
+        "find_by_pointing": 3,
+        "move_to_pose": 2,
+        "reset_scene": 2,
+        "observe_orbit": 2,
+        "get_arm_pose": 1,
+        "home": 1,
+        "record_reflection": 1,
+        "glob": 1,
+        "trajectory_refine": 1,
+        "is_holding": 1,
+        "descend_tcp_to_z": 1,
+        "get_grasp_pose": 1,
+        "grep": 1,
+        "read": 1,
+        "list_base_skills": 1,
+        "?": 1
+      },
+      "agent_thinking": {
+        "summary": "# Engineer Summary · libero_pick_place (seed=0)",
+        "why_failed": "Composite grasp_object approached the mug rim/upper body, pushed each mug over instead of straddling it, and never closed. Scene now contaminated (two toppled mugs) so the original upright grasp geometry no longer applies.",
+        "next_time": "reset_scene → look → localize both mugs and both plates → manual grasp of white mug to left plate, then yellow-white mug to right plate.",
+        "time_used": "tool_total=774s; perception=81s; action=68s; recovery=12s",
+        "problems": [
+          "Composite grasp_object approached the mug rim/upper body, pushed each mug over instead of straddling it, and never closed. Scene now contaminated (two toppled mugs) so the original upright grasp geometry no longer applies."
+        ],
+        "changes": [
+          "Reset the scene, then do an explicit top-down grasp: hover above the mug body center at z~0.66, descend to the mug mid-body height, close, lift, and verify with is_holding — instead of relying on the composite's grasp candidates."
+        ],
+        "timeline": [
+          "- descend_tcp_to_z({\"target_z\": 0.482, \"x\": -0.044, \"y\": -0.163, \"gripper\": \"open\", \"max_iters\": 70}) [action, 2.1s] ok=False reason=target pose was not reached",
+          "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- get_grasp_pose({\"pixel\": [63, 134], \"top_k\": 5}) [perception, 1.0s] ok=False reason=grasp candidates lacked finite 6-DoF poses",
+          "- exec_python({\"code\": \"names = [\\\"look\\\",\\\"find_pixel\\\",\\\"find_by_pointing\\\",\\\"find_by_detector\\\",\\\"unproject_pixel\\\",\\\"get_arm_pose\\\",\\n         \\\"grasp_object\\\",\\\"gripper\\\",\\\"home\\\",\\\"is_holding\\\",\\\"move_to_pose\\\",\\\"move_ee_delta\\\") [perception, 1.2s] ok=True",
+          "- grep({\"pattern\": \"bound\\\\[|_dispatch_tool|globals|def _bind|skill_fn\", \"path\": \"/home/sh/RoboRSI/roborsi/embodied/skills/base/exec_python/libero/policy.py\", \"context\": 3}) [perception, 0.0s] ok=True",
+          "- read({\"filePath\": \"/home/sh/RoboRSI/roborsi/embodied/skills/base/exec_python/libero/policy.py\", \"offset\": 20, \"limit\": 120}) [perception, 0.0s] ok=True",
+          "- list_base_skills({}) [perception, 1.9s] ok=True",
+          "- exec_python({\"code\": \"out = {}\\nfor n in [\\\"move_to_pose\\\", \\\"gripper\\\", \\\"descend_tcp_to_z\\\", \\\"is_holding\\\", \\\"unproject_pixel\\\",\\n          \\\"find_pixel\\\", \\\"grasp_object\\\", \\\"home\\\", \\\"place_on_surface\\\", \\\"place_object_in\\\",\\n ) [perception, 1.2s] ok=True",
+          "- unproject_pixel({\"u\": 42, \"v\": 136, \"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- unproject_pixel({\"camera\": \"head\", \"u\": 95, \"v\": 136}) [perception, 0.6s] ok=True",
+          "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- observe_orbit({}) [perception, 2.2s] ok=True",
+          "- observe_orbit({\"view\": \"orbit_top\", \"image_size\": 512}) [perception, 0.6s] ok=True",
+          "- exec_python({\"code\": \"out = {}\\n\\ndef center_px(fr):\\n    bb = fr.get(\\\"bbox\\\")\\n    if bb:\\n        return (int((bb[0]+bb[2])/2), int((bb[1]+bb[3])/2), bb)\\n    return (fr.get(\\\"u\\\"), fr.get(\\\"v\\\"), None)\\n\\nfp = find_pixel(object=) [perception, 1.3s] ok=False",
+          "- find_pixel({\"object\": \"white mug\", \"location\": \"left side of tabletop\"}) [perception, 0.9s] ok=True",
+          "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- find_by_pointing({\"object\": \"the white mug on the left side of the table\"}) [perception, 0.6s] ok=True",
+          "- ?({}) [other, 613.5s] "
+        ]
+      },
+      "agent_reflections": [
+        {
+          "timestamp": "2026-11-11T19:02:06.319672+00:00",
+          "observation": "grasp_object at [70,130] (white mug) and [164,147] (yellow-white mug) both returned grasped=false with gripper_gap 0.079 (fully open) and the head view now shows BOTH mugs knocked on their sides, with the arm folded in front of the camera.",
+          "problem": "Composite grasp_object approached the mug rim/upper body, pushed each mug over instead of straddling it, and never closed. Scene now contaminated (two toppled mugs) so the original upright grasp geometry no longer applies.",
+          "change": "Reset the scene, then do an explicit top-down grasp: hover above the mug body center at z~0.66, descend to the mug mid-body height, close, lift, and verify with is_holding — instead of relying on the composite's grasp candidates.",
+          "next_plan": "reset_scene → look → localize both mugs and both plates → manual grasp of white mug to left plate, then yellow-white mug to right plate."
+        }
+      ],
+      "agent_failure_counts": {
+        "contrib:planning": 1
+      },
+      "agent_mode": "single",
+      "agent_tool_calls": 64
     },
     {
       "id": "libero_10/5",
@@ -41750,30 +43256,35 @@
       "video_status": "pending",
       "success_video_url": null,
       "blender_status": "built",
-      "failure_video_url": null,
-      "failure_video_status": "pending",
-      "video_kind": null,
-      "exec_status": "pending",
-      "exec_success_rate": null,
-      "exec_attempts": 1,
-      "exec_rounds": 0,
-      "exec_duration_s": 0.0,
-      "exec_failure_reason": null,
+      "failure_video_url": "data/videos/agent/BM-036-last-failure.mp4",
+      "failure_video_status": "published",
+      "video_kind": "failure",
+      "exec_status": "failure",
+      "exec_success_rate": 0.0,
+      "exec_attempts": 2,
+      "exec_rounds": 1,
+      "exec_duration_s": 680.201,
+      "exec_failure_reason": "single-agent episode",
       "exec_note": "Agent 闭环：IK 末端控制 + DeepSeek VLM 摄像机观察，最多 10 轮；成功/最后一次失败视频已上传。",
-      "exec_checked_at": null,
+      "exec_checked_at": "2026-11-11T19:22:52.206474+00:00",
       "agent_success_count": 0,
-      "agent_loop_updated_at": null,
-      "success_video_label": "待执行",
-      "agent_status": "pending",
-      "agent_attempts": 1,
-      "agent_rounds": 0,
-      "agent_started_at": "2026-11-10T12:51:53.874331+00:00",
-      "agent_finished_at": null,
-      "agent_duration_s": 0.0,
-      "agent_failure_reason": null,
-      "agent_analysis": {},
+      "agent_loop_updated_at": "2026-11-11T19:22:52.206474+00:00",
+      "success_video_label": "Agent 最后一次失败回放",
+      "agent_status": "failure",
+      "agent_attempts": 2,
+      "agent_rounds": 1,
+      "agent_started_at": "2026-11-11T19:10:14.151372+00:00",
+      "agent_finished_at": "2026-11-11T19:22:52.206474+00:00",
+      "agent_duration_s": 680.201,
+      "agent_failure_reason": "single-agent episode",
+      "agent_analysis": {
+        "outcome": "time_budget",
+        "failure_category": "planning",
+        "reviewer_verdict": "blocked",
+        "tool_calls": 48
+      },
       "agent_success_video_url": null,
-      "agent_last_failure_video_url": null,
+      "agent_last_failure_video_url": "data/videos/agent/BM-036-last-failure.mp4",
       "agent_clean_success": false,
       "agent_success_kind": null,
       "agent_success_note": null,
@@ -41786,14 +43297,143 @@
       "agent_replay_attempts": null,
       "agent_replay_finished_at": null,
       "agent_replay_note": null,
-      "agent_thinking_s": 0.0,
-      "agent_time_breakdown": {},
-      "agent_tool_counts": {},
-      "agent_thinking": {},
-      "agent_reflections": [],
-      "agent_failure_counts": {},
+      "agent_thinking_s": 659.785,
+      "agent_time_breakdown": {
+        "tool_total_s": 951.4,
+        "perception_s": 287.2,
+        "action_s": 29.6,
+        "recovery_s": 0.6,
+        "other_s": 633.9,
+        "llm_overhead_s": 0.0,
+        "tool_calls": 48,
+        "steps": 36,
+        "tool_counts": {
+          "look": 8,
+          "unproject_pixel": 8,
+          "find_by_pointing": 6,
+          "exec_python": 5,
+          "get_arm_pose": 3,
+          "grasp_object": 3,
+          "observe_orbit": 3,
+          "descend_tcp_to_z": 2,
+          "get_grasp_pose": 2,
+          "home": 1,
+          "move_to_pose": 1,
+          "gripper": 1,
+          "read_joint_state": 1,
+          "move_to_pixel": 1,
+          "is_holding": 1,
+          "record_reflection": 1,
+          "?": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 8,
+            "seconds": 4.6
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 8,
+            "seconds": 4.5
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 6,
+            "seconds": 265.3
+          },
+          {
+            "tool": "exec_python",
+            "count": 5,
+            "seconds": 5.6
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 3,
+            "seconds": 1.7
+          },
+          {
+            "tool": "grasp_object",
+            "count": 3,
+            "seconds": 25.1
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 3,
+            "seconds": 1.9
+          },
+          {
+            "tool": "descend_tcp_to_z",
+            "count": 2,
+            "seconds": 2.1
+          }
+        ]
+      },
+      "agent_tool_counts": {
+        "look": 8,
+        "unproject_pixel": 8,
+        "find_by_pointing": 6,
+        "exec_python": 5,
+        "get_arm_pose": 3,
+        "grasp_object": 3,
+        "observe_orbit": 3,
+        "descend_tcp_to_z": 2,
+        "get_grasp_pose": 2,
+        "home": 1,
+        "move_to_pose": 1,
+        "gripper": 1,
+        "read_joint_state": 1,
+        "move_to_pixel": 1,
+        "is_holding": 1,
+        "record_reflection": 1,
+        "?": 1
+      },
+      "agent_thinking": {
+        "summary": "# Engineer Summary · libero_pick_place (seed=0)",
+        "why_failed": "The gripper close is happening too LOW: the fingertip/TCP descends to the object surface z (0.917/0.907), which the servo cannot even reach (stalls at 0.921), so the fingers end up below/around the book bottom and close on empty air. Negative grasp_z_offset pushed the close even lower.",
+        "next_time": "Re-localize the book and the caddy's back compartment from a fresh head frame, unproject both, build hover→descend→close→lift waypoints, verify hold, then hover above the back compartment and release low.",
+        "time_used": "tool_total=951s; perception=287s; action=30s; recovery=1s",
+        "problems": [
+          "The gripper close is happening too LOW: the fingertip/TCP descends to the object surface z (0.917/0.907), which the servo cannot even reach (stalls at 0.921), so the fingers end up below/around the book bottom and close on empty air. Negative grasp_z_offset pushed the close even lower."
+        ],
+        "changes": [
+          "Close HIGHER: use an explicit trajectory_refine waypoint chain with the TCP at z≈0.95-0.96 (about 4-5 cm above the perceived book surface) so the open fingers straddle the book's sides, then close and lift; verify the hold proprioceptively before transporting."
+        ],
+        "timeline": [
+          "- look({\"camera\": \"wrist\"}) [perception, 0.6s] ok=True",
+          "- observe_orbit({}) [perception, 0.6s] ok=True",
+          "- observe_orbit({\"view\": \"orbit_top\", \"image_size\": 512}) [perception, 0.6s] ok=True",
+          "- descend_tcp_to_z({\"target_z\": 0.905, \"gripper\": \"open\"}) [action, 0.6s] ok=False reason=target pose was not reached",
+          "- look({\"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- look({\"camera\": \"wrist\"}) [perception, 0.6s] ok=True",
+          "- is_holding({\"object\": \"book\"}) [perception, 0.6s] ok=True holding=False",
+          "- get_grasp_pose({\"pixel\": [230, 190], \"top_k\": 3}) [perception, 1.7s] ok=False reason=no camera-depth grasp candidates at that pixel",
+          "- look({\"camera\": \"head\"}) [perception, 0.7s] ok=True",
+          "- record_reflection({\"observation\": \"Two grasp_object calls on the book (pixels [184,155] and [189,181], grasp_z_offset 0.0 and -0.01) returned grasped=false; proprioception showed gripper closed_empty (gap 0.0022) and descend_tcp_to_z to z) [perception, 0.0s] ok=True",
+          "- find_by_pointing({\"object\": \"the black book lying on the table\"}) [perception, 25.3s] ok=True",
+          "- unproject_pixel({\"u\": 199, \"v\": 170, \"camera\": \"head\"}) [perception, 0.6s] ok=True",
+          "- grasp_object({\"object\": \"book\", \"pixel\": [199, 170], \"grasp_z_offset\": 0.04, \"hover\": 0.12}) [action, 10.0s] ok=True holding=False grasped=False reason=None",
+          "- unproject_pixel({\"camera\": \"head\", \"u\": 220, \"v\": 192}) [perception, 0.6s] ok=True",
+          "- unproject_pixel({\"camera\": \"head\", \"u\": 200, \"v\": 176}) [perception, 0.6s] ok=True",
+          "- unproject_pixel({\"camera\": \"head\", \"u\": 241, \"v\": 209}) [perception, 0.6s] ok=True",
+          "- get_arm_pose({}) [perception, 0.6s] ok=True",
+          "- ?({}) [other, 633.9s] "
+        ]
+      },
+      "agent_reflections": [
+        {
+          "timestamp": "2026-11-11T19:20:09.123623+00:00",
+          "observation": "Two grasp_object calls on the book (pixels [184,155] and [189,181], grasp_z_offset 0.0 and -0.01) returned grasped=false; proprioception showed gripper closed_empty (gap 0.0022) and descend_tcp_to_z to z=0.905/0.894 stalled at ee z=0.921. EE now (-0.117,0.236,0.921). Book surface unprojects to z≈0.917-0.989; caddy rim unprojects to z≈1.05.",
+          "problem": "The gripper close is happening too LOW: the fingertip/TCP descends to the object surface z (0.917/0.907), which the servo cannot even reach (stalls at 0.921), so the fingers end up below/around the book bottom and close on empty air. Negative grasp_z_offset pushed the close even lower.",
+          "change": "Close HIGHER: use an explicit trajectory_refine waypoint chain with the TCP at z≈0.95-0.96 (about 4-5 cm above the perceived book surface) so the open fingers straddle the book's sides, then close and lift; verify the hold proprioceptively before transporting.",
+          "next_plan": "Re-localize the book and the caddy's back compartment from a fresh head frame, unproject both, build hover→descend→close→lift waypoints, verify hold, then hover above the back compartment and release low."
+        }
+      ],
+      "agent_failure_counts": {
+        "contrib:planning": 1
+      },
       "agent_mode": "single",
-      "agent_tool_calls": 0
+      "agent_tool_calls": 48
     },
     {
       "id": "libero_10/6",
@@ -73519,24 +75159,24 @@
     }
   ],
   "results_summary": {
-    "generated_at": "2026-11-11T18:57:03.986665+00:00",
+    "generated_at": "2026-11-11T19:22:52.693264+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 40,
-    "failure": 84,
+    "failure": 90,
     "infra": 0,
     "blocked": 100,
-    "pending": 104,
-    "running": 5,
+    "pending": 103,
+    "running": 0,
     "clean_success": 39,
     "soft_success": 1,
     "confirmed_success": 2,
     "replay_pending": 36,
     "replay_failed": 2,
-    "valid_verdicts": 124,
-    "success_rate": 0.3225806451612903,
-    "clean_success_rate": 0.31451612903225806,
+    "valid_verdicts": 130,
+    "success_rate": 0.3076923076923077,
+    "clean_success_rate": 0.3,
     "publish": {
       "at": "2026-11-11T05:31:19.565639+00:00",
       "returncode": 1,
