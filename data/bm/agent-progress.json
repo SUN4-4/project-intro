@@ -1,9 +1,9 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-11T05:04:48.025903+00:00",
+  "generated_at": "2026-11-11T05:17:19.860379+00:00",
   "campaign_id": "bm-agent-20261109-140132",
   "summary": {
-    "generated_at": "2026-11-11T05:04:48.020290+00:00",
+    "generated_at": "2026-11-11T05:17:19.854318+00:00",
     "campaign_id": "bm-agent-20261109-140132",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -11,8 +11,8 @@
     "failure": 21,
     "infra": 6,
     "blocked": 100,
-    "pending": 190,
-    "running": 1,
+    "pending": 191,
+    "running": 0,
     "clean_success": 14,
     "soft_success": 1,
     "confirmed_success": 2,
@@ -22,20 +22,14 @@
     "success_rate": 0.4166666666666667,
     "clean_success_rate": 0.3888888888888889,
     "publish": {
-      "at": "2026-11-10T17:41:21.218047+00:00",
-      "returncode": 1,
-      "tail": "2026-11-10T17:41:21Z fetch failed | fatal: 无法访问 'https://github.com/SUN4-4/project-intro.git/'：Operation too slow. Less than 1000 bytes/sec transferred the last 60 seconds",
+      "at": "2026-11-11T05:04:54.703588+00:00",
+      "returncode": 0,
+      "tail": "来自 https://github.com/SUN4-4/project-intro |  * branch            main       -> FETCH_HEAD | To https://github.com/SUN4-4/project-intro.git |    3a1c4da..f18b586  main -> main",
       "url": "https://sun4-4.github.io/project-intro/"
     },
     "paused": null
   },
-  "current": {
-    "bm_id": "BM-031",
-    "task_id": "libero_10/0",
-    "benchmark": "libero",
-    "attempt": 1,
-    "started_at": "2026-11-11T05:04:48.001299+00:00"
-  },
+  "current": null,
   "tasks": [
     {
       "bm_id": "BM-001",
@@ -3209,18 +3203,96 @@
       "bm_id": "BM-031",
       "task_id": "libero_10/0",
       "benchmark": "libero",
-      "status": "running",
-      "attempts": 1,
+      "status": "pending",
+      "attempts": 0,
       "rounds": 0,
       "duration_s": 0.0,
-      "thinking_s": null,
-      "time_breakdown": {},
-      "tool_counts": {},
-      "failure_counts": {},
+      "thinking_s": 610.362,
+      "time_breakdown": {
+        "tool_total_s": 1108.0,
+        "perception_s": 319.6,
+        "action_s": 187.8,
+        "recovery_s": 0.3,
+        "other_s": 600.3,
+        "llm_overhead_s": 0.0,
+        "tool_calls": 27,
+        "steps": 22,
+        "tool_counts": {
+          "look": 6,
+          "find_by_pointing": 5,
+          "exec_python": 3,
+          "find_pixel": 3,
+          "find_by_detector": 2,
+          "grasp_object": 2,
+          "place_object_in": 2,
+          "get_arm_pose": 1,
+          "observe_orbit": 1,
+          "home": 1,
+          "?": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 6,
+            "seconds": 1.3
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 5,
+            "seconds": 123.8
+          },
+          {
+            "tool": "exec_python",
+            "count": 3,
+            "seconds": 1.8
+          },
+          {
+            "tool": "find_pixel",
+            "count": 3,
+            "seconds": 191.8
+          },
+          {
+            "tool": "find_by_detector",
+            "count": 2,
+            "seconds": 0.4
+          },
+          {
+            "tool": "grasp_object",
+            "count": 2,
+            "seconds": 5.2
+          },
+          {
+            "tool": "place_object_in",
+            "count": 2,
+            "seconds": 182.7
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 1,
+            "seconds": 0.2
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 6,
+        "find_by_pointing": 5,
+        "exec_python": 3,
+        "find_pixel": 3,
+        "find_by_detector": 2,
+        "grasp_object": 2,
+        "place_object_in": 2,
+        "get_arm_pose": 1,
+        "observe_orbit": 1,
+        "home": 1,
+        "?": 1
+      },
+      "failure_counts": {
+        "contrib:planning": 1
+      },
       "failure_reason": null,
       "success_video_url": null,
       "last_failure_video_url": "data/videos/agent/BM-031-last-failure.mp4",
-      "clean_grasp_trajectory_url": null,
+      "clean_grasp_trajectory_url": "data/trajectories/BM-031-last-clean-grasp.json",
       "confirmed_success": null,
       "replay_status": null,
       "replay_success": null,
