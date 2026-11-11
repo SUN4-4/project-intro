@@ -26,11 +26,16 @@ RoboRSI 的项目介绍页：项目定位、核心能力、最新评测进展，
 
 333 个 BM 任务由 `data/scripts/build_tasks_js.py` 统一生成。编号按
 `LIBERO → RoboTwin → BEHAVIOR-1K → robosuite → RoboDojo` 顺序连续分配，写入
-`data/bm/tasks.json`，并同步生成 `assets/tasks.js`。`data/bm/tasks.json`
-同时保存每个 BM 任务的最新执行状态、尝试次数、轮次、耗时和失败原因。
-后续要挂成功或失败视频时，直接在 `data/bm/tasks.json` 对应 BM 编号上填写
-`success_video_url` / `failure_video_url` 并更新 `video_status`，再重跑生成
-脚本；脚本会按 BM 编号保留已填写的结果和视频字段。
+`data/bm/tasks.json`，并同步生成 `assets/tasks.js`。
+
+源码目录只保存任务定义。执行状态、尝试次数、失败原因、视频和轨迹位于：
+
+```text
+$ROBORSI_ARTIFACT_DIR/website/data/
+```
+
+发布会把外部 artifact 临时叠加到源码后再生成完整站点，因此运行 campaign
+不会把结果写回这个 checkout。
 
 ```bash
 python3 data/scripts/build_tasks_js.py
