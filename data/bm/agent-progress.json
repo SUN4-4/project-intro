@@ -1,34 +1,34 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-13T12:44:36.631004+00:00",
+  "generated_at": "2026-11-13T12:56:14.525018+00:00",
   "campaign_id": "bm-agent-20261113-062626",
   "summary": {
-    "generated_at": "2026-11-13T12:44:36.613893+00:00",
+    "generated_at": "2026-11-13T12:56:14.508424+00:00",
     "campaign_id": "bm-agent-20261113-062626",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 2,
-    "failure": 38,
+    "failure": 39,
     "infra": 0,
     "blocked": 0,
-    "pending": 292,
+    "pending": 291,
     "running": 1,
     "clean_success": 2,
     "soft_success": 0,
     "confirmed_success": 0,
     "replay_pending": 2,
     "replay_failed": 0,
-    "valid_verdicts": 40,
-    "success_rate": 0.05,
-    "clean_success_rate": 0.05,
+    "valid_verdicts": 41,
+    "success_rate": 0.04878048780487805,
+    "clean_success_rate": 0.04878048780487805,
     "paused": null
   },
   "current": {
-    "bm_id": "BM-068",
-    "task_id": "libero_90/27",
+    "bm_id": "BM-072",
+    "task_id": "libero_90/31",
     "benchmark": "libero",
     "attempt": 1,
-    "started_at": "2026-11-13T12:44:36.594263+00:00"
+    "started_at": "2026-11-13T12:56:14.489331+00:00"
   },
   "tasks": [
     {
@@ -5842,6 +5842,164 @@
     {
       "bm_id": "BM-068",
       "task_id": "libero_90/27",
+      "benchmark": "libero",
+      "status": "pending",
+      "attempts": 0,
+      "rounds": 0,
+      "duration_s": 0.0,
+      "thinking_s": 0.0,
+      "time_breakdown": {},
+      "tool_counts": {},
+      "failure_counts": {},
+      "failure_reason": null,
+      "failure_primary": null,
+      "failure_contributing": [],
+      "failed_phase": null,
+      "runtime_summary": {},
+      "runtime_events_path": null,
+      "success_video_url": null,
+      "last_failure_video_url": null,
+      "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": null
+    },
+    {
+      "bm_id": "BM-069",
+      "task_id": "libero_90/28",
+      "benchmark": "libero",
+      "status": "failure",
+      "attempts": 1,
+      "rounds": 1,
+      "duration_s": 349.189,
+      "thinking_s": 113.0,
+      "time_breakdown": {
+        "tool_total_s": 236.2,
+        "perception_s": 235.9,
+        "action_s": 0.3,
+        "recovery_s": 0.0,
+        "other_s": 0.0,
+        "llm_overhead_s": 113.0,
+        "tool_calls": 15,
+        "steps": 15,
+        "tool_counts": {
+          "observe_orbit": 5,
+          "look": 3,
+          "get_arm_pose": 2,
+          "find_pixel": 1,
+          "close_drawer": 1,
+          "move_ee_delta": 1,
+          "record_reflection": 1,
+          "done": 1
+        },
+        "top_tools": [
+          {
+            "tool": "observe_orbit",
+            "count": 5,
+            "seconds": 1.2
+          },
+          {
+            "tool": "look",
+            "count": 3,
+            "seconds": 0.8
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 2,
+            "seconds": 0.6
+          },
+          {
+            "tool": "find_pixel",
+            "count": 1,
+            "seconds": 68.5
+          },
+          {
+            "tool": "close_drawer",
+            "count": 1,
+            "seconds": 164.7
+          },
+          {
+            "tool": "move_ee_delta",
+            "count": 1,
+            "seconds": 0.3
+          },
+          {
+            "tool": "record_reflection",
+            "count": 1,
+            "seconds": 0.0
+          },
+          {
+            "tool": "done",
+            "count": 1,
+            "seconds": 0.0
+          }
+        ]
+      },
+      "tool_counts": {
+        "observe_orbit": 5,
+        "look": 3,
+        "get_arm_pose": 2,
+        "find_pixel": 1,
+        "close_drawer": 1,
+        "move_ee_delta": 1,
+        "record_reflection": 1,
+        "done": 1
+      },
+      "failure_counts": {
+        "contrib:verification": 1,
+        "contrib:planning": 1
+      },
+      "failure_reason": "all observed phases succeeded but the physical predicate failed",
+      "failure_primary": "unknown",
+      "failure_contributing": [
+        "verification",
+        "planning"
+      ],
+      "failed_phase": null,
+      "runtime_summary": {
+        "path": "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261113-205022-130641/runtime_events.jsonl",
+        "sources": [
+          "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261113-205022-130641/rollout/round_01/libero_pick_place-0/runtime.jsonl"
+        ],
+        "events": 62,
+        "event_counts": {
+          "episode_start": 1,
+          "turn_started": 15,
+          "turn_response": 15,
+          "tool_started": 14,
+          "tool_finished": 14,
+          "commit_checkpoint": 1,
+          "perception_guard": 1,
+          "episode_end": 1
+        },
+        "tool_counts": {
+          "observe_orbit": 4,
+          "look": 3,
+          "get_arm_pose": 2,
+          "find_pixel": 1,
+          "close_drawer": 1,
+          "move_ee_delta": 1,
+          "record_reflection": 1,
+          "done": 1
+        }
+      },
+      "runtime_events_path": "home/workspaces/libero_pick_place-20261113-205022-130641/runtime_events.jsonl",
+      "success_video_url": null,
+      "last_failure_video_url": null,
+      "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-13T12:56:14.435153+00:00"
+    },
+    {
+      "bm_id": "BM-072",
+      "task_id": "libero_90/31",
       "benchmark": "libero",
       "status": "running",
       "attempts": 1,
