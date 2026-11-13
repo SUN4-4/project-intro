@@ -1,34 +1,34 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-13T12:59:38.335471+00:00",
+  "generated_at": "2026-11-13T13:27:12.617565+00:00",
   "campaign_id": "bm-agent-20261113-062626",
   "summary": {
-    "generated_at": "2026-11-13T12:59:38.318602+00:00",
+    "generated_at": "2026-11-13T13:27:12.599317+00:00",
     "campaign_id": "bm-agent-20261113-062626",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
     "success": 2,
-    "failure": 39,
+    "failure": 41,
     "infra": 0,
     "blocked": 0,
-    "pending": 291,
+    "pending": 289,
     "running": 1,
     "clean_success": 2,
     "soft_success": 0,
     "confirmed_success": 0,
     "replay_pending": 2,
     "replay_failed": 0,
-    "valid_verdicts": 41,
-    "success_rate": 0.04878048780487805,
-    "clean_success_rate": 0.04878048780487805,
+    "valid_verdicts": 43,
+    "success_rate": 0.046511627906976744,
+    "clean_success_rate": 0.046511627906976744,
     "paused": null
   },
   "current": {
-    "bm_id": "BM-073",
-    "task_id": "libero_90/32",
+    "bm_id": "BM-082",
+    "task_id": "libero_90/41",
     "benchmark": "libero",
     "attempt": 1,
-    "started_at": "2026-11-13T12:59:38.298719+00:00"
+    "started_at": "2026-11-13T13:27:12.579029+00:00"
   },
   "tasks": [
     {
@@ -6028,6 +6028,430 @@
     {
       "bm_id": "BM-073",
       "task_id": "libero_90/32",
+      "benchmark": "libero",
+      "status": "pending",
+      "attempts": 0,
+      "rounds": 0,
+      "duration_s": 0.0,
+      "thinking_s": 0.0,
+      "time_breakdown": {},
+      "tool_counts": {},
+      "failure_counts": {},
+      "failure_reason": null,
+      "failure_primary": null,
+      "failure_contributing": [],
+      "failed_phase": null,
+      "runtime_summary": {},
+      "runtime_events_path": null,
+      "success_video_url": null,
+      "last_failure_video_url": null,
+      "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": null
+    },
+    {
+      "bm_id": "BM-074",
+      "task_id": "libero_90/33",
+      "benchmark": "libero",
+      "status": "pending",
+      "attempts": 0,
+      "rounds": 0,
+      "duration_s": 0.0,
+      "thinking_s": 0.0,
+      "time_breakdown": {},
+      "tool_counts": {},
+      "failure_counts": {},
+      "failure_reason": null,
+      "failure_primary": null,
+      "failure_contributing": [],
+      "failed_phase": null,
+      "runtime_summary": {},
+      "runtime_events_path": null,
+      "success_video_url": null,
+      "last_failure_video_url": null,
+      "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": null
+    },
+    {
+      "bm_id": "BM-075",
+      "task_id": "libero_90/34",
+      "benchmark": "libero",
+      "status": "pending",
+      "attempts": 0,
+      "rounds": 0,
+      "duration_s": 0.0,
+      "thinking_s": 0.0,
+      "time_breakdown": {},
+      "tool_counts": {},
+      "failure_counts": {},
+      "failure_reason": null,
+      "failure_primary": null,
+      "failure_contributing": [],
+      "failed_phase": null,
+      "runtime_summary": {},
+      "runtime_events_path": null,
+      "success_video_url": null,
+      "last_failure_video_url": null,
+      "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": null
+    },
+    {
+      "bm_id": "BM-076",
+      "task_id": "libero_90/35",
+      "benchmark": "libero",
+      "status": "pending",
+      "attempts": 0,
+      "rounds": 0,
+      "duration_s": 0.0,
+      "thinking_s": 0.0,
+      "time_breakdown": {},
+      "tool_counts": {},
+      "failure_counts": {},
+      "failure_reason": null,
+      "failure_primary": null,
+      "failure_contributing": [],
+      "failed_phase": null,
+      "runtime_summary": {},
+      "runtime_events_path": null,
+      "success_video_url": null,
+      "last_failure_video_url": null,
+      "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": null
+    },
+    {
+      "bm_id": "BM-079",
+      "task_id": "libero_90/38",
+      "benchmark": "libero",
+      "status": "failure",
+      "attempts": 1,
+      "rounds": 1,
+      "duration_s": 592.75,
+      "thinking_s": 324.7,
+      "time_breakdown": {
+        "tool_total_s": 268.1,
+        "perception_s": 239.0,
+        "action_s": 28.8,
+        "recovery_s": 0.3,
+        "other_s": 0.0,
+        "llm_overhead_s": 324.7,
+        "tool_calls": 28,
+        "steps": 28,
+        "tool_counts": {
+          "look": 7,
+          "exec_python": 4,
+          "inspect_objects": 3,
+          "find_by_detector": 2,
+          "observe_orbit": 2,
+          "get_arm_pose": 2,
+          "grasp_object": 2,
+          "find_by_pointing": 1,
+          "read": 1,
+          "record_reflection": 1,
+          "home": 1,
+          "get_grasp_pose": 1,
+          "unproject_pixel": 1
+        },
+        "top_tools": [
+          {
+            "tool": "look",
+            "count": 7,
+            "seconds": 1.7
+          },
+          {
+            "tool": "exec_python",
+            "count": 4,
+            "seconds": 148.2
+          },
+          {
+            "tool": "inspect_objects",
+            "count": 3,
+            "seconds": 83.0
+          },
+          {
+            "tool": "find_by_detector",
+            "count": 2,
+            "seconds": 3.1
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 2,
+            "seconds": 0.6
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 2,
+            "seconds": 0.7
+          },
+          {
+            "tool": "grasp_object",
+            "count": 2,
+            "seconds": 28.8
+          },
+          {
+            "tool": "find_by_pointing",
+            "count": 1,
+            "seconds": 0.8
+          }
+        ]
+      },
+      "tool_counts": {
+        "look": 7,
+        "exec_python": 4,
+        "inspect_objects": 3,
+        "find_by_detector": 2,
+        "observe_orbit": 2,
+        "get_arm_pose": 2,
+        "grasp_object": 2,
+        "find_by_pointing": 1,
+        "read": 1,
+        "record_reflection": 1,
+        "home": 1,
+        "get_grasp_pose": 1,
+        "unproject_pixel": 1
+      },
+      "failure_counts": {
+        "contrib:planning": 1
+      },
+      "failure_reason": "all observed phases succeeded but the physical predicate failed",
+      "failure_primary": "unknown",
+      "failure_contributing": [
+        "planning"
+      ],
+      "failed_phase": null,
+      "runtime_summary": {
+        "path": "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261113-210949-161b46/runtime_events.jsonl",
+        "sources": [
+          "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261113-210949-161b46/rollout/round_01/libero_pick_place-0/runtime.jsonl"
+        ],
+        "events": 114,
+        "event_counts": {
+          "episode_start": 1,
+          "turn_started": 28,
+          "turn_response": 28,
+          "tool_started": 27,
+          "tool_finished": 27,
+          "time_checkpoint": 1,
+          "time_budget": 1,
+          "episode_end": 1
+        },
+        "tool_counts": {
+          "look": 6,
+          "exec_python": 4,
+          "inspect_objects": 3,
+          "find_by_detector": 2,
+          "observe_orbit": 2,
+          "get_arm_pose": 2,
+          "grasp_object": 2,
+          "find_by_pointing": 1,
+          "read": 1,
+          "record_reflection": 1,
+          "home": 1,
+          "get_grasp_pose": 1,
+          "unproject_pixel": 1
+        }
+      },
+      "runtime_events_path": "home/workspaces/libero_pick_place-20261113-210949-161b46/runtime_events.jsonl",
+      "success_video_url": null,
+      "last_failure_video_url": null,
+      "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-13T13:19:44.980769+00:00"
+    },
+    {
+      "bm_id": "BM-080",
+      "task_id": "libero_90/39",
+      "benchmark": "libero",
+      "status": "pending",
+      "attempts": 0,
+      "rounds": 0,
+      "duration_s": 0.0,
+      "thinking_s": 0.0,
+      "time_breakdown": {},
+      "tool_counts": {},
+      "failure_counts": {},
+      "failure_reason": null,
+      "failure_primary": null,
+      "failure_contributing": [],
+      "failed_phase": null,
+      "runtime_summary": {},
+      "runtime_events_path": null,
+      "success_video_url": null,
+      "last_failure_video_url": null,
+      "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": null
+    },
+    {
+      "bm_id": "BM-081",
+      "task_id": "libero_90/40",
+      "benchmark": "libero",
+      "status": "failure",
+      "attempts": 1,
+      "rounds": 1,
+      "duration_s": 387.597,
+      "thinking_s": 258.8,
+      "time_breakdown": {
+        "tool_total_s": 128.8,
+        "perception_s": 126.2,
+        "action_s": 2.3,
+        "recovery_s": 0.3,
+        "other_s": 0.0,
+        "llm_overhead_s": 258.8,
+        "tool_calls": 46,
+        "steps": 46,
+        "tool_counts": {
+          "exec_python": 22,
+          "look": 10,
+          "observe_orbit": 4,
+          "grasp_object": 2,
+          "inspect_objects": 1,
+          "unproject_pixel": 1,
+          "find_by_detector": 1,
+          "get_arm_pose": 1,
+          "home": 1,
+          "read": 1,
+          "record_reflection": 1,
+          "done": 1
+        },
+        "top_tools": [
+          {
+            "tool": "exec_python",
+            "count": 22,
+            "seconds": 114.0
+          },
+          {
+            "tool": "look",
+            "count": 10,
+            "seconds": 2.8
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 4,
+            "seconds": 1.2
+          },
+          {
+            "tool": "grasp_object",
+            "count": 2,
+            "seconds": 2.3
+          },
+          {
+            "tool": "inspect_objects",
+            "count": 1,
+            "seconds": 5.7
+          },
+          {
+            "tool": "unproject_pixel",
+            "count": 1,
+            "seconds": 0.3
+          },
+          {
+            "tool": "find_by_detector",
+            "count": 1,
+            "seconds": 1.8
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 1,
+            "seconds": 0.3
+          }
+        ]
+      },
+      "tool_counts": {
+        "exec_python": 22,
+        "look": 10,
+        "observe_orbit": 4,
+        "grasp_object": 2,
+        "inspect_objects": 1,
+        "unproject_pixel": 1,
+        "find_by_detector": 1,
+        "get_arm_pose": 1,
+        "home": 1,
+        "read": 1,
+        "record_reflection": 1,
+        "done": 1
+      },
+      "failure_counts": {
+        "contrib:verification": 1,
+        "contrib:planning": 1
+      },
+      "failure_reason": "all observed phases succeeded but the physical predicate failed",
+      "failure_primary": "unknown",
+      "failure_contributing": [
+        "verification",
+        "planning"
+      ],
+      "failed_phase": null,
+      "runtime_summary": {
+        "path": "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261113-212042-b8810d/runtime_events.jsonl",
+        "sources": [
+          "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261113-212042-b8810d/rollout/round_01/libero_pick_place-0/runtime.jsonl"
+        ],
+        "events": 187,
+        "event_counts": {
+          "episode_start": 1,
+          "turn_started": 46,
+          "turn_response": 46,
+          "tool_started": 46,
+          "tool_finished": 46,
+          "time_checkpoint": 1,
+          "episode_end": 1
+        },
+        "tool_counts": {
+          "exec_python": 22,
+          "look": 10,
+          "observe_orbit": 4,
+          "grasp_object": 2,
+          "inspect_objects": 1,
+          "unproject_pixel": 1,
+          "find_by_detector": 1,
+          "get_arm_pose": 1,
+          "home": 1,
+          "read": 1,
+          "record_reflection": 1,
+          "done": 1
+        }
+      },
+      "runtime_events_path": "home/workspaces/libero_pick_place-20261113-212042-b8810d/runtime_events.jsonl",
+      "success_video_url": null,
+      "last_failure_video_url": null,
+      "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": "2026-11-13T13:27:12.516082+00:00"
+    },
+    {
+      "bm_id": "BM-082",
+      "task_id": "libero_90/41",
       "benchmark": "libero",
       "status": "running",
       "attempts": 1,
