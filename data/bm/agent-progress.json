@@ -1,9 +1,9 @@
 {
   "schema": "roborsi.bm_agent_progress.v1",
-  "generated_at": "2026-11-13T12:56:14.525018+00:00",
+  "generated_at": "2026-11-13T12:59:38.335471+00:00",
   "campaign_id": "bm-agent-20261113-062626",
   "summary": {
-    "generated_at": "2026-11-13T12:56:14.508424+00:00",
+    "generated_at": "2026-11-13T12:59:38.318602+00:00",
     "campaign_id": "bm-agent-20261113-062626",
     "scope": "333 BM tasks · agent closed loop · IK + DeepSeek VLM · max 10 rounds",
     "total": 333,
@@ -24,11 +24,11 @@
     "paused": null
   },
   "current": {
-    "bm_id": "BM-072",
-    "task_id": "libero_90/31",
+    "bm_id": "BM-073",
+    "task_id": "libero_90/32",
     "benchmark": "libero",
     "attempt": 1,
-    "started_at": "2026-11-13T12:56:14.489331+00:00"
+    "started_at": "2026-11-13T12:59:38.298719+00:00"
   },
   "tasks": [
     {
@@ -6000,6 +6000,34 @@
     {
       "bm_id": "BM-072",
       "task_id": "libero_90/31",
+      "benchmark": "libero",
+      "status": "pending",
+      "attempts": 0,
+      "rounds": 0,
+      "duration_s": 0.0,
+      "thinking_s": 0.0,
+      "time_breakdown": {},
+      "tool_counts": {},
+      "failure_counts": {},
+      "failure_reason": null,
+      "failure_primary": null,
+      "failure_contributing": [],
+      "failed_phase": null,
+      "runtime_summary": {},
+      "runtime_events_path": null,
+      "success_video_url": null,
+      "last_failure_video_url": null,
+      "clean_grasp_trajectory_url": null,
+      "confirmed_success": null,
+      "replay_status": null,
+      "replay_success": null,
+      "replay_video_url": null,
+      "replay_finished_at": null,
+      "finished_at": null
+    },
+    {
+      "bm_id": "BM-073",
+      "task_id": "libero_90/32",
       "benchmark": "libero",
       "status": "running",
       "attempts": 1,
