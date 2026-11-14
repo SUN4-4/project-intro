@@ -19401,10 +19401,269 @@
           "blender_status": "built",
           "failure_video_url": "data/videos/agent/BM-080-last-failure.mp4",
           "failure_video_status": "published",
+          "video_kind": "failure",
+          "exec_status": "failure",
+          "exec_success_rate": 0.0,
+          "exec_attempts": 1,
+          "exec_rounds": 1,
+          "exec_duration_s": 901.052,
+          "exec_failure_reason": "all observed phases succeeded but the physical predicate failed",
+          "exec_note": "Agent 闭环：IK 末端控制 + DeepSeek VLM 摄像机观察，最多 10 轮；成功/最后一次失败视频已上传。",
+          "exec_checked_at": "2026-11-14T04:49:06.377269+00:00",
+          "agent_success_count": 0,
+          "agent_loop_updated_at": "2026-11-14T04:49:06.377269+00:00",
+          "success_video_label": "Agent 最后一次失败回放",
+          "agent_status": "failure",
+          "agent_attempts": 1,
+          "agent_rounds": 1,
+          "agent_started_at": "2026-11-14T04:34:00.180181+00:00",
+          "agent_finished_at": "2026-11-14T04:49:06.377269+00:00",
+          "agent_duration_s": 901.052,
+          "agent_failure_reason": "all observed phases succeeded but the physical predicate failed",
+          "agent_failure_primary": "unknown",
+          "agent_failure_contributing": [
+            "planning"
+          ],
+          "agent_failed_phase": null,
+          "agent_runtime_summary": {
+            "path": "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261114-123402-969358/runtime_events.jsonl",
+            "sources": [
+              "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261114-123402-969358/rollout/round_01/libero_pick_place-0/runtime.jsonl"
+            ],
+            "events": 284,
+            "event_counts": {
+              "episode_start": 1,
+              "turn_started": 67,
+              "turn_response": 67,
+              "tool_started": 73,
+              "tool_finished": 73,
+              "time_checkpoint": 1,
+              "time_budget": 1,
+              "episode_end": 1
+            },
+            "tool_counts": {
+              "exec_python": 16,
+              "read": 14,
+              "grep": 11,
+              "look": 9,
+              "move_to_pose": 4,
+              "glob": 4,
+              "get_arm_pose": 3,
+              "observe_orbit": 3,
+              "unproject_pixel": 2,
+              "home": 2,
+              "inspect_objects": 1,
+              "list": 1,
+              "find_by_pointing": 1,
+              "list_base_skills": 1,
+              "grasp_object": 1
+            }
+          },
+          "agent_runtime_events_path": "home/workspaces/libero_pick_place-20261114-123402-969358/runtime_events.jsonl",
+          "agent_analysis": {
+            "outcome": "time_budget",
+            "failure_category": "planning",
+            "failure_primary": "unknown",
+            "failure_contributing": [
+              "planning"
+            ],
+            "reviewer_verdict": "blocked",
+            "tool_calls": 77,
+            "runtime_summary": {
+              "path": "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261114-123402-969358/runtime_events.jsonl",
+              "sources": [
+                "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261114-123402-969358/rollout/round_01/libero_pick_place-0/runtime.jsonl"
+              ],
+              "events": 284,
+              "event_counts": {
+                "episode_start": 1,
+                "turn_started": 67,
+                "turn_response": 67,
+                "tool_started": 73,
+                "tool_finished": 73,
+                "time_checkpoint": 1,
+                "time_budget": 1,
+                "episode_end": 1
+              },
+              "tool_counts": {
+                "exec_python": 16,
+                "read": 14,
+                "grep": 11,
+                "look": 9,
+                "move_to_pose": 4,
+                "glob": 4,
+                "get_arm_pose": 3,
+                "observe_orbit": 3,
+                "unproject_pixel": 2,
+                "home": 2,
+                "inspect_objects": 1,
+                "list": 1,
+                "find_by_pointing": 1,
+                "list_base_skills": 1,
+                "grasp_object": 1
+              }
+            }
+          },
+          "agent_success_video_url": null,
+          "agent_last_failure_video_url": "data/videos/agent/BM-080-last-failure.mp4",
+          "agent_clean_success": false,
+          "agent_success_kind": null,
+          "agent_success_note": null,
+          "agent_clean_grasp_trajectory_url": null,
+          "agent_confirmed_success": null,
+          "agent_replay_status": null,
+          "agent_replay_success": null,
+          "agent_replay_video_url": null,
+          "agent_replay_failure_video_url": null,
+          "agent_replay_attempts": null,
+          "agent_replay_finished_at": null,
+          "agent_replay_note": null,
+          "agent_thinking_s": 805.4,
+          "agent_time_breakdown": {
+            "tool_total_s": 95.7,
+            "perception_s": 62.8,
+            "action_s": 32.1,
+            "recovery_s": 0.7,
+            "other_s": 0.0,
+            "llm_overhead_s": 805.4,
+            "tool_calls": 77,
+            "steps": 67,
+            "tool_counts": {
+              "exec_python": 17,
+              "read": 14,
+              "grep": 11,
+              "look": 9,
+              "move_to_pose": 4,
+              "glob": 4,
+              "get_arm_pose": 3,
+              "observe_orbit": 3,
+              "?": 3,
+              "unproject_pixel": 2,
+              "home": 2,
+              "inspect_objects": 1,
+              "list": 1,
+              "find_by_pointing": 1,
+              "list_base_skills": 1,
+              "grasp_object": 1
+            },
+            "top_tools": [
+              {
+                "tool": "exec_python",
+                "count": 17,
+                "seconds": 39.5
+              },
+              {
+                "tool": "read",
+                "count": 14,
+                "seconds": 0.6
+              },
+              {
+                "tool": "grep",
+                "count": 11,
+                "seconds": 3.7
+              },
+              {
+                "tool": "look",
+                "count": 9,
+                "seconds": 2.5
+              },
+              {
+                "tool": "move_to_pose",
+                "count": 4,
+                "seconds": 1.3
+              },
+              {
+                "tool": "glob",
+                "count": 4,
+                "seconds": 0.2
+              },
+              {
+                "tool": "get_arm_pose",
+                "count": 3,
+                "seconds": 0.8
+              },
+              {
+                "tool": "observe_orbit",
+                "count": 3,
+                "seconds": 0.9
+              }
+            ]
+          },
+          "agent_tool_counts": {
+            "exec_python": 17,
+            "read": 14,
+            "grep": 11,
+            "look": 9,
+            "move_to_pose": 4,
+            "glob": 4,
+            "get_arm_pose": 3,
+            "observe_orbit": 3,
+            "?": 3,
+            "unproject_pixel": 2,
+            "home": 2,
+            "inspect_objects": 1,
+            "list": 1,
+            "find_by_pointing": 1,
+            "list_base_skills": 1,
+            "grasp_object": 1
+          },
+          "agent_thinking": {
+            "summary": "# Engineer Summary · libero_pick_place (seed=0)",
+            "why_failed": "time_budget",
+            "next_time": "",
+            "time_used": "tool_total=96s; perception=63s; action=32s; recovery=1s",
+            "problems": [
+              "time_budget"
+            ],
+            "changes": [],
+            "timeline": [
+              "- exec_python({\"code\": \"res = {}\\nk = find_pixel(object=\\\"stove knob handle\\\")\\nres[\\\"knob\\\"] = k\\nres[\\\"pose\\\"] = get_arm_pose()\\nlook(camera=\\\"head\\\")\\nreturn_dict.update(res)\", \"description\": \"Localize stove knob handle on fresh fr) [perception, 1.5s] ok=True",
+              "- look({\"camera\": \"head\"}) [perception, 0.3s] ok=True",
+              "- exec_python({\"code\": \"import math\\nCX, CY, CZ = -0.1879, -0.1997, 0.947\\ndef rz(a):\\n    return [math.cos(a/2), 0.0, 0.0, math.sin(a/2)]\\nres = {}\\nres[\\\"hover\\\"] = move_to_pose(pos=[CX, CY, 1.03], quat=[1.0,0.0,0.0,0.0], gripper=\\\") [perception, 4.0s] ok=True",
+              "- exec_python({\"code\": \"res = {}\\ntry:\\n    import inspect\\n    fn = globals().get(\\\"turn_switch\\\")\\n    res[\\\"has_turn_switch\\\"] = fn is not None\\n    if fn is not None:\\n        res[\\\"sig\\\"] = str(inspect.signature(fn))\\n        res) [perception, 0.5s] ok=False",
+              "- exec_python({\"code\": \"res = {}\\ntry:\\n    r = turn_switch(object=\\\"stove knob\\\")\\n    res[\\\"turn_switch\\\"] = r\\nexcept NameError as e:\\n    res[\\\"err\\\"] = repr(e)\\nexcept Exception as e:\\n    res[\\\"other_err\\\"] = repr(e)\\nreturn_dic) [perception, 0.5s] ok=True",
+              "- read({\"filePath\": \"/home/sunhe/robot-benchmarks/LIBERO/libero/libero/assets/articulated_objects/flat_stove.xml\"}) [perception, 0.0s] ok=True",
+              "- read({\"filePath\": \"/home/sunhe/robot-benchmarks/LIBERO-plus/libero/libero/bddl_files/libero_90/KITCHEN_SCENE8_turn_off_the_stove.bddl\"}) [perception, 0.0s] ok=True",
+              "- grep({\"pattern\": \"class TurnOff|class TurnOn|class Turnoff\", \"path\": \"/home/sunhe/robot-benchmarks/LIBERO/libero/libero/envs/object_states\", \"context\": 14}) [perception, 0.0s] ok=True",
+              "- grep({\"pattern\": \"TurnOff|TurnOn|turn_off|turn_on\", \"path\": \"/home/sunhe/robot-benchmarks/LIBERO/libero/libero/envs\", \"context\": 10, \"include\": \"*.py\", \"limit\": 80}) [perception, 0.1s] ok=True",
+              "- grep({\"context\": 20, \"include\": \"*.py\", \"path\": \"/home/sunhe/robot-benchmarks/LIBERO\", \"pattern\": \"class FlatStove\"}) [perception, 0.1s] ok=True",
+              "- read({\"filePath\": \"/home/sunhe/robot-benchmarks/LIBERO/libero/libero/envs/objects/articulated_objects.py\", \"limit\": 70, \"offset\": 224}) [perception, 0.0s] ok=True",
+              "- read({\"filePath\": \"/home/sunhe/robot-benchmarks/LIBERO/libero/libero/assets/articulated_objects/flat_stove.xml\"}) [perception, 0.0s] ok=True",
+              "- look({\"camera\": \"wrist\"}) [perception, 0.3s] ok=True",
+              "- get_arm_pose({}) [perception, 0.3s] ok=True",
+              "- glob({\"pattern\": \"roborsi/embodied/skills/**/turn_switch/**\"}) [perception, 0.1s] ok=True",
+              "- read({\"filePath\": \"/home/sunhe/RoboRSI/roborsi/embodied/skills/atomic/turn_switch/zeroshot/policy.py\"}) [perception, 0.0s] ok=True",
+              "- ?({}) [other] ",
+              "- exec_python({}) [other, 0.0s] ok=False reason=EPISODE TIME BUDGET reached before tool dispatch; the tool was not started"
+            ]
+          },
+          "agent_reflections": [],
+          "agent_failure_counts": {
+            "contrib:planning": 1
+          },
+          "agent_mode": "single",
+          "agent_tool_calls": 77
+        },
+        {
+          "id": "libero_90/40",
+          "suite": "libero_90",
+          "index": 40,
+          "name": "KITCHEN_SCENE9_put_the_frying_pan_on_the_cabinet_shelf",
+          "instruction": "put the frying pan on the cabinet shelf",
+          "image": "images/libero_90_040.jpg",
+          "bm_id": "BM-081",
+          "bm_seq": 81,
+          "benchmark": "libero",
+          "benchmark_label": "LIBERO",
+          "video_status": "pending",
+          "success_video_url": null,
+          "blender_status": "built",
+          "failure_video_url": "data/videos/agent/BM-081-last-failure.mp4",
+          "failure_video_status": "published",
           "video_kind": null,
           "exec_status": "running",
           "exec_success_rate": null,
-          "exec_attempts": 1,
+          "exec_attempts": 2,
           "exec_rounds": 0,
           "exec_duration_s": 0.0,
           "exec_failure_reason": null,
@@ -19414,9 +19673,9 @@
           "agent_loop_updated_at": null,
           "success_video_label": "待执行",
           "agent_status": "running",
-          "agent_attempts": 1,
+          "agent_attempts": 2,
           "agent_rounds": 0,
-          "agent_started_at": "2026-11-14T04:34:00.130694+00:00",
+          "agent_started_at": "2026-11-14T04:49:06.446444+00:00",
           "agent_finished_at": null,
           "agent_duration_s": 0.0,
           "agent_failure_reason": null,
@@ -19427,7 +19686,7 @@
           "agent_runtime_events_path": null,
           "agent_analysis": {},
           "agent_success_video_url": null,
-          "agent_last_failure_video_url": "data/videos/agent/BM-080-last-failure.mp4",
+          "agent_last_failure_video_url": "data/videos/agent/BM-081-last-failure.mp4",
           "agent_clean_success": null,
           "agent_success_kind": null,
           "agent_success_note": null,
@@ -19448,262 +19707,6 @@
           "agent_failure_counts": {},
           "agent_mode": null,
           "agent_tool_calls": null
-        },
-        {
-          "id": "libero_90/40",
-          "suite": "libero_90",
-          "index": 40,
-          "name": "KITCHEN_SCENE9_put_the_frying_pan_on_the_cabinet_shelf",
-          "instruction": "put the frying pan on the cabinet shelf",
-          "image": "images/libero_90_040.jpg",
-          "bm_id": "BM-081",
-          "bm_seq": 81,
-          "benchmark": "libero",
-          "benchmark_label": "LIBERO",
-          "video_status": "pending",
-          "success_video_url": null,
-          "blender_status": "built",
-          "failure_video_url": "data/videos/agent/BM-081-last-failure.mp4",
-          "failure_video_status": "published",
-          "video_kind": "failure",
-          "exec_status": "failure",
-          "exec_success_rate": 0.0,
-          "exec_attempts": 1,
-          "exec_rounds": 1,
-          "exec_duration_s": 387.597,
-          "exec_failure_reason": "all observed phases succeeded but the physical predicate failed",
-          "exec_note": "Agent 闭环：IK 末端控制 + DeepSeek VLM 摄像机观察，最多 10 轮；成功/最后一次失败视频已上传。",
-          "exec_checked_at": "2026-11-13T13:27:12.516082+00:00",
-          "agent_success_count": 0,
-          "agent_loop_updated_at": "2026-11-13T13:27:12.516082+00:00",
-          "success_video_label": "Agent 最后一次失败回放",
-          "agent_status": "failure",
-          "agent_attempts": 1,
-          "agent_rounds": 1,
-          "agent_started_at": "2026-11-13T13:20:40.031487+00:00",
-          "agent_finished_at": "2026-11-13T13:27:12.516082+00:00",
-          "agent_duration_s": 387.597,
-          "agent_failure_reason": "all observed phases succeeded but the physical predicate failed",
-          "agent_failure_primary": "unknown",
-          "agent_failure_contributing": [
-            "verification",
-            "planning"
-          ],
-          "agent_failed_phase": null,
-          "agent_runtime_summary": {
-            "path": "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261113-212042-b8810d/runtime_events.jsonl",
-            "sources": [
-              "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261113-212042-b8810d/rollout/round_01/libero_pick_place-0/runtime.jsonl"
-            ],
-            "events": 187,
-            "event_counts": {
-              "episode_start": 1,
-              "turn_started": 46,
-              "turn_response": 46,
-              "tool_started": 46,
-              "tool_finished": 46,
-              "time_checkpoint": 1,
-              "episode_end": 1
-            },
-            "tool_counts": {
-              "exec_python": 22,
-              "look": 10,
-              "observe_orbit": 4,
-              "grasp_object": 2,
-              "inspect_objects": 1,
-              "unproject_pixel": 1,
-              "find_by_detector": 1,
-              "get_arm_pose": 1,
-              "home": 1,
-              "read": 1,
-              "record_reflection": 1,
-              "done": 1
-            }
-          },
-          "agent_runtime_events_path": "home/workspaces/libero_pick_place-20261113-212042-b8810d/runtime_events.jsonl",
-          "agent_analysis": {
-            "outcome": "vlm_overclaimed",
-            "failure_category": "planning",
-            "failure_primary": "unknown",
-            "failure_contributing": [
-              "verification",
-              "planning"
-            ],
-            "reviewer_verdict": "blocked",
-            "tool_calls": 46,
-            "runtime_summary": {
-              "path": "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261113-212042-b8810d/runtime_events.jsonl",
-              "sources": [
-                "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261113-212042-b8810d/rollout/round_01/libero_pick_place-0/runtime.jsonl"
-              ],
-              "events": 187,
-              "event_counts": {
-                "episode_start": 1,
-                "turn_started": 46,
-                "turn_response": 46,
-                "tool_started": 46,
-                "tool_finished": 46,
-                "time_checkpoint": 1,
-                "episode_end": 1
-              },
-              "tool_counts": {
-                "exec_python": 22,
-                "look": 10,
-                "observe_orbit": 4,
-                "grasp_object": 2,
-                "inspect_objects": 1,
-                "unproject_pixel": 1,
-                "find_by_detector": 1,
-                "get_arm_pose": 1,
-                "home": 1,
-                "read": 1,
-                "record_reflection": 1,
-                "done": 1
-              }
-            }
-          },
-          "agent_success_video_url": null,
-          "agent_last_failure_video_url": "data/videos/agent/BM-081-last-failure.mp4",
-          "agent_clean_success": false,
-          "agent_success_kind": null,
-          "agent_success_note": null,
-          "agent_clean_grasp_trajectory_url": null,
-          "agent_confirmed_success": null,
-          "agent_replay_status": null,
-          "agent_replay_success": null,
-          "agent_replay_video_url": null,
-          "agent_replay_failure_video_url": null,
-          "agent_replay_attempts": null,
-          "agent_replay_finished_at": null,
-          "agent_replay_note": null,
-          "agent_thinking_s": 258.8,
-          "agent_time_breakdown": {
-            "tool_total_s": 128.8,
-            "perception_s": 126.2,
-            "action_s": 2.3,
-            "recovery_s": 0.3,
-            "other_s": 0.0,
-            "llm_overhead_s": 258.8,
-            "tool_calls": 46,
-            "steps": 46,
-            "tool_counts": {
-              "exec_python": 22,
-              "look": 10,
-              "observe_orbit": 4,
-              "grasp_object": 2,
-              "inspect_objects": 1,
-              "unproject_pixel": 1,
-              "find_by_detector": 1,
-              "get_arm_pose": 1,
-              "home": 1,
-              "read": 1,
-              "record_reflection": 1,
-              "done": 1
-            },
-            "top_tools": [
-              {
-                "tool": "exec_python",
-                "count": 22,
-                "seconds": 114.0
-              },
-              {
-                "tool": "look",
-                "count": 10,
-                "seconds": 2.8
-              },
-              {
-                "tool": "observe_orbit",
-                "count": 4,
-                "seconds": 1.2
-              },
-              {
-                "tool": "grasp_object",
-                "count": 2,
-                "seconds": 2.3
-              },
-              {
-                "tool": "inspect_objects",
-                "count": 1,
-                "seconds": 5.7
-              },
-              {
-                "tool": "unproject_pixel",
-                "count": 1,
-                "seconds": 0.3
-              },
-              {
-                "tool": "find_by_detector",
-                "count": 1,
-                "seconds": 1.8
-              },
-              {
-                "tool": "get_arm_pose",
-                "count": 1,
-                "seconds": 0.3
-              }
-            ]
-          },
-          "agent_tool_counts": {
-            "exec_python": 22,
-            "look": 10,
-            "observe_orbit": 4,
-            "grasp_object": 2,
-            "inspect_objects": 1,
-            "unproject_pixel": 1,
-            "find_by_detector": 1,
-            "get_arm_pose": 1,
-            "home": 1,
-            "read": 1,
-            "record_reflection": 1,
-            "done": 1
-          },
-          "agent_thinking": {
-            "summary": "# Engineer Summary · libero_pick_place (seed=0)",
-            "why_failed": "Earlier GraspGen and detector-based grasps on the pan body/handle all failed (grasped=false) or left the gripper empty; the pan is wide and shallow so top-down candidates missed, and direct unprojection of the first pan pixel was rejected as outside the workspace envelope.",
-            "next_time": "Pan is released on the cabinet shelf; declare success after this verification.",
-            "time_used": "tool_total=129s; perception=126s; action=2s; recovery=0s",
-            "problems": [
-              "Earlier GraspGen and detector-based grasps on the pan body/handle all failed (grasped=false) or left the gripper empty; the pan is wide and shallow so top-down candidates missed, and direct unprojection of the first pan pixel was rejected as outside the workspace envelope."
-            ],
-            "changes": [
-              "Switched from detector-pixel grasp to a hand-built trajectory: sampled the handle rim from a fresh frame, hovered at a rotated top-down quaternion over the handle, descended to z=0.945, closed, lifted, then transported to a shelf point derived from a grid of unprojected cabinet-front pixels instead of a name-only place call."
-            ],
-            "timeline": [
-              "- look({\"camera\": \"head\"}) [perception, 0.3s] ok=True",
-              "- exec_python({\"code\": \"pts=[]\\nfor u in [25,40,55]:\\n    for v in [130,150,170]:\\n        r=unproject_pixel(u=u,v=v,camera=\\\"head\\\")\\n        w=r.get(\\\"world\\\")\\n        pts.append(f\\\"({u},{v})->\\\"+(f\\\"[{w[0]:.2f},{w[1]:.2f},{w[2]:.2) [perception, 5.0s] ok=True",
-              "- observe_orbit({\"view\": \"orbit_top\"}) [perception, 0.3s] ok=True",
-              "- exec_python({\"code\": \"pts=[]\\nfor u in [12,20,30,40,50,62,74]:\\n    r=unproject_pixel(u=u,v=140,camera=\\\"head\\\")\\n    w=r.get(\\\"world\\\")\\n    pts.append(f\\\"v140 u{u}->\\\"+(f\\\"[{w[0]:.2f},{w[1]:.2f},{w[2]:.2f}]\\\" if w else \\\"INVALID\\\") [perception, 3.2s] ok=True",
-              "- look({\"camera\": \"head\"}) [perception, 0.3s] ok=True",
-              "- exec_python({\"code\": \"pts=[]\\nfor (u,v) in [(8,110),(20,110),(30,110),(8,120),(20,120),(30,120),(8,100),(20,100),(30,100),(8,135),(20,135),(30,135)]:\\n    r=unproject_pixel(u=u,v=v,camera=\\\"head\\\")\\n    w=r.get(\\\"world\\\")\\n    pts.a) [perception, 3.2s] ok=True",
-              "- look({\"camera\": \"wrist\"}) [perception, 0.3s] ok=True",
-              "- exec_python({\"code\": \"fp=find_pixel(object=\\\"frying pan\\\")\\np=get_arm_pose()\\noff=None\\nif fp.get(\\\"world_valid\\\") and p.get(\\\"ok\\\"):\\n    w=fp[\\\"world\\\"]; e=p[\\\"pos\\\"]\\n    off=[w[0]-e[0], w[1]-e[1], w[2]-e[2]]\\nreturn_dict['r']={\\) [perception, 1.4s] ok=True",
-              "- exec_python({\"code\": \"pts=[]\\nfor (u,v) in [(0,110),(45,110),(60,110),(70,110),(80,110),(15,90),(15,95),(15,100),(15,150),(15,158),(15,165),(15,172)]:\\n    r=unproject_pixel(u=u,v=v,camera=\\\"head\\\")\\n    w=r.get(\\\"world\\\")\\n    pts.) [perception, 3.2s] ok=True",
-              "- exec_python({\"code\": \"log={}\\nr1=move_to_pose(pos=[0.045,0.14,1.26],gripper=\\\"close\\\")\\nlog['lift']=r1.get(\\\"ok\\\"), r1.get(\\\"ee_pos\\\")\\nr2=move_to_pose(pos=[0.057,-0.121,1.26],gripper=\\\"close\\\")\\nlog['over_shelf']=r2.get(\\\"ok\\\"), r2) [perception, 1.6s] ok=True",
-              "- exec_python({\"code\": \"fp=find_pixel(object=\\\"frying pan\\\")\\np=get_arm_pose()\\nreturn_dict['r']={\\\"pan\\\":{k:fp.get(k) for k in (\\\"ok\\\",\\\"u\\\",\\\"v\\\",\\\"world\\\",\\\"confidence\\\",\\\"world_valid\\\")},\\n                  \\\"ee\\\":p.get(\\\"pos\\\"),\\) [perception, 1.3s] ok=True",
-              "- exec_python({\"code\": \"g=gripper(state=\\\"open\\\")\\nh=home(lift=0.10)\\np=get_arm_pose()\\nreturn_dict['r']={\\\"open\\\":g.get(\\\"ok\\\"),\\\"home\\\":h.get(\\\"ok\\\"),\\\"ee\\\":p.get(\\\"pos\\\"),\\\"gap\\\":p.get(\\\"gripper_gap\\\")}\\n\", \"description\": \"Release ) [perception, 1.5s] ok=True",
-              "- look({\"camera\": \"head\"}) [perception, 0.3s] ok=True",
-              "- exec_python({\"code\": \"fp=find_pixel(object=\\\"frying pan\\\")\\nshelf=[]\\nfor (u,v) in [(10,105),(25,105),(40,105),(55,105)]:\\n    r=unproject_pixel(u=u,v=v,camera=\\\"head\\\")\\n    if r.get(\\\"world\\\"): shelf.append([round(x,3) for x in r[) [perception, 1.9s] ok=True",
-              "- look({\"camera\": \"head\"}) [perception, 0.3s] ok=True",
-              "- observe_orbit({\"view\": \"orbit_front\"}) [perception, 0.3s] ok=True",
-              "- record_reflection({\"observation\": \"After opening the gripper and retracting to ee z=1.295, the pan reads at world [0.030, -0.232, 1.136] with confidence 0.755 — z matches the shelf surfaces sampled along the cabinet front (z ~1.131-1.152)) [perception, 0.0s] ok=True",
-              "- done({\"success\": true, \"reason\": \"Frying pan was grasped by its handle (closed at z=0.945), lifted, transported over the cabinet, and released; post-release the pan reads at world [0.030,-0.232,1.136], flush with the sampled ) [other, 0.0s] ok=True"
-            ]
-          },
-          "agent_reflections": [
-            {
-              "timestamp": "2026-11-13T13:27:08.131162+00:00",
-              "observation": "After opening the gripper and retracting to ee z=1.295, the pan reads at world [0.030, -0.232, 1.136] with confidence 0.755 — z matches the shelf surfaces sampled along the cabinet front (z ~1.131-1.152), and x/y sit inside the cabinet shelf footprint (x -0.01..0.17, y -0.34..-0.18). The front/orbit views show the dark pan resting inside the shelf opening rather than on the tabletop.",
-              "problem": "Earlier GraspGen and detector-based grasps on the pan body/handle all failed (grasped=false) or left the gripper empty; the pan is wide and shallow so top-down candidates missed, and direct unprojection of the first pan pixel was rejected as outside the workspace envelope.",
-              "change": "Switched from detector-pixel grasp to a hand-built trajectory: sampled the handle rim from a fresh frame, hovered at a rotated top-down quaternion over the handle, descended to z=0.945, closed, lifted, then transported to a shelf point derived from a grid of unprojected cabinet-front pixels instead of a name-only place call.",
-              "next_plan": "Pan is released on the cabinet shelf; declare success after this verification."
-            }
-          ],
-          "agent_failure_counts": {
-            "contrib:verification": 1,
-            "contrib:planning": 1
-          },
-          "agent_mode": "single",
-          "agent_tool_calls": 46
         },
         {
           "id": "libero_90/41",
@@ -61655,10 +61658,269 @@
       "blender_status": "built",
       "failure_video_url": "data/videos/agent/BM-080-last-failure.mp4",
       "failure_video_status": "published",
+      "video_kind": "failure",
+      "exec_status": "failure",
+      "exec_success_rate": 0.0,
+      "exec_attempts": 1,
+      "exec_rounds": 1,
+      "exec_duration_s": 901.052,
+      "exec_failure_reason": "all observed phases succeeded but the physical predicate failed",
+      "exec_note": "Agent 闭环：IK 末端控制 + DeepSeek VLM 摄像机观察，最多 10 轮；成功/最后一次失败视频已上传。",
+      "exec_checked_at": "2026-11-14T04:49:06.377269+00:00",
+      "agent_success_count": 0,
+      "agent_loop_updated_at": "2026-11-14T04:49:06.377269+00:00",
+      "success_video_label": "Agent 最后一次失败回放",
+      "agent_status": "failure",
+      "agent_attempts": 1,
+      "agent_rounds": 1,
+      "agent_started_at": "2026-11-14T04:34:00.180181+00:00",
+      "agent_finished_at": "2026-11-14T04:49:06.377269+00:00",
+      "agent_duration_s": 901.052,
+      "agent_failure_reason": "all observed phases succeeded but the physical predicate failed",
+      "agent_failure_primary": "unknown",
+      "agent_failure_contributing": [
+        "planning"
+      ],
+      "agent_failed_phase": null,
+      "agent_runtime_summary": {
+        "path": "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261114-123402-969358/runtime_events.jsonl",
+        "sources": [
+          "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261114-123402-969358/rollout/round_01/libero_pick_place-0/runtime.jsonl"
+        ],
+        "events": 284,
+        "event_counts": {
+          "episode_start": 1,
+          "turn_started": 67,
+          "turn_response": 67,
+          "tool_started": 73,
+          "tool_finished": 73,
+          "time_checkpoint": 1,
+          "time_budget": 1,
+          "episode_end": 1
+        },
+        "tool_counts": {
+          "exec_python": 16,
+          "read": 14,
+          "grep": 11,
+          "look": 9,
+          "move_to_pose": 4,
+          "glob": 4,
+          "get_arm_pose": 3,
+          "observe_orbit": 3,
+          "unproject_pixel": 2,
+          "home": 2,
+          "inspect_objects": 1,
+          "list": 1,
+          "find_by_pointing": 1,
+          "list_base_skills": 1,
+          "grasp_object": 1
+        }
+      },
+      "agent_runtime_events_path": "home/workspaces/libero_pick_place-20261114-123402-969358/runtime_events.jsonl",
+      "agent_analysis": {
+        "outcome": "time_budget",
+        "failure_category": "planning",
+        "failure_primary": "unknown",
+        "failure_contributing": [
+          "planning"
+        ],
+        "reviewer_verdict": "blocked",
+        "tool_calls": 77,
+        "runtime_summary": {
+          "path": "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261114-123402-969358/runtime_events.jsonl",
+          "sources": [
+            "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261114-123402-969358/rollout/round_01/libero_pick_place-0/runtime.jsonl"
+          ],
+          "events": 284,
+          "event_counts": {
+            "episode_start": 1,
+            "turn_started": 67,
+            "turn_response": 67,
+            "tool_started": 73,
+            "tool_finished": 73,
+            "time_checkpoint": 1,
+            "time_budget": 1,
+            "episode_end": 1
+          },
+          "tool_counts": {
+            "exec_python": 16,
+            "read": 14,
+            "grep": 11,
+            "look": 9,
+            "move_to_pose": 4,
+            "glob": 4,
+            "get_arm_pose": 3,
+            "observe_orbit": 3,
+            "unproject_pixel": 2,
+            "home": 2,
+            "inspect_objects": 1,
+            "list": 1,
+            "find_by_pointing": 1,
+            "list_base_skills": 1,
+            "grasp_object": 1
+          }
+        }
+      },
+      "agent_success_video_url": null,
+      "agent_last_failure_video_url": "data/videos/agent/BM-080-last-failure.mp4",
+      "agent_clean_success": false,
+      "agent_success_kind": null,
+      "agent_success_note": null,
+      "agent_clean_grasp_trajectory_url": null,
+      "agent_confirmed_success": null,
+      "agent_replay_status": null,
+      "agent_replay_success": null,
+      "agent_replay_video_url": null,
+      "agent_replay_failure_video_url": null,
+      "agent_replay_attempts": null,
+      "agent_replay_finished_at": null,
+      "agent_replay_note": null,
+      "agent_thinking_s": 805.4,
+      "agent_time_breakdown": {
+        "tool_total_s": 95.7,
+        "perception_s": 62.8,
+        "action_s": 32.1,
+        "recovery_s": 0.7,
+        "other_s": 0.0,
+        "llm_overhead_s": 805.4,
+        "tool_calls": 77,
+        "steps": 67,
+        "tool_counts": {
+          "exec_python": 17,
+          "read": 14,
+          "grep": 11,
+          "look": 9,
+          "move_to_pose": 4,
+          "glob": 4,
+          "get_arm_pose": 3,
+          "observe_orbit": 3,
+          "?": 3,
+          "unproject_pixel": 2,
+          "home": 2,
+          "inspect_objects": 1,
+          "list": 1,
+          "find_by_pointing": 1,
+          "list_base_skills": 1,
+          "grasp_object": 1
+        },
+        "top_tools": [
+          {
+            "tool": "exec_python",
+            "count": 17,
+            "seconds": 39.5
+          },
+          {
+            "tool": "read",
+            "count": 14,
+            "seconds": 0.6
+          },
+          {
+            "tool": "grep",
+            "count": 11,
+            "seconds": 3.7
+          },
+          {
+            "tool": "look",
+            "count": 9,
+            "seconds": 2.5
+          },
+          {
+            "tool": "move_to_pose",
+            "count": 4,
+            "seconds": 1.3
+          },
+          {
+            "tool": "glob",
+            "count": 4,
+            "seconds": 0.2
+          },
+          {
+            "tool": "get_arm_pose",
+            "count": 3,
+            "seconds": 0.8
+          },
+          {
+            "tool": "observe_orbit",
+            "count": 3,
+            "seconds": 0.9
+          }
+        ]
+      },
+      "agent_tool_counts": {
+        "exec_python": 17,
+        "read": 14,
+        "grep": 11,
+        "look": 9,
+        "move_to_pose": 4,
+        "glob": 4,
+        "get_arm_pose": 3,
+        "observe_orbit": 3,
+        "?": 3,
+        "unproject_pixel": 2,
+        "home": 2,
+        "inspect_objects": 1,
+        "list": 1,
+        "find_by_pointing": 1,
+        "list_base_skills": 1,
+        "grasp_object": 1
+      },
+      "agent_thinking": {
+        "summary": "# Engineer Summary · libero_pick_place (seed=0)",
+        "why_failed": "time_budget",
+        "next_time": "",
+        "time_used": "tool_total=96s; perception=63s; action=32s; recovery=1s",
+        "problems": [
+          "time_budget"
+        ],
+        "changes": [],
+        "timeline": [
+          "- exec_python({\"code\": \"res = {}\\nk = find_pixel(object=\\\"stove knob handle\\\")\\nres[\\\"knob\\\"] = k\\nres[\\\"pose\\\"] = get_arm_pose()\\nlook(camera=\\\"head\\\")\\nreturn_dict.update(res)\", \"description\": \"Localize stove knob handle on fresh fr) [perception, 1.5s] ok=True",
+          "- look({\"camera\": \"head\"}) [perception, 0.3s] ok=True",
+          "- exec_python({\"code\": \"import math\\nCX, CY, CZ = -0.1879, -0.1997, 0.947\\ndef rz(a):\\n    return [math.cos(a/2), 0.0, 0.0, math.sin(a/2)]\\nres = {}\\nres[\\\"hover\\\"] = move_to_pose(pos=[CX, CY, 1.03], quat=[1.0,0.0,0.0,0.0], gripper=\\\") [perception, 4.0s] ok=True",
+          "- exec_python({\"code\": \"res = {}\\ntry:\\n    import inspect\\n    fn = globals().get(\\\"turn_switch\\\")\\n    res[\\\"has_turn_switch\\\"] = fn is not None\\n    if fn is not None:\\n        res[\\\"sig\\\"] = str(inspect.signature(fn))\\n        res) [perception, 0.5s] ok=False",
+          "- exec_python({\"code\": \"res = {}\\ntry:\\n    r = turn_switch(object=\\\"stove knob\\\")\\n    res[\\\"turn_switch\\\"] = r\\nexcept NameError as e:\\n    res[\\\"err\\\"] = repr(e)\\nexcept Exception as e:\\n    res[\\\"other_err\\\"] = repr(e)\\nreturn_dic) [perception, 0.5s] ok=True",
+          "- read({\"filePath\": \"/home/sunhe/robot-benchmarks/LIBERO/libero/libero/assets/articulated_objects/flat_stove.xml\"}) [perception, 0.0s] ok=True",
+          "- read({\"filePath\": \"/home/sunhe/robot-benchmarks/LIBERO-plus/libero/libero/bddl_files/libero_90/KITCHEN_SCENE8_turn_off_the_stove.bddl\"}) [perception, 0.0s] ok=True",
+          "- grep({\"pattern\": \"class TurnOff|class TurnOn|class Turnoff\", \"path\": \"/home/sunhe/robot-benchmarks/LIBERO/libero/libero/envs/object_states\", \"context\": 14}) [perception, 0.0s] ok=True",
+          "- grep({\"pattern\": \"TurnOff|TurnOn|turn_off|turn_on\", \"path\": \"/home/sunhe/robot-benchmarks/LIBERO/libero/libero/envs\", \"context\": 10, \"include\": \"*.py\", \"limit\": 80}) [perception, 0.1s] ok=True",
+          "- grep({\"context\": 20, \"include\": \"*.py\", \"path\": \"/home/sunhe/robot-benchmarks/LIBERO\", \"pattern\": \"class FlatStove\"}) [perception, 0.1s] ok=True",
+          "- read({\"filePath\": \"/home/sunhe/robot-benchmarks/LIBERO/libero/libero/envs/objects/articulated_objects.py\", \"limit\": 70, \"offset\": 224}) [perception, 0.0s] ok=True",
+          "- read({\"filePath\": \"/home/sunhe/robot-benchmarks/LIBERO/libero/libero/assets/articulated_objects/flat_stove.xml\"}) [perception, 0.0s] ok=True",
+          "- look({\"camera\": \"wrist\"}) [perception, 0.3s] ok=True",
+          "- get_arm_pose({}) [perception, 0.3s] ok=True",
+          "- glob({\"pattern\": \"roborsi/embodied/skills/**/turn_switch/**\"}) [perception, 0.1s] ok=True",
+          "- read({\"filePath\": \"/home/sunhe/RoboRSI/roborsi/embodied/skills/atomic/turn_switch/zeroshot/policy.py\"}) [perception, 0.0s] ok=True",
+          "- ?({}) [other] ",
+          "- exec_python({}) [other, 0.0s] ok=False reason=EPISODE TIME BUDGET reached before tool dispatch; the tool was not started"
+        ]
+      },
+      "agent_reflections": [],
+      "agent_failure_counts": {
+        "contrib:planning": 1
+      },
+      "agent_mode": "single",
+      "agent_tool_calls": 77
+    },
+    {
+      "id": "libero_90/40",
+      "suite": "libero_90",
+      "index": 40,
+      "name": "KITCHEN_SCENE9_put_the_frying_pan_on_the_cabinet_shelf",
+      "instruction": "put the frying pan on the cabinet shelf",
+      "image": "images/libero_90_040.jpg",
+      "bm_id": "BM-081",
+      "bm_seq": 81,
+      "benchmark": "libero",
+      "benchmark_label": "LIBERO",
+      "video_status": "pending",
+      "success_video_url": null,
+      "blender_status": "built",
+      "failure_video_url": "data/videos/agent/BM-081-last-failure.mp4",
+      "failure_video_status": "published",
       "video_kind": null,
       "exec_status": "running",
       "exec_success_rate": null,
-      "exec_attempts": 1,
+      "exec_attempts": 2,
       "exec_rounds": 0,
       "exec_duration_s": 0.0,
       "exec_failure_reason": null,
@@ -61668,9 +61930,9 @@
       "agent_loop_updated_at": null,
       "success_video_label": "待执行",
       "agent_status": "running",
-      "agent_attempts": 1,
+      "agent_attempts": 2,
       "agent_rounds": 0,
-      "agent_started_at": "2026-11-14T04:34:00.130694+00:00",
+      "agent_started_at": "2026-11-14T04:49:06.446444+00:00",
       "agent_finished_at": null,
       "agent_duration_s": 0.0,
       "agent_failure_reason": null,
@@ -61681,7 +61943,7 @@
       "agent_runtime_events_path": null,
       "agent_analysis": {},
       "agent_success_video_url": null,
-      "agent_last_failure_video_url": "data/videos/agent/BM-080-last-failure.mp4",
+      "agent_last_failure_video_url": "data/videos/agent/BM-081-last-failure.mp4",
       "agent_clean_success": null,
       "agent_success_kind": null,
       "agent_success_note": null,
@@ -61702,262 +61964,6 @@
       "agent_failure_counts": {},
       "agent_mode": null,
       "agent_tool_calls": null
-    },
-    {
-      "id": "libero_90/40",
-      "suite": "libero_90",
-      "index": 40,
-      "name": "KITCHEN_SCENE9_put_the_frying_pan_on_the_cabinet_shelf",
-      "instruction": "put the frying pan on the cabinet shelf",
-      "image": "images/libero_90_040.jpg",
-      "bm_id": "BM-081",
-      "bm_seq": 81,
-      "benchmark": "libero",
-      "benchmark_label": "LIBERO",
-      "video_status": "pending",
-      "success_video_url": null,
-      "blender_status": "built",
-      "failure_video_url": "data/videos/agent/BM-081-last-failure.mp4",
-      "failure_video_status": "published",
-      "video_kind": "failure",
-      "exec_status": "failure",
-      "exec_success_rate": 0.0,
-      "exec_attempts": 1,
-      "exec_rounds": 1,
-      "exec_duration_s": 387.597,
-      "exec_failure_reason": "all observed phases succeeded but the physical predicate failed",
-      "exec_note": "Agent 闭环：IK 末端控制 + DeepSeek VLM 摄像机观察，最多 10 轮；成功/最后一次失败视频已上传。",
-      "exec_checked_at": "2026-11-13T13:27:12.516082+00:00",
-      "agent_success_count": 0,
-      "agent_loop_updated_at": "2026-11-13T13:27:12.516082+00:00",
-      "success_video_label": "Agent 最后一次失败回放",
-      "agent_status": "failure",
-      "agent_attempts": 1,
-      "agent_rounds": 1,
-      "agent_started_at": "2026-11-13T13:20:40.031487+00:00",
-      "agent_finished_at": "2026-11-13T13:27:12.516082+00:00",
-      "agent_duration_s": 387.597,
-      "agent_failure_reason": "all observed phases succeeded but the physical predicate failed",
-      "agent_failure_primary": "unknown",
-      "agent_failure_contributing": [
-        "verification",
-        "planning"
-      ],
-      "agent_failed_phase": null,
-      "agent_runtime_summary": {
-        "path": "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261113-212042-b8810d/runtime_events.jsonl",
-        "sources": [
-          "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261113-212042-b8810d/rollout/round_01/libero_pick_place-0/runtime.jsonl"
-        ],
-        "events": 187,
-        "event_counts": {
-          "episode_start": 1,
-          "turn_started": 46,
-          "turn_response": 46,
-          "tool_started": 46,
-          "tool_finished": 46,
-          "time_checkpoint": 1,
-          "episode_end": 1
-        },
-        "tool_counts": {
-          "exec_python": 22,
-          "look": 10,
-          "observe_orbit": 4,
-          "grasp_object": 2,
-          "inspect_objects": 1,
-          "unproject_pixel": 1,
-          "find_by_detector": 1,
-          "get_arm_pose": 1,
-          "home": 1,
-          "read": 1,
-          "record_reflection": 1,
-          "done": 1
-        }
-      },
-      "agent_runtime_events_path": "home/workspaces/libero_pick_place-20261113-212042-b8810d/runtime_events.jsonl",
-      "agent_analysis": {
-        "outcome": "vlm_overclaimed",
-        "failure_category": "planning",
-        "failure_primary": "unknown",
-        "failure_contributing": [
-          "verification",
-          "planning"
-        ],
-        "reviewer_verdict": "blocked",
-        "tool_calls": 46,
-        "runtime_summary": {
-          "path": "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261113-212042-b8810d/runtime_events.jsonl",
-          "sources": [
-            "/home/sunhe/.roborsi-rerun-failed-20261113/home/workspaces/libero_pick_place-20261113-212042-b8810d/rollout/round_01/libero_pick_place-0/runtime.jsonl"
-          ],
-          "events": 187,
-          "event_counts": {
-            "episode_start": 1,
-            "turn_started": 46,
-            "turn_response": 46,
-            "tool_started": 46,
-            "tool_finished": 46,
-            "time_checkpoint": 1,
-            "episode_end": 1
-          },
-          "tool_counts": {
-            "exec_python": 22,
-            "look": 10,
-            "observe_orbit": 4,
-            "grasp_object": 2,
-            "inspect_objects": 1,
-            "unproject_pixel": 1,
-            "find_by_detector": 1,
-            "get_arm_pose": 1,
-            "home": 1,
-            "read": 1,
-            "record_reflection": 1,
-            "done": 1
-          }
-        }
-      },
-      "agent_success_video_url": null,
-      "agent_last_failure_video_url": "data/videos/agent/BM-081-last-failure.mp4",
-      "agent_clean_success": false,
-      "agent_success_kind": null,
-      "agent_success_note": null,
-      "agent_clean_grasp_trajectory_url": null,
-      "agent_confirmed_success": null,
-      "agent_replay_status": null,
-      "agent_replay_success": null,
-      "agent_replay_video_url": null,
-      "agent_replay_failure_video_url": null,
-      "agent_replay_attempts": null,
-      "agent_replay_finished_at": null,
-      "agent_replay_note": null,
-      "agent_thinking_s": 258.8,
-      "agent_time_breakdown": {
-        "tool_total_s": 128.8,
-        "perception_s": 126.2,
-        "action_s": 2.3,
-        "recovery_s": 0.3,
-        "other_s": 0.0,
-        "llm_overhead_s": 258.8,
-        "tool_calls": 46,
-        "steps": 46,
-        "tool_counts": {
-          "exec_python": 22,
-          "look": 10,
-          "observe_orbit": 4,
-          "grasp_object": 2,
-          "inspect_objects": 1,
-          "unproject_pixel": 1,
-          "find_by_detector": 1,
-          "get_arm_pose": 1,
-          "home": 1,
-          "read": 1,
-          "record_reflection": 1,
-          "done": 1
-        },
-        "top_tools": [
-          {
-            "tool": "exec_python",
-            "count": 22,
-            "seconds": 114.0
-          },
-          {
-            "tool": "look",
-            "count": 10,
-            "seconds": 2.8
-          },
-          {
-            "tool": "observe_orbit",
-            "count": 4,
-            "seconds": 1.2
-          },
-          {
-            "tool": "grasp_object",
-            "count": 2,
-            "seconds": 2.3
-          },
-          {
-            "tool": "inspect_objects",
-            "count": 1,
-            "seconds": 5.7
-          },
-          {
-            "tool": "unproject_pixel",
-            "count": 1,
-            "seconds": 0.3
-          },
-          {
-            "tool": "find_by_detector",
-            "count": 1,
-            "seconds": 1.8
-          },
-          {
-            "tool": "get_arm_pose",
-            "count": 1,
-            "seconds": 0.3
-          }
-        ]
-      },
-      "agent_tool_counts": {
-        "exec_python": 22,
-        "look": 10,
-        "observe_orbit": 4,
-        "grasp_object": 2,
-        "inspect_objects": 1,
-        "unproject_pixel": 1,
-        "find_by_detector": 1,
-        "get_arm_pose": 1,
-        "home": 1,
-        "read": 1,
-        "record_reflection": 1,
-        "done": 1
-      },
-      "agent_thinking": {
-        "summary": "# Engineer Summary · libero_pick_place (seed=0)",
-        "why_failed": "Earlier GraspGen and detector-based grasps on the pan body/handle all failed (grasped=false) or left the gripper empty; the pan is wide and shallow so top-down candidates missed, and direct unprojection of the first pan pixel was rejected as outside the workspace envelope.",
-        "next_time": "Pan is released on the cabinet shelf; declare success after this verification.",
-        "time_used": "tool_total=129s; perception=126s; action=2s; recovery=0s",
-        "problems": [
-          "Earlier GraspGen and detector-based grasps on the pan body/handle all failed (grasped=false) or left the gripper empty; the pan is wide and shallow so top-down candidates missed, and direct unprojection of the first pan pixel was rejected as outside the workspace envelope."
-        ],
-        "changes": [
-          "Switched from detector-pixel grasp to a hand-built trajectory: sampled the handle rim from a fresh frame, hovered at a rotated top-down quaternion over the handle, descended to z=0.945, closed, lifted, then transported to a shelf point derived from a grid of unprojected cabinet-front pixels instead of a name-only place call."
-        ],
-        "timeline": [
-          "- look({\"camera\": \"head\"}) [perception, 0.3s] ok=True",
-          "- exec_python({\"code\": \"pts=[]\\nfor u in [25,40,55]:\\n    for v in [130,150,170]:\\n        r=unproject_pixel(u=u,v=v,camera=\\\"head\\\")\\n        w=r.get(\\\"world\\\")\\n        pts.append(f\\\"({u},{v})->\\\"+(f\\\"[{w[0]:.2f},{w[1]:.2f},{w[2]:.2) [perception, 5.0s] ok=True",
-          "- observe_orbit({\"view\": \"orbit_top\"}) [perception, 0.3s] ok=True",
-          "- exec_python({\"code\": \"pts=[]\\nfor u in [12,20,30,40,50,62,74]:\\n    r=unproject_pixel(u=u,v=140,camera=\\\"head\\\")\\n    w=r.get(\\\"world\\\")\\n    pts.append(f\\\"v140 u{u}->\\\"+(f\\\"[{w[0]:.2f},{w[1]:.2f},{w[2]:.2f}]\\\" if w else \\\"INVALID\\\") [perception, 3.2s] ok=True",
-          "- look({\"camera\": \"head\"}) [perception, 0.3s] ok=True",
-          "- exec_python({\"code\": \"pts=[]\\nfor (u,v) in [(8,110),(20,110),(30,110),(8,120),(20,120),(30,120),(8,100),(20,100),(30,100),(8,135),(20,135),(30,135)]:\\n    r=unproject_pixel(u=u,v=v,camera=\\\"head\\\")\\n    w=r.get(\\\"world\\\")\\n    pts.a) [perception, 3.2s] ok=True",
-          "- look({\"camera\": \"wrist\"}) [perception, 0.3s] ok=True",
-          "- exec_python({\"code\": \"fp=find_pixel(object=\\\"frying pan\\\")\\np=get_arm_pose()\\noff=None\\nif fp.get(\\\"world_valid\\\") and p.get(\\\"ok\\\"):\\n    w=fp[\\\"world\\\"]; e=p[\\\"pos\\\"]\\n    off=[w[0]-e[0], w[1]-e[1], w[2]-e[2]]\\nreturn_dict['r']={\\) [perception, 1.4s] ok=True",
-          "- exec_python({\"code\": \"pts=[]\\nfor (u,v) in [(0,110),(45,110),(60,110),(70,110),(80,110),(15,90),(15,95),(15,100),(15,150),(15,158),(15,165),(15,172)]:\\n    r=unproject_pixel(u=u,v=v,camera=\\\"head\\\")\\n    w=r.get(\\\"world\\\")\\n    pts.) [perception, 3.2s] ok=True",
-          "- exec_python({\"code\": \"log={}\\nr1=move_to_pose(pos=[0.045,0.14,1.26],gripper=\\\"close\\\")\\nlog['lift']=r1.get(\\\"ok\\\"), r1.get(\\\"ee_pos\\\")\\nr2=move_to_pose(pos=[0.057,-0.121,1.26],gripper=\\\"close\\\")\\nlog['over_shelf']=r2.get(\\\"ok\\\"), r2) [perception, 1.6s] ok=True",
-          "- exec_python({\"code\": \"fp=find_pixel(object=\\\"frying pan\\\")\\np=get_arm_pose()\\nreturn_dict['r']={\\\"pan\\\":{k:fp.get(k) for k in (\\\"ok\\\",\\\"u\\\",\\\"v\\\",\\\"world\\\",\\\"confidence\\\",\\\"world_valid\\\")},\\n                  \\\"ee\\\":p.get(\\\"pos\\\"),\\) [perception, 1.3s] ok=True",
-          "- exec_python({\"code\": \"g=gripper(state=\\\"open\\\")\\nh=home(lift=0.10)\\np=get_arm_pose()\\nreturn_dict['r']={\\\"open\\\":g.get(\\\"ok\\\"),\\\"home\\\":h.get(\\\"ok\\\"),\\\"ee\\\":p.get(\\\"pos\\\"),\\\"gap\\\":p.get(\\\"gripper_gap\\\")}\\n\", \"description\": \"Release ) [perception, 1.5s] ok=True",
-          "- look({\"camera\": \"head\"}) [perception, 0.3s] ok=True",
-          "- exec_python({\"code\": \"fp=find_pixel(object=\\\"frying pan\\\")\\nshelf=[]\\nfor (u,v) in [(10,105),(25,105),(40,105),(55,105)]:\\n    r=unproject_pixel(u=u,v=v,camera=\\\"head\\\")\\n    if r.get(\\\"world\\\"): shelf.append([round(x,3) for x in r[) [perception, 1.9s] ok=True",
-          "- look({\"camera\": \"head\"}) [perception, 0.3s] ok=True",
-          "- observe_orbit({\"view\": \"orbit_front\"}) [perception, 0.3s] ok=True",
-          "- record_reflection({\"observation\": \"After opening the gripper and retracting to ee z=1.295, the pan reads at world [0.030, -0.232, 1.136] with confidence 0.755 — z matches the shelf surfaces sampled along the cabinet front (z ~1.131-1.152)) [perception, 0.0s] ok=True",
-          "- done({\"success\": true, \"reason\": \"Frying pan was grasped by its handle (closed at z=0.945), lifted, transported over the cabinet, and released; post-release the pan reads at world [0.030,-0.232,1.136], flush with the sampled ) [other, 0.0s] ok=True"
-        ]
-      },
-      "agent_reflections": [
-        {
-          "timestamp": "2026-11-13T13:27:08.131162+00:00",
-          "observation": "After opening the gripper and retracting to ee z=1.295, the pan reads at world [0.030, -0.232, 1.136] with confidence 0.755 — z matches the shelf surfaces sampled along the cabinet front (z ~1.131-1.152), and x/y sit inside the cabinet shelf footprint (x -0.01..0.17, y -0.34..-0.18). The front/orbit views show the dark pan resting inside the shelf opening rather than on the tabletop.",
-          "problem": "Earlier GraspGen and detector-based grasps on the pan body/handle all failed (grasped=false) or left the gripper empty; the pan is wide and shallow so top-down candidates missed, and direct unprojection of the first pan pixel was rejected as outside the workspace envelope.",
-          "change": "Switched from detector-pixel grasp to a hand-built trajectory: sampled the handle rim from a fresh frame, hovered at a rotated top-down quaternion over the handle, descended to z=0.945, closed, lifted, then transported to a shelf point derived from a grid of unprojected cabinet-front pixels instead of a name-only place call.",
-          "next_plan": "Pan is released on the cabinet shelf; declare success after this verification."
-        }
-      ],
-      "agent_failure_counts": {
-        "contrib:verification": 1,
-        "contrib:planning": 1
-      },
-      "agent_mode": "single",
-      "agent_tool_calls": 46
     },
     {
       "id": "libero_90/41",
